@@ -1,7 +1,19 @@
 # Brief Formats
 
-Reusable structural templates for EIL policy briefs. Copy a template as your starting point for a new brief.
+Reusable structural templates and design files for EIL policy briefs.
 
-## Templates
+## Files
 
-_(Add template files here as `.md` or `.docx` files)_
+| File | Purpose |
+|---|---|
+| `_style.tex` | Shared LaTeX design system — colors, fonts, spacing macros, and box definitions for all policy briefs |
+
+## Using `_style.tex`
+
+Each brief's `.qmd` file references this file via `include-in-header` in its YAML:
+
+```yaml
+include-in-header: ../../../formats/_style.tex
+```
+
+If a specific brief needs a different visual style, create a local `_style.tex` in its `text/` folder and point to that instead. A brief-specific file can also import and override values from the shared file.

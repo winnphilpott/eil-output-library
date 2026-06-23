@@ -11,7 +11,7 @@ YYYY-[topic-slug]/
 ├── code/          # analysis and figure scripts (e.g., make-fig1.R)
 ├── data/          # datasets used by the brief or figures
 ├── figures/       # figure outputs (e.g., fig1.png)
-├── text/          # source files: .qmd and any .tex style files
+├── text/          # source files: .qmd (style pulled from formats/_style.tex)
 └── brief.pdf      # compiled output — rendered from text/, moved here
 ```
 
@@ -38,7 +38,6 @@ The PDF will appear in `text/`. If Quarto is on your system PATH, you can replac
 |---|---|---|
 | Brief folder | `YYYY-[topic-slug]` | `2026-epa-compliance-workshops` |
 | Brief source | `[topic-slug].qmd` | `epa-compliance-workshops.qmd` |
-| Style file | `_style.tex` | `_style.tex` |
 | Data files | `YYYY-[description].[ext]` | `2025-deidentified-survey.dta` |
 | Figures | `fig[N]-[description].png` | `fig1-violations-per-facility.png` |
 | Figure scripts | `make-fig[N]-[description].[ext]` | `make-fig1-violations.R` |
