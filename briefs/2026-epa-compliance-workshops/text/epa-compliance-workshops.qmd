@@ -29,7 +29,7 @@ format:
 % ---------------------------------------------------------------------
 % TITLE + CITATION (thin divider auto-drawn beneath the citation)
 % ---------------------------------------------------------------------
-\brieftitle{EPA compliance workshops don't cut violations like they're supposed to}
+\brieftitle{EPA Compliance Workshops Don't Reduce Violations}
 \briefcitation{Ferraro \& Shimshack \textperiodcentered{} Journal of Policy Analysis and Management, 2026}
 
 \vspace{11pt}
