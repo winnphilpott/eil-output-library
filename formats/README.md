@@ -1,21 +1,22 @@
-# Brief Formats
+# Formats
 
-Reusable structural templates and design files for EIL policy briefs.
+Reusable templates and design files for EIL outputs.
 
-## Files
+## Subfolders
 
-| File | Purpose |
+| Folder | Purpose |
 |---|---|
-| `_style.tex` | Shared LaTeX design system — colors, fonts, spacing macros, and box definitions for all policy briefs |
-| `templates/` | Folder of reusable brief templates — see `templates/policy-brief-template.qmd` to start a new one-page brief |
-| `logos/` | Shared logo assets (e.g., `eil-logo-maroon.png`) referenced by the template and briefs |
+| `logos/` | Shared logo assets (e.g., `eil-logo-maroon.png`) used across all output types |
+| `briefs/` | Policy brief templates and LaTeX design system (`_style.tex`) |
+| `data-viz/` | Data visualization themes and templates |
+| `social-media/` | Social media image templates |
 
-## Using `_style.tex`
+## Using `_style.tex` (briefs)
 
-Each brief's `.qmd` file references this file via `include-in-header` in its YAML:
+Each brief's `.qmd` file references the shared design system via `include-in-header` in its YAML:
 
 ```yaml
-include-in-header: ../../../formats/_style.tex
+include-in-header: ../../../formats/briefs/_style.tex
 ```
 
 If a specific brief needs a different visual style, create a local `_style.tex` in its `text/` folder and point to that instead. A brief-specific file can also import and override values from the shared file.

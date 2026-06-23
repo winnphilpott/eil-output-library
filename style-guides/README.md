@@ -1,7 +1,11 @@
 # Style Guides
 
-Writing conventions for EIL policy briefs — tone, citations, figures, and formatting rules.
+Writing and design conventions for EIL outputs — organized by output type.
 
-## Guides
+## Subfolders
 
-_(Add style guide documents here)_
+| Folder | Purpose |
+|---|---|
+| `briefs/` | Tone, citations, figures, and formatting rules for policy briefs |
+| `data-viz/` | Design and annotation conventions for standalone visualizations |
+| `social-media/` | Caption style, image guidelines, and platform conventions |

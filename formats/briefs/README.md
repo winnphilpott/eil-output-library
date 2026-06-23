@@ -11,7 +11,7 @@ Starter templates for EIL policy briefs. Copy a template into a new brief folder
 ## How to Use
 
 1. Copy the template into your new brief's `text/` folder and rename it to `[topic-slug].qmd`
-2. Update `include-in-header` in the YAML to point to `../../../formats/_style.tex`
+2. Update `include-in-header` in the YAML to point to `../../../formats/briefs/_style.tex`
 3. Update the logo path to `../../../formats/logos/eil-logo-maroon.png` (or white version)
 4. Fill in all `[placeholder]` text with your brief's content
 5. Add your figure to the brief's `figures/` folder and update the figure path
