@@ -79,7 +79,7 @@ format:
 \begin{minipage}[t]{0.575\linewidth}
 \vspace{0pt}
 \figtitle{Fig.\ 1 \textperiodcentered{} [Figure title]}{Source: [Author(s)] ([Year]).}
-\includegraphics[width=\linewidth]{figures/fig1.png}
+\fbox{\parbox[c][2.0in][c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\centering\color{muted}\small [Figure placeholder]}}
 \end{minipage}
 
 \vspace{0pt}
