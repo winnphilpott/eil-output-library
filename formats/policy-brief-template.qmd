@@ -1,0 +1,110 @@
+---
+# =====================================================================
+#  Policy brief — one-pager (LaTeX/PDF via Quarto)
+#  Render:  quarto render policy-brief-template.qmd
+#  Design system: _style.tex (colours, fonts, boxes, macros)
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 10pt
+    geometry:
+      - top=0.32in
+      - bottom=0.32in
+      - left=0.583in
+      - right=0.583in
+    include-in-header: _style.tex
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% MASTHEAD
+% ---------------------------------------------------------------------
+\briefheader{%
+  \includegraphics[height=0.45in]{figures/eil-logo-maroon.png}%
+}{Policy Brief}
+
+% ---------------------------------------------------------------------
+% TITLE + CITATION
+% ---------------------------------------------------------------------
+\brieftitle{[Title of the brief]}
+\briefcitation{[Author(s)] \textperiodcentered{} [Journal Name], [Year]}
+
+\vspace{3pt}
+
+% ---------------------------------------------------------------------
+% BOTTOM LINE
+% ---------------------------------------------------------------------
+\begin{bottomline}
+\textbf{[One-sentence statement of the core finding in bold.]} [One or two sentences expanding on the finding and its significance.]
+\end{bottomline}
+
+\vspace{2pt}
+
+% ---------------------------------------------------------------------
+% BACKGROUND
+% ---------------------------------------------------------------------
+\sectionhead{Background}
+\noindent [Two to three sentences providing context for the research question. What is the policy problem? Why does it matter? What did researchers want to know?]
+
+\vspace{4pt}
+
+% ---------------------------------------------------------------------
+% TWO COLUMNS
+% ---------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{0.483\linewidth}
+\subhead{[Column 1 heading]}
+{\colsize [Two to four sentences on the first supporting theme — e.g., why the topic matters, relevant background, prior evidence.]\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.483\linewidth}
+\subhead{[Column 2 heading]}
+{\colsize [Two to four sentences on the second supporting theme — e.g., a gap in knowledge, the case for evaluation, or a contrasting perspective.]\par}
+\end{minipage}
+
+\vspace{12pt}
+
+% ---------------------------------------------------------------------
+% PULL QUOTE | FIGURE
+% ---------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{0.40\linewidth}
+\vspace{0pt}
+\begin{pullquote}
+[Two to three sentences summarizing the key result in plain language. Include a \quotelink{short highlighted phrase} that captures the headline finding.]
+\end{pullquote}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.575\linewidth}
+\vspace{0pt}
+\figtitle{Fig.\ 1 \textperiodcentered{} [Figure title]}{Source: [Author(s)] ([Year]).}
+\includegraphics[width=\linewidth]{figures/fig1.png}
+\end{minipage}
+
+\vspace{0pt}
+
+% ---------------------------------------------------------------------
+% IMPLICATIONS
+% ---------------------------------------------------------------------
+\sectionhead{Implications}
+
+\noindent
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{[Implication 1]}
+{\impcolsize [Two to three sentences on the first policy implication. Use \brieflink{a linked phrase} to highlight a key takeaway.]\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{[Implication 2]}
+{\impcolsize [Two to three sentences on the second policy implication. Use \brieflink{a linked phrase} to highlight a key takeaway.]\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{[Implication 3]}
+{\impcolsize [Two to three sentences on the third policy implication. Use \brieflink{a linked phrase} to highlight a key takeaway.]\par}
+\end{minipage}
+
+% ---------------------------------------------------------------------
+% FOOTER
+% ---------------------------------------------------------------------
+\brieffooter{Method: [One sentence describing the research design.] Full paper: [doi.org/...]}
+```

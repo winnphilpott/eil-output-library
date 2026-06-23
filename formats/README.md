@@ -7,6 +7,7 @@ Reusable structural templates and design files for EIL policy briefs.
 | File | Purpose |
 |---|---|
 | `_style.tex` | Shared LaTeX design system — colors, fonts, spacing macros, and box definitions for all policy briefs |
+| `policy-brief-template.qmd` | Starting template for a new one-page policy brief — copy to a new brief folder and fill in the placeholders |
 
 ## Using `_style.tex`
 
