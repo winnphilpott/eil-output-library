@@ -1,8 +1,8 @@
 ---
 # =====================================================================
 #  Policy brief — one-pager (LaTeX/PDF via Quarto)
-#  Render:  quarto render policy-brief.qmd
-#  Design system: _brief-style.tex (colours, fonts, boxes, macros)
+#  Render:  quarto render epa-compliance-workshops.qmd
+#  Design system: _style.tex (colours, fonts, boxes, macros)
 # =====================================================================
 format:
   pdf:
@@ -14,7 +14,7 @@ format:
       - bottom=0.32in
       - left=0.583in
       - right=0.583in
-    include-in-header: _brief-style.tex
+    include-in-header: _style.tex
     keep-tex: true
 ---
 

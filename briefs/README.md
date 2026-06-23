@@ -20,6 +20,8 @@ YYYY-[topic-slug]/
 | File type | Pattern | Example |
 |---|---|---|
 | Brief folder | `YYYY-[topic-slug]` | `2026-epa-compliance-workshops` |
+| Brief source | `[topic-slug].qmd` | `epa-compliance-workshops.qmd` |
+| Style file | `_style.tex` | `_style.tex` |
 | Data files | `YYYY-[description].[ext]` | `2025-deidentified-survey.dta` |
 | Figures | `fig[N]-[description].png` | `fig1-violations-per-facility.png` |
 | Figure scripts | `make-fig[N]-[description].[ext]` | `make-fig1-violations.R` |
