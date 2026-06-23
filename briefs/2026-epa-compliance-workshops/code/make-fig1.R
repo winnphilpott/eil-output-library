@@ -46,8 +46,10 @@ series_labels <- c("Monthly violations", "Pre-existing trend")
 
 # --- Plot -------------------------------------------------------------------
 p <- ggplot(treated, aes(x = time)) +
-  # Program window shading (months 22-42: first to last workshop cohort)
-  annotate("rect", xmin = 22, xmax = 42, ymin = 0, ymax = 1.6, fill = BAND) +
+  # Program window shading — geom_rect so it appears in the legend
+  geom_rect(data = data.frame(xmin=22, xmax=42, ymin=0, ymax=1.6),
+            aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill="Program rollout window"),
+            inherit.aes = FALSE) +
   annotate("segment", x = 22, xend = 22, y = 0, yend = 1.6,
            color = RED, linetype = "dashed", linewidth = 0.4) +
   annotate("segment", x = 42, xend = 42, y = 0, yend = 1.6,
@@ -73,6 +75,7 @@ p <- ggplot(treated, aes(x = time)) +
     breaks = series_labels,
     values = setNames(c("solid", "longdash"), series_labels)
   ) +
+  scale_fill_manual(name = NULL, values = c("Program rollout window" = BAND)) +
   scale_x_continuous(
     limits = c(1, 72),
     breaks = c(1, 13, 25, 37, 49, 61),
@@ -86,7 +89,8 @@ p <- ggplot(treated, aes(x = time)) +
     expand = c(0, 0)
   ) +
   labs(x = "MONTH OF SAMPLE (72 MONTHS)", y = NULL) +
-  guides(color = guide_legend(nrow = 1), linetype = guide_legend(nrow = 1)) +
+  guides(color = guide_legend(nrow = 1), linetype = guide_legend(nrow = 1),
+         fill = guide_legend(nrow = 1, keywidth = unit(8, "pt"), keyheight = unit(8, "pt"))) +
   theme_minimal(base_size = 7) +
   theme(
     plot.background   = element_rect(fill = "#ffffff", color = NA),
@@ -101,6 +105,7 @@ p <- ggplot(treated, aes(x = time)) +
     legend.position   = "bottom",
     legend.margin     = margin(t = -4),
     legend.key.width  = unit(20, "pt"),
+    legend.key.height = unit(8, "pt"),
     legend.text       = element_text(color = MUTE, size = 6.2),
     legend.key        = element_rect(fill = NA, color = NA),
     legend.spacing.x  = unit(6, "pt")
