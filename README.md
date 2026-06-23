@@ -11,9 +11,11 @@ eil-brief-library/
 │       ├── code/              # Analysis and figure scripts
 │       ├── data/              # Datasets (excluded from git)
 │       ├── figures/           # Figure outputs
-│       ├── text/              # Source files (.qmd, .tex)
-│       └── brief.pdf          # Compiled output
-├── formats/                   # Reusable brief templates
+│       └── text/              # Source .qmd (style pulled from formats/)
+├── formats/                   # Shared design system and templates
+│   ├── _style.tex             # LaTeX design system for all briefs
+│   ├── policy-brief-template.qmd  # Starting template for a new brief
+│   └── logos/                 # Shared logo assets
 └── style-guides/              # Writing conventions, tone, citations, formatting
 ```
 
