@@ -7,7 +7,7 @@ Reusable structural templates and design files for EIL policy briefs.
 | File | Purpose |
 |---|---|
 | `_style.tex` | Shared LaTeX design system — colors, fonts, spacing macros, and box definitions for all policy briefs |
-| `policy-brief-template.qmd` | Starting template for a new one-page policy brief — copy to a new brief folder and fill in the placeholders |
+| `templates/` | Folder of reusable brief templates — see `templates/policy-brief-template.qmd` to start a new one-page brief |
 | `logos/` | Shared logo assets (e.g., `eil-logo-maroon.png`) referenced by the template and briefs |
 
 ## Using `_style.tex`

@@ -14,7 +14,7 @@ eil-brief-library/
 │       └── text/              # Source .qmd (style pulled from formats/)
 ├── formats/                   # Shared design system and templates
 │   ├── _style.tex             # LaTeX design system for all briefs
-│   ├── policy-brief-template.qmd  # Starting template for a new brief
+│   ├── templates/             # Reusable brief templates
 │   └── logos/                 # Shared logo assets
 └── style-guides/              # Writing conventions, tone, citations, formatting
 ```

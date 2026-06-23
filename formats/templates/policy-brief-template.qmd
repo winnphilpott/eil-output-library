@@ -14,7 +14,7 @@ format:
       - bottom=0.32in
       - left=0.583in
       - right=0.583in
-    include-in-header: _style.tex
+    include-in-header: ../_style.tex
     keep-tex: true
 ---
 
@@ -23,7 +23,7 @@ format:
 % MASTHEAD
 % ---------------------------------------------------------------------
 \briefheader{%
-  \includegraphics[height=0.45in]{logos/eil-logo-maroon.png}%
+  \includegraphics[height=0.45in]{../logos/eil-logo-maroon.png}%
 }{Policy Brief}
 
 % ---------------------------------------------------------------------
