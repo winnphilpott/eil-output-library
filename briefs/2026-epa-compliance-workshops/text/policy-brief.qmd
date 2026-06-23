@@ -1,0 +1,108 @@
+---
+# =====================================================================
+#  Policy brief — one-pager (LaTeX/PDF via Quarto)
+#  Render:  quarto render policy-brief.qmd
+#  Design system: _brief-style.tex (colours, fonts, boxes, macros)
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 10pt
+    geometry:
+      - top=0.40in
+      - bottom=0.32in
+      - left=0.583in
+      - right=0.583in
+    include-in-header: _brief-style.tex
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% MASTHEAD — swap the left arg for: \includegraphics[height=0.5in]{figures/logo.png}
+% ---------------------------------------------------------------------
+\briefheader{%
+  \bfseries\fontsize{11pt}{12pt}\selectfont ENVIRONMENTAL\\ INEQUALITY\\ LAB%
+}{Policy Brief}
+
+% ---------------------------------------------------------------------
+% TITLE + CITATION (thin divider auto-drawn beneath the citation)
+% ---------------------------------------------------------------------
+\brieftitle{EPA compliance workshops don't cut violations like they're supposed to}
+\briefcitation{Ferraro \& Shimshack \textperiodcentered{} Journal of Policy Analysis and Management, 2026}
+
+\vspace{11pt}
+
+% ---------------------------------------------------------------------
+% BOTTOM LINE (bold lead-in, then regular)
+% ---------------------------------------------------------------------
+\begin{bottomline}
+\textbf{Are current Environmental Protection Agency (EPA) regulation enforcement policies actually helping minimize violations? Researchers say no.} A study published this summer shows that compliance assistance (i.e.\ offering free resources to polluting facilities to help them comply with regulations) has little to no effect on reducing violations.
+\end{bottomline}
+
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% BACKGROUND (full width, 12.5px body)
+% ---------------------------------------------------------------------
+\sectionhead{Background}
+\noindent As the country shifts from one administration to the next, so does the EPA's approach to enforcing environmental rules. One camp wants to crack down on polluters through inspections and penalties. The other wants to help them comply, offering free \textbf{compliance assistance}: workshops, consulting, and technical support. Lately, the EPA has been deliberately reducing inspections and penalties in favor of compliance assistance. But that rests on the untested assumption that compliance assistance actually works. Researchers wanted to know if deregulation is a helpful tool, or an ineffective alternative.
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% TWO COLUMNS — WHY COMPLIANCE MATTERS | WHY EVALUATION MATTERS (11px body)
+% ---------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{0.483\linewidth}
+\subhead{Why compliance matters}
+{\colsize Environmental regulations from the EPA have played an important role in delivering clean air and clean water in the United States. However, these regulations are only effective if regulated entities actually comply with them. A central question is therefore not what rules to write, but how to encourage compliance.\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.483\linewidth}
+\subhead{Why evaluation matters}
+{\colsize There is a strong set of evidence supporting the effectiveness of inspections and penalties: they are proven to increase compliance. Comparable evidence for compliance assistance does not exist. Rather than relying on assumptions, the EPA has the data and tools at their disposal to better evaluate and compare their enforcement policies.\par}
+\end{minipage}
+
+\vspace{14pt}
+
+% ---------------------------------------------------------------------
+% PULL QUOTE | FIGURE  (0.82fr / 1.18fr split)
+% ---------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{0.40\linewidth}
+\begin{pullquote}
+At first glance, compliance assistance looked liked it reduced violations for assisted facilities by over 50\%. When measured against facilities that turned down the same help, the program's \quotelink{true effect was a precise zero} --- the decline was already underway and unrelated to the workshops.
+\end{pullquote}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.575\linewidth}
+\figtitle{Fig.\ 1 \textperiodcentered{} Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
+\includegraphics[width=\linewidth]{../figures/fig1.png}
+\end{minipage}
+
+\vspace{16pt}
+
+% ---------------------------------------------------------------------
+% IMPLICATIONS (ruled head) + THREE COLUMNS (11px body)
+% ---------------------------------------------------------------------
+\sectionheadruled{Implications}
+
+\noindent
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{Funding}
+{\colsize Given scarce enforcement resources, programs need to actually work. This study indicates \brieflink{compliance assistance may not be as effective as previously thought}.\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{Alternatives}
+{\colsize The \brieflink{trade-offs of different policies should be weighed as the EPA plans future programs}. Assistance is not proven to be as effective as inspections, though that is not to say they'll never be effective.\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{Oversight}
+{\colsize The EPA does not systematically collect data on compliance assistance activities (GAO, 2020), and \brieflink{this study underscores the need for more deliberate program evaluation}.\par}
+\end{minipage}
+
+% ---------------------------------------------------------------------
+% FOOTER (pinned to bottom)
+% ---------------------------------------------------------------------
+\brieffooter{Method: pre-registered difference-in-differences on monthly facility violation records. Full paper: doi.org/10.1002/pam.70056}
+```
