@@ -10,7 +10,7 @@ Each brief gets its own folder named `YYYY-[topic-slug]` (e.g., `2026-coal-commu
 YYYY-[topic-slug]/
 ├── code/          # analysis and figure scripts (e.g., make-fig1.R)
 ├── data/          # datasets used by the brief or figures
-├── figures/       # figure outputs (e.g., fig1.png)
+├── figures/       # figure outputs (e.g., fig1.png); logos live in formats/logos/
 ├── text/          # source files: .qmd (style pulled from formats/_style.tex)
 └── brief.pdf      # compiled output — rendered from text/, moved here
 ```
