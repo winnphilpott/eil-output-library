@@ -64,7 +64,7 @@ format:
 {\colsize There is a strong set of evidence supporting the effectiveness of inspections and penalties: they are proven to increase compliance. Comparable evidence for compliance assistance does not exist. Rather than relying on assumptions, the EPA has the data and tools at their disposal to better evaluate and compare their enforcement policies.\par}
 \end{minipage}
 
-\vspace{4pt}
+\vspace{12pt}
 
 % ---------------------------------------------------------------------
 % PULL QUOTE | FIGURE  (0.82fr / 1.18fr split)
