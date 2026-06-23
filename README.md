@@ -6,9 +6,15 @@ A shared library of policy brief drafts, style guides, and reusable brief format
 
 ```
 eil-brief-library/
-├── briefs/          # Draft briefs (works-in-progress and completed)
-├── formats/         # Reusable brief templates and structural outlines
-└── style-guides/    # Writing conventions, tone, citation style, formatting rules
+├── briefs/                    # Draft and completed briefs
+│   └── YYYY-[topic-slug]/     # One folder per brief
+│       ├── code/              # Analysis and figure scripts
+│       ├── data/              # Datasets (excluded from git)
+│       ├── figures/           # Figure outputs
+│       ├── text/              # Source files (.qmd, .tex)
+│       └── brief.pdf          # Compiled output
+├── formats/                   # Reusable brief templates
+└── style-guides/              # Writing conventions, tone, citations, formatting
 ```
 
 ## How to Use
