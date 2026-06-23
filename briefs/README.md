@@ -15,6 +15,23 @@ YYYY-[topic-slug]/
 └── brief.pdf      # compiled output — rendered from text/, moved here
 ```
 
+## Rendering a Brief to PDF
+
+PDFs are not committed to the repo — render locally from the source files.
+
+**Requirements:** Quarto and a LaTeX distribution (TinyTeX recommended). If Quarto is bundled with RStudio but not on your PATH, use the full path to the RStudio-bundled binary:
+
+```bash
+# 1. Generate figures (run from the brief's root folder)
+Rscript code/make-fig1.R
+
+# 2. Render the PDF (run from the text/ subfolder)
+cd text/
+/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto render [topic-slug].qmd
+```
+
+The PDF will appear in `text/`. If Quarto is on your system PATH, you can replace the full path above with just `quarto`.
+
 ## Naming Conventions
 
 | File type | Pattern | Example |
