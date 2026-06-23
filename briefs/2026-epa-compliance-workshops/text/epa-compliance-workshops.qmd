@@ -23,7 +23,7 @@ format:
 % MASTHEAD — swap the left arg for: \includegraphics[height=0.5in]{figures/logo.png}
 % ---------------------------------------------------------------------
 \briefheader{%
-  \includegraphics[height=0.45in]{../figures/eil-logo-maroon.png}%
+  \includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}%
 }{Policy Brief}
 
 % ---------------------------------------------------------------------
