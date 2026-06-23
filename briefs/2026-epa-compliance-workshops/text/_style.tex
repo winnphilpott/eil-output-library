@@ -19,7 +19,7 @@
 \definecolor{warmrule}{HTML}{D8D2C2}   % thin warm-grey dividers
 \definecolor{paper}{HTML}{FAF8F1}      % warm page background
 
-\pagecolor{paper}                      % comment out for plain white pages
+% \pagecolor{paper}                    % uncomment for warm off-white background
 
 % ---- Fonts ----------------------------------------------------------
 % Source: Source Sans 3 / Source Serif 4. The CTAN packages below provide
@@ -32,7 +32,7 @@
 % ---- Page -----------------------------------------------------------
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
+\setlength{\parskip}{2pt}
 % default body size/colour (12.5px -> 9.4pt, line-height 1.45)
 \AtBeginDocument{\color{body}\fontsize{9.4pt}{13.6pt}\selectfont}
 
@@ -43,8 +43,10 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
 
-% smaller size used inside the two-/three-column regions (11px -> 8.25pt)
-\newcommand{\colsize}{\color{muted}\fontsize{8.25pt}{11.7pt}\selectfont}
+% column regions — same size as body
+\newcommand{\colsize}{\color{muted}\fontsize{9.4pt}{13.6pt}\selectfont}
+% implications columns — smaller, matches target design
+\newcommand{\impcolsize}{\color{muted}\fontsize{8.25pt}{11.7pt}\selectfont}
 
 % =====================================================================
 %  MACROS
@@ -59,27 +61,27 @@
     \textls[200]{\MakeUppercase{#2}}%
   \end{minipage}
 
-  \vspace{6pt}
+  \vspace{2pt}
   \noindent\textcolor{ink}{\rule{\linewidth}{2.2pt}}
-  \vspace{9pt}
+  \vspace{-3pt}
 }
 
 % --- Title + citation (citation has a thin warm divider beneath) ------
 \newcommand{\brieftitle}[1]{%
-  {\color{ink}\fontsize{18pt}{19.5pt}\selectfont\bfseries\textls[-12]{#1}\par}\vspace{5pt}}
+  {\color{ink}\fontsize{18pt}{19.5pt}\selectfont\bfseries\textls[-12]{#1}\par}\vspace{3pt}}
 \newcommand{\briefcitation}[1]{%
-  {\color{cite}\fontsize{9.4pt}{12pt}\selectfont #1\par}\vspace{6pt}%
+  {\color{cite}\fontsize{9.4pt}{12pt}\selectfont #1\par}\vspace{3pt}%
   \noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}}
 
 % --- Section heads (13px 900 uppercase, ls 0.02em) -------------------
 \newcommand{\sectionhead}[1]{%
-  \vspace{8pt}{\color{ink}\bfseries\fontsize{9.75pt}{12pt}\selectfont
+  \vspace{2pt}{\color{ink}\bfseries\fontsize{9.75pt}{12pt}\selectfont
   \textls[20]{\MakeUppercase{#1}}\par}\vspace{1pt}}
 % with a 2px ink rule beneath (IMPLICATIONS)
 \newcommand{\sectionheadruled}[1]{%
-  \vspace{8pt}{\color{ink}\bfseries\fontsize{9.75pt}{12pt}\selectfont
+  \vspace{5pt}{\color{ink}\bfseries\fontsize{9.75pt}{12pt}\selectfont
   \textls[20]{\MakeUppercase{#1}}\par}%
-  \vspace{4pt}\noindent\textcolor{ink}{\rule{\linewidth}{1.5pt}}\vspace{5pt}}
+  \vspace{3pt}\noindent\textcolor{ink}{\rule{\linewidth}{1.5pt}}\vspace{3pt}}
 
 % --- Sub-heads -------------------------------------------------------
 % small uppercase (11px, ls 0.05em) — WHY COMPLIANCE MATTERS
@@ -88,8 +90,8 @@
   \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
 % 2px ink top rule + title-case bold heading — Funding / Oversight
 \newcommand{\colhead}[1]{%
-  \noindent\textcolor{ink}{\rule{\linewidth}{1.5pt}}\par\vspace{4pt}%
-  {\color{ink}\bfseries\fontsize{9pt}{11pt}\selectfont #1\par}\vspace{2pt}}
+  \noindent\textcolor{ink}{\rule{\linewidth}{1.5pt}}\par\vspace{2pt}%
+  {\color{ink}\bfseries\fontsize{9pt}{11pt}\selectfont #1\par}\vspace{1pt}}
 
 % --- Figure title ----------------------------------------------------
 \newcommand{\figtitle}[2]{%
@@ -114,14 +116,14 @@
 \newtcolorbox{bottomline}{%
   enhanced, arc=4pt, outer arc=4pt, boxrule=0pt,
   colback=boxred, coltext=boxtext,
-  left=15pt, right=15pt, top=12pt, bottom=13pt,
+  left=7pt, right=7pt, top=7pt, bottom=7pt,
   before upper={{\fontsize{7.1pt}{9pt}\selectfont\textls[120]{%
-    \bfseries\textcolor{labeltan}{BOTTOM LINE}}}\par\vspace{6pt}%
+    \bfseries\textcolor{labeltan}{BOTTOM LINE}}}\par\vspace{3pt}%
     \fontsize{9.4pt}{13.6pt}\selectfont}}
 
 % --- Pull-quote box (serif, 13.5px -> 10.1pt, with rose border) ------
 \newtcolorbox{pullquote}{%
   enhanced, arc=4pt, outer arc=4pt, boxrule=0.7pt,
   colback=rosebg, colframe=roseborder, coltext=ink,
-  left=15pt, right=15pt, top=13pt, bottom=14pt,
+  left=7pt, right=7pt, top=7pt, bottom=7pt,
   fontupper={\rmfamily\fontsize{10.1pt}{14.7pt}\selectfont}}

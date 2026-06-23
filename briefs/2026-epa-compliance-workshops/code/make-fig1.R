@@ -11,7 +11,7 @@ library(haven)
 library(dplyr)
 library(ggplot2)
 
-DATA_FILE <- "final_deidentified_dataset_july2025.dta"
+DATA_FILE <- "data/final_deidentified_dataset_july2025.dta"
 DATA_URL  <- "https://osf.io/download/sa56r/"
 OUT_PATH  <- "figures/fig1.png"
 
@@ -89,8 +89,8 @@ p <- ggplot(treated, aes(x = time)) +
   guides(color = guide_legend(nrow = 1), linetype = guide_legend(nrow = 1)) +
   theme_minimal(base_size = 7) +
   theme(
-    plot.background   = element_rect(fill = "#faf8f1", color = NA),
-    panel.background  = element_rect(fill = "#faf8f1", color = NA),
+    plot.background   = element_rect(fill = "#ffffff", color = NA),
+    panel.background  = element_rect(fill = "#ffffff", color = NA),
     panel.grid        = element_blank(),
     axis.line.x       = element_line(color = AXIS, linewidth = 0.4),
     axis.line.y       = element_line(color = AXIS, linewidth = 0.4),
@@ -106,5 +106,5 @@ p <- ggplot(treated, aes(x = time)) +
   )
 
 dir.create("figures", showWarnings = FALSE, recursive = TRUE)
-ggsave(OUT_PATH, p, width = 5.2, height = 2.9, dpi = 220, bg = "#faf8f1")
+ggsave(OUT_PATH, p, width = 5.2, height = 2.9, dpi = 220, bg = "#ffffff")
 message("wrote ", OUT_PATH)
