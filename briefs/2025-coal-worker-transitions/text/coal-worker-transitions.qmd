@@ -24,7 +24,7 @@ format:
 % ---------------------------------------------------------------------
 \briefheader{%
   \includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}%
-}{Policy Brief}
+}{Research Highights}
 
 % ---------------------------------------------------------------------
 % TITLE + CITATION
