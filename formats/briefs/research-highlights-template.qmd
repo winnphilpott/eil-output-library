@@ -35,7 +35,7 @@ format:
 \vspace{3pt}
 
 % ---------------------------------------------------------------------
-% BOTTOM LINE  (~46 words / ~340 chars)
+% BOTTOM LINE  (~50 words)
 % ---------------------------------------------------------------------
 \begin{bottomline}
 \textbf{[One-sentence statement of the core finding in bold.]} [One or two sentences expanding on the finding and its significance.]
@@ -44,7 +44,7 @@ format:
 \vspace{2pt}
 
 % ---------------------------------------------------------------------
-% BACKGROUND  (~88 words / ~600 chars)
+% BACKGROUND  (~90 words)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
 \noindent [Two to three sentences providing context for the research question. What is the policy problem? Why does it matter? What did researchers want to know?]
@@ -52,7 +52,7 @@ format:
 \vspace{4pt}
 
 % ---------------------------------------------------------------------
-% TWO COLUMNS  (~49 words / ~315 chars each)
+% TWO COLUMNS  (~50 words each)
 % ---------------------------------------------------------------------
 \noindent
 \begin{minipage}[t]{0.483\linewidth}
@@ -67,7 +67,7 @@ format:
 \vspace{12pt}
 
 % ---------------------------------------------------------------------
-% PULL QUOTE | FIGURE  (quote: ~45 words / ~290 chars)
+% PULL QUOTE | FIGURE  (quote: ~45 words)
 % ---------------------------------------------------------------------
 \noindent
 \begin{minipage}[t]{0.40\linewidth}
@@ -85,7 +85,7 @@ format:
 \vspace{0pt}
 
 % ---------------------------------------------------------------------
-% IMPLICATIONS  (~22–34 words / ~155–200 chars each)
+% IMPLICATIONS  (~25–35 words each)
 % ---------------------------------------------------------------------
 \sectionhead{Implications}
 
@@ -104,7 +104,7 @@ format:
 \end{minipage}
 
 % ---------------------------------------------------------------------
-% FOOTER  (~11 words / ~125 chars)
+% FOOTER  (~10–15 words)
 % ---------------------------------------------------------------------
 \brieffooter{Method: [One sentence describing the research design.] Full paper: [doi.org/...]}
 ```
