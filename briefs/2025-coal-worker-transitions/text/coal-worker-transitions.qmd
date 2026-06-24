@@ -1,0 +1,110 @@
+---
+# =====================================================================
+#  Policy brief — one-pager (LaTeX/PDF via Quarto)
+#  Render:  quarto render coal-worker-transitions.qmd
+#  Design system: _style.tex (colours, fonts, boxes, macros)
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 10pt
+    geometry:
+      - top=0.32in
+      - bottom=0.32in
+      - left=0.583in
+      - right=0.583in
+    include-in-header: ../../../formats/briefs/_style.tex
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% MASTHEAD
+% ---------------------------------------------------------------------
+\briefheader{%
+  \includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}%
+}{Policy Brief}
+
+% ---------------------------------------------------------------------
+% TITLE + CITATION
+% ---------------------------------------------------------------------
+\brieftitle{Transitional Costs and the Decline of Coal: Worker-Level Evidence}
+\briefcitation{Colmer, Krause, Lyubich \& Voorheis \textperiodcentered{} Working Paper, 2025}
+
+\vspace{3pt}
+
+% ---------------------------------------------------------------------
+% BOTTOM LINE
+% ---------------------------------------------------------------------
+\begin{bottomline}
+\textbf{[Bottom line goes here.]}
+\end{bottomline}
+
+\vspace{2pt}
+
+% ---------------------------------------------------------------------
+% BACKGROUND
+% ---------------------------------------------------------------------
+\sectionhead{Background}
+\noindent [Background text goes here.]
+
+\vspace{4pt}
+
+% ---------------------------------------------------------------------
+% TWO COLUMNS
+% ---------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{0.483\linewidth}
+\subhead{[Left column head]}
+{\colsize [Left column text.]\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.483\linewidth}
+\subhead{[Right column head]}
+{\colsize [Right column text.]\par}
+\end{minipage}
+
+\vspace{12pt}
+
+% ---------------------------------------------------------------------
+% PULL QUOTE | FIGURE
+% ---------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{0.40\linewidth}
+\vspace{0pt}
+\begin{pullquote}
+[Pull quote text goes here.]
+\end{pullquote}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.575\linewidth}
+\vspace{0pt}
+\figtitle{Fig.\ 1 \textperiodcentered{} [Figure title]}{Source: Colmer et al.\ (2025).}
+\includegraphics[width=\linewidth]{../figures/fig1.png}
+\end{minipage}
+
+\vspace{0pt}
+
+% ---------------------------------------------------------------------
+% IMPLICATIONS
+% ---------------------------------------------------------------------
+\sectionhead{Implications}
+
+\noindent
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{[Implication 1]}
+{\impcolsize [Text.]\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{[Implication 2]}
+{\impcolsize [Text.]\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.310\linewidth}
+\colhead{[Implication 3]}
+{\impcolsize [Text.]\par}
+\end{minipage}
+
+% ---------------------------------------------------------------------
+% FOOTER
+% ---------------------------------------------------------------------
+\brieffooter{[Method note and link to full paper.]}
+```
