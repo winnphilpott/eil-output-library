@@ -1,7 +1,7 @@
 ---
 # =====================================================================
 #  Policy brief — one-pager (LaTeX/PDF via Quarto)
-#  Render:  quarto render policy-brief-template.qmd
+#  Render:  quarto render research-highlights-template.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 # =====================================================================
 format:

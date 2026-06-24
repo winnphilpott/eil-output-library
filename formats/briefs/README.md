@@ -6,7 +6,7 @@ Starter templates for EIL policy briefs. Copy a template into a new brief folder
 
 | File | Description |
 |---|---|
-| `policy-brief-template.qmd` | One-page policy brief with bottom line, background, pull quote, figure, and implications sections |
+| `research-highlights-template.qmd` | One-page research highlight with bottom line, background, pull quote, figure, and implications sections |
 
 ## How to Use
 
