@@ -16,7 +16,7 @@ format:
       - right=0.65in
       - includehead
       - headheight=52pt
-      - headsep=10pt
+      - headsep=7pt
       - includefoot
       - footskip=24pt
     include-in-header:
@@ -38,8 +38,9 @@ format:
               \color{warmrule}\rule{\textwidth}{0.7pt}\par\vspace{3pt}%
               \hbox to\textwidth{%
                 \color{faint}\fontsize{7.4pt}{9pt}\selectfont
+                For full paper:\hspace{0.4em}\href{https://doi.org/10.1002/pam.70056}{\color{faint}\underline{\textls[40]{doi.org/10.1002/pam.70056}}}%
                 \hfill
-                \textls[40]{\MakeUppercase{Page \thepage}}%
+                Page \thepage%
               }%
             }%
           }
@@ -52,9 +53,9 @@ format:
 % TITLE + CITATION  (masthead now repeats in the page header)
 % ---------------------------------------------------------------------
 \brieftitle{EPA Compliance Workshops Don't Reduce Violations}
-\briefcitation{Paul J. Ferraro \& Jay P. Shimshack \textperiodcentered{} \textit{Journal of Policy Analysis and Management}, 2026 \textperiodcentered{} \href{https://doi.org/10.1002/pam.70056}{doi.org/10.1002/pam.70056}}
+\briefcitation{Lessons from ``The effect of compliance assistance on pollution discharges and violations of environmental regulations'' by Paul J. Ferraro \& Jay P. Shimshack in \textit{Journal of Policy Analysis and Management}, 2026}
 
-\vspace{3pt}
+\vspace{-2pt}
 
 % override body font size for this document
 \fontsize{10.5pt}{13.5pt}\selectfont
@@ -68,15 +69,15 @@ format:
 }
 \end{bottomline}
 
-\vspace{8pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
 % BACKGROUND
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place --- through free workshops, guidance, and technical support --- on the premise that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. It is cheaper than litigation, less adversarial, and has grown more popular across administrations. Yet whether the help actually changes behavior had rarely been tested. New research puts it to the test, studying an Ohio program that offered free assistance to hundreds of small water-treatment facilities with a recent history of violations.
+\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. Regulators have never settled on a single approach: over the decades, U.S. environmental policy has swung back and forth between the two, depending on the administration. Yet whether the help actually changes behavior had rarely been tested. New research puts it to the test, studying an Ohio program that offered free assistance to hundreds of small water-treatment facilities with a recent history of violations.
 
-\vspace{8pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
 % WHAT THE STUDY FOUND
@@ -88,13 +89,13 @@ format:
 
 \noindent Looking only at violations before and after the program rolled out, it looks like a clear success: violations fell by about half. But that drop had begun \textit{before} the workshops started, and it continued at the same pace afterward, among assisted and unassisted facilities alike. That is the misunderstanding the study corrects: by stripping out that underlying trend, it shows the workshops made no real difference to violations or pollution.
 
-\vspace{8pt}
+\vspace{4pt}
 
 % ---------------------------------------------------------------------
 % FIGURE — centred, stand-alone
 % ---------------------------------------------------------------------
 \begin{center}
-\begin{minipage}{0.70\linewidth}
+\begin{minipage}{0.62\linewidth}
 \figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
 \includegraphics[width=\linewidth]{../figures/fig1-v2.png}
 \end{minipage}
@@ -106,7 +107,7 @@ format:
 % TAKEAWAY
 % ---------------------------------------------------------------------
 \sectionhead{Takeaway}
-\noindent The finding also points to why the workshops fell short. Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case --- extra training and guidance changed little, a sign that their violations had other roots. A program that solves a problem facilities don't actually have was never likely to work.
+\noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case --- extra training and guidance changed little, a sign that their violations had other roots. A program that solves a problem facilities don't actually have was never likely to work.
 
 \vspace{4pt}
 
