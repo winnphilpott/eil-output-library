@@ -14,7 +14,7 @@ format:
       - bottom=0.32in
       - left=0.583in
       - right=0.583in
-    include-in-header: ../../../formats/briefs/_style.tex
+    include-in-header: ../../../formats/research-highlight/_style.tex
     keep-tex: true
 ---
 

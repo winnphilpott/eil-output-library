@@ -1,28 +1,38 @@
 # EIL Output Library
 
-A shared library of policy outputs — briefs, data visualizations, and social media content — developed at the Environmental Inequality Lab (EIL). Designed to make production faster, more consistent, and easier to hand off across projects.
+A shared library of public-facing outputs developed at the Environmental Inequality Lab (EIL). Each paper gets a full communications bundle; shared templates and design assets live in `formats/`.
 
 ## Structure
 
 ```
 eil-output-library/
-├── briefs/                    # Draft and completed policy briefs
-│   └── YYYY-[topic-slug]/     # One folder per brief
-│       ├── code/              # Analysis and figure scripts
+├── papers/                    # One folder per paper, each containing a full output bundle
+│   └── YYYY-[topic-slug]/
+│       ├── code/              # Figure scripts
 │       ├── data/              # Datasets (excluded from git)
-│       ├── figures/           # Figure outputs
-│       └── text/              # Source .qmd (style pulled from formats/briefs/)
+│       ├── figures/           # Figure outputs (shared across outputs)
+│       ├── research-highlight/  # One-page research highlight
+│       ├── press-release/     # Press release
+│       ├── blog/              # Blog post copy and assets
+│       └── social/            # Social media copy and assets
+├── newsletter/                # Newsletter posts (date-based, not tied to a single paper)
+│   └── YYYY-MM-DD/
 ├── data-viz/                  # Standalone data visualizations
-├── social-media/              # Social media content
 ├── formats/                   # Shared design system and templates
 │   ├── logos/                 # Shared logo assets
-│   ├── briefs/                # Brief templates and LaTeX design system
-│   ├── data-viz/              # Data viz themes and templates
-│   └── social-media/          # Social media image templates
+│   ├── research-highlight/    # Research highlight templates and LaTeX design system
+│   ├── press-release/         # Press release templates
+│   ├── blog/                  # Blog post templates
+│   ├── social/                # Social media image templates
+│   ├── newsletter/            # Newsletter templates
+│   └── data-viz/              # Data viz themes and templates
 └── style-guides/              # Writing and design conventions by output type
-    ├── briefs/
-    ├── data-viz/
-    └── social-media/
+    ├── research-highlight/
+    ├── press-release/
+    ├── blog/
+    ├── social/
+    ├── newsletter/
+    └── data-viz/
 ```
 
 ## How to Use

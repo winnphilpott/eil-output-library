@@ -12,7 +12,7 @@
 # 1. Generate figures (from this folder)
 Rscript code/make-fig1.R
 
-# 2. Render PDF (from text/ subfolder)
-cd text/
+# 2. Render PDF (from research-highlight/ subfolder)
+cd research-highlight/
 quarto render coal-worker-transitions.qmd
 ```

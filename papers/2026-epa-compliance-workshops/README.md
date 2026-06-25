@@ -13,7 +13,7 @@ DOI: [10.1002/pam.70056](https://doi.org/10.1002/pam.70056)
 # 1. Generate figure (from this folder)
 Rscript code/make-fig1.R
 
-# 2. Render PDF (from text/ subfolder)
-cd text/
+# 2. Render PDF (from research-highlight/ subfolder)
+cd research-highlight/
 quarto render epa-compliance-workshops.qmd
 ```
