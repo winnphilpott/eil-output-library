@@ -30,7 +30,7 @@ format:
 % TITLE + CITATION (thin divider auto-drawn beneath the citation)
 % ---------------------------------------------------------------------
 \brieftitle{EPA Compliance Workshops Don't Reduce Violations}
-\briefcitation{Paper authored by Paul J. Ferraro \& Jay P. Shimshack \textperiodcentered{} *Journal of Policy Analysis and Management*, (2026)}
+\briefcitation{Paper authored by Paul J. Ferraro \& Jay P. Shimshack \textperiodcentered{} \textit{Journal of Policy Analysis and Management}, (2026)}
 
 \vspace{3pt}
 
@@ -106,5 +106,5 @@ At first glance, compliance assistance looked liked it reduced violations for as
 % ---------------------------------------------------------------------
 % FOOTER (pinned to bottom)
 % ---------------------------------------------------------------------
-\brieffooter{Method: pre-registered difference-in-differences on monthly facility violation records. Full paper: <doi.org/10.1002/pam.70056>}
+\brieffooter{Method: pre-registered difference-in-differences on monthly facility violation records. Full paper: \href{https://doi.org/10.1002/pam.70056}{doi.org/10.1002/pam.70056}}
 ```
