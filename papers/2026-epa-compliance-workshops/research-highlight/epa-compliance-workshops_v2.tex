@@ -5,10 +5,10 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  10pt,
+  11pt,
 ]{article}
 \usepackage{xcolor}
-\usepackage[top=0.32in,bottom=0.32in,left=0.583in,right=0.583in]{geometry}
+\usepackage[top=0.38in,bottom=0.38in,left=0.65in,right=0.65in]{geometry}
 \usepackage{amsmath,amssymb}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
@@ -296,93 +296,68 @@
 
 
 % ---------------------------------------------------------------------
-% MASTHEAD — swap the left arg for: \includegraphics[height=0.5in]{figures/logo.png}
+% MASTHEAD
 % ---------------------------------------------------------------------
 \briefheader{%
   \includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}%
 }{Research Highlight}
 
 % ---------------------------------------------------------------------
-% TITLE + CITATION (thin divider auto-drawn beneath the citation)
+% TITLE + CITATION
 % ---------------------------------------------------------------------
 \brieftitle{EPA Compliance Workshops Don't Reduce Violations}
-\briefcitation{Lessons learned from "The effect of compliance assistance on pollution discharges and violations of environmental regulations" by Paul J. Ferraro \& Jay P. Shimshack published in \textit{Journal of Policy Analysis and Management}, (2026)}
+\briefcitation{Paul J. Ferraro \& Jay P. Shimshack \textperiodcentered{} \textit{Journal of Policy Analysis and Management}, 2026 \textperiodcentered{} \href{https://doi.org/10.1002/pam.70056}{doi.org/10.1002/pam.70056}}
 
-\vspace{3pt}
+\vspace{6pt}
+
+% override body font size for this document
+\fontsize{10.5pt}{14pt}\selectfont
 
 % ---------------------------------------------------------------------
-% BOTTOM LINE (bold lead-in, then regular)
+% BOTTOM LINE
 % ---------------------------------------------------------------------
 \begin{bottomline}
+{\fontsize{11pt}{15pt}\selectfont
 \textbf{Offering polluters free help to follow environmental rules does not make them more likely to follow them.} Researchers studied thousands of facilities that received EPA compliance workshops and found no reduction in violations --- the program looked effective at first glance, but the improvement was a pre-existing trend, not caused by the workshops.
+}
 \end{bottomline}
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% BACKGROUND
+% ---------------------------------------------------------------------
+\sectionhead{Background}
+\noindent When a polluting facility breaks environmental rules, the EPA has two main options: levy a fine, or offer a helping hand. For the past decade, the agency has been quietly shifting from the first to the second --- cutting back on inspections and penalties in favor of free \textbf{compliance assistance}: workshops and consulting designed to help facilities understand and follow the rules. The logic is appealing. But this study asks a question that had never been rigorously tested: does it actually work?
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% FIGURE — centred, stand-alone
+% ---------------------------------------------------------------------
+\begin{center}
+\begin{minipage}{0.72\linewidth}
+\figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
+\includegraphics[width=\linewidth]{../figures/fig1-v2.png}
+\vspace{1pt}
+{\color{muted}\fontsize{7.6pt}{10.5pt}\selectfont\textit{Violations were already falling before the EPA's workshops started --- and kept falling at exactly the same rate afterward. The black line shows what actually happened; the dashed line shows the trend that was already in motion beforehand. The two never separate. If the workshops worked, the black line would have dropped below the dashed one.}\par}
+\end{minipage}
+\end{center}
+
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% TAKEAWAY
+% ---------------------------------------------------------------------
+\sectionhead{Takeaway}
+\noindent Before trading a proven enforcement tool for a newer alternative, \impllink{test whether the alternative actually works}. Inspections and penalties have a strong track record of reducing violations; compliance assistance does not. With EPA enforcement resources under pressure, scaling an unproven program comes at a real cost. The EPA has the data to run this kind of evaluation --- this study is a model for how it should be done, and a reminder that good intentions are not a substitute for evidence.
 
 \vspace{2pt}
 
 % ---------------------------------------------------------------------
-% BACKGROUND (full width, 12.5px body)
+% FOOTER
 % ---------------------------------------------------------------------
-\sectionhead{Background}
-\noindent As the country shifts from one administration to the next, so does the EPA's approach to enforcing environmental rules. Some believe the best way to crack down on polluters is through inspections and penalties. Others want to help them comply, offering free \textbf{compliance assistance}: workshops, consulting, and technical support. Over the past ten years, the EPA has been reducing inspections and penalties in favor of compliance assistance. But that rests on the untested assumption that compliance assistance actually works. Researchers wanted to know if deregulation is a helpful tool, or an ineffective alternative.
-
-\vspace{4pt}
-
-% ---------------------------------------------------------------------
-% TWO COLUMNS — WHY COMPLIANCE MATTERS | WHY EVALUATION MATTERS (11px body)
-% ---------------------------------------------------------------------
-\noindent
-\begin{minipage}[t]{0.483\linewidth}
-\subhead{Why compliance matters}
-{\colsize Environmental regulations from the EPA have played an important role in delivering clean air and clean water in the United States. However, these regulations are only effective if regulated entities comply with them. A central question is therefore not what rules to write, but how to encourage compliance.\par}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.483\linewidth}
-\subhead{Why evaluation matters}
-{\colsize There is a strong set of evidence supporting the effectiveness of inspections and penalties: they are proven to increase compliance. Comparable evidence for compliance assistance does not exist. Rather than relying on assumptions, the EPA has the data and tools at their disposal to better evaluate and compare their enforcement policies.\par}
-\end{minipage}
-
-\vspace{12pt}
-
-% ---------------------------------------------------------------------
-% PULL QUOTE | FIGURE  (0.82fr / 1.18fr split)
-% ---------------------------------------------------------------------
-\noindent
-\begin{minipage}[t]{0.40\linewidth}
-\vspace{0pt}
-\begin{pullquote}
-At first glance, compliance assistance looked liked it reduced violations for assisted facilities by over 50\%. When measured against facilities that turned down the same help, the program's \quotelink{true effect was a precise zero} --- the decline was already underway and unrelated to the workshops.
-\end{pullquote}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.575\linewidth}
-\vspace{0pt}
-\figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
-\includegraphics[width=\linewidth]{../figures/fig1.png}
-\end{minipage}
-
-\vspace{0pt}
-
-% ---------------------------------------------------------------------
-% IMPLICATIONS (ruled head) + THREE COLUMNS (11px body)
-% ---------------------------------------------------------------------
-\sectionhead{Implications}
-
-\noindent
-\begin{minipage}[t]{0.310\linewidth}
-\colhead{Funding}
-{\impcolsize Given scarce funding for the EPA enforcement office, programs need to actually work. This study indicates \impllink{compliance assistance may not be as effective as previously thought}.\par}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.310\linewidth}
-\colhead{Alternatives}
-{\impcolsize The \impllink{trade-offs of different policies should be weighed as the EPA plans future programs}. Assistance is not proven to be as effective as inspections, though that is not to say they'll never be effective.\par}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.310\linewidth}
-\colhead{Oversight}
-{\impcolsize The EPA does not systematically collect data on compliance assistance activities, according to a 2020 report from the Government Accountability Office, and \impllink{this study underscores the need for more deliberate program evaluation}.\par}
-\end{minipage}
-
-% ---------------------------------------------------------------------
-% FOOTER (pinned to bottom)
-% ---------------------------------------------------------------------
-\brieffooter{Method: pre-registered difference-in-differences on monthly facility violation records. Full paper: \href{https://doi.org/10.1002/pam.70056}{doi.org/10.1002/pam.70056}}
+\brieffooter{Method: pre-registered difference-in-differences comparing assisted facilities to those that declined assistance, using monthly facility-level violation records.}
 
 
 

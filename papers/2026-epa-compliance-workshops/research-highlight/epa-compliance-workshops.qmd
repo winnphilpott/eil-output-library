@@ -38,7 +38,7 @@ format:
 % BOTTOM LINE (bold lead-in, then regular)
 % ---------------------------------------------------------------------
 \begin{bottomline}
-\textbf{Are current Environmental Protection Agency (EPA) regulation enforcement policies helping minimize violations?} In the Journal of Policy Analysis and Management, Ferraro and Shimshack (2026) show that compliance assistance (i.e.\ offering informative workshops to polluting facilities to help them comply with regulations) has little to no effect on reducing violations.
+\textbf{Offering polluters free help to follow environmental rules does not make them more likely to follow them.} Researchers studied thousands of facilities that received EPA compliance workshops and found no reduction in violations --- the program looked effective at first glance, but the improvement was a pre-existing trend, not caused by the workshops.
 \end{bottomline}
 
 \vspace{2pt}

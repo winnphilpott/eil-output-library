@@ -1,1 +1,12 @@
 data/
+
+# LaTeX build artifacts (keep .tex and .pdf)
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+
+# Source journal PDFs dropped in a paper folder (kept locally, not committed).
+# Rendered outputs in research-highlight/ subfolders are still tracked.
+papers/*/*.pdf
