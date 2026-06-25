@@ -24,13 +24,13 @@ format:
 % ---------------------------------------------------------------------
 \briefheader{%
   \includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}%
-}{Policy Brief}
+}{Research Highlight}
 
 % ---------------------------------------------------------------------
 % TITLE + CITATION (thin divider auto-drawn beneath the citation)
 % ---------------------------------------------------------------------
 \brieftitle{EPA Compliance Workshops Don't Reduce Violations}
-\briefcitation{Paper authored by Paul J. Ferraro \& Jay P. Shimshack \textperiodcentered{} \textit{Journal of Policy Analysis and Management}, (2026)}
+\briefcitation{Lessons learned from "The effect of compliance assistance on pollution discharges and violations of environmental regulations" by Paul J. Ferraro \& Jay P. Shimshack published in \textit{Journal of Policy Analysis and Management}, (2026)}
 
 \vspace{3pt}
 
