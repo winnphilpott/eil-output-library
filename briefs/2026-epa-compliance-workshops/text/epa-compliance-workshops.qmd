@@ -30,7 +30,7 @@ format:
 % TITLE + CITATION (thin divider auto-drawn beneath the citation)
 % ---------------------------------------------------------------------
 \brieftitle{EPA Compliance Workshops Don't Reduce Violations}
-\briefcitation{Ferraro \& Shimshack \textperiodcentered{} Journal of Policy Analysis and Management, 2026}
+\briefcitation{Paper authored by Paul J. Ferraro \& Jay P. Shimshack \textperiodcentered{} *Journal of Policy Analysis and Management*, (2026)}
 
 \vspace{3pt}
 
@@ -38,7 +38,7 @@ format:
 % BOTTOM LINE (bold lead-in, then regular)
 % ---------------------------------------------------------------------
 \begin{bottomline}
-\textbf{Are current Environmental Protection Agency (EPA) regulation enforcement policies actually helping minimize violations? Researchers say no.} A study published this summer shows that compliance assistance (i.e.\ offering free resources to polluting facilities to help them comply with regulations) has little to no effect on reducing violations.
+\textbf{Are current Environmental Protection Agency (EPA) regulation enforcement policies helping minimize violations?} In the Journal of Policy Analysis and Management, Ferraro and Shimshack (2026) show that compliance assistance (i.e.\ offering informative workshops to polluting facilities to help them comply with regulations) has little to no effect on reducing violations.
 \end{bottomline}
 
 \vspace{2pt}
@@ -47,7 +47,7 @@ format:
 % BACKGROUND (full width, 12.5px body)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent As the country shifts from one administration to the next, so does the EPA's approach to enforcing environmental rules. One camp wants to crack down on polluters through inspections and penalties. The other wants to help them comply, offering free \textbf{compliance assistance}: workshops, consulting, and technical support. Lately, the EPA has been deliberately reducing inspections and penalties in favor of compliance assistance. But that rests on the untested assumption that compliance assistance actually works. Researchers wanted to know if deregulation is a helpful tool, or an ineffective alternative.
+\noindent As the country shifts from one administration to the next, so does the EPA's approach to enforcing environmental rules. Some believe the best way to crack down on polluters is through inspections and penalties. Others want to help them comply, offering free \textbf{compliance assistance}: workshops, consulting, and technical support. Over the past ten years, the EPA has been reducing inspections and penalties in favor of compliance assistance. But that rests on the untested assumption that compliance assistance actually works. Researchers wanted to know if deregulation is a helpful tool, or an ineffective alternative.
 
 \vspace{4pt}
 
@@ -57,7 +57,7 @@ format:
 \noindent
 \begin{minipage}[t]{0.483\linewidth}
 \subhead{Why compliance matters}
-{\colsize Environmental regulations from the EPA have played an important role in delivering clean air and clean water in the United States. However, these regulations are only effective if regulated entities actually comply with them. A central question is therefore not what rules to write, but how to encourage compliance.\par}
+{\colsize Environmental regulations from the EPA have played an important role in delivering clean air and clean water in the United States. However, these regulations are only effective if regulated entities comply with them. A central question is therefore not what rules to write, but how to encourage compliance.\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.483\linewidth}
 \subhead{Why evaluation matters}
@@ -72,13 +72,14 @@ format:
 \noindent
 \begin{minipage}[t]{0.40\linewidth}
 \vspace{0pt}
-\begin{pullquote}
+\begin{pullquote
+\subhead{Figure Inqight}
 At first glance, compliance assistance looked liked it reduced violations for assisted facilities by over 50\%. When measured against facilities that turned down the same help, the program's \quotelink{true effect was a precise zero} --- the decline was already underway and unrelated to the workshops.
 \end{pullquote}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.575\linewidth}
 \vspace{0pt}
-\figtitle{Fig.\ 1 \textperiodcentered{} Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
+\figtitle{Violations per facility, 2014--2019} \textperiodcentered{} {Source: Ferraro \& Shimshack (2026).}
 \includegraphics[width=\linewidth]{../figures/fig1.png}
 \end{minipage}
 
@@ -92,19 +93,19 @@ At first glance, compliance assistance looked liked it reduced violations for as
 \noindent
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{Funding}
-{\impcolsize Given scarce enforcement resources, programs need to actually work. This study indicates \brieflink{compliance assistance may not be as effective as previously thought}.\par}
+{\impcolsize Given scarce funding for the EPA enforcement office, programs need to actually work. This study indicates **compliance assistance may not be as effective as previously thought**.\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{Alternatives}
-{\impcolsize The \brieflink{trade-offs of different policies should be weighed as the EPA plans future programs}. Assistance is not proven to be as effective as inspections, though that is not to say they'll never be effective.\par}
+{\impcolsize The **trade-offs of different policies should be weighed as the EPA plans future programs**. Assistance is not proven to be as effective as inspections, though that is not to say they'll never be effective.\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{Oversight}
-{\impcolsize The EPA does not systematically collect data on compliance assistance activities (GAO, 2020), and \brieflink{this study underscores the need for more deliberate program evaluation}.\par}
+{\impcolsize The EPA does not systematically collect data on compliance assistance activities, according to a 2020 report from the GOvernment Accountability Office, and **this study underscores the need for more deliberate program evaluation**.\par}
 \end{minipage}
 
 % ---------------------------------------------------------------------
 % FOOTER (pinned to bottom)
 % ---------------------------------------------------------------------
-\brieffooter{Method: pre-registered difference-in-differences on monthly facility violation records. Full paper: doi.org/10.1002/pam.70056}
+\brieffooter{Method: pre-registered difference-in-differences on monthly facility violation records. Full paper: <doi.org/10.1002/pam.70056>}
 ```
