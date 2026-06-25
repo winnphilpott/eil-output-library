@@ -101,12 +101,12 @@ p <- ggplot(treated, aes(x = time)) +
     axis.ticks        = element_line(color = AXIS, linewidth = 0.3),
     axis.ticks.length = unit(2, "pt"),
     axis.text         = element_text(color = MUTE, size = 7),
-    axis.title.x      = element_text(color = FAINT, size = 6, margin = margin(t = 4)),
+    axis.title.x      = element_text(color = MUTE, size = 6, margin = margin(t = 4)),
     legend.position   = "bottom",
     legend.margin     = margin(t = -4),
     legend.key.width  = unit(20, "pt"),
     legend.key.height = unit(8, "pt"),
-    legend.text       = element_text(color = MUTE, size = 6.2),
+    legend.text       = element_text(color = INK, size = 6.2),
     legend.key        = element_rect(fill = NA, color = NA),
     legend.spacing.x  = unit(6, "pt")
   )

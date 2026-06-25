@@ -92,15 +92,15 @@ At first glance, compliance assistance looked liked it reduced violations for as
 \noindent
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{Funding}
-{\impcolsize Given scarce funding for the EPA enforcement office, programs need to actually work. This study indicates \brieflink{compliance assistance may not be as effective as previously thought}.\par}
+{\impcolsize Given scarce funding for the EPA enforcement office, programs need to actually work. This study indicates \impllink{compliance assistance may not be as effective as previously thought}.\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{Alternatives}
-{\impcolsize The \brieflink{trade-offs of different policies should be weighed as the EPA plans future programs}. Assistance is not proven to be as effective as inspections, though that is not to say they'll never be effective.\par}
+{\impcolsize The \impllink{trade-offs of different policies should be weighed as the EPA plans future programs}. Assistance is not proven to be as effective as inspections, though that is not to say they'll never be effective.\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{Oversight}
-{\impcolsize The EPA does not systematically collect data on compliance assistance activities, according to a 2020 report from the Government Accountability Office, and \brieflink{this study underscores the need for more deliberate program evaluation}.\par}
+{\impcolsize The EPA does not systematically collect data on compliance assistance activities, according to a 2020 report from the Government Accountability Office, and \impllink{this study underscores the need for more deliberate program evaluation}.\par}
 \end{minipage}
 
 % ---------------------------------------------------------------------

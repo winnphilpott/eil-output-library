@@ -92,15 +92,15 @@ format:
 \noindent
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{[Implication 1]}
-{\impcolsize [Two to three sentences on the first policy implication. Use \brieflink{a linked phrase} to highlight a key takeaway.]\par}
+{\impcolsize [Two to three sentences on the first policy implication. Use \impllink{a linked phrase} to highlight a key takeaway.]\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{[Implication 2]}
-{\impcolsize [Two to three sentences on the second policy implication. Use \brieflink{a linked phrase} to highlight a key takeaway.]\par}
+{\impcolsize [Two to three sentences on the second policy implication. Use \impllink{a linked phrase} to highlight a key takeaway.]\par}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.310\linewidth}
 \colhead{[Implication 3]}
-{\impcolsize [Two to three sentences on the third policy implication. Use \brieflink{a linked phrase} to highlight a key takeaway.]\par}
+{\impcolsize [Two to three sentences on the third policy implication. Use \impllink{a linked phrase} to highlight a key takeaway.]\par}
 \end{minipage}
 
 % ---------------------------------------------------------------------

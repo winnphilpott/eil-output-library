@@ -96,12 +96,14 @@
 
 % --- Figure title ----------------------------------------------------
 \newcommand{\figtitle}[2]{%
-  {\bfseries\color{accentred}\fontsize{7.1pt}{9pt}\selectfont\textls[40]{\MakeUppercase{#1}}}%
-  \ {\color{muted}\fontsize{7.1pt}{9pt}\selectfont #2}\par\vspace{4pt}}
+  {\bfseries\color{accentred}\fontsize{7.1pt}{9pt}\selectfont\textls[40]{\MakeUppercase{#1}}}\par%
+  {\color{muted}\fontsize{7.1pt}{9pt}\selectfont #2}\par\vspace{4pt}}
 
 % --- Inline links (underlined accent red, wraps across lines) --------
 \newcommand{\brieflink}[1]{{\color{accentred}\ul{#1}}}
 \newcommand{\quotelink}[1]{{\bfseries\color{accentred}\ul{#1}}}
+% implications links — bold accent red, no underline
+\newcommand{\impllink}[1]{{\bfseries\color{accentred}#1}}
 
 % --- Footer (warm divider + faint text, pinned to bottom) ------------
 \newcommand{\brieffooter}[1]{%
