@@ -75,7 +75,7 @@ format:
 % BACKGROUND
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. Regulators have never settled on a single approach: over the decades, U.S. environmental policy has swung back and forth between the two, depending on the administration. Yet whether the help actually changes behavior had rarely been tested. New research puts it to the test, studying an Ohio program that offered free assistance to hundreds of small water-treatment facilities with a recent history of violations.
+\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. Regulators have never settled on a single approach: over the decades, U.S. environmental policy has swung back and forth between the two, depending on the administration. Yet \textbf{whether the help actually changes behavior had rarely been tested}. New research puts it to the test, studying an Ohio program that offered free assistance to hundreds of small water-treatment facilities with a recent history of violations.
 
 \vspace{6pt}
 
@@ -83,23 +83,23 @@ format:
 % WHAT THE STUDY FOUND
 % ---------------------------------------------------------------------
 \sectionhead{What the study found}
-\noindent To measure the program's effect, the researchers compared facilities that had received the workshops with otherwise similar facilities that hadn't yet been reached, using the program's gradual roll-out across the state. They tracked both regulatory violations and the actual pollution facilities discharged.
+\noindent Evaluating whether or not the workshops worked takes more than tracking the violations of participating facilities after the workshops. Facilities change over time for all kinds of reasons, so \textbf{the real test is whether those who attended improved more than similar facilities that didn't}. The researchers built in that comparison, measuring attendees against otherwise similar plants that skipped the workshops, including some that were offered the very same free help but chose not to take it. They also looked beyond paperwork violations to the actual pollution the plants released into Ohio's waters.
 
-\vspace{4pt}
-
-\noindent Looking only at violations before and after the program rolled out, it looks like a clear success: violations fell by about half. But that drop had begun \textit{before} the workshops started, and it continued at the same pace afterward, among assisted and unassisted facilities alike. That is the misunderstanding the study corrects: by stripping out that underlying trend, it shows the workshops made no real difference to violations or pollution.
-
-\vspace{4pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
-% FIGURE — centred, stand-alone
+% FIGURE — centred, stand-alone (illustrates the pre-existing decline)
 % ---------------------------------------------------------------------
 \begin{center}
-\begin{minipage}{0.62\linewidth}
+\begin{minipage}{0.80\linewidth}
 \figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
 \includegraphics[width=\linewidth]{../figures/fig1-v2.png}
 \end{minipage}
 \end{center}
+
+\vspace{6pt}
+
+\noindent In the figure, the jagged line is each month's violations per facility, the shaded band marks the years the workshops were delivered, and the dashed line traces the trend across the whole period. Comparing the violations of facilities that attended the EPA workshops before and after, the program looked like a clear win: violations fell by about half. However, facilities that did not attend the workshops improved just as much, and the dashed line shows why: the decline had begun \textit{before} the first workshop was ever held, and it continued at the same steady pace afterward. \textbf{The workshops didn't drive that decline; violations were already falling on their own, whether or not a facility attended.}
 
 \vspace{8pt}
 
@@ -107,10 +107,10 @@ format:
 % TAKEAWAY
 % ---------------------------------------------------------------------
 \sectionhead{Takeaway}
-\noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case --- extra training and guidance changed little, a sign that their violations had other roots. A program that solves a problem facilities don't actually have was never likely to work.
+\noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case --- extra training and guidance changed little, a sign that their violations had other roots. \textbf{A program that solves a problem facilities don't actually have was never likely to work.}
 
 \vspace{4pt}
 
-\noindent The stakes are practical, not academic. Buoyed by the apparent success, the EPA had moved to expand the program to other states, spreading an approach that the evidence here says does not work. Expanding an ineffective program only multiplies its cost: wasted money, pollution that is never curbed, and communities that never see cleaner water. The lesson is not that assistance can never help; this is one program, and small benefits can't be ruled out. The point is that such programs should be rigorously tested before they replace tools already known to work.
+\noindent The stakes are practical, not academic. Buoyed by the apparent success, the EPA had moved to expand the program to other states, spreading an approach that the evidence here says does not work. Expanding an ineffective program only multiplies its cost: wasted money, pollution that is never curbed, and communities that never see cleaner water. The lesson is not that assistance can never help; this is one program, and small benefits can't be ruled out. The point is that \textbf{such programs should be rigorously tested before they replace tools already known to work}.
 
 ```
