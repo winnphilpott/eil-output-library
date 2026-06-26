@@ -65,7 +65,7 @@ format:
 % ---------------------------------------------------------------------
 \begin{bottomline}
 {\fontsize{11pt}{15pt}\selectfont
-\textbf{Offering polluters free help to follow the rules doesn't make them more likely to follow them.} Researchers studied hundreds of Ohio facilities offered free compliance workshops and found no drop in violations. The program looked like a success at first glance --- but that improvement was a trend already underway, not an effect of the workshops.
+\textbf{Offering polluters free help to follow the rules doesn't make them more likely to follow them.} New research studying hundreds of facilities that were offered free compliance workshops found the workshops didn't reduce violations.
 }
 \end{bottomline}
 
@@ -75,7 +75,7 @@ format:
 % BACKGROUND
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. Regulators have never settled on a single approach: over the decades, U.S. environmental policy has swung back and forth between the two, depending on the administration. Yet \textbf{whether the help actually changes behavior had rarely been tested}. New research puts it to the test, studying an Ohio program that offered free assistance to hundreds of small water-treatment facilities with a recent history of violations.
+\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. Regulators have never settled on a single approach: over the decades, U.S. environmental policy has swung back and forth between the two, depending on the administration. Yet \textbf{whether the help actually changes behavior had rarely been tested}. New research studying hundreds of facilities that were offered free compliance workshops found no evidence of a reduction in violations.
 
 \vspace{6pt}
 
