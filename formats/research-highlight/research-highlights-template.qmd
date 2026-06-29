@@ -1,110 +1,133 @@
 ---
 # =====================================================================
-#  Policy brief — one-pager (LaTeX/PDF via Quarto)
+#  Research highlight — one- to two-page PDF (LaTeX/PDF via Quarto)
+#  Canonical layout: see style-guides/research-highlight/README.md
 #  Render:  quarto render research-highlights-template.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
+#  Figure: build with a script in code/ and save to figures/
+#
+#  LENGTH — use the space the paper warrants; pick ONE budget, stay close:
+#    One page  | Background ~120 | Found ~150 + 1 fig | 3 Takeaways ~50 ea
+#    Two pages | Background ~180 | Found ~300 + 1-2 figs | 3-4 Takeaways ~60 ea
+#  Don't shrink the layout to fit, and don't pad to fill a second page.
 # =====================================================================
 format:
   pdf:
     pdf-engine: pdflatex
     documentclass: article
-    fontsize: 10pt
+    fontsize: 11pt
     geometry:
-      - top=0.32in
-      - bottom=0.32in
-      - left=0.583in
-      - right=0.583in
-    include-in-header: ../_style.tex
+      - top=0.4in
+      - bottom=0.45in
+      - left=0.65in
+      - right=0.65in
+      - includehead
+      - headheight=52pt
+      - headsep=7pt
+      - includefoot
+      - footskip=24pt
+    include-in-header:
+      - file: _style.tex
+      - text: |
+          % --- Running masthead + footer (logo, label, rule, page number) ---
+          \usepackage{fancyhdr}
+          \renewcommand{\headrulewidth}{0pt}
+          \renewcommand{\footrulewidth}{0pt}
+          \fancypagestyle{brief}{%
+            \fancyhf{}%
+            \fancyhead[L]{%
+              \begin{minipage}[c]{0.62\textwidth}\raggedright\color{ink}\includegraphics[height=0.45in]{../logos/eil-logo-maroon.png}\end{minipage}\hfill%
+              \begin{minipage}[c]{0.36\textwidth}\raggedleft\fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}\textls[200]{\MakeUppercase{Research Highlight}}\end{minipage}%
+              \par\vspace{2pt}%
+              \noindent\textcolor{ink}{\rule{\textwidth}{2.2pt}}%
+            }%
+            \fancyfoot[C]{%
+              \color{warmrule}\rule{\textwidth}{0.7pt}\par\vspace{3pt}%
+              \hbox to\textwidth{%
+                \color{faint}\fontsize{7.4pt}{9pt}\selectfont
+                For full paper:\hspace{0.4em}\href{https://doi.org/[DOI]}{\color{faint}\underline{\textls[40]{doi.org/[DOI]}}}%
+                \hfill
+                Page \thepage%
+              }%
+            }%
+          }
+          \pagestyle{brief}
+          % Takeaways subheads in the brand maroon (logo / Research Highlight)
+          \renewcommand{\subhead}[1]{%
+            {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
+            \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
     keep-tex: true
 ---
 
 ```{=latex}
 % ---------------------------------------------------------------------
-% MASTHEAD
+% TITLE + CITATION  (masthead repeats in the page header)
 % ---------------------------------------------------------------------
-\briefheader{%
-  \includegraphics[height=0.45in]{../logos/eil-logo-maroon.png}%
-}{Research Highlights}
+\brieftitle{[Title — state the finding as a claim, not a topic]}
+\briefcitation{Lessons from ``[Exact Paper Title]'' by [Authors] in \textit{[Journal]}, [Year].}
+
+\vspace{-2pt}
+
+% override body font size for this document
+\fontsize{10.5pt}{13.5pt}\selectfont
 
 % ---------------------------------------------------------------------
-% TITLE + CITATION
-% ---------------------------------------------------------------------
-\brieftitle{[Title of the brief]}
-\briefcitation{[Author(s)] \textperiodcentered{} [Journal Name], [Year]}
-
-\vspace{3pt}
-
-% ---------------------------------------------------------------------
-% BOTTOM LINE  (~50 words)
+% BOTTOM LINE  (~40–50 words)
 % ---------------------------------------------------------------------
 \begin{bottomline}
-\textbf{[One-sentence statement of the core finding in bold.]} [One or two sentences expanding on the finding and its significance.]
+{\fontsize{11pt}{15pt}\selectfont
+\textbf{[The core finding in one bold sentence.]} [One or two sentences expanding on the finding and why it matters.]
+}
 \end{bottomline}
 
-\vspace{2pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
-% BACKGROUND  (~90 words)
+% BACKGROUND  (~120 words, 2 paragraphs)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent [Two to three sentences providing context for the research question. What is the policy problem? Why does it matter? What did researchers want to know?]
+\noindent [Set up the policy problem. Define any key term on first use in \textbf{bold}, then explain it plainly. Spell out agencies on first mention. End on the open question the study tests.]
 
-\vspace{4pt}
+\noindent [Describe the setting and data in plain language — who was studied, what records the researchers had, and over what period.]
+
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
-% TWO COLUMNS  (~50 words each)
+% WHAT THE STUDY FOUND  (~150 words + figure)
 % ---------------------------------------------------------------------
-\noindent
-\begin{minipage}[t]{0.483\linewidth}
-\subhead{[Column 1 heading]}
-{\colsize [Two to four sentences on the first supporting theme — e.g., why the topic matters, relevant background, prior evidence.]\par}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.483\linewidth}
-\subhead{[Column 2 heading]}
-{\colsize [Two to four sentences on the second supporting theme — e.g., a gap in knowledge, the case for evaluation, or a contrasting perspective.]\par}
+\sectionhead{What the study found}
+% ---------------------------------------------------------------------
+% FIGURE — one figure, centered. Build via a script in code/ -> figures/
+% ---------------------------------------------------------------------
+\begin{center}
+\begin{minipage}{0.82\linewidth}
+\figtitle{[Sentence-style figure title — what the chart shows]}{Source: [Author(s)] ([Year]).}
+\includegraphics[width=\linewidth]{figures/[figure].png}
+\par\vspace{3pt}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} [Plain-language note: how to read the chart and what to conclude from it.]\par}
 \end{minipage}
+\end{center}
 
-\vspace{12pt}
+\vspace{6pt}
 
-% ---------------------------------------------------------------------
-% PULL QUOTE | FIGURE  (quote: ~45 words)
-% ---------------------------------------------------------------------
-\noindent
-\begin{minipage}[t]{0.40\linewidth}
-\vspace{0pt}
-\begin{pullquote}
-[Two to three sentences summarizing the key result in plain language. Include a \quotelink{short highlighted phrase} that captures the headline finding.]
-\end{pullquote}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.575\linewidth}
-\vspace{0pt}
-\figtitle{Fig.\ 1 \textperiodcentered{} [Figure title]}{Source: [Author(s)] ([Year]).}
-\fbox{\parbox[c][2.0in][c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\centering\color{muted}\small [Figure placeholder]}}
-\end{minipage}
+\noindent [Explain why the research design is credible — narrate the comparison, don't name the method. What would the result look like if the policy worked?]
 
-\vspace{0pt}
+\noindent [State the result, pointing the reader to the figure. End with the headline finding in \textbf{bold}.]
+
+\vspace{8pt}
 
 % ---------------------------------------------------------------------
-% IMPLICATIONS  (~25–35 words each)
+% TAKEAWAYS  (3 points, ~50 words each)
 % ---------------------------------------------------------------------
-\sectionhead{Implications}
+\sectionhead{Takeaways}
+\subhead{[Subhead 1]}
+\noindent [First takeaway. Bold the one sentence a skimmer must catch.]
 
-\noindent
-\begin{minipage}[t]{0.310\linewidth}
-\colhead{[Implication 1]}
-{\impcolsize [Two to three sentences on the first policy implication. Use \impllink{a linked phrase} to highlight a key takeaway.]\par}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.310\linewidth}
-\colhead{[Implication 2]}
-{\impcolsize [Two to three sentences on the second policy implication. Use \impllink{a linked phrase} to highlight a key takeaway.]\par}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.310\linewidth}
-\colhead{[Implication 3]}
-{\impcolsize [Two to three sentences on the third policy implication. Use \impllink{a linked phrase} to highlight a key takeaway.]\par}
-\end{minipage}
+\vspace{5pt}
+\subhead{[Subhead 2]}
+\noindent [Second takeaway.]
 
-% ---------------------------------------------------------------------
-% FOOTER  (~10–15 words)
-% ---------------------------------------------------------------------
-\brieffooter{Method: [One sentence describing the research design.] Full paper: [doi.org/...]}
+\vspace{5pt}
+\subhead{[Subhead 3]}
+\noindent [Third takeaway. Acknowledge the honest caveat, then restate the real point.]
 ```
