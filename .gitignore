@@ -1,5 +1,8 @@
 data/
 
+# macOS folder metadata
+.DS_Store
+
 # LaTeX build artifacts (keep .tex and .pdf)
 *.aux
 *.fdb_latexmk
