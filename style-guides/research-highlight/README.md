@@ -7,11 +7,6 @@ translate a single academic paper for a policy audience.
 - **Design system:** `formats/research-highlight/_style.tex` (colors, fonts, boxes, macros)
 - **Starter template:** `formats/research-highlight/research-highlights-template.qmd` (matches this guide)
 
-> **One standard.** The `v4` single-column layout is the canonical pattern. Older
-> highlights that use the two-column body, pull-quote-beside-figure block, and
-> three-column "Implications" row (e.g. `coal-worker-transitions.qmd`) predate this
-> guide and should be migrated to the structure below.
-
 ---
 
 ## 1. Purpose & shape
@@ -62,7 +57,7 @@ so two-page highlights stay branded throughout.
 - **In-text reference:** Author & Author (Year) — "Ferraro & Shimshack (2026)."
 - **Figure source:** `Source: Ferraro & Shimshack (2026).` Use *et al.* for 3+ authors.
 - **Footer link:** `For full paper: doi.org/...` — always a resolvable DOI, underlined,
-  in the faint footer color.
+  in the faint footer color. If source paper is a working paper without a DOI, use an appropriate alternative link. 
 
 ## 4. Figures
 
@@ -98,7 +93,8 @@ so two-page highlights stay branded throughout.
 ## 6. Length budget (target)
 
 Two columns: a tight **one-page** budget, and a looser **two-page** budget for papers that
-need the room. Pick one and stay close to it — don't land between the two.
+need the room. This is the least strict element of the style guide, as long as the text is clear, direct,
+and based on all other conventions in this style guide. 
 
 | Block                 | One page                       | Two pages                          |
 |-----------------------|--------------------------------|------------------------------------|
