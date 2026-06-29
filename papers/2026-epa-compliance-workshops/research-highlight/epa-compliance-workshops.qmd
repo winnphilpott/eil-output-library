@@ -26,6 +26,7 @@ format:
   \includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}%
 }{Research Highlight}
 
+
 % ---------------------------------------------------------------------
 % TITLE + CITATION (thin divider auto-drawn beneath the citation)
 % ---------------------------------------------------------------------

@@ -1,0 +1,119 @@
+---
+# =====================================================================
+#  Research highlight v4 — difference-in-differences / event-study framing
+#  Render:  quarto render epa-compliance-workshops_v4.qmd
+#  Design system: _style.tex (colours, fonts, boxes, macros)
+#  Figure: figures/fig2-did.png (built by code/make-fig2.R)
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 11pt
+    geometry:
+      - top=0.4in
+      - bottom=0.45in
+      - left=0.65in
+      - right=0.65in
+      - includehead
+      - headheight=52pt
+      - headsep=7pt
+      - includefoot
+      - footskip=24pt
+    include-in-header:
+      - file: ../../../formats/research-highlight/_style.tex
+      - text: |
+          % --- Running masthead + footer (logo, label, rule, page number) ---
+          \usepackage{fancyhdr}
+          \renewcommand{\headrulewidth}{0pt}
+          \renewcommand{\footrulewidth}{0pt}
+          \fancypagestyle{brief}{%
+            \fancyhf{}%
+            \fancyhead[L]{%
+              \begin{minipage}[c]{0.62\textwidth}\raggedright\color{ink}\includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}\end{minipage}\hfill%
+              \begin{minipage}[c]{0.36\textwidth}\raggedleft\fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}\textls[200]{\MakeUppercase{Research Highlight}}\end{minipage}%
+              \par\vspace{2pt}%
+              \noindent\textcolor{ink}{\rule{\textwidth}{2.2pt}}%
+            }%
+            \fancyfoot[C]{%
+              \color{warmrule}\rule{\textwidth}{0.7pt}\par\vspace{3pt}%
+              \hbox to\textwidth{%
+                \color{faint}\fontsize{7.4pt}{9pt}\selectfont
+                For full paper:\hspace{0.4em}\href{https://doi.org/10.1002/pam.70056}{\color{faint}\underline{\textls[40]{doi.org/10.1002/pam.70056}}}%
+                \hfill
+                Page \thepage%
+              }%
+            }%
+          }
+          \pagestyle{brief}
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% TITLE + CITATION  (masthead now repeats in the page header)
+% ---------------------------------------------------------------------
+\brieftitle{EPA Compliance Workshops Don't Reduce Violations}
+\briefcitation{Lessons from ``The effect of compliance assistance on pollution discharges and violations of environmental regulations'' by Paul J. Ferraro \& Jay P. Shimshack in \textit{Journal of Policy Analysis and Management}, 2026}
+
+\vspace{-2pt}
+
+% override body font size for this document
+\fontsize{10.5pt}{13.5pt}\selectfont
+
+% ---------------------------------------------------------------------
+% BOTTOM LINE
+% ---------------------------------------------------------------------
+\begin{bottomline}
+{\fontsize{11pt}{15pt}\selectfont
+\textbf{Offering polluters free help to follow the rules doesn't make them more likely to follow them.} New research studying hundreds of facilities that were offered free compliance workshops found the workshops didn't reduce violations.
+}
+\end{bottomline}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% BACKGROUND
+% ---------------------------------------------------------------------
+\sectionhead{Background}
+\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. Regulators have never settled on a single approach: over the decades, U.S. environmental policy has swung back and forth between the two, depending on the administration. Yet \textbf{whether the help actually changes behavior had rarely been tested}. New research studying hundreds of facilities that were offered free compliance workshops found no evidence of a reduction in violations.
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% WHAT THE STUDY FOUND
+% ---------------------------------------------------------------------
+\sectionhead{What the study found}
+\noindent Evaluating whether a policy works is difficult, especially when researchers can't randomly choose who receives it or when. Take these workshops: facilities decided for themselves whether to attend, and the ones that signed up may already have been more motivated to clean up than the ones that didn't. That motivation is nearly impossible to separate from the effect of the training itself, so \textbf{an improvement that follows the workshops is not proof the workshops caused it}. The only way to know is to compare against a credible benchmark: similar facilities that had not yet been trained. The researchers built exactly that comparison, using the fact that the workshops reached different parts of Ohio at different times, so facilities trained early could be measured against equally motivated facilities trained later. They also looked beyond paperwork violations to the actual pollution the plants released into Ohio's waters.
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% FIGURE — event study: effect on violations by month around training
+% ---------------------------------------------------------------------
+\begin{center}
+\begin{minipage}{0.80\linewidth}
+\figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026).}
+\includegraphics[width=\linewidth]{../figures/fig2-did.png}
+\par\vspace{3pt}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} The shaded band is the range of statistical uncertainty around each month's estimated effect. Because it always spans ``no change,'' the workshops had no detectable effect on violations.\par}
+\end{minipage}
+\end{center}
+
+\vspace{6pt}
+
+\noindent The figure shows what they found. \textbf{Trained facilities were no less likely to violate than comparable facilities that had not yet been trained.} The same held for the actual pollution the plants discharged: the workshops left no mark on either.
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% TAKEAWAY
+% ---------------------------------------------------------------------
+\sectionhead{Takeaway}
+\noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case --- extra training and guidance changed little, a sign that their violations had other roots. \textbf{A program that solves a problem facilities don't actually have was never likely to work.}
+
+\vspace{4pt}
+
+\noindent The stakes are practical, not academic. Buoyed by the apparent success, the EPA had moved to expand the program to other states, spreading an approach that the evidence here says does not work. Expanding an ineffective program only multiplies its cost: wasted money, pollution that is never curbed, and communities that never see cleaner water. The lesson is not that assistance can never help; this is one program, and small benefits can't be ruled out. The point is that \textbf{such programs should be rigorously tested before they replace tools already known to work}.
+
+```
