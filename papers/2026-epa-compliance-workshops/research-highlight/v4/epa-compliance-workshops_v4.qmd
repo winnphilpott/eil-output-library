@@ -76,7 +76,7 @@ format:
 % BACKGROUND
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations, especially at smaller operations, stem from confusion or limited expertise rather than deliberate corner-cutting. Regulators have never settled on a single approach: over the decades, U.S. environmental policy has swung back and forth between the two, depending on the administration. Yet \textbf{whether the help actually changes behavior had rarely been tested}. New research studying hundreds of facilities that were offered free compliance workshops found no evidence of a reduction in violations.
+\noindent Environmental enforcement has long centered on penalties: inspect facilities, catch violations, and levy fines. \textbf{Compliance assistance} takes a different approach. Rather than punishing facilities that break the rules, regulators help them follow the rules in the first place, through free workshops, guidance, and technical support. The premise is that many violations stem from confusion or limited expertise rather than deliberate corner-cutting. Over the decades, U.S. environmental policy has typically prioritized one approach over the other, swinging between the two depending on the administration. Over the past ten years, compliance assistance has become the preferred method. Yet \textbf{whether the help actually changes behavior had rarely been tested}.
 
 \vspace{6pt}
 
@@ -109,7 +109,7 @@ format:
 % ---------------------------------------------------------------------
 % TAKEAWAY
 % ---------------------------------------------------------------------
-\sectionhead{Takeaway}
+\sectionhead{Takeaways}
 \noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case --- extra training and guidance changed little, a sign that their violations had other roots. \textbf{A program that solves a problem facilities don't actually have was never likely to work.}
 
 \vspace{4pt}
