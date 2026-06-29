@@ -46,6 +46,10 @@ format:
             }%
           }
           \pagestyle{brief}
+          % Takeaways subheads in the brand maroon (logo / Research Highlight)
+          \renewcommand{\subhead}[1]{%
+            {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
+            \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
     keep-tex: true
 ---
 
@@ -100,9 +104,9 @@ format:
 
 \vspace{6pt}
 
-\noindent Evaluating whether a policy works is difficult when researchers can't randomly choose who receives it or when. For the EPA compliance workshops, facilities decided for themselves whether to attend, and the ones that signed up may already have been more motivated to reduce violations than the ones that didn't. That motivation is nearly impossible to separate from the effect of the training itself, so \textbf{an improvement that follows the workshops is not necessarily proof the workshops caused it}. The only way to know is to compare against a credible benchmark: similar facilities that signed up but had not yet been trained. Because the workshops reached different facilities at different times, the researchers could measure facilities trained early against equally motivated ones trained later.
+\noindent Evaluating whether a policy works is difficult when researchers can't randomly choose who receives it or when. For the EPA compliance workshops, facilities decided for themselves whether to attend, and the ones that signed up may already have been more motivated to reduce violations than the ones that didn't. That motivation is nearly impossible to separate from the effect of the training itself, so an improvement that follows the workshops is not necessarily proof the workshops caused it. The only way to know is to compare against a credible benchmark: similar facilities that signed up but had not yet been trained. Because the workshops reached different facilities at different times, the researchers could measure facilities trained early against equally motivated ones trained later.
 
-\noindent If the workshops changed behavior, it should show up as a turning point: right after training, violations at trained facilities should fall relative to facilities not yet trained. The figure tracks exactly that, month by month around the workshop. Instead of bending at the moment of training, the line stays flat at zero. \textbf{Trained facilities were no less likely to violate than comparable facilities that had not yet been trained.}
+\noindent If the workshops changed behavior, violations at trained facilities should fall relative to facilities not yet trained. The figure tracks exactly that, month by month around the workshop. Instead of bending at the moment of training, the line stays flat at zero. \textbf{Trained facilities were no less likely to violate than comparable facilities that had not yet been trained.}
 
 \vspace{8pt}
 
@@ -110,10 +114,15 @@ format:
 % TAKEAWAY
 % ---------------------------------------------------------------------
 \sectionhead{Takeaways}
+\subhead{The wrong diagnosis}
 \noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case --- extra training and guidance changed little, a sign that their violations had other roots. \textbf{A program that solves a problem facilities don't actually have was never likely to work.}
 
-\vspace{4pt}
+\vspace{5pt}
+\subhead{A misleading success}
+\noindent Before this study, the EPA's own numbers seemed to tell a success story, with a comparison of violations before and after the workshops showing them dropping by more than 50\%. But that comparison was misleading, because \textbf{the same decline was happening at facilities that hadn't been trained at all}. What looked like the effect of the workshops was really just a broader downward trend, and without a credible benchmark to separate the two, it was easy to mistake one for the other.
 
-\noindent The stakes are practical, not academic. Buoyed by the apparent success, the EPA had moved to expand the program to other states, spreading an approach that the evidence here says does not work. Expanding an ineffective program only multiplies its cost: wasted money, pollution that is never curbed, and communities that never see cleaner water. The lesson is not that assistance can never help; this is one program, and small benefits can't be ruled out. The point is that \textbf{such programs should be rigorously tested before they replace tools already known to work}.
+\vspace{5pt}
+\subhead{What's at stake}
+\noindent The stakes are practical, not academic. Buoyed by that apparent success, the EPA has moved to expand the program to other states. Scaling a program that doesn't work only wastes more public money and leaves more pollution unaddressed. The lesson is not that assistance can never help; this is one program, and small benefits can't be ruled out. The point is that \textbf{such programs should be rigorously tested before they replace tools already known to work}.
 
 ```
