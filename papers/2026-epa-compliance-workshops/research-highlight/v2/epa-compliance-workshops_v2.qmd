@@ -14,7 +14,7 @@ format:
       - bottom=0.38in
       - left=0.65in
       - right=0.65in
-    include-in-header: ../../../formats/research-highlight/_style.tex
+    include-in-header: ../../../../formats/research-highlight/_style.tex
     keep-tex: true
 ---
 
@@ -23,7 +23,7 @@ format:
 % MASTHEAD
 % ---------------------------------------------------------------------
 \briefheader{%
-  \includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}%
+  \includegraphics[height=0.45in]{../../../../formats/logos/eil-logo-maroon.png}%
 }{Research Highlight}
 
 % ---------------------------------------------------------------------
@@ -62,7 +62,7 @@ format:
 \begin{center}
 \begin{minipage}{0.72\linewidth}
 \figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
-\includegraphics[width=\linewidth]{../figures/fig1-v2.png}
+\includegraphics[width=\linewidth]{../../figures/fig1-v2.png}
 \vspace{1pt}
 {\color{muted}\fontsize{7.6pt}{10.5pt}\selectfont\textit{Violations were already falling before the EPA's workshops started --- and kept falling at exactly the same rate afterward. The black line shows what actually happened; the dashed line shows the trend that was already in motion beforehand. The two never separate. If the workshops worked, the black line would have dropped below the dashed one.}\par}
 \end{minipage}

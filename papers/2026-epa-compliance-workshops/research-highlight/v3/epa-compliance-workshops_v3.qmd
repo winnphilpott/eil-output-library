@@ -20,7 +20,7 @@ format:
       - includefoot
       - footskip=24pt
     include-in-header:
-      - file: ../../../formats/research-highlight/_style.tex
+      - file: ../../../../formats/research-highlight/_style.tex
       - text: |
           % --- Running masthead + footer (logo, label, rule, page number) ---
           \usepackage{fancyhdr}
@@ -29,7 +29,7 @@ format:
           \fancypagestyle{brief}{%
             \fancyhf{}%
             \fancyhead[L]{%
-              \begin{minipage}[c]{0.62\textwidth}\raggedright\color{ink}\includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}\end{minipage}\hfill%
+              \begin{minipage}[c]{0.62\textwidth}\raggedright\color{ink}\includegraphics[height=0.45in]{../../../../formats/logos/eil-logo-maroon.png}\end{minipage}\hfill%
               \begin{minipage}[c]{0.36\textwidth}\raggedleft\fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}\textls[200]{\MakeUppercase{Research Highlight}}\end{minipage}%
               \par\vspace{2pt}%
               \noindent\textcolor{ink}{\rule{\textwidth}{2.2pt}}%
@@ -93,7 +93,7 @@ format:
 \begin{center}
 \begin{minipage}{0.80\linewidth}
 \figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
-\includegraphics[width=\linewidth]{../figures/fig1-v2.png}
+\includegraphics[width=\linewidth]{../../figures/fig1-v2.png}
 \end{minipage}
 \end{center}
 
