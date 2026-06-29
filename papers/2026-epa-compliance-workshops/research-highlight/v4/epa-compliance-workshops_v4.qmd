@@ -104,9 +104,9 @@ format:
 
 \vspace{6pt}
 
-\noindent Evaluating whether a policy works is difficult when researchers can't randomly choose who receives it or when. For the EPA compliance workshops, facilities decided for themselves whether to attend, and the ones that signed up may already have been more motivated to reduce violations than the ones that didn't. That motivation is nearly impossible to separate from the effect of the training itself, so an improvement that follows the workshops is not necessarily proof the workshops caused it. The only way to know is to compare against a credible benchmark: similar facilities that signed up but had not yet been trained. Because the workshops reached different facilities at different times, the researchers could measure facilities trained early against equally motivated ones trained later.
+\noindent Evaluating whether a policy works is difficult when researchers can't randomly choose who receives it or when. For the EPA compliance workshops, facilities decided for themselves whether to attend, and the ones that signed up may already have been more motivated to reduce violations than the ones that didn't. That motivation is nearly impossible to separate from the effect of the training itself, so an improvement that follows the workshops is not necessarily proof the workshops caused it. The only way to know is to compare against a credible benchmark: similar facilities that signed up but had not yet been trained. Since the workshops reached different facilities at different times, the researchers could measure facilities trained early against equally motivated ones trained later.
 
-\noindent If the workshops changed behavior, violations at trained facilities should fall relative to facilities not yet trained. The figure tracks exactly that, month by month around the workshop. Instead of bending at the moment of training, the line stays flat at zero. \textbf{Trained facilities were no less likely to violate than comparable facilities that had not yet been trained.}
+\noindent If the workshops changed behavior, violations at trained facilities should have fallen relative to facilities not yet trained. The figure tracks exactly that, month by month around the workshop. Instead of bending at the moment of training, the line stays flat at zero. \textbf{Trained facilities were no less likely to violate than comparable facilities that had not yet been trained.}
 
 \vspace{8pt}
 
@@ -123,6 +123,6 @@ format:
 
 \vspace{5pt}
 \subhead{What's at stake}
-\noindent The stakes are practical, not academic. Buoyed by that apparent success, the EPA has moved to expand the program to other states. Scaling a program that doesn't work only wastes more public money and leaves more pollution unaddressed. The lesson is not that assistance can never help; this is one program, and small benefits can't be ruled out. The point is that \textbf{such programs should be rigorously tested before they replace tools already known to work}.
+\noindent Buoyed by that apparent success, the EPA has moved to expand the program to other states. Scaling a program with little measurable effect commits more public funding without delivering the reduction in pollution it was meant to achieve. The lesson is not that assistance can never help; this is one program, and small benefits can't be ruled out. The point is that \textbf{such programs should be rigorously tested before they replace tools already known to work}.
 
 ```
