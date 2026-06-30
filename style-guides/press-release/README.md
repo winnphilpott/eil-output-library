@@ -82,6 +82,9 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
 ## 5. Formatting & mechanics
 
 - **One page** unless the story genuinely needs more. Short paragraphs (2–4 sentences).
+- **Body type is 11/15pt** — set once after the masthead, overriding the shared
+  `_style.tex` 9.4pt default. A release is sparse, so it reads larger than a research
+  highlight. The release line, contact, boilerplate, and footer keep their own smaller sizes.
 - **Release line in caps**, top-left. Embargo line in caps when used.
 - **Dateline** in AP form: `CITY, State —` (city in caps, state spelled or AP-abbreviated).
 - **`###`** centered to mark the end, before boilerplate.

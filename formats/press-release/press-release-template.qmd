@@ -37,6 +37,9 @@ format:
 
 \vspace{6pt}
 
+% Body type for the release (overrides the _style.tex 9.4pt default)
+\fontsize{11pt}{15pt}\selectfont
+
 % ---------------------------------------------------------------------
 % RELEASE LINE + MEDIA CONTACT
 % Use the embargo form instead when coordinating with a journal:
