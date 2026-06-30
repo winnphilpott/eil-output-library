@@ -103,4 +103,4 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
 | Lead             | 2–3 sentences (~50 words)               |
 | Body             | 2–4 paragraphs (~250–350 words total)   |
 | Quotes *(optional)* | 0–3, ~30–50 words each               |
-| Boilerplate      | ~50–75 words, reusable                  |
+| Boilerplate      | ~25–40 words (one sentence), reusable    |

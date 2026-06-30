@@ -48,7 +48,7 @@ format:
 \noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}\par}
 \vspace{2pt}
 \noindent{\color{muted}\fontsize{8.25pt}{11pt}\selectfont
-\textbf{Media contact:} [Full Name] · [email] · [phone]\par}
+For questions, interviews, or other media inquiries, contact [Full Name] at [email] or [phone].\par}
 
 \vspace{10pt}
 
@@ -113,10 +113,10 @@ format:
 \vspace{4pt}
 
 % ---------------------------------------------------------------------
-% BOILERPLATE  (reusable ~50-75 words; keep identical across releases)
+% BOILERPLATE  (reusable; keep identical across releases)
 % ---------------------------------------------------------------------
 \noindent{\color{muted}\fontsize{8.25pt}{11.5pt}\selectfont
-{\bfseries About the Environmental Inequality Lab (EIL).} [One reusable paragraph describing EIL's mission and work. Use the same approved text on every release.]\par}
+{\bfseries About the Environmental Inequality Lab (EIL).} The Environmental Inequality Lab is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par}
 
 \vspace{6pt}
 
