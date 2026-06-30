@@ -67,13 +67,13 @@ format:
 \noindent The study, ``The effect of compliance assistance on pollution discharges and violations of environmental regulations,'' by Paul J. Ferraro and Jay P. Shimshack, examined a program built on a simple premise: that many facilities break environmental rules out of confusion or limited expertise rather than deliberate corner-cutting. Over the past decade, this ``compliance assistance'' approach --- free workshops, guidance, and technical support --- has become the EPA's preferred alternative to inspections and fines.
 
 \vspace{6pt}
-\noindent To test whether the help actually changed behavior, the researchers used detailed Ohio EPA records of violations and pollution discharges at facilities that had recently been cited and had volunteered to attend. Because the workshops reached different facilities at different times, the researchers could compare facilities trained early against equally motivated facilities not yet trained. Measured against that benchmark, violations at trained facilities did not fall.
+\noindent To test whether the help actually changed behavior, the researchers used detailed Ohio EPA records of violations and pollution discharges at facilities that had recently been cited and had volunteered to attend. Since the workshops reached different facilities at different times, the researchers could compare facilities trained earlier with comparable facilities that had also volunteered but were not yet trained. Measured against that benchmark, violations at trained facilities did not fall.
 
 \vspace{6pt}
 \noindent The result is notable because the program had appeared to work: the EPA's own before-and-after figures showed violations dropping by more than 50 percent after the workshops. But the same decline was occurring at facilities that had not been trained at all --- a broad downward trend that was easy to mistake for the effect of the workshops themselves.
 
 \vspace{6pt}
-\noindent Encouraged by that apparent success, the EPA has moved to expand the program to other states. The authors caution that the finding does not mean compliance assistance can never help --- this is one program, and small benefits cannot be ruled out. The broader lesson, they note, is that such programs should be rigorously tested before they replace enforcement tools already known to work.
+\noindent Encouraged by that apparent success, the EPA has moved to expand the program to other states --- committing public funding to an approach with no measurable effect on pollution. This is not to say that assistance can never help; it's one program, and small benefits cannot be ruled out. The broader lesson, they note, is that such programs should be rigorously tested before they replace enforcement tools already known to work.
 
 \vspace{10pt}
 
