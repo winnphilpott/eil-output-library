@@ -47,7 +47,7 @@ never hand-pick new hex values.
 | Token       | Hex       | Use in a figure                                  |
 |-------------|-----------|--------------------------------------------------|
 | `ink`       | `#1D2620` | Data marks — points, lines; y-axis value labels  |
-| `accentred` | `#641111` | The one emphasis colour: reference line, the "after"/treated side |
+| `accentred` | `#641111` | The one emphasis color: reference line, the "after"/treated side |
 | `muted`     | `#50534A` | Annotations, axis text, source line              |
 | `cite`      | `#6E6D61` | Secondary annotation                             |
 | `faint`     | `#9A978A` | Least-prominent text                             |
@@ -57,7 +57,7 @@ never hand-pick new hex values.
 | `paper`     | `#FAF8F1` | Use as background only to blend into a warm page |
 | `canvas`    | `#FFFFFF` | Default figure background                        |
 
-**One emphasis colour.** `accentred` marks the single thing the reader should look
+**One emphasis color.** `accentred` marks the single thing the reader should look
 at. If everything is red, nothing is. Keep categorical encodings to grayscale
 (`ink` / `muted` / `faint`) plus that one red.
 
@@ -106,9 +106,9 @@ at. If everything is red, nothing is. Keep categorical encodings to grayscale
 
 - [ ] Does the figure make **one** clear point?
 - [ ] Could a non-specialist read the axes **without a key**?
-- [ ] Is there exactly **one** emphasis colour (`accentred`)?
+- [ ] Is there exactly **one** emphasis color (`accented`)?
 - [ ] Gridlines, y-ticks, and chart junk removed?
 - [ ] Uncertainty shown as a soft band, explained once in words?
 - [ ] Do the data marks read as the darkest element?
 - [ ] Is the interpretation in the document, not baked into the plot?
-- [ ] Colours pulled from `eil_pal`, exported via `eil_save()` at ≥ 200 dpi?
+- [ ] Colors pulled from `eil_pal`, exported via `eil_save()` at ≥ 200 dpi?
