@@ -9,10 +9,17 @@
 ## Reproducing the Brief
 
 ```bash
-# 1. Generate figures (from this folder)
+# Both steps run from the research-highlight/ subfolder
+cd research-highlight/
+
+# 1. Generate the figure (recreates the paper's Fig. 7a -> figures/fig1.png)
 Rscript code/make-fig1.R
 
-# 2. Render PDF (from research-highlight/ subfolder)
-cd research-highlight/
+# 2. Render the PDF
 quarto render coal-worker-transitions_research-highlight.qmd
 ```
+
+> **Figure note:** `code/make-fig1.R` recreates Figure 7(a) (cumulative
+> earnings of coal-exposed workers). The point estimates are digitized from the
+> published figure — we don't hold the restricted Census/IRS microdata — and
+> cross-checked against the paper's text (1.6× a year's pay lost by 2019).

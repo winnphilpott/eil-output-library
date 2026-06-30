@@ -63,7 +63,7 @@ format:
 % ---------------------------------------------------------------------
 % TITLE + CITATION  (masthead repeats in the page header)
 % ---------------------------------------------------------------------
-\brieftitle{Transitional Costs and the Decline of Coal: Worker-Level Evidence}
+\brieftitle{Coal's Decline Imposed Large, Lasting Costs on Its Workers}
 \briefcitation{Lessons from ``Transitional Costs and the Decline of Coal: Worker-Level Evidence'' by Jonathan Colmer, Eleanor Krause, Eva Lyubich \& John Voorheis, Working Paper, 2025.}
 
 \vspace{-2pt}
@@ -76,7 +76,7 @@ format:
 % ---------------------------------------------------------------------
 \begin{bottomline}
 {\fontsize{11pt}{15pt}\selectfont
-\textbf{[The core finding in one bold sentence.]} [One or two sentences expanding on the finding and why it matters.]
+\textbf{When the U.S. coal industry shrank by half, the workers it left behind never caught back up.} The most coal-dependent workers lost more than a full year's earnings over the following decade --- and neither switching industries nor moving to a new region did much to soften the blow.
 }
 \end{bottomline}
 
@@ -86,9 +86,9 @@ format:
 % BACKGROUND  (~120 words, 2 paragraphs)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent [Set up the policy problem. Define any key term on first use in \textbf{bold}, then explain it plainly. Spell out agencies on first mention. End on the open question the study tests.]
+\noindent After peaking in 2011, U.S. coal mining employment fell by more than half within a decade, as cheap natural gas from the fracking boom and falling wind and solar costs pushed coal out of the power sector. (Environmental regulation, often blamed, played only a minor role.) Earlier research shows that coal \textit{communities} lost jobs, wages, and tax revenue. But aggregate numbers hide how individual workers fared: some may have moved on quickly to new jobs, while others may have borne heavy \textbf{transitional costs} --- the lasting earnings and employment losses workers absorb when an industry contracts. Which pattern held for coal had never been measured at the worker level.
 
-\noindent [Describe the setting and data in plain language — who was studied, what records the researchers had, and over what period.]
+\noindent To find out, researchers assembled administrative records covering nearly every person who worked in U.S. coal mining between 2005 and 2021 --- linked tax filings, residential histories, and survey data from the U.S. Census Bureau and Internal Revenue Service (IRS). This let them follow each worker's earnings, employment, and location year by year, including the years spent outside coal or out of work entirely, and compare them with otherwise similar workers less exposed to coal's decline.
 
 \vspace{6pt}
 
@@ -97,22 +97,22 @@ format:
 % ---------------------------------------------------------------------
 \sectionhead{What the study found}
 % ---------------------------------------------------------------------
-% FIGURE — one figure, centered. Build via a script in code/ -> figures/
+% FIGURE — recreation of the paper's Fig. 7(a); built by code/make-fig1.R
 % ---------------------------------------------------------------------
 \begin{center}
 \begin{minipage}{0.82\linewidth}
-\figtitle{[Sentence-style figure title — what the chart shows]}{Source: Colmer et al.\ (2025).}
+\figtitle{Coal workers' earnings fell further behind comparable workers every year}{Source: recreated from Colmer et al.\ (2025), Fig.\ 7a.}
 \includegraphics[width=\linewidth]{figures/fig1.png}
 \par\vspace{3pt}
-{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} [Plain-language note: how to read the chart and what to conclude from it.]\par}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point is the cumulative earnings gap between the most coal-exposed workers and otherwise similar less-exposed workers, measured in years of pre-decline pay. The two groups track together until coal's 2011 peak, then steadily diverge --- by 2019 the gap reaches 1.6 years' worth of earnings. Values digitized from the published figure.\par}
 \end{minipage}
 \end{center}
 
 \vspace{6pt}
 
-\noindent [Explain why the research design is credible — narrate the comparison, don't name the method. What would the result look like if the policy worked?]
+\noindent Measuring the damage means separating coal's decline from everything else shaping a worker's career. The researchers compared workers who looked alike before 2011 --- similar age, education, earnings, and location --- but who differed in how tightly their jobs were bound to coal. Because the collapse in coal demand was driven by national energy prices rather than any one worker's choices, the more-exposed group offers a clean picture of what coal's decline cost. If that decline hadn't mattered, the two groups' fortunes should have moved together.
 
-\noindent [State the result, pointing the reader to the figure. End with the headline finding in \textbf{bold}.]
+\noindent They didn't. Between 2012 and 2019, the most-exposed workers lost cumulative earnings equal to roughly 1.6 times a full pre-shock year of pay. The losses came through two channels at once: workers spent about a third of a year longer out of work, and earned 17 percent less in the years they did work. \textbf{A decade on, coal's decline had carved a deep and persistent hole in workers' earnings.}
 
 \vspace{8pt}
 
@@ -120,14 +120,14 @@ format:
 % TAKEAWAYS  (3 points, ~50 words each)
 % ---------------------------------------------------------------------
 \sectionhead{Takeaways}
-\subhead{[Subhead 1]}
-\noindent [First takeaway. Bold the one sentence a skimmer must catch.]
+\subhead{Nowhere to go}
+\noindent Workers couldn't simply move or retrain their way out. Those who left coal earned about 30 percent less, and relocating to a new labor market barely helped. Unlike displaced manufacturing or trade-shock workers, many coal workers stopped working altogether --- \textbf{a sign their skills didn't transfer to the jobs around them}.
 
 \vspace{5pt}
-\subhead{[Subhead 2]}
-\noindent [Second takeaway.]
+\subhead{Falling back on disability}
+\noindent As earnings fell, exposed workers leaned on government transfers --- especially Social Security Disability Insurance (SSDI) --- and drew down retirement savings earlier. These payments cushioned the blow but \textbf{replaced only a fraction of what workers lost}, a second-best safety net standing in for the jobs and wages that disappeared.
 
 \vspace{5pt}
-\subhead{[Subhead 3]}
-\noindent [Third takeaway. Acknowledge the honest caveat, then restate the real point.]
+\subhead{A preview of the energy transition}
+\noindent Coal's decline is an early look at what shrinking demand for fossil fuels could mean for workers in concentrated, high-wage industries. The honest caveat: this is one industry, and coal's geography is unusually isolating. But the lesson holds --- \textbf{where specialized skills don't transfer, the costs of an energy transition land hard on workers, and existing safety nets catch only part of the fall}.
 ```
