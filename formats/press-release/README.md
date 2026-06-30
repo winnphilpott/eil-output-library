@@ -10,7 +10,7 @@ Starter templates for EIL press releases. Copy a template into a new paper's `pr
 
 ## How to Use
 
-1. Copy the template into your new paper's `press-release/` folder and rename it to `[topic-slug].qmd`
+1. Copy the template into your new paper's `press-release/` folder and rename it to `[topic-slug]_press-release.qmd`
 2. Update `include-in-header` in the YAML to point to `../../../formats/research-highlight/_style.tex` (the shared design system)
 3. Update the logo path to `../../../formats/logos/eil-logo-maroon.png` (or white version)
 4. Fill in all `[placeholder]` text with your content

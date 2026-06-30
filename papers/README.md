@@ -30,7 +30,7 @@ Rscript code/make-fig1.R
 
 # 2. Render the PDF (run from the research-highlight/ subfolder)
 cd research-highlight/
-/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto render [topic-slug].qmd
+/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto render [topic-slug]_research-highlight.qmd
 ```
 
 The PDF will appear in `research-highlight/`. If Quarto is on your system PATH, you can replace the full path above with just `quarto`.
@@ -40,7 +40,10 @@ The PDF will appear in `research-highlight/`. If Quarto is on your system PATH, 
 | File type | Pattern | Example |
 |---|---|---|
 | Paper folder | `YYYY-[topic-slug]` | `2026-epa-compliance-workshops` |
-| Research highlight source | `[topic-slug].qmd` | `epa-compliance-workshops.qmd` |
+| Research highlight source | `[topic-slug]_research-highlight.qmd` | `epa-compliance-workshops_research-highlight.qmd` |
+| Press release source | `[topic-slug]_press-release.qmd` | `epa-compliance-workshops_press-release.qmd` |
 | Data files | `YYYY-[description].[ext]` | `2025-deidentified-survey.dta` |
 | Figures | `fig[N]-[description].png` | `fig1-violations-per-facility.png` |
 | Figure scripts | `make-fig[N]-[description].[ext]` | `make-fig1-violations.R` |
+
+**Output sources carry their type in the filename** (`_research-highlight`, `_press-release`, etc.). A paper's research highlight and press release share a topic slug and could otherwise produce identically named files; encoding the output type keeps both the source and the rendered PDF self-describing even when pulled out of their folder. Add a version suffix (`_v4`) when keeping numbered drafts.

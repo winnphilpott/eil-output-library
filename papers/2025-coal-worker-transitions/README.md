@@ -14,5 +14,5 @@ Rscript code/make-fig1.R
 
 # 2. Render PDF (from research-highlight/ subfolder)
 cd research-highlight/
-quarto render coal-worker-transitions.qmd
+quarto render coal-worker-transitions_research-highlight.qmd
 ```

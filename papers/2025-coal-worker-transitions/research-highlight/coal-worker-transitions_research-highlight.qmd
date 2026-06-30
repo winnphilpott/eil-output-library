@@ -2,7 +2,7 @@
 # =====================================================================
 #  Research highlight — one- to two-page PDF (LaTeX/PDF via Quarto)
 #  Canonical layout: see style-guides/research-highlight/README.md
-#  Render:  quarto render coal-worker-transitions.qmd
+#  Render:  quarto render coal-worker-transitions_research-highlight.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 #  Figure: build with a script in code/ and save to figures/
 #

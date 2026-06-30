@@ -1,7 +1,7 @@
 ---
 # =====================================================================
 #  Research highlight v3 — v2 structure + findings section (two-page)
-#  Render:  quarto render epa-compliance-workshops_v3.qmd
+#  Render:  quarto render epa-compliance-workshops_research-highlight_v3.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 # =====================================================================
 format:

@@ -1,7 +1,7 @@
 ---
 # =====================================================================
 #  Research highlight v2 — streamlined one-pager
-#  Render:  quarto render epa-compliance-workshops_v2.qmd
+#  Render:  quarto render epa-compliance-workshops_research-highlight_v2.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 # =====================================================================
 format:

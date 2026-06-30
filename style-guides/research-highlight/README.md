@@ -3,7 +3,7 @@
 Writing and design conventions for EIL **research highlights** — one-page PDFs that
 translate a single academic paper for a policy audience.
 
-- **Canonical example:** `papers/2026-epa-compliance-workshops/research-highlight/v4/epa-compliance-workshops_v4.qmd`
+- **Canonical example:** `papers/2026-epa-compliance-workshops/research-highlight/v4/epa-compliance-workshops_research-highlight_v4.qmd`
 - **Design system:** `formats/research-highlight/_style.tex` (colors, fonts, boxes, macros)
 - **Starter template:** `formats/research-highlight/research-highlights-template.qmd` (matches this guide)
 

@@ -1,7 +1,7 @@
 ---
 # =====================================================================
 #  Research highlight v4 — difference-in-differences / event-study framing
-#  Render:  quarto render epa-compliance-workshops_v4.qmd
+#  Render:  quarto render epa-compliance-workshops_research-highlight_v4.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 #  Figure: figures/fig2-did.png (built by code/make-fig2.R)
 # =====================================================================

@@ -1,7 +1,7 @@
 ---
 # =====================================================================
 #  Policy brief — one-pager (LaTeX/PDF via Quarto)
-#  Render:  quarto render epa-compliance-workshops.qmd
+#  Render:  quarto render epa-compliance-workshops_research-highlight_v1.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 # =====================================================================
 format:
