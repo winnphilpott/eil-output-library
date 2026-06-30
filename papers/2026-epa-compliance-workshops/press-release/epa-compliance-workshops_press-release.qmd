@@ -29,6 +29,9 @@ format:
 
 \vspace{6pt}
 
+% Body type for this release (overrides the _style.tex 9.4pt default)
+\fontsize{11pt}{15pt}\selectfont
+
 % ---------------------------------------------------------------------
 % RELEASE LINE + MEDIA CONTACT
 % ---------------------------------------------------------------------
@@ -87,7 +90,7 @@ format:
 % BOILERPLATE  (reusable ~50-75 words; supply approved text)
 % ---------------------------------------------------------------------
 \noindent{\color{muted}\fontsize{8.25pt}{11.5pt}\selectfont
-{\bfseries About the Environmental Inequality Lab (EIL).} [Reusable boilerplate paragraph --- to be supplied.]\par}
+{\bfseries About the Environmental Inequality Lab (EIL).} The Environmental Inequality Lab is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being. The lab develops novel data infrastructures, publishes frontier research in top academic journals, invests in early career researchers, and creates public-facing tools and products that help to democratize access to information and inform decision-making.\par}
 
 \vspace{6pt}
 
