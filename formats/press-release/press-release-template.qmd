@@ -1,0 +1,123 @@
+---
+# =====================================================================
+#  Press release — one-page PDF (LaTeX/PDF via Quarto)
+#  Conventions: see style-guides/press-release/README.md
+#  Render:  quarto render press-release-template.qmd
+#  Design system: ../research-highlight/_style.tex (shared colours, fonts, macros)
+#
+#  SHAPE — inverted pyramid, third person, built to be quoted/reprinted.
+#  Most newsworthy first; an editor should get the story from the lead alone.
+#
+#  LENGTH (target):
+#    Headline <=15w | Subhead <=20w | Lead ~50w
+#    Body 2-4 paras (~250-350w) | Quotes 1-3 (~30-50w ea) | Boilerplate ~50-75w
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 11pt
+    geometry:
+      - top=0.6in
+      - bottom=0.55in
+      - left=0.75in
+      - right=0.75in
+    include-in-header:
+      - file: ../research-highlight/_style.tex
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% MASTHEAD  (logo left, label right, 2.2pt ink rule beneath)
+% Update the logo path when copied into a paper's press-release/ folder:
+%   ../../../formats/logos/eil-logo-maroon.png
+% ---------------------------------------------------------------------
+\briefheader{\includegraphics[height=0.45in]{../logos/eil-logo-maroon.png}}{Press Release}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% RELEASE LINE + MEDIA CONTACT
+% Use the embargo form instead when coordinating with a journal:
+%   \textbf{EMBARGOED UNTIL [Month Day, Year, Time TZ]}
+% ---------------------------------------------------------------------
+\noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}\par}
+\vspace{2pt}
+\noindent{\color{muted}\fontsize{8.25pt}{11pt}\selectfont
+\textbf{Media contact:} [Full Name] · [email] · [phone]\par}
+
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% HEADLINE + SUBHEAD  (headline = the finding as news, not a topic)
+% ---------------------------------------------------------------------
+\brieftitle{[Headline — the finding as news, <=15 words]}
+\vspace{1pt}
+\noindent{\color{cite}\rmfamily\itshape\fontsize{11pt}{14pt}\selectfont [Optional subhead — one line of context or stakes, <=20 words.]\par}
+\vspace{2pt}
+\noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% DATELINE + LEAD  (~50 words; carries the whole story: who/what/where/why)
+% ---------------------------------------------------------------------
+\noindent\textbf{[CITY, State]} — [Month Day, Year] — [Lead sentence stating the finding as news. Two to three sentences that an editor could run on their own.]
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% BODY  (2-4 short paragraphs; quotes interleaved)
+%  - Name the paper here: ``[Exact Title],'' published in [Journal] by [Authors].
+%  - Explain the method in plain language; don't name it.
+%  - Keep EIL's own voice factual; put judgment in the quotes.
+% ---------------------------------------------------------------------
+\noindent [Paragraph 1 — expand the finding. Name the paper, journal, and authors. Spell out any agency on first use.]
+
+\vspace{6pt}
+\noindent [Paragraph 2 — the method in plain language: who was compared, what records, over what period, and why the comparison is credible.]
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% QUOTE 1 — lead author / PI: what the finding means
+% ---------------------------------------------------------------------
+\noindent ``[Quote on what the finding means — the interpretive claim EIL's own prose avoids],'' said [Full Name], [Title], [Affiliation].
+
+\vspace{6pt}
+\noindent [Paragraph 3 — the stakes: what the finding implies for policy or practice.]
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% QUOTE 2 (optional) — policymaker / official / stakeholder: why it matters
+% ---------------------------------------------------------------------
+\noindent ``[Quote on why it matters from a policymaker or affected stakeholder],'' said [Full Name], [Title], [Affiliation].
+
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% END MARKER
+% ---------------------------------------------------------------------
+\begin{center}{\color{faint}\bfseries \#\#\#}\end{center}
+
+\vspace{6pt}
+\noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}
+\vspace{4pt}
+
+% ---------------------------------------------------------------------
+% BOILERPLATE  (reusable ~50-75 words; keep identical across releases)
+% ---------------------------------------------------------------------
+\noindent{\color{muted}\fontsize{8.25pt}{11.5pt}\selectfont
+{\bfseries About the Environmental Inequality Lab (EIL).} [One reusable paragraph describing EIL's mission and work. Use the same approved text on every release.]\par}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% PAPER LINK  (resolvable DOI + companion research highlight)
+% ---------------------------------------------------------------------
+\noindent{\color{faint}\fontsize{7.4pt}{10pt}\selectfont
+Full paper: \href{https://doi.org/[DOI]}{\color{faint}\underline{doi.org/[DOI]}} \quad·\quad
+Research highlight: \href{[URL]}{\color{faint}\underline{[short link]}}\par}
+```
