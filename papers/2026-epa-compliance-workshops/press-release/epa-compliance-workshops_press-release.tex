@@ -300,19 +300,11 @@
 % ---------------------------------------------------------------------
 \briefheader{\includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}}{Press Release}
 
-\vspace{6pt}
-
 % Body type for this release (overrides the _style.tex 9.4pt default)
 \fontsize{11pt}{15pt}\selectfont
 
-% ---------------------------------------------------------------------
-% RELEASE LINE + MEDIA CONTACT
-% ---------------------------------------------------------------------
-\noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}\par}
-\vspace{2pt}
-\noindent{\color{muted}\fontsize{8.25pt}{11pt}\selectfont
-For questions, interviews, or other media inquiries, contact [Full Name] at [email] or [phone].\par}
-
+% Gap below the masthead rule to the headline (~7pt, matching the research
+% highlight's headsep; the briefheader macro adds -3pt, so 10pt nets ~7pt)
 \vspace{10pt}
 
 % ---------------------------------------------------------------------
@@ -328,9 +320,12 @@ For questions, interviews, or other media inquiries, contact [Full Name] at [ema
 \vspace{8pt}
 
 % ---------------------------------------------------------------------
-% DATELINE + LEAD
+% RELEASE LINE + DATELINE (opens the body, AEI-style) + LEAD
+% Embargo form: replace with EMBARGOED UNTIL [Month Day, Year, Time TZ]
 % ---------------------------------------------------------------------
-\noindent\textbf{[CITY, State]} — [Month Day, Year] — Offering polluters free help to follow environmental rules did not make them any more likely to follow them, according to a new study of hundreds of wastewater treatment facilities in Ohio. The research, published in the \textit{Journal of Policy Analysis and Management}, found that compliance workshops promoted by the U.S. Environmental Protection Agency (EPA) had no detectable effect on violations.
+\noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}}\hspace{0.6em}{\color{muted}\fontsize{9pt}{12pt}\selectfont [CITY, State] · [Month Day, Year]}\par
+\vspace{5pt}
+\noindent Offering polluters free help to follow environmental rules did not make them any more likely to follow them, according to a new study of hundreds of wastewater treatment facilities in Ohio. The research, published in the \textit{Journal of Policy Analysis and Management}, found that compliance workshops promoted by the U.S. Environmental Protection Agency (EPA) had no detectable effect on violations.
 
 \vspace{6pt}
 
@@ -360,7 +355,15 @@ For questions, interviews, or other media inquiries, contact [Full Name] at [ema
 \vspace{4pt}
 
 % ---------------------------------------------------------------------
-% BOILERPLATE  (reusable ~50-75 words; supply approved text)
+% MEDIA CONTACT  (bottom, before boilerplate)
+% ---------------------------------------------------------------------
+\noindent{\color{muted}\fontsize{8.25pt}{11pt}\selectfont
+For questions, interviews, or other media inquiries, contact [Full Name] at [email] or [phone].\par}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% BOILERPLATE  (reusable one sentence; supply approved text)
 % ---------------------------------------------------------------------
 \noindent{\color{muted}\fontsize{8.25pt}{11.5pt}\selectfont
 {\bfseries About the Environmental Inequality Lab (EIL).} The Environmental Inequality Lab is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par}
