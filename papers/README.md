@@ -22,7 +22,7 @@ YYYY-[topic-slug]/
 
 PDFs are not committed to the repo — render locally from the source files.
 
-**Requirements:** Quarto and a LaTeX distribution (TinyTeX recommended). If Quarto is bundled with RStudio but not on your PATH, use the full path to the RStudio-bundled binary:
+**Requirements:** [Quarto](https://quarto.org/docs/get-started/) and a LaTeX distribution. The simplest cross-platform setup is to install Quarto, then run `quarto install tinytex` once — Quarto then locates LaTeX automatically on macOS, Linux, and Windows. If Quarto is bundled with RStudio but not on your PATH, use the full path to the RStudio-bundled binary:
 
 ```bash
 # 1. Generate figures (run from the paper's root folder)
@@ -34,6 +34,8 @@ cd research-highlight/
 ```
 
 The PDF will appear in `research-highlight/`. If Quarto is on your system PATH, you can replace the full path above with just `quarto`.
+
+**Convenience scripts.** Each `press-release/` folder ships a `render.sh` (macOS / Linux, or Windows via Git Bash or WSL) and a `render.ps1` (native Windows PowerShell) that render every `.qmd` in the folder from any working directory — they locate Quarto themselves and `cd` into their own folder first. Run `./render.sh` or `.\render.ps1`.
 
 ## Naming Conventions
 
