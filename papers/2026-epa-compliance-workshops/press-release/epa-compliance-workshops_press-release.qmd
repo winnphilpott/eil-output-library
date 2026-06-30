@@ -4,7 +4,7 @@
 #  Conventions: style-guides/press-release/README.md
 #  Template:    formats/press-release/press-release-template.qmd
 #  Render:  quarto render epa-compliance-workshops_press-release.qmd
-#  Design system: ../../../formats/research-highlight/_style.tex
+#  Design system: ../../../formats/press-release/_style.tex
 # =====================================================================
 format:
   pdf:
@@ -17,7 +17,7 @@ format:
       - left=0.75in
       - right=0.75in
     include-in-header:
-      - file: ../../../formats/research-highlight/_style.tex
+      - file: ../../../formats/press-release/_style.tex
     keep-tex: true
 ---
 
@@ -26,9 +26,6 @@ format:
 % MASTHEAD
 % ---------------------------------------------------------------------
 \briefheader{\includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}}{Press Release}
-
-% Body type for this release (overrides the _style.tex 9.4pt default)
-\fontsize{11pt}{15pt}\selectfont
 
 % Gap below the masthead rule to the headline (~7pt, matching the research
 % highlight's headsep; the briefheader macro adds -3pt, so 10pt nets ~7pt)

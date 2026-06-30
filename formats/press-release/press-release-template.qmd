@@ -3,7 +3,7 @@
 #  Press release — one-page PDF (LaTeX/PDF via Quarto)
 #  Conventions: see style-guides/press-release/README.md
 #  Render:  quarto render press-release-template.qmd
-#  Design system: ../research-highlight/_style.tex (shared colours, fonts, macros)
+#  Design system: _style.tex (press-release colours, fonts, macros)
 #
 #  SHAPE — inverted pyramid, third person, built to be quoted/reprinted.
 #  Most newsworthy first; an editor should get the story from the lead alone.
@@ -23,7 +23,7 @@ format:
       - left=0.75in
       - right=0.75in
     include-in-header:
-      - file: ../research-highlight/_style.tex
+      - file: _style.tex
     keep-tex: true
 ---
 
@@ -34,9 +34,6 @@ format:
 %   ../../../formats/logos/eil-logo-maroon.png
 % ---------------------------------------------------------------------
 \briefheader{\includegraphics[height=0.45in]{../logos/eil-logo-maroon.png}}{Press Release}
-
-% Body type for the release (overrides the _style.tex 9.4pt default)
-\fontsize{11pt}{15pt}\selectfont
 
 % Gap below the masthead rule to the headline (~7pt, matching the research
 % highlight's headsep; the briefheader macro adds -3pt, so 10pt nets ~7pt)

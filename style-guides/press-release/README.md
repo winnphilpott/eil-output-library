@@ -7,6 +7,7 @@ public. A press release is the companion to a research highlight: where the high
 written to be quoted or reprinted*.
 
 - **Canonical example:** `papers/2026-epa-compliance-workshops/press-release/epa-compliance-workshops_press-release.qmd`
+- **Design system:** `formats/press-release/_style.tex` (colors, fonts, masthead/headline macros)
 - **Starter template:** `formats/press-release/press-release-template.qmd` (matches this guide)
 - **Companion guide:** `style-guides/research-highlight/README.md`
 
@@ -84,9 +85,11 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
 ## 5. Formatting & mechanics
 
 - **One page** unless the story genuinely needs more. Short paragraphs (2–4 sentences).
-- **Body type is 11/15pt** — set once after the masthead, overriding the shared
-  `_style.tex` 9.4pt default. A release is sparse, so it reads larger than a research
-  highlight. The release line, contact, boilerplate, and footer keep their own smaller sizes.
+- **Body type is 11/15pt** — set in the press-release `_style.tex`, so a release reads
+  larger than a research highlight without a per-document override. The masthead label,
+  release line, contact, boilerplate, and footer set their own smaller sizes inline.
+- **Never restyle in the `.qmd`.** Colours, fonts, and the `\briefheader` / `\brieftitle`
+  macros live in `formats/press-release/_style.tex` — edit there to restyle every release.
 - **Release line in caps** opens the body (not the header), with the dateline beside it:
   `FOR IMMEDIATE RELEASE   CITY, State · Month Day, Year`. Embargo line in caps when used.
 - **`###`** centered to mark the end. The media contact sits just below it, before the

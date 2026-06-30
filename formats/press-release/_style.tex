@@ -1,0 +1,56 @@
+% =====================================================================
+%  _style.tex  ·  Design system for EIL press releases
+%  Self-contained — does NOT depend on the research-highlight style.
+%  Edit here to restyle ALL press releases. Included via the .qmd YAML.
+% =====================================================================
+
+% ---- Colours (shared EIL palette) -----------------------------------
+\definecolor{ink}{HTML}{1D2620}        % masthead label, headline, rule
+\definecolor{body}{HTML}{33352C}       % main body paragraphs
+\definecolor{accentred}{HTML}{641111}  % PRESS RELEASE label, release line, links
+\definecolor{muted}{HTML}{50534A}      % dateline, contact, boilerplate
+\definecolor{cite}{HTML}{6E6D61}       % subhead
+\definecolor{faint}{HTML}{9A978A}      % end marker, footer links
+\definecolor{warmrule}{HTML}{D8D2C2}   % thin warm-grey dividers
+
+% ---- Fonts (Source Sans 3 / Source Serif 4) -------------------------
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+\usepackage{sourceserifpro}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---- Page -----------------------------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+% Press-release body type. A release is sparse, so it reads larger than a
+% research highlight; set once here rather than overriding in each .qmd.
+\AtBeginDocument{\color{body}\fontsize{11pt}{15pt}\selectfont}
+
+% ---- Packages -------------------------------------------------------
+\usepackage{microtype}                 % provides \textls letter-spacing
+\usepackage{soul}
+\setul{2pt}{.5pt}
+\usepackage[colorlinks=true, urlcolor=accentred, linkcolor=accentred, pdfborder={0 0 0}]{hyperref}
+
+% =====================================================================
+%  MACROS
+% =====================================================================
+
+% --- Masthead: {logo}{right label} + 2.2pt ink rule ------------------
+\newcommand{\briefheader}[2]{%
+  \noindent
+  \begin{minipage}[c]{0.62\linewidth}\raggedright\color{ink} #1\end{minipage}\hfill
+  \begin{minipage}[c]{0.36\linewidth}\raggedleft
+    \fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}%
+    \textls[200]{\MakeUppercase{#2}}%
+  \end{minipage}
+
+  \vspace{2pt}
+  \noindent\textcolor{ink}{\rule{\linewidth}{2.2pt}}
+  \vspace{-3pt}
+}
+
+% --- Headline --------------------------------------------------------
+\newcommand{\brieftitle}[1]{%
+  {\color{ink}\fontsize{18pt}{19.5pt}\selectfont\bfseries\textls[-12]{#1}\par}\vspace{3pt}}
