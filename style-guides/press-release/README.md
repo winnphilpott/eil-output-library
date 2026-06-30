@@ -21,18 +21,20 @@ quoted directly or reprinted in part.
 
 **Section order (fixed):**
 
-1. **Release line** — `FOR IMMEDIATE RELEASE` at the top, or
-   `EMBARGOED UNTIL [Month Day, Year, Time TZ]` when coordinating with a journal's
-   publication date.
-2. **Media contact** — name, email, phone, directly under the release line.
-3. **Headline** — the finding as news, not as a standing claim.
-4. **Subhead** *(optional)* — one line of context or stakes.
-5. **Dateline + lead** — `CITY, State — Month Day, Year —` opening the first sentence,
-   which carries the whole story (who/what/where/why) in 2–3 sentences.
-6. **Body** — 2–4 short paragraphs: the finding, the method in plain language, and the
+1. **Headline** — the finding as news, not as a standing claim. Sits directly under the
+   masthead.
+2. **Subhead** *(optional)* — one line of context or stakes.
+3. **Release line + dateline** — opens the body: `FOR IMMEDIATE RELEASE` followed by
+   `CITY, State · Month Day, Year` (or `EMBARGOED UNTIL [Month Day, Year, Time TZ]` when
+   coordinating with a journal's publication date).
+4. **Lead** — the first paragraph, carrying the whole story (who/what/where/why) in 2–3
+   sentences.
+5. **Body** — 2–4 short paragraphs: the finding, the method in plain language, and the
    stakes, with any quotes interleaved.
-7. **Quotes** *(optional)* — up to three attributable quotes (see §3).
-8. **End marker** — `###` centered, signaling the release ends.
+6. **Quotes** *(optional)* — up to three attributable quotes (see §3).
+7. **End marker** — `###` centered, signaling the release ends.
+8. **Media contact** — name, email, phone, in a sentence at the bottom, just above the
+   boilerplate.
 9. **Boilerplate** — a short, reusable "About EIL" paragraph.
 10. **Paper link** — DOI, and a link to the companion research highlight.
 
@@ -85,9 +87,10 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
 - **Body type is 11/15pt** — set once after the masthead, overriding the shared
   `_style.tex` 9.4pt default. A release is sparse, so it reads larger than a research
   highlight. The release line, contact, boilerplate, and footer keep their own smaller sizes.
-- **Release line in caps**, top-left. Embargo line in caps when used.
-- **Dateline** in AP form: `CITY, State —` (city in caps, state spelled or AP-abbreviated).
-- **`###`** centered to mark the end, before boilerplate.
+- **Release line in caps** opens the body (not the header), with the dateline beside it:
+  `FOR IMMEDIATE RELEASE   CITY, State · Month Day, Year`. Embargo line in caps when used.
+- **`###`** centered to mark the end. The media contact sits just below it, before the
+  boilerplate.
 - **Boilerplate is reusable** — keep one approved "About EIL" paragraph and use it
   verbatim across releases. Edit it in one place.
 - **File layout:** `papers/<paper-slug>/press-release/` holds the release, named
