@@ -108,21 +108,19 @@
 
 
 % =====================================================================
-%  _brief-style.tex  ·  Design system for the one-page policy brief
-%  Tokens below were extracted from the source Claude Design HTML.
-%  Edit here to restyle ALL briefs. Included via the .qmd YAML.
+%  _style.tex  ·  Design system for EIL research highlights (v4 layout)
+%  Edit here to restyle ALL research highlights. Included via the .qmd YAML.
+%  Matches the canonical single-column v4 template; the masthead and footer
+%  are set per-document via fancyhdr in each .qmd's include-in-header.
 % =====================================================================
 
-% ---- Colours (exact hex from source) --------------------------------
-\definecolor{ink}{HTML}{1D2620}        % headings, title, pull quote
+% ---- Colours (exact hex) --------------------------------------------
+\definecolor{ink}{HTML}{1D2620}        % headings, title, section heads, rule
 \definecolor{body}{HTML}{33352C}       % main body paragraphs
-\definecolor{accentred}{HTML}{641111}  % POLICY BRIEF, links, fig title, chart
-\definecolor{boxred}{HTML}{8C2826}     % bottom-line box fill
-\definecolor{labeltan}{HTML}{E6B894}   % "BOTTOM LINE" label on the box
-\definecolor{boxtext}{HTML}{EEF1EA}    % bottom-line body text (off-white)
-\definecolor{rosebg}{HTML}{F7EEED}     % pull-quote background
-\definecolor{roseborder}{HTML}{E6D2D0} % pull-quote border
-\definecolor{muted}{HTML}{50534A}      % column bodies, fig source
+\definecolor{accentred}{HTML}{641111}  % RESEARCH HIGHLIGHT label, links, fig title
+\definecolor{boxred}{HTML}{8C2826}     % Bottom Line box fill
+\definecolor{boxtext}{HTML}{EEF1EA}    % Bottom Line body text (off-white)
+\definecolor{muted}{HTML}{50534A}      % figure source line
 \definecolor{cite}{HTML}{6E6D61}       % citation line
 \definecolor{faint}{HTML}{9A978A}      % footer
 \definecolor{warmrule}{HTML}{D8D2C2}   % thin warm-grey dividers
@@ -130,9 +128,7 @@
 
 % \pagecolor{paper}                    % uncomment for warm off-white background
 
-% ---- Fonts ----------------------------------------------------------
-% Source: Source Sans 3 / Source Serif 4. The CTAN packages below provide
-% Adobe Source Sans/Serif (same typefaces); TinyTeX auto-installs them.
+% ---- Fonts (Source Sans 3 / Source Serif 4) -------------------------
 \usepackage[T1]{fontenc}
 \usepackage[default]{sourcesanspro}
 \usepackage{sourceserifpro}
@@ -142,7 +138,7 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2pt}
-% default body size/colour (12.5px -> 9.4pt, line-height 1.45)
+% Default body size/colour. The v4 .qmd overrides this to 10.5/13.5pt.
 \AtBeginDocument{\color{body}\fontsize{9.4pt}{13.6pt}\selectfont}
 
 % ---- Packages -------------------------------------------------------
@@ -153,28 +149,9 @@
 \tcbuselibrary{skins}
 \usepackage[colorlinks=true, urlcolor=accentred, linkcolor=accentred, pdfborder={0 0 0}]{hyperref}
 
-% column regions — same size as body
-\newcommand{\colsize}{\color{muted}\fontsize{9.4pt}{13.6pt}\selectfont}
-% implications columns — smaller, matches target design
-\newcommand{\impcolsize}{\color{muted}\fontsize{8.25pt}{11.7pt}\selectfont}
-
 % =====================================================================
 %  MACROS
 % =====================================================================
-
-% --- Masthead: {logo}{right label} + 3px ink rule --------------------
-\newcommand{\briefheader}[2]{%
-  \noindent
-  \begin{minipage}[c]{0.62\linewidth}\raggedright\color{ink} #1\end{minipage}\hfill
-  \begin{minipage}[c]{0.36\linewidth}\raggedleft
-    \fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}%
-    \textls[200]{\MakeUppercase{#2}}%
-  \end{minipage}
-
-  \vspace{2pt}
-  \noindent\textcolor{ink}{\rule{\linewidth}{2.2pt}}
-  \vspace{-3pt}
-}
 
 % --- Title + citation (citation has a thin warm divider beneath) ------
 \newcommand{\brieftitle}[1]{%
@@ -183,60 +160,32 @@
   {\color{cite}\fontsize{9.4pt}{12pt}\selectfont #1\par}\vspace{3pt}%
   \noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}}
 
-% --- Section heads (13px 900 uppercase, ls 0.02em) -------------------
+% --- Section heads (uppercase, ink) ----------------------------------
 \newcommand{\sectionhead}[1]{%
   \vspace{2pt}{\color{ink}\bfseries\fontsize{9.75pt}{12pt}\selectfont
   \textls[20]{\MakeUppercase{#1}}\par}\vspace{1pt}}
-% with a 2px ink rule beneath (IMPLICATIONS)
-\newcommand{\sectionheadruled}[1]{%
-  \vspace{5pt}{\color{ink}\bfseries\fontsize{9.75pt}{12pt}\selectfont
-  \textls[20]{\MakeUppercase{#1}}\par}%
-  \vspace{3pt}\noindent\textcolor{ink}{\rule{\linewidth}{1.5pt}}\vspace{3pt}}
 
-% --- Sub-heads -------------------------------------------------------
-% small uppercase (11px, ls 0.05em) — WHY COMPLIANCE MATTERS
+% --- Sub-heads (small uppercase) — Takeaway subheads -----------------
+% The v4 .qmd overrides this to the brand maroon via \renewcommand.
 \newcommand{\subhead}[1]{%
   {\color{ink}\bfseries\fontsize{8.25pt}{10pt}\selectfont
   \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
-% 2px ink top rule + title-case bold heading — Funding / Oversight
-\newcommand{\colhead}[1]{%
-  \noindent\textcolor{ink}{\rule{\linewidth}{1.5pt}}\par\vspace{2pt}%
-  {\color{ink}\bfseries\fontsize{9pt}{11pt}\selectfont #1\par}\vspace{1pt}}
 
-% --- Figure title ----------------------------------------------------
+% --- Figure title + source line --------------------------------------
 \newcommand{\figtitle}[2]{%
   {\bfseries\color{accentred}\fontsize{7.1pt}{9pt}\selectfont\textls[40]{\MakeUppercase{#1}}}\par%
   {\color{muted}\fontsize{7.1pt}{9pt}\selectfont #2}\par\vspace{4pt}}
 
-% --- Inline links (underlined accent red, wraps across lines) --------
-\newcommand{\brieflink}[1]{{\color{accentred}\ul{#1}}}
-\newcommand{\quotelink}[1]{{\bfseries\color{accentred}\ul{#1}}}
-% implications links — bold accent red, no underline
-\newcommand{\impllink}[1]{{\bfseries\color{accentred}#1}}
-
-% --- Footer (warm divider + faint text, pinned to bottom) ------------
-\newcommand{\brieffooter}[1]{%
-  \par\vfill
-  \noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}\par\vspace{5pt}%
-  {\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont #1\par}}
-
 % =====================================================================
-%  COLOURED BOXES (border-radius 6px -> arc=4pt)
+%  COLOURED BOXES
 % =====================================================================
 
-% --- Bottom-line box -------------------------------------------------
+% --- Bottom Line box (border-radius 6px -> arc=4pt) ------------------
 \newtcolorbox{bottomline}{%
   enhanced, arc=4pt, outer arc=4pt, boxrule=0pt,
   colback=boxred, coltext=boxtext,
   left=7pt, right=7pt, top=7pt, bottom=7pt,
   before upper={\fontsize{9.4pt}{13.6pt}\selectfont}}
-
-% --- Pull-quote box (serif, 13.5px -> 10.1pt, with rose border) ------
-\newtcolorbox{pullquote}{%
-  enhanced, arc=4pt, outer arc=4pt, boxrule=0.7pt,
-  colback=rosebg, colframe=roseborder, coltext=ink,
-  left=7pt, right=7pt, top=11pt, bottom=12pt,
-  fontupper={\rmfamily\fontsize{11.5pt}{16.5pt}\selectfont}}
 % --- Running masthead + footer (logo, label, rule, page number) ---
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
