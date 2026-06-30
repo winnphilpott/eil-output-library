@@ -6,7 +6,7 @@ public. A press release is the companion to a research highlight: where the high
 *explains a paper to a policy reader*, the release *announces the finding as news,
 written to be quoted or reprinted*.
 
-- **Canonical example:** _(none yet — first release sets the pattern; update this line)_
+- **Canonical example:** `papers/2026-epa-compliance-workshops/press-release/epa-compliance-workshops_press-release.qmd`
 - **Starter template:** `formats/press-release/press-release-template.qmd` (matches this guide)
 - **Companion guide:** `style-guides/research-highlight/README.md`
 
@@ -30,8 +30,8 @@ quoted directly or reprinted in part.
 5. **Dateline + lead** — `CITY, State — Month Day, Year —` opening the first sentence,
    which carries the whole story (who/what/where/why) in 2–3 sentences.
 6. **Body** — 2–4 short paragraphs: the finding, the method in plain language, and the
-   stakes, with quotes interleaved.
-7. **Quotes** — one to three attributable quotes (see §3).
+   stakes, with any quotes interleaved.
+7. **Quotes** *(optional)* — up to three attributable quotes (see §3).
 8. **End marker** — `###` centered, signaling the release ends.
 9. **Boilerplate** — a short, reusable "About EIL" paragraph.
 10. **Paper link** — DOI, and a link to the companion research highlight.
@@ -54,9 +54,13 @@ quoted directly or reprinted in part.
 - **Newsworthy, not promotional.** A release reports a finding; it does not sell a
   program. Avoid adjectives a journalist would cut ("groundbreaking," "first-ever").
 
-## 3. Quotes
+## 3. Quotes (optional)
 
-- **One to three quotes**, each clearly attributed: *"…," said [Full Name], [Title],
+Quotes are encouraged but **not required** — a release stands on its own without them.
+**Never use an invented or placeholder quote.** Leave the section out entirely until a
+real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
+
+- **Up to three quotes**, each clearly attributed: *"…," said [Full Name], [Title],
   [Affiliation].*
 - **Divide the labor:** the PI/lead author speaks to *what the finding means*; a
   policymaker, agency official, or affected stakeholder speaks to *why it matters*.
@@ -83,8 +87,9 @@ quoted directly or reprinted in part.
 - **`###`** centered to mark the end, before boilerplate.
 - **Boilerplate is reusable** — keep one approved "About EIL" paragraph and use it
   verbatim across releases. Edit it in one place.
-- **File layout:** `papers/<paper-slug>/press-release/` holds the release, alongside the
-  paper's other outputs.
+- **File layout:** `papers/<paper-slug>/press-release/` holds the release, named
+  `<paper-slug>_press-release.qmd` so the source and its rendered PDF stay self-describing
+  even out of folder context (see `papers/README.md`).
 
 ## 6. Length budget (target)
 
@@ -94,5 +99,5 @@ quoted directly or reprinted in part.
 | Subhead          | ≤ 20 words                              |
 | Lead             | 2–3 sentences (~50 words)               |
 | Body             | 2–4 paragraphs (~250–350 words total)   |
-| Quotes           | 1–3, ~30–50 words each                  |
+| Quotes *(optional)* | 0–3, ~30–50 words each               |
 | Boilerplate      | ~50–75 words, reusable                  |

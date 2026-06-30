@@ -81,7 +81,9 @@ format:
 \vspace{6pt}
 
 % ---------------------------------------------------------------------
-% QUOTE 1 — lead author / PI: what the finding means
+% QUOTE 1 (OPTIONAL) — lead author / PI: what the finding means.
+% Quotes are optional. Delete this block unless you have a REAL, confirmed
+% quote — never ship an invented or placeholder quote.
 % ---------------------------------------------------------------------
 \noindent ``[Quote on what the finding means — the interpretive claim EIL's own prose avoids],'' said [Full Name], [Title], [Affiliation].
 
@@ -91,7 +93,8 @@ format:
 \vspace{6pt}
 
 % ---------------------------------------------------------------------
-% QUOTE 2 (optional) — policymaker / official / stakeholder: why it matters
+% QUOTE 2 (OPTIONAL) — policymaker / official / stakeholder: why it matters.
+% Same rule: delete unless you have a real, confirmed quote.
 % ---------------------------------------------------------------------
 \noindent ``[Quote on why it matters from a policymaker or affected stakeholder],'' said [Full Name], [Title], [Affiliation].
 
