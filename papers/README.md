@@ -20,8 +20,6 @@ YYYY-[topic-slug]/
 
 ## Rendering a Research Highlight to PDF
 
-PDFs are not committed to the repo — render locally from the source files.
-
 **Requirements:** [Quarto](https://quarto.org/docs/get-started/) and a LaTeX distribution. The simplest cross-platform setup is to install Quarto, then run `quarto install tinytex` once — Quarto then locates LaTeX automatically on macOS, Linux, and Windows. If Quarto is bundled with RStudio but not on your PATH, use the full path to the RStudio-bundled binary:
 
 ```bash
