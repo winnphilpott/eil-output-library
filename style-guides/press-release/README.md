@@ -30,12 +30,12 @@ quoted directly or reprinted in part.
    coordinating with a journal's publication date).
 4. **Lead** — the first paragraph, carrying the whole story (who/what/where/why) in 2–3
    sentences.
-5. **Body** — 2–4 short paragraphs: the finding, the method in plain language, and the
+5. **Body** — 2–3 short paragraphs: the finding, the method in plain language, and the
    stakes, with any quotes interleaved.
 6. **Quotes** *(optional)* — up to three attributable quotes (see §3).
-7. **End marker** — `###` centered, signaling the release ends.
-8. **Media contact** — name, email, phone, in a sentence at the bottom, just above the
-   boilerplate.
+7. **Media contact** — name, email, phone, in a sentence closing the body, just above the
+   end marker.
+8. **End marker** — `###` centered, signaling the release ends.
 9. **Boilerplate** — a short, reusable "About EIL" paragraph.
 10. **Paper link** — DOI, and a link to the companion research highlight.
 
@@ -92,8 +92,8 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
   macros live in `formats/press-release/_style.tex` — edit there to restyle every release.
 - **Release line in caps** opens the body (not the header), with the dateline beside it:
   `FOR IMMEDIATE RELEASE   CITY, State · Month Day, Year`. Embargo line in caps when used.
-- **`###`** centered to mark the end. The media contact sits just below it, before the
-  boilerplate.
+- **`###`** centered to mark the end. The media contact sits just above it, closing the
+  body; the boilerplate and paper link follow below, centered.
 - **Boilerplate is reusable** — keep one approved "About EIL" paragraph and use it
   verbatim across releases. Edit it in one place.
 - **File layout:** `papers/<paper-slug>/press-release/` holds the release, named
@@ -107,6 +107,6 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
 | Headline         | ≤ 15 words                              |
 | Subhead          | ≤ 20 words                              |
 | Lead             | 2–3 sentences (~50 words)               |
-| Body             | 2–4 paragraphs (~250–350 words total)   |
+| Body             | 2–3 paragraphs (~150–220 words total)   |
 | Quotes *(optional)* | 0–3, ~30–50 words each               |
 | Boilerplate      | ~25–40 words (one sentence), reusable    |

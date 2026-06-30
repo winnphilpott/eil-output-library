@@ -56,48 +56,42 @@ format:
 % ---------------------------------------------------------------------
 % BODY
 % ---------------------------------------------------------------------
-\noindent The study, ``The effect of compliance assistance on pollution discharges and violations of environmental regulations,'' by Paul J. Ferraro and Jay P. Shimshack, examined a program built on a simple premise: that many facilities break environmental rules out of confusion or limited expertise rather than deliberate corner-cutting. Over the past decade, this ``compliance assistance'' approach --- free workshops, guidance, and technical support --- has become the EPA's preferred alternative to inspections and fines.
+\noindent The study examined the EPA's preferred alternative to inspections and fines: ``compliance assistance'' --- free workshops, guidance, and technical support. The approach is built on the premise that many facilities break the rules out of confusion rather than deliberate corner-cutting. Using detailed Ohio EPA records, authors Paul J. Ferraro and Jay P. Shimshack compared facilities trained earlier with comparable facilities that had also volunteered but were not yet trained. Measured against that benchmark, violations at trained facilities did not fall.
 
 \vspace{6pt}
-\noindent To test whether the help actually changed behavior, the researchers used detailed Ohio EPA records of violations and pollution discharges at facilities that had recently been cited and had volunteered to attend. Since the workshops reached different facilities at different times, the researchers could compare facilities trained earlier with comparable facilities that had also volunteered but were not yet trained. Measured against that benchmark, violations at trained facilities did not fall.
+\noindent The finding is notable because the program had appeared to work: the EPA's own before-and-after figures showed violations dropping by more than 50 percent after the workshops. But the same decline was occurring at facilities that had never been trained --- a broad downward trend easy to mistake for the workshops' effect. Encouraged by that apparent success, the EPA is now expanding the program to other states. Small benefits cannot be ruled out, the authors note, but such programs should be rigorously tested before they replace enforcement tools already known to work.
 
-\vspace{6pt}
-\noindent The result is notable because the program had appeared to work: the EPA's own before-and-after figures showed violations dropping by more than 50 percent after the workshops. But the same decline was occurring at facilities that had not been trained at all --- a broad downward trend that was easy to mistake for the effect of the workshops themselves.
+\vspace{15pt}
 
-\vspace{6pt}
-\noindent Encouraged by that apparent success, the EPA has moved to expand the program to other states --- committing public funding to an approach with no measurable effect on pollution. This is not to say that assistance can never help; it's one program, and small benefits cannot be ruled out. The broader lesson, they note, is that such programs should be rigorously tested before they replace enforcement tools already known to work.
+% ---------------------------------------------------------------------
+% MEDIA CONTACT  (AEI-style: above the ###, body size, bold lead-in)
+% ---------------------------------------------------------------------
+\noindent{\fontsize{10pt}{13.5pt}\selectfont
+{\bfseries For questions, interviews, or media inquiries,} contact [Full Name] at [email] or [phone].\par}
 
-\vspace{10pt}
+\vspace{11pt}
 
 % ---------------------------------------------------------------------
 % END MARKER
 % ---------------------------------------------------------------------
 \begin{center}{\color{faint}\bfseries \#\#\#}\end{center}
 
-\vspace{6pt}
-\noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}
-\vspace{4pt}
+\vspace{11pt}
 
 % ---------------------------------------------------------------------
-% MEDIA CONTACT  (bottom, before boilerplate)
+% BOILERPLATE  (centered, italic, org name as link)
 % ---------------------------------------------------------------------
-\noindent{\color{muted}\fontsize{8.25pt}{11pt}\selectfont
-For questions, interviews, or other media inquiries, contact [Full Name] at [email] or [phone].\par}
+\begin{center}{\color{muted}\itshape\fontsize{9.5pt}{14pt}\selectfont
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par}
+\end{center}
 
-\vspace{6pt}
-
-% ---------------------------------------------------------------------
-% BOILERPLATE  (reusable one sentence; supply approved text)
-% ---------------------------------------------------------------------
-\noindent{\color{muted}\fontsize{8.25pt}{11.5pt}\selectfont
-{\bfseries About the Environmental Inequality Lab (EIL).} The Environmental Inequality Lab is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par}
-
-\vspace{6pt}
+\vspace{10pt}
 
 % ---------------------------------------------------------------------
 % PAPER LINK
 % ---------------------------------------------------------------------
-\noindent{\color{faint}\fontsize{7.4pt}{10pt}\selectfont
+\begin{center}{\color{faint}\fontsize{8pt}{11pt}\selectfont
 Full paper: \href{https://doi.org/10.1002/pam.70056}{\color{faint}\underline{doi.org/10.1002/pam.70056}} \quad·\quad
 Research highlight: \href{[URL]}{\color{faint}\underline{[link]}}\par}
+\end{center}
 ```

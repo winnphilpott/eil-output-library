@@ -15,4 +15,9 @@ YYYY-[topic-slug]/
 
 ## Formats and Style
 
-Templates and color/theme files live in `formats/data-viz/`. Style conventions are in `style-guides/data-viz/`.
+Style conventions live in [`style-guides/data-viz/README.md`](../style-guides/data-viz/README.md). The theme and starter live in `formats/data-viz/`:
+
+- [`eil-theme.R`](../formats/data-viz/eil-theme.R) — house palette (`eil_pal`), `theme_eil()`, and `eil_save()`.
+- [`data-viz-template.R`](../formats/data-viz/data-viz-template.R) — runnable starter (synthetic data) demonstrating the house style.
+
+Canonical example: `papers/2026-epa-compliance-workshops/figures/fig2-did.png` (built by `code/make-fig2.R`).

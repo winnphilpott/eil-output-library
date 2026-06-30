@@ -222,21 +222,22 @@
 
 
 % ---------------------------------------------------------------------
-% MASTHEAD
+% MASTHEAD  (logo left, label right, 2.2pt ink rule beneath)
+% Update the logo path when copied into a paper's press-release/ folder:
+%   ../../../formats/logos/eil-logo-maroon.png
 % ---------------------------------------------------------------------
-\briefheader{\includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}}{Press Release}
+\briefheader{\includegraphics[height=0.45in]{../logos/eil-logo-maroon.png}}{Press Release}
 
 % Gap below the masthead rule to the headline (~7pt, matching the research
 % highlight's headsep; the briefheader macro adds -3pt, so 10pt nets ~7pt)
 \vspace{10pt}
 
 % ---------------------------------------------------------------------
-% HEADLINE + SUBHEAD
+% HEADLINE + SUBHEAD  (headline = the finding as news, not a topic)
 % ---------------------------------------------------------------------
-{\hyphenpenalty=10000\exhyphenpenalty=10000
-\brieftitle{Free EPA Compliance Workshops Did Not Reduce Pollution Violations, Study Finds}}
+\brieftitle{[Headline — the finding as news, <=15 words]}
 \vspace{1pt}
-\noindent{\color{cite}\rmfamily\itshape\fontsize{11pt}{14pt}\selectfont A program the EPA is now expanding to more states showed no measurable effect on the facilities it was meant to help.\par}
+\noindent{\color{cite}\rmfamily\itshape\fontsize{11pt}{14pt}\selectfont [Optional subhead — one line of context or stakes, <=20 words.]\par}
 \vspace{2pt}
 \noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}
 
@@ -244,21 +245,46 @@
 
 % ---------------------------------------------------------------------
 % RELEASE LINE + DATELINE (opens the body, AEI-style) + LEAD
-% Embargo form: replace with EMBARGOED UNTIL [Month Day, Year, Time TZ]
+% Embargo form: replace FOR IMMEDIATE RELEASE with
+%   EMBARGOED UNTIL [Month Day, Year, Time TZ]
+% Lead = ~50 words; carries the whole story (who/what/where/why).
 % ---------------------------------------------------------------------
 \noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}}\hspace{0.6em}{\color{muted}\fontsize{9pt}{12pt}\selectfont [CITY, State] · [Month Day, Year]}\par
 \vspace{5pt}
-\noindent Offering polluters free help to follow environmental rules did not make them any more likely to follow them, according to a new study of hundreds of wastewater treatment facilities in Ohio. The research, published in the \textit{Journal of Policy Analysis and Management}, found that compliance workshops promoted by the U.S. Environmental Protection Agency (EPA) had no detectable effect on violations.
+\noindent [Lead sentence stating the finding as news. Two to three sentences that an editor could run on their own.]
 
 \vspace{6pt}
 
 % ---------------------------------------------------------------------
-% BODY
+% BODY  (2-3 short paragraphs; quotes interleaved)
+%  - Name the paper here: ``[Exact Title],'' published in [Journal] by [Authors].
+%  - Explain the method in plain language; don't name it.
+%  - Keep EIL's own voice factual; put judgment in the quotes.
 % ---------------------------------------------------------------------
-\noindent The study examined the EPA's preferred alternative to inspections and fines: ``compliance assistance'' --- free workshops, guidance, and technical support. The approach is built on the premise that many facilities break the rules out of confusion rather than deliberate corner-cutting. Using detailed Ohio EPA records, authors Paul J. Ferraro and Jay P. Shimshack compared facilities trained earlier with comparable facilities that had also volunteered but were not yet trained. Measured against that benchmark, violations at trained facilities did not fall.
+\noindent [Paragraph 1 — expand the finding. Name the paper, journal, and authors. Spell out any agency on first use.]
 
 \vspace{6pt}
-\noindent The finding is notable because the program had appeared to work: the EPA's own before-and-after figures showed violations dropping by more than 50 percent after the workshops. But the same decline was occurring at facilities that had never been trained --- a broad downward trend easy to mistake for the workshops' effect. Encouraged by that apparent success, the EPA is now expanding the program to other states. Small benefits cannot be ruled out, the authors note, but such programs should be rigorously tested before they replace enforcement tools already known to work.
+\noindent [Paragraph 2 — the method in plain language: who was compared, what records, over what period, and why the comparison is credible.]
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% QUOTE 1 (OPTIONAL) — lead author / PI: what the finding means.
+% Quotes are optional. Delete this block unless you have a REAL, confirmed
+% quote — never ship an invented or placeholder quote.
+% ---------------------------------------------------------------------
+\noindent ``[Quote on what the finding means — the interpretive claim EIL's own prose avoids],'' said [Full Name], [Title], [Affiliation].
+
+\vspace{6pt}
+\noindent [Paragraph 3 — the stakes: what the finding implies for policy or practice.]
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% QUOTE 2 (OPTIONAL) — policymaker / official / stakeholder: why it matters.
+% Same rule: delete unless you have a real, confirmed quote.
+% ---------------------------------------------------------------------
+\noindent ``[Quote on why it matters from a policymaker or affected stakeholder],'' said [Full Name], [Title], [Affiliation].
 
 \vspace{15pt}
 
@@ -278,7 +304,7 @@
 \vspace{11pt}
 
 % ---------------------------------------------------------------------
-% BOILERPLATE  (centered, italic, org name as link)
+% BOILERPLATE  (centered, italic, org name as link; keep identical across releases)
 % ---------------------------------------------------------------------
 \begin{center}{\color{muted}\itshape\fontsize{9.5pt}{14pt}\selectfont
 The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par}
@@ -287,11 +313,11 @@ The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{
 \vspace{10pt}
 
 % ---------------------------------------------------------------------
-% PAPER LINK
+% PAPER LINK  (resolvable DOI + companion research highlight)
 % ---------------------------------------------------------------------
 \begin{center}{\color{faint}\fontsize{8pt}{11pt}\selectfont
-Full paper: \href{https://doi.org/10.1002/pam.70056}{\color{faint}\underline{doi.org/10.1002/pam.70056}} \quad·\quad
-Research highlight: \href{[URL]}{\color{faint}\underline{[link]}}\par}
+Full paper: \href{https://doi.org/[DOI]}{\color{faint}\underline{doi.org/[DOI]}} \quad·\quad
+Research highlight: \href{[URL]}{\color{faint}\underline{[short link]}}\par}
 \end{center}
 
 
