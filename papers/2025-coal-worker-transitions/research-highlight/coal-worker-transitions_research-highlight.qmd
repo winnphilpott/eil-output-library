@@ -110,6 +110,8 @@ format:
 
 \vspace{6pt}
 
+\newpage
+
 \noindent Measuring what coal's decline cost workers means separating its effects from everything else shaping a career. The researchers compared the most coal-dependent workers with other workers, evening out gaps in age, education, earnings, and location, so that whatever difference emerged afterward could be chalked up to coal's decline. The collapse in coal demand was driven by national energy prices rather than any one worker's choices, so the comparison offers a clean picture of coal's effect. If coal's decline had left workers unharmed --- or had weighed on both groups equally --- no earnings gap should have opened between them.
 
 \noindent This is not what the researchers found. Between 2012 and 2019, \textbf{the most coal-dependent workers lost cumulative earnings equal to roughly 1.6 times a full pre-shock year of pay}. The losses came through two channels at once: compared with similar workers, they spent more time out of work \textit{and} earned less in the years they did work. \textbf{A decade on, coal's decline had carved a deep and persistent hole in workers' earnings.}
