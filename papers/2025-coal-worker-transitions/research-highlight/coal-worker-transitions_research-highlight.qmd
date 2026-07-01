@@ -121,13 +121,13 @@ format:
 % ---------------------------------------------------------------------
 \sectionhead{Takeaways}
 \subhead{Nowhere to go}
-\noindent Workers couldn't simply move or retrain their way out. Those who left coal earned about 30 percent less, and relocating to a new labor market barely helped. Unlike displaced manufacturing or trade-shock workers, many coal workers stopped working altogether --- \textbf{a sign their skills didn't transfer to the jobs around them}.
+\noindent Workers couldn't simply move or retrain their way out. Coal employment is concentrated in a few isolated regions where entire local economies lean on the industry, so nearby alternatives were scarce. Those who left coal earned about 30 percent less, and relocating to a new labor market barely helped. Where workers displaced by factory closings often find their way into new jobs, a striking share of coal workers stopped working altogether --- \textbf{a sign their skills didn't transfer to the jobs around them}.
 
 \vspace{5pt}
-\subhead{Falling back on disability}
+\subhead{Leaning on the safety net}
 \noindent As earnings fell, coal-dependent workers leaned on government transfers --- especially Social Security Disability Insurance (SSDI) --- and drew down retirement savings earlier. These payments cushioned the blow but \textbf{replaced only a fraction of what workers lost}, a second-best safety net standing in for the jobs and wages that disappeared.
 
 \vspace{5pt}
 \subhead{A preview of the energy transition}
-\noindent Coal's decline is an early look at what shrinking demand for fossil fuels could mean for workers in concentrated, high-wage industries. The honest caveat: this is one industry, and coal's geography is unusually isolating. But the lesson holds --- \textbf{where specialized skills don't transfer, the costs of an energy transition land hard on workers, and existing safety nets catch only part of the fall}.
+\noindent Coal's decline is an early look at what shrinking demand for fossil fuels could mean for workers in concentrated, high-wage industries. Coal is just one industry, and its geography is unusually isolating, so its exact path won't repeat everywhere. Even so, the warning is clear --- \textbf{where specialized skills don't transfer, the costs of an energy transition land hard on workers, and existing safety nets catch only part of the fall}.
 ```
