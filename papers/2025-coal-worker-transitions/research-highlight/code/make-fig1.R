@@ -39,8 +39,12 @@ d$hi <- d$est + d$hw
 INK  <- "#1d2620"; RED <- "#641111"; BAND <- "#f3e4e2"
 AXIS <- "#c4bdad"; MUTE <- "#50534a"
 
+# Fixed panel bounds so the shaded region, zero-line, and x-axis line all
+# terminate on exactly the same right/left edge.
+XLIM <- c(2006.72, 2021.28)
+
 p <- ggplot(d, aes(year, est)) +
-  annotate("rect", xmin = 2011, xmax = 2021.4, ymin = -Inf, ymax = Inf,
+  annotate("rect", xmin = 2011, xmax = XLIM[2], ymin = -Inf, ymax = Inf,
            fill = BAND, alpha = 0.35) +
   annotate("text", x = 2008.6, y = 0.20, label = "BEFORE COAL'S DECLINE",
            size = 2.3, color = MUTE, fontface = "bold") +
@@ -63,7 +67,8 @@ p <- ggplot(d, aes(year, est)) +
     breaks = c(0, -0.5, -1.0, -1.5, -2.0, -2.5),
     labels = c("Pre-shock\nearnings", "½ year's\npay", "1 year",
                "1½ years", "2 years", "2½ years\nlost")) +
-  scale_x_continuous(breaks = seq(2007, 2021, 2), expand = c(0.02, 0)) +
+  scale_x_continuous(breaks = seq(2007, 2021, 2),
+                     limits = XLIM, expand = c(0, 0)) +
   labs(x = NULL, y = NULL) +
   theme_minimal(base_size = 7) +
   theme(

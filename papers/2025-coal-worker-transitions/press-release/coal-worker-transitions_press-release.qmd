@@ -1,0 +1,97 @@
+---
+# =====================================================================
+#  Press release — coal worker transitions paper
+#  Conventions: style-guides/press-release/README.md
+#  Template:    formats/press-release/press-release-template.qmd
+#  Render:  quarto render coal-worker-transitions_press-release.qmd
+#  Design system: ../../../formats/press-release/_style.tex
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 11pt
+    geometry:
+      - top=0.6in
+      - bottom=0.55in
+      - left=0.75in
+      - right=0.75in
+    include-in-header:
+      - file: ../../../formats/press-release/_style.tex
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% MASTHEAD
+% ---------------------------------------------------------------------
+\briefheader{\includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}}{Press Release}
+
+% Gap below the masthead rule to the headline (~7pt, matching the research
+% highlight's headsep; the briefheader macro adds -3pt, so 10pt nets ~7pt)
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% HEADLINE + SUBHEAD
+% ---------------------------------------------------------------------
+{\hyphenpenalty=10000\exhyphenpenalty=10000
+\brieftitle{Coal's Decline Cost Its Workers More Than a Year's Earnings, Study Finds}}
+\vspace{1pt}
+\noindent{\color{cite}\rmfamily\itshape\fontsize{11pt}{14pt}\selectfont The most coal-dependent workers never recovered --- and switching industries or moving to a new region did little to help.\par}
+\vspace{2pt}
+\noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% RELEASE LINE + DATELINE (opens the body, AEI-style) + LEAD
+% Embargo form: replace with EMBARGOED UNTIL [Month Day, Year, Time TZ]
+% ---------------------------------------------------------------------
+\noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}}\hspace{0.6em}{\color{muted}\fontsize{9pt}{12pt}\selectfont [CITY, State] · [Month Day, Year]}\par
+\vspace{5pt}
+\noindent When the U.S. coal industry shrank by half after 2011, the workers it left behind never caught back up, according to a new study that tracks coal miners' earnings year by year. The most coal-dependent workers lost more than a full year's pay over the following decade, and neither switching industries nor moving to a new region did much to soften the blow.
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% BODY
+% ---------------------------------------------------------------------
+\noindent U.S. coal mining employment has fallen more than half since its 2011 peak, as cheap natural gas and falling renewable costs pushed coal out of the power sector. Earlier research showed that coal communities lost jobs and tax revenue, but could not reveal how individual workers fared. Using administrative records that follow nearly every U.S. coal worker before and after the peak, the working paper ``Transitional Costs and the Decline of Coal: Worker-Level Evidence,'' by Jonathan Colmer, Eleanor Krause, Eva Lyubich, and John Voorheis, compared the most coal-dependent workers with otherwise similar workers who depended less on coal. Between 2012 and 2019, the coal-dependent group lost cumulative earnings equal to about 1.6 times a full year's pre-decline pay --- a loss they never recovered.
+
+\vspace{6pt}
+\noindent Workers could not easily move or retrain their way out. Coal jobs are concentrated in a few isolated regions, so alternatives were scarce; those who left coal earned about 30 percent less, relocating barely helped, and a striking share stopped working altogether. Government transfers and early retirement withdrawals replaced only a fraction of what they lost. The authors frame coal's decline as an early look at what shrinking demand for fossil fuels could mean for workers in concentrated, high-wage industries: where specialized skills do not transfer, the costs land hard on workers and existing safety nets catch only part of the fall.
+
+\vspace{15pt}
+
+% ---------------------------------------------------------------------
+% MEDIA CONTACT  (AEI-style: above the ###, body size, bold lead-in)
+% ---------------------------------------------------------------------
+\noindent{\fontsize{10pt}{13.5pt}\selectfont
+{\bfseries For questions, interviews, or media inquiries,} contact [Full Name] at [email] or [phone].\par}
+
+\vspace{11pt}
+
+% ---------------------------------------------------------------------
+% END MARKER
+% ---------------------------------------------------------------------
+\begin{center}{\color{faint}\bfseries \#\#\#}\end{center}
+
+\vspace{11pt}
+
+% ---------------------------------------------------------------------
+% BOILERPLATE  (centered, italic, org name as link)
+% ---------------------------------------------------------------------
+\begin{center}{\color{muted}\itshape\fontsize{9.5pt}{14pt}\selectfont
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par}
+\end{center}
+
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% PAPER LINK
+% ---------------------------------------------------------------------
+\begin{center}{\color{faint}\fontsize{8pt}{11pt}\selectfont
+Full paper: \href{https://researchonline.lse.ac.uk/id/eprint/126795}{\color{faint}\underline{researchonline.lse.ac.uk/id/eprint/126795}} \quad·\quad
+Research highlight: \href{[URL]}{\color{faint}\underline{[link]}}\par}
+\end{center}
+```

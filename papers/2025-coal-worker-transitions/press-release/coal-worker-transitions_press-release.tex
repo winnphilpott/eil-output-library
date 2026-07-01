@@ -1,0 +1,300 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  11pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[top=0.6in,bottom=0.55in,left=0.75in,right=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+% =====================================================================
+%  _style.tex  ·  Design system for EIL press releases
+%  Self-contained — does NOT depend on the research-highlight style.
+%  Edit here to restyle ALL press releases. Included via the .qmd YAML.
+% =====================================================================
+
+% ---- Colours (shared EIL palette) -----------------------------------
+\definecolor{ink}{HTML}{1D2620}        % masthead label, headline, rule
+\definecolor{body}{HTML}{33352C}       % main body paragraphs
+\definecolor{accentred}{HTML}{641111}  % PRESS RELEASE label, release line, links
+\definecolor{muted}{HTML}{50534A}      % dateline, contact, boilerplate
+\definecolor{cite}{HTML}{6E6D61}       % subhead
+\definecolor{faint}{HTML}{9A978A}      % end marker, footer links
+\definecolor{warmrule}{HTML}{D8D2C2}   % thin warm-grey dividers
+
+% ---- Fonts (Source Sans 3 / Source Serif 4) -------------------------
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+\usepackage{sourceserifpro}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---- Page -----------------------------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+% Press-release body type. A release is sparse, so it reads larger than a
+% research highlight; set once here rather than overriding in each .qmd.
+\AtBeginDocument{\color{body}\fontsize{11pt}{15pt}\selectfont}
+
+% ---- Packages -------------------------------------------------------
+\usepackage{microtype}                 % provides \textls letter-spacing
+\usepackage{soul}
+\setul{2pt}{.5pt}
+\usepackage[colorlinks=true, urlcolor=accentred, linkcolor=accentred, pdfborder={0 0 0}]{hyperref}
+
+% =====================================================================
+%  MACROS
+% =====================================================================
+
+% --- Masthead: {logo}{right label} + 2.2pt ink rule ------------------
+\newcommand{\briefheader}[2]{%
+  \noindent
+  \begin{minipage}[c]{0.62\linewidth}\raggedright\color{ink} #1\end{minipage}\hfill
+  \begin{minipage}[c]{0.36\linewidth}\raggedleft
+    \fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}%
+    \textls[200]{\MakeUppercase{#2}}%
+  \end{minipage}
+
+  \vspace{2pt}
+  \noindent\textcolor{ink}{\rule{\linewidth}{2.2pt}}
+  \vspace{-3pt}
+}
+
+% --- Headline --------------------------------------------------------
+\newcommand{\brieftitle}[1]{%
+  {\color{ink}\fontsize{18pt}{19.5pt}\selectfont\bfseries\textls[-12]{#1}\par}\vspace{3pt}}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\author{}
+\date{}
+\begin{document}
+
+
+% ---------------------------------------------------------------------
+% MASTHEAD
+% ---------------------------------------------------------------------
+\briefheader{\includegraphics[height=0.45in]{../../../formats/logos/eil-logo-maroon.png}}{Press Release}
+
+% Gap below the masthead rule to the headline (~7pt, matching the research
+% highlight's headsep; the briefheader macro adds -3pt, so 10pt nets ~7pt)
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% HEADLINE + SUBHEAD
+% ---------------------------------------------------------------------
+{\hyphenpenalty=10000\exhyphenpenalty=10000
+\brieftitle{Coal's Decline Cost Its Workers More Than a Year's Earnings, Study Finds}}
+\vspace{1pt}
+\noindent{\color{cite}\rmfamily\itshape\fontsize{11pt}{14pt}\selectfont The most coal-dependent workers never recovered --- and switching industries or moving to a new region did little to help.\par}
+\vspace{2pt}
+\noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% RELEASE LINE + DATELINE (opens the body, AEI-style) + LEAD
+% Embargo form: replace with EMBARGOED UNTIL [Month Day, Year, Time TZ]
+% ---------------------------------------------------------------------
+\noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}}\hspace{0.6em}{\color{muted}\fontsize{9pt}{12pt}\selectfont [CITY, State] · [Month Day, Year]}\par
+\vspace{5pt}
+\noindent When the U.S. coal industry shrank by half after 2011, the workers it left behind never caught back up, according to a new study that tracks coal miners' earnings year by year. The most coal-dependent workers lost more than a full year's pay over the following decade, and neither switching industries nor moving to a new region did much to soften the blow.
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% BODY
+% ---------------------------------------------------------------------
+\noindent U.S. coal mining employment has fallen more than half since its 2011 peak, as cheap natural gas and falling renewable costs pushed coal out of the power sector. Earlier research showed that coal communities lost jobs and tax revenue, but could not reveal how individual workers fared. Using administrative records that follow nearly every U.S. coal worker before and after the peak, the working paper ``Transitional Costs and the Decline of Coal: Worker-Level Evidence,'' by Jonathan Colmer, Eleanor Krause, Eva Lyubich, and John Voorheis, compared the most coal-dependent workers with otherwise similar workers who depended less on coal. Between 2012 and 2019, the coal-dependent group lost cumulative earnings equal to about 1.6 times a full year's pre-decline pay --- a loss they never recovered.
+
+\vspace{6pt}
+\noindent Workers could not easily move or retrain their way out. Coal jobs are concentrated in a few isolated regions, so alternatives were scarce; those who left coal earned about 30 percent less, relocating barely helped, and a striking share stopped working altogether. Government transfers and early retirement withdrawals replaced only a fraction of what they lost. The authors frame coal's decline as an early look at what shrinking demand for fossil fuels could mean for workers in concentrated, high-wage industries: where specialized skills do not transfer, the costs land hard on workers and existing safety nets catch only part of the fall.
+
+\vspace{15pt}
+
+% ---------------------------------------------------------------------
+% MEDIA CONTACT  (AEI-style: above the ###, body size, bold lead-in)
+% ---------------------------------------------------------------------
+\noindent{\fontsize{10pt}{13.5pt}\selectfont
+{\bfseries For questions, interviews, or media inquiries,} contact [Full Name] at [email] or [phone].\par}
+
+\vspace{11pt}
+
+% ---------------------------------------------------------------------
+% END MARKER
+% ---------------------------------------------------------------------
+\begin{center}{\color{faint}\bfseries \#\#\#}\end{center}
+
+\vspace{11pt}
+
+% ---------------------------------------------------------------------
+% BOILERPLATE  (centered, italic, org name as link)
+% ---------------------------------------------------------------------
+\begin{center}{\color{muted}\itshape\fontsize{9.5pt}{14pt}\selectfont
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par}
+\end{center}
+
+\vspace{10pt}
+
+% ---------------------------------------------------------------------
+% PAPER LINK
+% ---------------------------------------------------------------------
+\begin{center}{\color{faint}\fontsize{8pt}{11pt}\selectfont
+Full paper: \href{https://researchonline.lse.ac.uk/id/eprint/126795}{\color{faint}\underline{researchonline.lse.ac.uk/id/eprint/126795}} \quad·\quad
+Research highlight: \href{[URL]}{\color{faint}\underline{[link]}}\par}
+\end{center}
+
+
+
+
+\end{document}
