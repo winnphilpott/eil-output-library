@@ -98,15 +98,17 @@ format:
 \figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026).}
 \includegraphics[width=\linewidth]{../../data-viz/figures/fig2-did.png}
 \par\vspace{3pt}
-{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} The shaded band is the range of statistical uncertainty around each month's estimated effect. Because it always spans ``no change,'' the workshops had no detectable effect on violations.\par}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point compares violations at trained facilities against facilities not yet trained, month by month around training (month 0). After training, an effect from the workshops would show up as the line moving away from zero; instead it stays flat, and the shaded band of statistical uncertainty always includes ``no change.'' The workshops had no detectable effect.\par}
 \end{minipage}
 \end{center}
 
 \vspace{6pt}
 
-\noindent Evaluating whether a policy works is difficult when researchers can't randomly choose who receives it or when. For the EPA compliance workshops, facilities decided for themselves whether to attend, and the ones that signed up may already have been more motivated to reduce violations than the ones that didn't. That motivation is nearly impossible to separate from the effect of the training itself, so an improvement that follows the workshops is not necessarily proof the workshops caused it. The only way to know is to compare against a credible benchmark: similar facilities that signed up but had not yet been trained. Since the workshops reached different facilities at different times, the researchers could measure facilities trained early against equally motivated ones trained later.
+\noindent Evaluating whether a policy works is difficult: researchers can't see what the facilities would have done with and without the policy. Two things make this policy hard to evaluate. First, the workshops were voluntary. This means that comparing trained and untrained facilities might not work --- what if facilities that signed up were more motivated to reduce violations than those that didn't, regardless of the workshops? We might conflate two different causes of violation reduction. Second, violations were falling across the board in these years, so a simple before-and-after comparison would credit the workshops with a broader decline they hadn't caused. The researchers got around both by comparing facilities trained early against ones that had \emph{also} signed up but not yet been trained --- just as motivated, and moving through the same stretch of time. The staggered rollout, spread over several months, is what made those not-yet-trained facilities available as a comparison group.
 
-\noindent If the workshops changed behavior, violations at trained facilities should have fallen relative to facilities not yet trained. The figure tracks exactly that, month by month around the workshop. Instead of bending at the moment of training, the line stays flat at zero. \textbf{Trained facilities were no less likely to violate than comparable facilities that had not yet been trained.}
+\noindent Of course, the not-yet-trained facilities are only a fair stand-in if they really would have followed the same path --- and that's something researchers take partly on faith. Two things earn it here: the groups had been moving in lockstep long before any training began, and no facility got to pick its place in line. The program set the schedule.
+
+\noindent The two groups declined almost identically. Violations at trained facilities fell by about as much as at facilities still waiting to be trained, and no additional drop appeared once a facility had been through a workshop. The training added nothing to a decline that was already underway. \textbf{Trained facilities were no less likely to violate than facilities that had not yet been trained.}
 
 \vspace{8pt}
 
