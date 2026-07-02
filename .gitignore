@@ -10,6 +10,9 @@ data/
 *.log
 *.synctex.gz
 
+# Quarto render intermediates (regenerated on every render)
+*_files/
+
 # Source journal PDFs dropped in a paper folder (kept locally, not committed).
 # Rendered outputs in research-highlight/ subfolders are still tracked.
 papers/*/*.pdf
