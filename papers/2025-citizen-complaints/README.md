@@ -1,6 +1,6 @@
-# [Paper Title]
+# Environmental Citizen Complaints
 
-**[Authors] · [Venue], 2025** URI: [add link]
+**Colmer, Evans & Shimshack · Journal of Political Economy: Microeconomics (forthcoming), 2025** URI: https://doi.org/10.1086/740210
 
 <!-- Folder dated 2025 = year accepted for publication. Source PDF: Citizen_Complaint_Paper.pdf (gitignored) -->
 
