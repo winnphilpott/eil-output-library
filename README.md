@@ -8,16 +8,18 @@ A shared library of public-facing outputs developed at the Environmental Inequal
 eil-output-library/
 ├── papers/                    # One folder per paper, each containing a full output bundle
 │   └── YYYY-[topic-slug]/
-│       ├── code/              # Figure scripts
-│       ├── data/              # Datasets (excluded from git)
-│       ├── figures/           # Figure outputs (shared across outputs)
+│       ├── data-viz/          # Figure pipeline shared across this paper's outputs
+│       │   ├── code/          # Figure scripts
+│       │   ├── data/          # Datasets (excluded from git)
+│       │   └── figures/       # Figure outputs (shared across outputs)
 │       ├── research-highlight/  # One-page research highlight
 │       ├── press-release/     # Press release
 │       ├── blog/              # Blog post copy and assets
 │       └── social/            # Social media copy and assets
 ├── newsletter/                # Newsletter posts (date-based, not tied to a single paper)
 │   └── YYYY-MM-DD/
-├── data-viz/                  # Standalone data visualizations
+├── social/                    # Standalone social campaigns (not tied to a single paper)
+│   └── YYYY-[topic-slug]/
 ├── formats/                   # Shared design system and templates
 │   ├── logos/                 # Shared logo assets
 │   ├── research-highlight/    # Research highlight templates and LaTeX design system
