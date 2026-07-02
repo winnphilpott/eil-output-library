@@ -80,10 +80,6 @@ p <- ggplot(es, aes(event, est)) +
   geom_ribbon(aes(ymin = lo, ymax = hi), fill = AXIS, alpha = 0.35) +
   geom_line(color = INK, alpha = 0.55, linewidth = 0.4) +
   geom_point(color = INK, size = 0.95) +
-  annotate("segment", x = -9, xend = -8, y = 0.48, yend = 0.24,
-           color = MUTE, linewidth = 0.3) +
-  annotate("text", x = -9, y = 0.58, label = "range of\nuncertainty",
-           size = 2.0, color = MUTE, lineheight = 0.9) +
   # word-based y-axis instead of numbers
   scale_y_continuous(limits = c(-0.8, 1.0), breaks = c(-0.5, 0, 0.5),
     labels = c("Fewer\nviolations", "No change", "More\nviolations")) +
