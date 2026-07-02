@@ -80,7 +80,7 @@ At first glance, compliance assistance looked liked it reduced violations for as
 \begin{minipage}[t]{0.575\linewidth}
 \vspace{0pt}
 \figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
-\includegraphics[width=\linewidth]{../../figures/fig1.png}
+\includegraphics[width=\linewidth]{../../data-viz/figures/fig1.png}
 \end{minipage}
 
 \vspace{0pt}

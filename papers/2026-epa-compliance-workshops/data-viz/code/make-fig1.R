@@ -4,7 +4,7 @@
 # The script looks for the .dta file in the current directory. If absent,
 # it downloads it automatically from OSF (~21 MB).
 #
-# Run:  Rscript make_fig1.R   ->  writes figures/fig1.png
+# Run (from data-viz/):  Rscript code/make-fig1.R   ->  writes figures/fig1.png
 # Deps: haven, dplyr, ggplot2
 
 library(haven)

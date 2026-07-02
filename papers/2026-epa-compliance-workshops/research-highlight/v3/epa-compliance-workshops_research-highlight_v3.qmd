@@ -93,7 +93,7 @@ format:
 \begin{center}
 \begin{minipage}{0.80\linewidth}
 \figtitle{Violations per facility, 2014--2019}{Source: Ferraro \& Shimshack (2026).}
-\includegraphics[width=\linewidth]{../../figures/fig1-v2.png}
+\includegraphics[width=\linewidth]{../../data-viz/figures/fig1-v2.png}
 \end{minipage}
 \end{center}
 

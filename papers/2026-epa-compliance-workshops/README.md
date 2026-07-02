@@ -5,15 +5,16 @@ DOI: [10.1002/pam.70056](https://doi.org/10.1002/pam.70056)
 
 ## Data
 
-`data/final_deidentified_dataset_july2025.dta` — de-identified facility-level violation records from Ferraro & Shimshack (2026). Also available at [osf.io/w2fje](https://osf.io/w2fje).
+`data-viz/data/final_deidentified_dataset_july2025.dta` — de-identified facility-level violation records from Ferraro & Shimshack (2026). Also available at [osf.io/w2fje](https://osf.io/w2fje).
 
 ## Reproducing the Brief
 
 ```bash
-# 1. Generate figure (from this folder)
+# 1. Generate figure (from the data-viz/ folder)
+cd data-viz/
 Rscript code/make-fig1.R
 
 # 2. Render PDF (from the version subfolder)
-cd research-highlight/v4/
+cd ../research-highlight/v4/
 quarto render epa-compliance-workshops_research-highlight_v4.qmd
 ```

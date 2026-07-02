@@ -14,4 +14,4 @@ YYYY-[topic-slug]/
 
 ## Formats and Style
 
-Image templates live in `formats/social-media/`. Caption and platform conventions are in `style-guides/social-media/`.
+Image templates live in `formats/social/`. Caption and platform conventions are in `style-guides/social/`.

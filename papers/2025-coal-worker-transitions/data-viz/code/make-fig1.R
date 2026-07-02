@@ -15,7 +15,7 @@
 # before/after-2011 framing, and a single soft uncertainty band. The
 # interpretive note lives in the document, not the figure.
 #
-# Run (from research-highlight/):  Rscript code/make-fig1.R  -> figures/fig1.png
+# Run (from data-viz/):  Rscript code/make-fig1.R  -> figures/fig1.png
 # Deps: ggplot2
 
 library(ggplot2)

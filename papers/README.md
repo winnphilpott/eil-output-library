@@ -8,9 +8,10 @@ Each paper gets its own folder named `YYYY-[topic-slug]` (e.g., `2026-epa-compli
 
 ```
 YYYY-[topic-slug]/
-├── code/                # figure scripts (e.g., make-fig1.R)
-├── data/                # datasets used by the paper or figures
-├── figures/             # figure outputs shared across outputs; logos live in formats/logos/
+├── data-viz/            # figure pipeline shared across this paper's outputs
+│   ├── code/            # figure scripts (e.g., make-fig1.R)
+│   ├── data/            # datasets used by the figures (gitignored)
+│   └── figures/         # figure outputs; logos live in formats/logos/
 ├── research-highlight/  # one-page research highlight (.qmd source + rendered PDF)
 ├── press-release/       # press release copy
 ├── blog/                # blog post copy and assets
@@ -18,13 +19,17 @@ YYYY-[topic-slug]/
 └── README.md
 ```
 
+Every output that needs a figure (research highlight, press release, blog, …) reaches into the shared `data-viz/figures/` folder rather than keeping its own copy.
+
 ## Rendering a Research Highlight to PDF
 
 **Requirements:** [Quarto](https://quarto.org/docs/get-started/) and a LaTeX distribution. The simplest cross-platform setup is to install Quarto, then run `quarto install tinytex` once — Quarto then locates LaTeX automatically on macOS, Linux, and Windows. If Quarto is bundled with RStudio but not on your PATH, use the full path to the RStudio-bundled binary:
 
 ```bash
-# 1. Generate figures (run from the paper's root folder)
+# 1. Generate figures (run from the paper's data-viz/ folder)
+cd data-viz/
 Rscript code/make-fig1.R
+cd ..
 
 # 2. Render the PDF (run from the research-highlight/ subfolder)
 cd research-highlight/
