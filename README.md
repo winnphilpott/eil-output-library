@@ -48,7 +48,7 @@ eil-output-library/
 The general idea is to start small, with the most essential bits of information from a paper, and then work up from there. This helps maintain consistent messaging across outputs. 
 
 1. **Reading and Understanding** Read through the paper, talk with PIs about any questions, note any technically dense and/or essential-to-know sections.
-2. **Data Visualization** Identify one (two if absolutely necessary) figure from the paper that gets the central point across. Verify with PIs that this is the idea we want to frame our communication around.
+2. **Data Visualization** Identify one (two if absolutely necessary) figure from the paper that gets the central point across. Verify with PIs that this is the idea we want to frame our communication around. ALSO SEE IF YOU HAVE ACCESS TO THE DATA THEMSELF or if we're jsut doing a visual recreation. 
 3. **Social Media** Draft any posts/captions to be shared alongside key figure. Use this time to identify key messaging and take-aways for a short output. Use this to inform development for longer-form outputs.
 4. **Press Release** Think about what a reporter needs to know to decide whether or not they want to explore or write about this paper. Think about taking it a step further than the social media output, but keeping it concise. This is where quotes/interpretations not in the paper would be helpful from a PI or qualified stakeholder. Talk to PIs about this early on so that we have that if necessary when press release time comes.
 5. **Research Highlight** Here is where we can get more into the mechanics of the study (while maintaining a general interest audience).
