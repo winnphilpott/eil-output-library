@@ -21,6 +21,7 @@
 library(ggplot2)
 
 OUT_PATH <- "figures/fig1.png"
+SRC      <- "Environmental Inequality Lab · Coal Worker Transitions, 2025"
 
 # --- Digitized point estimates (coef. on coal exposure, x pre-shock annual pay)
 d <- data.frame(
@@ -69,7 +70,7 @@ p <- ggplot(d, aes(year, est)) +
                "1½ years", "2 years", "2½ years\nlost")) +
   scale_x_continuous(breaks = seq(2007, 2021, 2),
                      limits = XLIM, expand = c(0, 0)) +
-  labs(x = NULL, y = NULL) +
+  labs(x = NULL, y = NULL, caption = SRC) +
   theme_minimal(base_size = 7) +
   theme(
     plot.background  = element_rect(fill = "#ffffff", color = NA),
@@ -79,7 +80,9 @@ p <- ggplot(d, aes(year, est)) +
     axis.ticks.x     = element_line(color = AXIS, linewidth = 0.3),
     axis.ticks.y     = element_blank(),
     axis.text.x      = element_text(color = MUTE, size = 7),
-    axis.text.y      = element_text(color = INK, size = 6.4, lineheight = 0.85)
+    axis.text.y      = element_text(color = INK, size = 6.4, lineheight = 0.85),
+    plot.caption     = element_text(color = MUTE, size = 5.6, hjust = 0,
+                                    margin = margin(t = 6))
   )
 
 dir.create("figures", showWarnings = FALSE, recursive = TRUE)

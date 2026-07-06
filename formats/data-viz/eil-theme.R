@@ -6,7 +6,16 @@
 #  Usage:
 #    source("formats/data-viz/eil-theme.R")   # adjust path as needed
 #    p <- ggplot(...) + ... + theme_eil()
-#    eil_save(p, "figures/fig1.png")
+#    # embedded figure: source line always, no logo
+#    eil_save(p, "figures/fig1.png", source = "Environmental Inequality Lab · Short Title, 2026")
+#    # standalone / social card: add the logo lock-up
+#    eil_save(p, "figures/fig1-card.png", width = 6, height = 6,
+#             source = "Environmental Inequality Lab · Short Title, 2026", logo = TRUE)
+#
+#  Branding convention (style-guides/data-viz/README.md §5):
+#    - source line ALWAYS (pass `source=`); it renders as the muted caption.
+#    - logo lock-up only on figures that travel alone (`logo = TRUE`, or
+#      `logo = "white"` on a dark/accent card). Omit on embedded figures.
 #
 #  The palette is locked to the print design system
 #  (formats/research-highlight/_style.tex) so figures sit seamlessly
@@ -57,15 +66,68 @@ theme_eil <- function(base_size = 7, base_family = "") {
                                                margin = ggplot2::margin(t = 4)),
       axis.title.y     = ggplot2::element_blank(),
       plot.title       = ggplot2::element_text(color = eil_pal$ink, face = "bold"),
-      plot.caption     = ggplot2::element_text(color = eil_pal$muted, hjust = 0)
+      # source line renders here (via eil_save(source=)): muted, flush-left, small
+      plot.caption     = ggplot2::element_text(color = eil_pal$muted, hjust = 0,
+                                               size = base_size * 0.82,
+                                               margin = ggplot2::margin(t = 6))
     )
+}
+
+# ---- Branding: source line + logo lock-up ---------------------------
+# Resolve formats/logos/ by walking up from the working directory, so a
+# script run from a paper's data-viz/ folder or from the repo root both
+# find it. Override with options(eil.logo_dir = "/path/to/logos").
+.eil_find_logo_dir <- function() {
+  opt <- getOption("eil.logo_dir")
+  if (!is.null(opt)) return(opt)
+  dir <- normalizePath(getwd(), mustWork = FALSE)
+  repeat {
+    cand <- file.path(dir, "formats", "logos")
+    if (dir.exists(cand)) return(cand)
+    parent <- dirname(dir)
+    if (identical(parent, dir)) break        # reached filesystem root
+    dir <- parent
+  }
+  NULL
 }
 
 # ---- Export ---------------------------------------------------------
 # House defaults for a column-width figure. Keep dpi >= 200 for print.
+#
+# source: the attribution line (ALWAYS pass it) — rendered as the muted
+#   caption, e.g. "Environmental Inequality Lab · Short Title, 2026".
+# logo:  FALSE for embedded figures (the document's masthead brands the
+#   page); TRUE to inset the maroon lock-up top-right on a standalone /
+#   social card; "white" for the white lock-up on a dark/accent card.
+#   Dependency-light: uses the tiny `png` package + base `grid` only.
 eil_save <- function(plot, path, width = 5.4, height = 3.1, dpi = 220,
-                     bg = eil_pal$canvas) {
+                     bg = eil_pal$canvas, source = NULL, logo = FALSE) {
   dir.create(dirname(path), showWarnings = FALSE, recursive = TRUE)
-  ggplot2::ggsave(path, plot, width = width, height = height, dpi = dpi, bg = bg)
+
+  if (!is.null(source)) plot <- plot + ggplot2::labs(caption = source)
+
+  if (isFALSE(logo)) {
+    ggplot2::ggsave(path, plot, width = width, height = height, dpi = dpi, bg = bg)
+  } else {
+    file <- if (identical(logo, "white")) "eil-logo-white.png" else "eil-logo-maroon.png"
+    logo_dir <- .eil_find_logo_dir()
+    if (is.null(logo_dir))
+      stop("eil_save(logo=): could not find formats/logos/. ",
+           "Set options(eil.logo_dir = \"/path/to/logos\").")
+    img <- png::readPNG(file.path(logo_dir, file))
+    # top-right corner of the whole canvas; width in inches keeps aspect ratio
+    mark <- grid::rasterGrob(
+      img,
+      x = grid::unit(1, "npc") - grid::unit(0.05, "in"),
+      y = grid::unit(1, "npc") - grid::unit(0.05, "in"),
+      just = c("right", "top"),
+      width = grid::unit(width * 0.16, "in")
+    )
+    grDevices::png(path, width = width, height = height, units = "in",
+                   res = dpi, bg = bg)
+    grid::grid.draw(ggplot2::ggplotGrob(plot))
+    grid::grid.draw(mark)
+    grDevices::dev.off()
+  }
   message("wrote ", path)
 }

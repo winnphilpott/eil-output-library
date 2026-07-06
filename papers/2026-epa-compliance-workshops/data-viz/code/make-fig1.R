@@ -14,6 +14,7 @@ library(ggplot2)
 DATA_FILE <- "data/final_deidentified_dataset_july2025.dta"
 DATA_URL  <- "https://osf.io/download/sa56r/"
 OUT_PATH  <- "figures/fig1.png"
+SRC       <- "Environmental Inequality Lab · EPA Compliance Workshops, 2026"
 
 # --- Load data (download if missing) ----------------------------------------
 if (!file.exists(DATA_FILE)) {
@@ -88,7 +89,7 @@ p <- ggplot(treated, aes(x = time)) +
     labels = c("0", ".5", "1.0", "1.5"),
     expand = c(0, 0)
   ) +
-  labs(x = "MONTH OF SAMPLE (72 MONTHS)", y = NULL) +
+  labs(x = "MONTH OF SAMPLE (72 MONTHS)", y = NULL, caption = SRC) +
   guides(color = guide_legend(nrow = 1), linetype = guide_legend(nrow = 1),
          fill = guide_legend(nrow = 1, keywidth = unit(8, "pt"), keyheight = unit(8, "pt"))) +
   theme_minimal(base_size = 7) +
@@ -108,7 +109,9 @@ p <- ggplot(treated, aes(x = time)) +
     legend.key.height = unit(8, "pt"),
     legend.text       = element_text(color = INK, size = 6.2),
     legend.key        = element_rect(fill = NA, color = NA),
-    legend.spacing.x  = unit(6, "pt")
+    legend.spacing.x  = unit(6, "pt"),
+    plot.caption      = element_text(color = MUTE, size = 5.6, hjust = 0,
+                                     margin = margin(t = 6))
   )
 
 dir.create("figures", showWarnings = FALSE, recursive = TRUE)

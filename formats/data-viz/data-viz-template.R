@@ -20,6 +20,10 @@ library(ggplot2)
 source("formats/data-viz/eil-theme.R")
 
 OUT_PATH <- "/tmp/eil-data-viz-template.png"
+CARD_PATH <- "/tmp/eil-data-viz-template-card.png"   # standalone/social variant
+
+# Source line: pass it to eil_save on EVERY figure (see data-viz README §5).
+SOURCE <- "Environmental Inequality Lab · Demo Figure, 2026"
 
 # --- Data ------------------------------------------------------------
 # DEMO ONLY: a before/after event series with an uncertainty band.
@@ -71,4 +75,12 @@ p <- ggplot(demo, aes(event, est)) +
   theme_eil()
 
 # --- Export ----------------------------------------------------------
-eil_save(p, OUT_PATH)
+# Embedded figure (goes inside a highlight/release): source line, NO logo.
+# The document's masthead already brands the page.
+eil_save(p, OUT_PATH, source = SOURCE)
+
+# Standalone / social card: same recipe, re-rendered with the logo lock-up
+# added and at a self-contained size. A social card is NEVER a copied export
+# of the embedded figure -- it is re-rendered like this (see social README §2).
+# Use logo = "white" instead when the card sits on a dark/accent background.
+eil_save(p, CARD_PATH, width = 6, height = 6, source = SOURCE, logo = TRUE)

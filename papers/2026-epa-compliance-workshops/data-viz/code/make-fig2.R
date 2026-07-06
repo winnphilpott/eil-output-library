@@ -26,6 +26,7 @@ library(ggplot2)
 DATA_FILE <- "data/final_deidentified_dataset_july2025.dta"
 DATA_URL  <- "https://osf.io/download/sa56r/"
 OUT_PATH  <- "figures/fig2-did.png"
+SRC       <- "Environmental Inequality Lab · EPA Compliance Workshops, 2026"
 
 # --- Load data (download if missing) ----------------------------------------
 if (!file.exists(DATA_FILE)) {
@@ -86,7 +87,7 @@ p <- ggplot(es, aes(event, est)) +
   scale_x_continuous(breaks = seq(-12, 12, 6),
     labels = c("12+ before", "6 before", "Workshop", "6 after", "12+ after"),
     expand = c(0.02, 0)) +
-  labs(x = "MONTHS RELATIVE TO TRAINING", y = NULL) +
+  labs(x = "MONTHS RELATIVE TO TRAINING", y = NULL, caption = SRC) +
   theme_minimal(base_size = 7) +
   theme(
     plot.background  = element_rect(fill = "#ffffff", color = NA),
@@ -97,7 +98,9 @@ p <- ggplot(es, aes(event, est)) +
     axis.ticks.y     = element_blank(),
     axis.text.x      = element_text(color = MUTE, size = 7),
     axis.text.y      = element_text(color = INK, size = 6.6, lineheight = 0.9),
-    axis.title.x     = element_text(color = MUTE, size = 6, margin = margin(t = 4))
+    axis.title.x     = element_text(color = MUTE, size = 6, margin = margin(t = 4)),
+    plot.caption     = element_text(color = MUTE, size = 5.6, hjust = 0,
+                                    margin = margin(t = 6))
   )
 
 dir.create("figures", showWarnings = FALSE, recursive = TRUE)

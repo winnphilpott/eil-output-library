@@ -38,8 +38,11 @@ and then maybe read the caption.
   with comment), not the rule.
 - **The image is self-sufficient.** Similar to figure conventions, source line and a legible headline 
   live *on* the image, not only in the caption (see §6).
-- **Reuse, don't redraw.** Pull the paper's existing figure through the data-viz theme
-  rather than making a one-off.
+- **Reuse the recipe, re-render the card.** A social card is built from the paper's
+  existing figure *recipe* — same data, same plot, same theme — but it can't be a straight
+  copy of the embedded PNG. Re-render it with the logo lock-up added
+  (`eil_save(..., logo = TRUE)`) and at social dimensions, so it stands alone. Reuse the
+  plot, not the exported file (see data-viz README §5).
 - **LinkedIn too.** A visual still outperforms text, though LinkedIn's longer caption does
   more of the work.
 

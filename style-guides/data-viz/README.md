@@ -82,7 +82,32 @@ at. Keep categorical encodings to grayscale (`ink` / `muted` / `faint`) plus tha
   "no change" line across the board, let the flat series say so rather than
   annotating significance on the chart.
 
-## 5. Export & file conventions
+## 5. Attribution & branding
+
+Every figure carries its source; only figures that travel alone carry the logo.
+
+- **Source line — always.** A single `muted`-grey line at the foot of the figure names
+  the lab and the work: *"Environmental Inequality Lab · [Short Title], [Year]"* (e.g.
+  *"Environmental Inequality Lab · EPA Compliance Workshops, 2026"*). It appears on every
+  figure, embedded or standalone, so a figure lifted out of its document is never
+  unattributed. Pass it via `eil_save(..., source = "…")`, which renders it as the plot
+  caption; scripts that don't use `eil_save()` add it as `labs(caption = …)` with a
+  `muted` `plot.caption` element (see the paper figure scripts for the pattern).
+- **Logo lock-up — standalone only.** Figures that travel alone (social cards, standalone
+  web graphics, a figure sent on its own) carry the EIL logo in the **top-right** corner:
+  `eil-logo-maroon.png` on a light canvas, `eil-logo-white.png` on a dark/accent card.
+  Add it with `eil_save(..., logo = TRUE)` (or `logo = "white"`). **Omit it on figures
+  embedded in a highlight, release, or newsletter** — the document's masthead already
+  brands the page, and a second mark double-brands it.
+- **Consistent placement.** Logo in the same corner at the same scale across cards; source
+  line flush-left at the foot. Never hand-place either per-figure — the `eil_save()`
+  mechanism sets both.
+
+This mirrors the social guide's on-image conventions (`style-guides/social/README.md` §6):
+a social card is a figure **re-rendered** with `logo = TRUE`, never a copied export of the
+embedded figure.
+
+## 6. Export & file conventions
 
 - **Export with `eil_save()`** — defaults to 5.4×3.1 in, 220 dpi, white canvas.
   Keep dpi ≥ 200 for anything that may print.
@@ -103,7 +128,7 @@ at. Keep categorical encodings to grayscale (`ink` / `muted` / `faint`) plus tha
   For figures that belong to a paper, the script lives in the paper's `code/`
   and writes to its `figures/` (see the canonical example).
 
-## 6. Checklist
+## 7. Checklist
 
 - [ ] Does the figure make **one** clear point?
 - [ ] Could a non-specialist read the axes **without a key**?
@@ -112,4 +137,6 @@ at. Keep categorical encodings to grayscale (`ink` / `muted` / `faint`) plus tha
 - [ ] Uncertainty shown as a soft band, explained once in words?
 - [ ] Do the data marks read as the darkest element?
 - [ ] Is the interpretation in the document, not baked into the plot?
+- [ ] **Source line present** (via `source =`), on embedded and standalone alike?
+- [ ] **Logo** only if the figure travels alone (`logo = TRUE`), never on an embedded one?
 - [ ] Colors pulled from `eil_pal`, exported via `eil_save()` at ≥ 200 dpi?
