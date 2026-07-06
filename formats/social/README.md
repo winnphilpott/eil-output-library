@@ -43,11 +43,14 @@ Each template has two `EDIT HERE` blocks — **content** (stat, headline, source
 
 ## Output convention
 
-Templates write to `/tmp` for a quick preview. For real work, save into the campaign
-folder per `social/README.md`:
+Templates write to `/tmp` for a quick preview. For real work, save into the paper's
+`social/` folder (or, for non-paper campaigns, a top-level `social/YYYY-[topic-slug]/`) —
+see `style-guides/social/README.md` §9:
 
 ```
-social/YYYY-[topic-slug]/
+papers/<paper-slug>/social/      # paper-tied (most social)
 ├── assets/   # exported cards (.png)
 └── copy/     # captions, per platform
 ```
+
+The EPA cards are a worked example: `papers/2026-epa-compliance-workshops/social/`.

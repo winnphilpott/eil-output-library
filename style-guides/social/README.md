@@ -82,7 +82,7 @@ Inherits the press-release register, compressed:
   Agency (EPA).
 - **Explain the method, don't name it.** Narrate why a comparison is credible; never write
   "difference-in-differences" in a caption.
-- **Academic tone and grounding.** State stakes soberly; keep the honest caveat. 
+- **Academic tone and grounding.** State stakes soberly; keep the caveat. 
 - **Lab voice.** The post speaks as the Environmental Inequality Lab, not as an
   individual.
 
@@ -130,16 +130,25 @@ affiliation) and confirm the quote with the speaker before posting.
 
 ## 9. File & folder conventions
 
-Per `social/README.md`, each campaign gets a dated folder:
+Social lives in one of two places, by whether it belongs to a paper:
+
+- **Paper-tied social** → `papers/<paper-slug>/social/`, next to that paper's
+  `press-release/`, `data-viz/`, and `blog/` (see `papers/README.md`). Most social is
+  this. No dated sub-folder — the paper folder already names the topic.
+- **Non-paper social** (lab news, events, cross-paper campaigns) → the top-level
+  `social/YYYY-[topic-slug]/` (see `social/README.md`).
+
+Both use the same inside shape:
 
 ```
-social/YYYY-[topic-slug]/
+social/
 ├── assets/   # source images, exported cards, design files
 └── copy/     # caption drafts, per platform
 ```
 
-- **Card scripts** that generate images live with the campaign or extend `formats/social/`
-  templates; they pull `formats/data-viz/eil-theme.R` so social cards match paper figures.
+- **Card scripts** that generate images live in the `social/` folder or extend
+  `formats/social/` templates; they pull `formats/data-viz/eil-theme.R` so social cards
+  match paper figures.
 - **Name copy by platform** — e.g. `copy/x.md`, `copy/linkedin.md` — so a draft is
   self-describing out of context.
 

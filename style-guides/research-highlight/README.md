@@ -44,7 +44,7 @@ so two-page highlights stay branded throughout.
 - **Explain the method, don't name it.** Narrate *why* a comparison is credible
   ("similar facilities that signed up but had not yet been trained") rather than writing
   "difference-in-differences."
-- **Earn trust with calibrated humility.** Acknowledge the honest caveat
+- **Earn trust with calibrated humility.** Acknowledge the caveat
   ("this is one program, and small benefits can't be ruled out"), then restate the real point.
 - **No hype.** State the stakes soberly ("commits more public funding without delivering
   the reduction in pollution it was meant to achieve").

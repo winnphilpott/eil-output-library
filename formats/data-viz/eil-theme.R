@@ -100,8 +100,13 @@ theme_eil <- function(base_size = 7, base_family = "") {
 #   page); TRUE to inset the maroon lock-up top-right on a standalone /
 #   social card; "white" for the white lock-up on a dark/accent card.
 #   Dependency-light: uses the tiny `png` package + base `grid` only.
+# logo_frac:   logo width as a fraction of the figure width (aspect kept).
+# logo_margin: inset of the logo from the top and right edges, in inches.
+#   Set this to the plot's outer margin so the logo lines up with the
+#   title (left) and source line (for cards, save_card() does this).
 eil_save <- function(plot, path, width = 5.4, height = 3.1, dpi = 220,
-                     bg = eil_pal$canvas, source = NULL, logo = FALSE) {
+                     bg = eil_pal$canvas, source = NULL, logo = FALSE,
+                     logo_frac = 0.20, logo_margin = 0.08) {
   dir.create(dirname(path), showWarnings = FALSE, recursive = TRUE)
 
   if (!is.null(source)) plot <- plot + ggplot2::labs(caption = source)
@@ -118,10 +123,10 @@ eil_save <- function(plot, path, width = 5.4, height = 3.1, dpi = 220,
     # top-right corner of the whole canvas; width in inches keeps aspect ratio
     mark <- grid::rasterGrob(
       img,
-      x = grid::unit(1, "npc") - grid::unit(0.05, "in"),
-      y = grid::unit(1, "npc") - grid::unit(0.05, "in"),
+      x = grid::unit(1, "npc") - grid::unit(logo_margin, "in"),
+      y = grid::unit(1, "npc") - grid::unit(logo_margin, "in"),
       just = c("right", "top"),
-      width = grid::unit(width * 0.16, "in")
+      width = grid::unit(width * logo_frac, "in")
     )
     grDevices::png(path, width = width, height = height, units = "in",
                    res = dpi, bg = bg)

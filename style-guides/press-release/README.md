@@ -49,7 +49,7 @@ quoted directly or reprinted in part.
   agencies on first use: "Environmental Protection Agency (EPA)."
 - **Explain the method, don't name it.** Narrate *why* a comparison is credible rather
   than writing "difference-in-differences."
-- **No hype, calibrated humility.** State the stakes soberly and keep the honest caveat
+- **No hype, calibrated humility.** State the stakes soberly and keep the caveat
   — but put strong claims and significance into a researcher's quote, where they read as
   attributed judgment rather than EIL editorializing.
 - **Newsworthy, not promotional.** A release reports a finding; it does not sell a

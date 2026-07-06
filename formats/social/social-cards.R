@@ -29,14 +29,25 @@ SOCIAL_DIMS <- list(
   landscape = list(width = 6.667, height = 3.75, dpi = 180)
 )
 
+# ---- Shared layout ---------------------------------------------------
+# One gutter for everything: the card themes inset title + source by this
+# much, and save_card() insets the logo by the same, so the logo lines up
+# with the headline (left) and the source line. Change it in one place.
+CARD_BASE      <- 19                                  # base_size for card themes
+CARD_GUTTER_F  <- 1.5                                 # gutter as a multiple of base_size (pt)
+CARD_GUTTER_IN <- (CARD_BASE * CARD_GUTTER_F) / 72.27 # same gutter in inches (for the logo inset)
+
 # ---- Save a card -----------------------------------------------------
 # Thin wrapper over eil_save() that spreads a SOCIAL_DIMS entry and
 # defaults logo = TRUE (a card travels alone, so it carries the mark).
-# Pass logo = "white" on a dark/accent background; bg sets the canvas.
+# logo_margin defaults to the card gutter so the logo aligns with the
+# text. Pass logo = "white" on a dark/accent background; bg sets the canvas.
 save_card <- function(plot, path, dims = SOCIAL_DIMS$square,
-                      source, logo = TRUE, bg = eil_pal$canvas) {
+                      source, logo = TRUE, bg = eil_pal$canvas,
+                      logo_margin = CARD_GUTTER_IN) {
   eil_save(plot, path, width = dims$width, height = dims$height,
-           dpi = dims$dpi, bg = bg, source = source, logo = logo)
+           dpi = dims$dpi, bg = bg, source = source, logo = logo,
+           logo_margin = logo_margin)
 }
 
 # ---- Text wrapping ---------------------------------------------------
@@ -52,7 +63,7 @@ wrap_text <- function(x, width = 24) {
 # For cards that hold a CHART. Extends the house theme with social-scale
 # type, a bold headline (plot.title), and generous card margins. Bump
 # base_size for a bigger canvas; the title/subtitle/caption scale with it.
-theme_eil_social <- function(base_size = 19, base_family = "") {
+theme_eil_social <- function(base_size = CARD_BASE, base_family = "") {
   theme_eil(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       # align title + source to the whole card, not the inset plot panel,
@@ -65,31 +76,33 @@ theme_eil_social <- function(base_size = 19, base_family = "") {
       plot.subtitle = ggplot2::element_text(color = eil_pal$muted,
                         size = base_size * 0.85, lineheight = 1.1,
                         margin = ggplot2::margin(b = base_size)),
+      # source line: a quiet footnote, kept smaller than the logo
       plot.caption  = ggplot2::element_text(color = eil_pal$muted, hjust = 0,
-                        size = base_size * 0.60,
+                        size = base_size * 0.46,
                         margin = ggplot2::margin(t = base_size * 0.9)),
       axis.text.x   = ggplot2::element_text(size = base_size * 0.80),
       axis.text.y   = ggplot2::element_text(size = base_size * 0.80),
       axis.title.x  = ggplot2::element_text(size = base_size * 0.72),
-      plot.margin   = ggplot2::margin(base_size * 1.4, base_size * 1.4,
-                                      base_size * 1.1, base_size * 1.4)
+      plot.margin   = ggplot2::margin(base_size * CARD_GUTTER_F, base_size * CARD_GUTTER_F,
+                                      base_size * 1.1, base_size * CARD_GUTTER_F)
     )
 }
 
 # ---- Theme: blank cards ---------------------------------------------
 # For text-only cards (a stat card). A blank canvas with just the source
 # caption styled; the source line and logo are added by save_card().
-theme_eil_card <- function(bg = eil_pal$canvas, base_size = 19) {
+theme_eil_card <- function(bg = eil_pal$canvas, base_size = CARD_BASE) {
   ggplot2::theme_void(base_size = base_size) +
     ggplot2::theme(
       plot.caption.position = "plot",
       plot.background  = ggplot2::element_rect(fill = bg, color = NA),
       panel.background = ggplot2::element_rect(fill = bg, color = NA),
+      # source line: a quiet footnote, kept smaller than the logo
       plot.caption     = ggplot2::element_text(color = eil_pal$muted, hjust = 0,
-                          size = base_size * 0.60,
+                          size = base_size * 0.46,
                           margin = ggplot2::margin(t = base_size * 0.6)),
-      plot.margin      = ggplot2::margin(base_size * 1.6, base_size * 1.6,
-                                         base_size * 1.2, base_size * 1.6)
+      plot.margin      = ggplot2::margin(base_size * CARD_GUTTER_F, base_size * CARD_GUTTER_F,
+                                         base_size * CARD_GUTTER_F, base_size * CARD_GUTTER_F)
     )
 }
 
