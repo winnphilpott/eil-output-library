@@ -47,7 +47,7 @@ format:
 % RELEASE LINE + DATELINE (opens the body, AEI-style) + LEAD
 % Embargo form: replace with EMBARGOED UNTIL [Month Day, Year, Time TZ]
 % ---------------------------------------------------------------------
-\noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}}\hspace{0.6em}{\color{muted}\fontsize{9pt}{12pt}\selectfont [CITY, State] · [Month Day, Year]}\par
+\noindent{\bfseries\color{accentred}\fontsize{8.25pt}{10pt}\selectfont\textls[50]{FOR IMMEDIATE RELEASE}}\hspace{0.6em}{\color{muted}\fontsize{9pt}{12pt}\selectfont CHARLOTTESVILLE, VA · [Month Day, Year]}\par
 \vspace{5pt}
 \noindent Offering polluters free help to follow environmental rules did not make them any more likely to follow them, according to a new study of hundreds of wastewater treatment facilities in Ohio. The research, published in the \textit{Journal of Policy Analysis and Management}, found that compliance workshops promoted by the U.S. Environmental Protection Agency (EPA) had no detectable effect on violations.
 
@@ -56,10 +56,10 @@ format:
 % ---------------------------------------------------------------------
 % BODY
 % ---------------------------------------------------------------------
-\noindent The study examined the EPA's preferred alternative to inspections and fines: ``compliance assistance'' --- free workshops, guidance, and technical support. The approach is built on the premise that many facilities break the rules out of confusion rather than deliberate corner-cutting. Using detailed Ohio EPA records, authors Paul J. Ferraro and Jay P. Shimshack compared facilities trained earlier with comparable facilities that had also volunteered but were not yet trained. Measured against that benchmark, violations at trained facilities did not fall.
+\noindent The study examined the EPA's alternative to inspections and fines: ``compliance assistance'' --- free workshops, guidance, and technical support. The approach is built on the premise that many facilities break the rules out of confusion rather than deliberate corner-cutting. Using detailed Ohio EPA records, authors Paul J. Ferraro and Jay P. Shimshack compared facilities trained earlier with comparable facilities that had also volunteered but were not yet trained. Measured against that benchmark, violations at trained facilities did not fall.
 
 \vspace{6pt}
-\noindent The finding is notable because the program had appeared to work: the EPA's own before-and-after figures showed violations dropping by more than 50 percent after the workshops. But the same decline was occurring at facilities that had never been trained --- a broad downward trend easy to mistake for the workshops' effect. Encouraged by that apparent success, the EPA is now expanding the program to other states. Small benefits cannot be ruled out, the authors note, but such programs should be rigorously tested before they replace enforcement tools already known to work.
+\noindent The finding is notable because the program had appeared to work: the EPA's own before-and-after figures showed violations dropping by more than 50 percent after the workshops. But the same decline was occurring at facilities that had never been trained --- a broad downward trend easy to mistake for the workshops' effect. Encouraged by that apparent success, the EPA is now expanding the program to other states. Small benefits cannot be ruled out, the authors note, but this study suggests that compliance assistance is not an effective strategy for reducing violations.
 
 \vspace{15pt}
 
