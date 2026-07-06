@@ -2,9 +2,7 @@
 
 Writing conventions for EIL **press releases** — short, on-the-record news
 announcements that translate a research finding for journalists, partners, and the
-public. A press release is the companion to a research highlight: where the highlight
-*explains a paper to a policy reader*, the release *announces the finding as news,
-written to be quoted or reprinted*.
+public. The release *announces the finding as news, written to be quoted or reprinted*.
 
 - **Canonical example:** `papers/2026-epa-compliance-workshops/press-release/epa-compliance-workshops_press-release.qmd`
 - **Design system:** `formats/press-release/_style.tex` (colors, fonts, masthead/headline macros)
@@ -15,7 +13,7 @@ written to be quoted or reprinted*.
 
 ## 1. Purpose & shape
 
-A press release is a **one-page** announcement (rarely two). It follows the inverted
+A press release is a **one-page** announcement. It follows the inverted
 pyramid: the most newsworthy information comes first, so an editor can cut from the
 bottom without losing the story. It is written in **third person** and built to be
 quoted directly or reprinted in part.
@@ -36,7 +34,7 @@ quoted directly or reprinted in part.
 7. **Media contact** — name, email, phone, in a sentence closing the body, just above the
    end marker.
 8. **End marker** — `###` centered, signaling the release ends.
-9. **Boilerplate** — a short, reusable "About EIL" paragraph.
+9. **Boilerplate** — "About EIL" paragraph -- consistent across press releases unless updated.
 10. **Paper link** — DOI, and a link to the companion research highlight.
 
 ## 2. Tone
@@ -79,8 +77,8 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
 - **Name the paper in the body:** the exact title in quotes, authors, and journal —
   *"[Exact Paper Title]," published in [Journal] by [Authors].*
 - **In-text reference:** Author & Author (Year); *et al.* for 3+ authors.
-- **Paper link:** a resolvable DOI — `doi.org/...`.
-- **Companion highlight:** link the research highlight as the deeper read.
+- **Paper link:** a resolvable DOI — `doi.org/...`. If a working paper or without a DOI, use a different appropriate link.
+- **Companion highlight:** link the research highlight as the deeper read (should be on EIL website).
 
 ## 5. Formatting & mechanics
 
@@ -109,4 +107,4 @@ real, confirmed quote exists; a fabricated "stand-in" is worse than no quote.
 | Lead             | 2–3 sentences (~50 words)               |
 | Body             | 2–3 paragraphs (~150–220 words total)   |
 | Quotes *(optional)* | 0–3, ~30–50 words each               |
-| Boilerplate      | ~25–40 words (one sentence), reusable    |
+| Boilerplate      | Standardized, reusable                  |
