@@ -3,6 +3,9 @@ data/
 # macOS folder metadata
 .DS_Store
 
+# RStudio session artifacts
+.Rhistory
+
 # LaTeX build artifacts (keep .tex and .pdf)
 *.aux
 *.fdb_latexmk
