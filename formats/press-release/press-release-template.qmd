@@ -66,7 +66,7 @@ format:
 % BODY  (2-3 short paragraphs; quotes interleaved)
 %  - Name the paper here: ``[Exact Title],'' published in [Journal] by [Authors].
 %  - Explain the method in plain language; don't name it.
-%  - Keep EIL's own voice factual; put judgment in the quotes.
+%  - Keep EIL's own voice factual; put judgement or interpretation in the quotes if at all.
 % ---------------------------------------------------------------------
 \noindent [Paragraph 1 — expand the finding. Name the paper, journal, and authors. Spell out any agency on first use.]
 
@@ -77,8 +77,7 @@ format:
 
 % ---------------------------------------------------------------------
 % QUOTE 1 (OPTIONAL) — lead author / PI: what the finding means.
-% Quotes are optional. Delete this block unless you have a REAL, confirmed
-% quote — never ship an invented or placeholder quote.
+% Quotes are optional. Delete this block unless you decide to include a quote.
 % ---------------------------------------------------------------------
 \noindent ``[Quote on what the finding means — the interpretive claim EIL's own prose avoids],'' said [Full Name], [Title], [Affiliation].
 
