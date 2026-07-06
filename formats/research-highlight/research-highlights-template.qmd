@@ -121,7 +121,7 @@ format:
 % ---------------------------------------------------------------------
 \sectionhead{Takeaways}
 \subhead{[Subhead 1]}
-\noindent [First takeaway. Bold the one sentence a skimmer must catch.]
+\noindent [First takeaway. Bold the one sentence someone skimming should catch.]
 
 \vspace{5pt}
 \subhead{[Subhead 2]}
@@ -129,5 +129,5 @@ format:
 
 \vspace{5pt}
 \subhead{[Subhead 3]}
-\noindent [Third takeaway. Acknowledge the honest caveat, then restate the real point.]
+\noindent [Third takeaway. Acknowledge any caveats or limitations without getting too technical, then restate the central point.]
 ```
