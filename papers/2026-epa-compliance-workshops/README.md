@@ -18,3 +18,14 @@ Rscript code/make-fig1.R
 cd ../research-highlight/v4/
 quarto render epa-compliance-workshops_research-highlight_v4.qmd
 ```
+
+## Reproducing the Social Cards
+
+```bash
+# From the REPO ROOT — cards write to social/assets/
+Rscript papers/2026-epa-compliance-workshops/social/stat-card.R    # -> assets/epa-stat-card.png
+Rscript papers/2026-epa-compliance-workshops/social/chart-card.R   # -> assets/epa-chart-card.png
+```
+
+Post copy lives in `social/copy/` (`linkedin.md`, `x.md`). See
+`style-guides/social/README.md` for voice and on-image conventions.
