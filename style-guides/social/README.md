@@ -1,9 +1,6 @@
 # Social Media Style Guide
 
-Conventions for EIL **social posts** — the top-of-funnel companion to a research
-highlight or press release. Where the highlight *explains a paper to a policy reader*
-and the release *announces it as news*, a social post *stops the scroll and sends the
-reader to the finding*. Scope: **X/Twitter and LinkedIn**.
+Conventions for EIL **social posts** — straightforward messaging meant for the most general audience. A social post *catches one's attention and sends the reader to the finding*. Scope: **X/Twitter and LinkedIn**.
 
 - **Design system:** `formats/social/` (R card templates, built on the data-viz theme)
 - **Figure theme & palette:** `formats/data-viz/eil-theme.R` (`eil_pal`, `theme_eil()`, `eil_save()`)
@@ -15,7 +12,7 @@ reader to the finding*. Scope: **X/Twitter and LinkedIn**.
 ## 1. Purpose & shape
 
 A social post is the shortest EIL output and the first one most people see. It carries
-**one finding, one link, one image** — and earns the click. It never has to stand alone
+**one finding, one link, one image**. It never has to stand alone
 as the argument; the linked highlight or release does that. Two platforms, one voice, two
 length budgets:
 
@@ -26,31 +23,29 @@ length budgets:
 
 **Cadence: event-driven, not a content calendar.** EIL is a small lab and posts
 accordingly — a social post accompanies a real output (a highlight, a release, a
-published paper), not a daily posting quota. Volume is low by design, so every post is
-deliberate: if it doesn't carry a genuine finding to a genuine link, it doesn't go out.
-This is why three archetypes cover the ground where a high-volume newsroom needs a dozen.
+published paper), not a daily posting quota. Every post is
+deliberate: if it doesn't carry a genuine finding to a genuine link or other important lab news, 
+it doesn't go out.
 
 ## 2. Visual-first
 
 **Every X post ships with an image unless there's a deliberate reason not to.** A tweet
-with a chart, stat card, or figure stops the scroll where plain text slides past. The
-image carries the finding on its own — assume many readers see the picture and never read
-the caption.
+with a chart, stat card, or figure catches someone's eye where plain text slides past. The
+image carries the finding on its own or compliments it — assume many readers see the picture 
+and then maybe read the caption.
 
 - **Default to a visual.** Text-only posts are the exception (a quick reaction, a repost
   with comment), not the rule.
-- **The image is self-sufficient.** Source line and a legible headline live *on* the
-  image, not only in the caption (see §6).
+- **The image is self-sufficient.** Similar to figure conventions, source line and a legible headline 
+  live *on* the image, not only in the caption (see §6).
 - **Reuse, don't redraw.** Pull the paper's existing figure through the data-viz theme
-  rather than making a one-off — social charts should never drift from the print figure.
-  Because posts are rare and each ties to a paper that already has a figure, reuse is the
-  realistic default, not a shortcut.
+  rather than making a one-off.
 - **LinkedIn too.** A visual still outperforms text, though LinkedIn's longer caption does
   more of the work.
 
 ## 3. The three archetypes
 
-EIL runs three social formats. Pick one per post; don't blend them.
+EIL runs three social formats. Pick one per post and let that guide the output.
 
 **a. Finding announcement** — the workhorse. Announces a new paper/result as news.
 - *Anatomy:* finding-first hook → author credit → link, over a chart or stat card.
@@ -59,14 +54,15 @@ EIL runs three social formats. Pick one per post; don't blend them.
 **b. Chart / stat card** — a single number or figure as the whole post.
 - *Anatomy:* one stat or one chart, headline + source baked into the image; caption adds
   one line of context.
-- *Use when:* the result is legible at a glance and doesn't need the full story to land.
+- *Use when:* the result is legible at a glance and doesn't need the full story to land. 
+  Additionally, a  good option for when there's an interesting development in a project, 
+  but the paper isn't ready for sharing yet. 
 
 **c. Thread** — a finding unrolled across a few posts.
 - *Anatomy:* **the first post carries the entire hook** (finding + image) and must stand
   alone; 3–5 follow-ups add method-in-plain-language, the caveat, and the link; last post
   credits authors and links the paper.
-- *Use when:* the story needs a step of reasoning the single card can't hold. Reserve for
-  the occasional paper that needs it — at EIL's volume, threads are the rarest format.
+- *Use when:* the story needs a step of reasoning the single card can't hold.
 
 Quote cards (a scholar's sentence over a branded background) are **optional**, not a core
 archetype — see §7.
@@ -76,21 +72,20 @@ archetype — see §7.
 Inherits the press-release register, compressed:
 
 - **Lead with the finding.** The first line states the result; the reader who sees only
-  that has the story. Never open with "New paper out" or "Excited to share."
+  that has the story. Don't open with vague or generic phrases like "New paper out" 
+  or "Excited to share."
 - **Plain, declarative, active.** "Free help to follow the rules," not "voluntary
   compliance interventions." Spell out agencies on first use — Environmental Protection
   Agency (EPA).
 - **Explain the method, don't name it.** Narrate why a comparison is credible; never write
   "difference-in-differences" in a caption.
-- **No hype, calibrated humility.** State stakes soberly; keep the honest caveat. Skip
-  adjectives a journalist would cut ("groundbreaking," "first-ever").
+- **Academic tone and grounding.** State stakes soberly; keep the honest caveat. 
 - **Lab voice.** The post speaks as the Environmental Inequality Lab, not as an
   individual.
 
 ## 5. Author attribution
 
-Posts speak in the **lab's voice but always surface the authors** — the people, not just
-the institution, did the work.
+Posts speak in the **lab's voice but always surface the authors**.
 
 - **Credit by name, tag when handles exist:** *"New EIL research by [Full Name] and [Full
   Name] finds…"* Use handles (`@…`) when the author has one; fall back to plain names when
@@ -114,10 +109,9 @@ The image must survive being seen with no caption:
 
 ## 7. Quote cards (optional)
 
-A quote card puts a single sentence over a branded background. Because the quote *is* the
-asset, the guardrail is absolute: **never use an invented or placeholder quote.** Leave
-the format unused until a real, confirmed, attributable quote exists — a fabricated
-stand-in is worse than no card. When used: attribute fully on the card (name, title,
+A quote card puts a single sentence over a branded background. Leave
+the format unused until a real, confirmed, attributable quote exists. 
+When used: attribute fully on the card (name, title,
 affiliation) and confirm the quote with the speaker before posting.
 
 ## 8. Caption budgets
