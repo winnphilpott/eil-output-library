@@ -27,14 +27,14 @@ in the canonical example:
    intervention, and short caps labels (neutral in `muted`, the emphasized side in
    `accentred`).
 3. **Show uncertainty softly.** One light ribbon, not a thicket of confidence
-   whiskers. Explain it once, in words, with a small hand-placed *"range of
-   uncertainty"* callout and a thin leader line.
-4. **Minimal chrome.** No gridlines, no y-axis ticks, no box. A single thin
+   whiskers. We don't want to lie by omission, but the range of uncertainty is typically
+   not essential for general understandability. 
+5. **Minimal chrome.** No gridlines, no y-axis ticks, no box. A single thin
    warm-grey x-axis line carries the scale.
-5. **Restrained data ink.** Small dark points and a thin, semi-transparent
-   connecting line. Data marks are the darkest thing on the canvas; everything
-   else recedes.
-6. **Interpretation lives in the document.** The figure shows; the surrounding
+6. **Clear Visibility.** Small dark points and a thin, semi-transparent
+   connecting line. Data marks are the darkest thing on the canvas; we
+   want stark contrast for easy reading.
+8. **Interpretation lives in the document.** The figure shows; the surrounding
    prose (figure title, note, body) tells the reader what to conclude. Keep
    editorial claims out of the plot itself.
 
@@ -58,8 +58,7 @@ never hand-pick new hex values.
 | `canvas`    | `#FFFFFF` | Default figure background                        |
 
 **One emphasis color.** `accentred` marks the single thing the reader should look
-at. If everything is red, nothing is. Keep categorical encodings to grayscale
-(`ink` / `muted` / `faint`) plus that one red.
+at. Keep categorical encodings to grayscale (`ink` / `muted` / `faint`) plus that one red.
 
 ## 3. Typography & sizing
 
@@ -69,7 +68,9 @@ at. If everything is red, nothing is. Keep categorical encodings to grayscale
 - **Caps + restraint for structural labels** — axis titles and orientation labels
   in uppercase (`"MONTHS RELATIVE TO TRAINING"`); sentence case for value labels.
 - **`theme_eil(base_size = 7)`** is calibrated for a figure exported at ~5.4×3.1 in
-  and placed at ~0.8 of a print column. Increase `base_size` for standalone or web
+  and placed at ~0.8 of a print column. This is subject to change depending on the needs
+  of the document. Prioritize cohesiveness of the   whole document over getting the
+  exact sizing replicated every time. Increase `base_size` for standalone or web
   figures.
 
 ## 4. Uncertainty
