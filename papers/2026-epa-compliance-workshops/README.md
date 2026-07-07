@@ -26,9 +26,9 @@ social, and a quote card:
 
 ```bash
 # From the REPO ROOT — cards write to social/assets/
-Rscript papers/2026-epa-compliance-workshops/social/stat-card.R    # -> assets/epa-stat-card.png
-Rscript papers/2026-epa-compliance-workshops/social/chart-card.R   # -> assets/epa-chart-card.png
-Rscript papers/2026-epa-compliance-workshops/social/quote-card.R   # -> assets/epa-quote-card.png
+Rscript papers/2026-epa-compliance-workshops/social/script/stat-card.R    # -> assets/epa-stat-card.png
+Rscript papers/2026-epa-compliance-workshops/social/script/chart-card.R   # -> assets/epa-chart-card.png
+Rscript papers/2026-epa-compliance-workshops/social/script/quote-card.R   # -> assets/epa-quote-card.png
 ```
 
 Post copy lives in `social/copy/` (`linkedin.md`, `x.md`). See
