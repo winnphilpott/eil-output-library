@@ -1,4 +1,4 @@
-# LinkedIn — EPA compliance workshops
+# LinkedIn — Template
 
 <!--
   SKELETON — fill in and approve before posting. Not final copy.
@@ -18,4 +18,4 @@ the caveat; keep EIL's lab voice]
 
 **Hashtags:** [#tag] [#tag] [#tag]
 
-**Image:** ../assets/epa-stat-card.png  ·  or  ../assets/epa-chart-card.png
+**Image:** ../assets/eil-stat-card.png  ·  or  ../assets/eil-chart-card.png
