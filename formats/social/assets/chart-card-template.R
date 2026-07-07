@@ -23,7 +23,7 @@
 
 library(dplyr)
 library(ggplot2)
-source("formats/social/social-cards.R")   # dims, themes, save_card()
+source("formats/social/assets/social-cards.R")   # dims, themes, save_card()
 
 OUT_PATH <- "/tmp/eil-chart-card.png"
 

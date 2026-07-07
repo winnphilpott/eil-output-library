@@ -20,7 +20,7 @@ library(haven)
 library(dplyr)
 library(fixest)
 library(ggplot2)
-source("formats/social/social-cards.R")
+source("formats/social/assets/social-cards.R")
 
 DATA_FILE <- "papers/2026-epa-compliance-workshops/data-viz/data/final_deidentified_dataset_july2025.dta"
 DATA_URL  <- "https://osf.io/download/sa56r/"

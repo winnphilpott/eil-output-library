@@ -13,7 +13,7 @@
 # =====================================================================
 
 library(ggplot2)
-source("formats/social/social-cards.R")
+source("formats/social/assets/social-cards.R")
 
 OUT <- "papers/2026-epa-compliance-workshops/social/assets/epa-stat-card.png"
 

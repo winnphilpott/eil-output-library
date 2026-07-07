@@ -19,7 +19,7 @@
 # =====================================================================
 
 library(ggplot2)
-source("formats/social/social-cards.R")   # dims, themes, eil_quote_card(), save_card()
+source("formats/social/assets/social-cards.R")   # dims, themes, eil_quote_card(), save_card()
 
 OUT_PATH <- "/tmp/eil-quote-card.png"
 

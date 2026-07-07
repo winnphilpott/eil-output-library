@@ -10,12 +10,15 @@ other outputs won't integrate well with the social card.
 
 ## Files
 
+The card builders live in `assets/`, alongside the exported `.png`s:
+
 | File | What it is |
 |---|---|
-| `social-cards.R` | Shared scaffolding — dimensions, card themes, `eil_stat_card()`, `eil_quote_card()`, helpers. Sourced by the templates. |
-| `stat-card-template.R` | Runnable starter for a **stat card** (eyebrow + one hero number + headline). |
-| `chart-card-template.R` | Runnable starter for a **chart card** (a paper figure re-rendered for social). |
-| `quote-card-template.R` | Runnable starter for a **quote / finding card** (one pulled sentence over the house maroon). Real, confirmed quotes only — see style guide §7. |
+| `assets/social-cards.R` | Shared scaffolding — dimensions, card themes, `eil_stat_card()`, `eil_quote_card()`, helpers. Sourced by the templates. |
+| `assets/stat-card-template.R` | Runnable starter for a **stat card** (eyebrow + one hero number + headline). |
+| `assets/chart-card-template.R` | Runnable starter for a **chart card** (a paper figure re-rendered for social). |
+| `assets/quote-card-template.R` | Runnable starter for a **quote / finding card** (one pulled sentence over the house maroon). Real, confirmed quotes only — see style guide §7. |
+| `copy/linkedin.md`, `copy/x.md` | Skeleton **post copy**, per platform — finding-first hook, credit, link, hashtags, image. Fill in and approve before posting. |
 
 The three cards mirror the design mockup: **landscape 1200×675** with a shared chrome —
 an eyebrow kicker top-left, the logo lock-up top-right, and a source line above a thin
@@ -26,9 +29,9 @@ rule at the foot.
 From the **repo root** (the templates source the data-viz theme by relative path):
 
 ```
-Rscript formats/social/stat-card-template.R    # -> /tmp/eil-stat-card.png
-Rscript formats/social/chart-card-template.R   # -> /tmp/eil-chart-card.png
-Rscript formats/social/quote-card-template.R   # -> /tmp/eil-quote-card.png
+Rscript formats/social/assets/stat-card-template.R    # -> /tmp/eil-stat-card.png
+Rscript formats/social/assets/chart-card-template.R   # -> /tmp/eil-chart-card.png
+Rscript formats/social/assets/quote-card-template.R   # -> /tmp/eil-quote-card.png
 ```
 
 Deps: `ggplot2` (+ `dplyr` for the chart demo) and `png` (for the logo overlay).
@@ -60,8 +63,9 @@ see `style-guides/social/README.md` §9:
 ```
 papers/<paper-slug>/social/      # paper-tied (most social)
 ├── assets/   # exported cards (.png)
-└── copy/     # captions, per platform
+├── copy/     # captions, per platform
+└── script/   # the .R card builders
 ```
 
 The EPA cards are a worked example — `stat-card.R`, `chart-card.R`, and `quote-card.R` in
-`papers/2026-epa-compliance-workshops/social/`, writing to `social/assets/`.
+`papers/2026-epa-compliance-workshops/social/script/`, writing to `social/assets/`.
