@@ -28,7 +28,8 @@ ATTRIBUTION <- "Ferraro & Shimshack · Journal of Policy Analysis & Management, 
 SOURCE      <- "Environmental Inequality Lab · Ferraro & Shimshack, 2026"
 
 # --- Build + save (dark/accent card: maroon bg, white logo) ----------
-card <- eil_quote_card(QUOTE, ATTRIBUTION, eyebrow = EYEBROW, source = SOURCE) +
+card <- eil_quote_card(QUOTE, ATTRIBUTION, eyebrow = EYEBROW, source = SOURCE,
+                       emphasis = "precise zero") +
   theme_eil_card(bg = eil_pal$accentred)
 
 save_card(card, OUT, dims = SOCIAL_DIMS$landscape, bg = eil_pal$accentred,

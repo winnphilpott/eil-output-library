@@ -64,6 +64,34 @@ wrap_text <- function(x, width = 24) {
          character(1), USE.NAMES = FALSE)
 }
 
+# ---- Letter-spacing (tracking) --------------------------------------
+# ggplot can't letter-space text, so we insert a space between every glyph
+# to track out an uppercase kicker like the mockup's eyebrow. A literal
+# space also widens the word gaps (they become three spaces), which mirrors
+# the mockup's spacing. Used on the eyebrow inside the card builders.
+letter_space <- function(x, sep = " ") {
+  vapply(x, function(s) paste(strsplit(s, "")[[1]], collapse = sep),
+         character(1), USE.NAMES = FALSE)
+}
+
+# ---- Text width, in card-width fractions ----------------------------
+# Width of `txt` set at ggplot geom `size`, as a fraction of a card that is
+# `card_w_in` inches wide. Measured on the SAME base graphics device the
+# cards render on (grDevices::png), so the metric matches what gets drawn --
+# this is what lets the quote card place a mid-sentence tinted span. geom
+# size -> point size is size * .pt (72.27/25.4); bold text uses font = 2.
+.text_width_frac <- function(txt, size, bold = TRUE, card_w_in = 6.667,
+                             res = 180) {
+  if (!nzchar(txt)) return(0)
+  tf <- tempfile(fileext = ".png")
+  grDevices::png(tf, width = card_w_in, height = 1, units = "in", res = res,
+                 pointsize = size * (72.27 / 25.4))
+  on.exit({ grDevices::dev.off(); unlink(tf) }, add = TRUE)
+  graphics::par(mar = c(0, 0, 0, 0))
+  graphics::plot.new()
+  graphics::strwidth(txt, units = "inches", font = if (bold) 2 else 1) / card_w_in
+}
+
 # ---- Theme: chart cards ---------------------------------------------
 # For cards that hold a CHART. Extends the house theme with social-scale
 # type, a bold headline (plot.title), and generous card margins. Bump
@@ -160,7 +188,8 @@ eil_stat_card <- function(stat, headline, sub = NULL, eyebrow = NULL,
     ggplot2::coord_cartesian(clip = "off")
   if (!is.null(eyebrow)) {
     p <- p + ggplot2::annotate("text", x = x, y = eyebrow_y,
-                               label = toupper(eyebrow), hjust = 0, vjust = 0.5,
+                               label = letter_space(toupper(eyebrow)),
+                               hjust = 0, vjust = 0.5,
                                color = eyebrow_color, fontface = "bold",
                                size = eyebrow_size)
   }
@@ -190,10 +219,15 @@ eil_stat_card <- function(stat, headline, sub = NULL, eyebrow = NULL,
 # match the stat card's geometry.
 #
 # Colours default to the light-on-maroon reading of the house palette:
-# quote in `paper`, mark/eyebrow/attribution in a pale-red `band`. The
-# whole quote is one colour — ggplot can't emphasise a sub-phrase without
-# ggtext; keep the emphasis in the words, not the ink.
+# quote in `paper`, mark/eyebrow/attribution in a pale-red `band`.
+#
+# `emphasis` tints one mid-sentence span (e.g. "precise zero") in
+# `emphasis_color`. There is no house token for a mid-rose, so the default
+# is the mockup's rose -- the one place these cards step outside eil_pal,
+# mirroring the mockup. The span is measured and placed segment-by-segment
+# (no ggtext); it must appear verbatim within one wrapped line of `quote`.
 eil_quote_card <- function(quote, attribution, eyebrow = NULL, source = NULL,
+                           emphasis = NULL, emphasis_color = "#F2C9C9",
                            quote_color = eil_pal$paper,
                            mark_color = eil_pal$band,
                            attribution_color = eil_pal$band,
@@ -203,18 +237,54 @@ eil_quote_card <- function(quote, attribution, eyebrow = NULL, source = NULL,
                            source_color = grDevices::adjustcolor(eil_pal$paper, 0.7),
                            quote_size = 8.1, mark_size = 21, attribution_size = 3.66,
                            eyebrow_size = 3.0, source_size = 3.1,
+                           quote_lineheight = 1.08, card_w_in = 6.667,
+                           card_h_in = 3.75,
                            x = 0.063, mark_x = 0.058,
                            eyebrow_y = 0.864, mark_y = 0.73, quote_y = 0.468,
                            attribution_y = 0.255, rule_y = 0.175, source_y = 0.123,
                            rule_xend = 0.937) {
+  # quote text: one block, or -- with `emphasis` -- line-by-line so the
+  # tinted span can be dropped in at its measured x-offset.
+  q_lines <- strsplit(quote, "\n", fixed = TRUE)[[1]]
+  has_emph <- !is.null(emphasis) && any(grepl(emphasis, q_lines, fixed = TRUE))
+  if (!has_emph) {
+    q_layers <- list(ggplot2::annotate("text", x = x, y = quote_y,
+                       label = quote, hjust = 0, vjust = 0.5,
+                       color = quote_color, fontface = "bold",
+                       size = quote_size, lineheight = quote_lineheight))
+  } else {
+    n <- length(q_lines)
+    line_frac <- quote_size * (72.27 / 25.4) / 72.27 / card_h_in * quote_lineheight
+    seg <- function(lbl, xoff, yi, col) {
+      ggplot2::annotate("text", x = x + xoff, y = yi, label = lbl,
+                        hjust = 0, vjust = 0.5, color = col,
+                        fontface = "bold", size = quote_size)
+    }
+    q_layers <- list()
+    for (i in seq_len(n)) {
+      yi  <- quote_y + ((n - 1) / 2 - (i - 1)) * line_frac
+      ln  <- q_lines[i]
+      pos <- regexpr(emphasis, ln, fixed = TRUE)
+      if (pos < 0) {
+        q_layers <- c(q_layers, list(seg(ln, 0, yi, quote_color)))
+      } else {
+        pre <- substr(ln, 1, pos - 1)
+        suf <- substr(ln, pos + nchar(emphasis), nchar(ln))
+        w_pre <- .text_width_frac(pre, quote_size, TRUE, card_w_in)
+        w_emp <- .text_width_frac(emphasis, quote_size, TRUE, card_w_in)
+        if (nzchar(pre)) q_layers <- c(q_layers, list(seg(pre, 0, yi, quote_color)))
+        q_layers <- c(q_layers, list(seg(emphasis, w_pre, yi, emphasis_color)))
+        if (nzchar(suf))
+          q_layers <- c(q_layers, list(seg(suf, w_pre + w_emp, yi, quote_color)))
+      }
+    }
+  }
   p <- ggplot2::ggplot() +
     # oversized opening quote mark, set just above the sentence
     ggplot2::annotate("text", x = mark_x, y = mark_y, label = "“",
                       hjust = 0, vjust = 0.5, color = mark_color,
                       fontface = "bold", size = mark_size) +
-    ggplot2::annotate("text", x = x, y = quote_y, label = quote,
-                      hjust = 0, vjust = 0.5, color = quote_color,
-                      fontface = "bold", size = quote_size, lineheight = 1.08) +
+    q_layers +
     ggplot2::annotate("text", x = x, y = attribution_y, label = attribution,
                       hjust = 0, vjust = 0.5, color = attribution_color,
                       size = attribution_size, lineheight = 1.1) +
@@ -223,7 +293,8 @@ eil_quote_card <- function(quote, attribution, eyebrow = NULL, source = NULL,
     ggplot2::coord_cartesian(clip = "off")
   if (!is.null(eyebrow)) {
     p <- p + ggplot2::annotate("text", x = x, y = eyebrow_y,
-                               label = toupper(eyebrow), hjust = 0, vjust = 0.5,
+                               label = letter_space(toupper(eyebrow)),
+                               hjust = 0, vjust = 0.5,
                                color = eyebrow_color, fontface = "bold",
                                size = eyebrow_size)
   }
