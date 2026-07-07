@@ -13,13 +13,12 @@ Conventions for EIL **social posts** — straightforward messaging meant for the
 
 A social post is the shortest EIL output and the first one most people see. It carries
 **one finding, one link, one image**. It never has to stand alone
-as the argument; the linked highlight or release does that. Two platforms, one voice, two
-length budgets:
+as the argument; the linked highlight or release does that.
 
 - **X/Twitter** — a tight hook, finding-first, link trailing. High scroll velocity; the
-  image does the stopping.
+  image helps catch people's eye.
 - **LinkedIn** — the same finding-first opening, but room for a short "why it matters"
-  paragraph and an inline link. A policy/professional audience that tolerates more text.
+  paragraph and an inline link.
 
 **Cadence: event-driven, not a content calendar.** EIL is a small lab and posts
 accordingly — a social post accompanies a real output (a highlight, a release, a
@@ -40,17 +39,17 @@ and then maybe read the caption.
   live *on* the image, not only in the caption (see §6).
 - **Reuse the recipe, re-render the card.** A social card is built from the paper's
   existing figure *recipe* — same data, same plot, same theme — but it can't be a straight
-  copy of the embedded PNG. Re-render it with the logo lock-up added
-  (`eil_save(..., logo = TRUE)`) and at social dimensions, so it stands alone. Reuse the
+  copy of the embedded PNG. Re-render it with the logo added
+  (`eil_save(..., logo = TRUE)`). Reuse the
   plot, not the exported file (see data-viz README §5).
-- **LinkedIn too.** A visual still outperforms text, though LinkedIn's longer caption does
+- **LinkedIn too.** A visual still supports text, though LinkedIn's longer caption does
   more of the work.
 
 ## 3. The three archetypes
 
 EIL runs three social formats. Pick one per post and let that guide the output.
 
-**a. Finding announcement** — the workhorse. Announces a new paper/result as news.
+**a. Finding announcement** — announces a new paper/result as news.
 - *Anatomy:* finding-first hook → author credit → link, over a chart or stat card.
 - *Use when:* a highlight or release is going live.
 
@@ -72,7 +71,7 @@ archetype — see §7.
 
 ## 4. Voice
 
-Inherits the press-release register, compressed:
+Generalist, third person, academic conversational:
 
 - **Lead with the finding.** The first line states the result; the reader who sees only
   that has the story. Don't open with vague or generic phrases like "New paper out" 
@@ -88,7 +87,7 @@ Inherits the press-release register, compressed:
 
 ## 5. Author attribution
 
-Posts speak in the **lab's voice but always surface the authors**.
+Posts speak in the **lab's voice but always reference the authors**.
 
 - **Credit by name, tag when handles exist:** *"New EIL research by [Full Name] and [Full
   Name] finds…"* Use handles (`@…`) when the author has one; fall back to plain names when
@@ -100,7 +99,7 @@ Posts speak in the **lab's voice but always surface the authors**.
 
 ## 6. On-image conventions
 
-The image must survive being seen with no caption:
+The image should be strong even with no caption:
 
 - **Headline on the image** — the finding in plain words, sized to read at thumbnail.
 - **Source line always present** — `muted` grey, bottom of the card, e.g. *"Environmental
@@ -112,8 +111,7 @@ The image must survive being seen with no caption:
 
 ## 7. Quote cards (optional)
 
-A quote card puts a single sentence over a branded background. Leave
-the format unused until a real, confirmed, attributable quote exists. 
+A quote card puts a single sentence over a branded background. 
 When used: attribute fully on the card (name, title,
 affiliation) and confirm the quote with the speaker before posting.
 
@@ -124,8 +122,8 @@ affiliation) and confirm the quote with the speaker before posting.
 | Hook (first line) | ≤ ~200 chars, finding-first                    | ≤ ~200 chars, finding-first    |
 | Body           | none — the hook *is* the post                    | 2–4 short lines, "why it matters" |
 | Link           | trailing, last line                              | inline or trailing             |
-| Hashtags       | 1–2, topical, never decorative                   | 0–3, topical                   |
-| Image          | required (§2)                                    | strongly preferred             |
+| Hashtags       | 1–2, topical                                     | 0–3, topical                   |
+| Image          | strongly preferred (§2)                          | strongly preferred             |
 | Thread         | first post ≤ hook budget, 3–5 follow-ups         | N/A — use the body instead     |
 
 ## 9. File & folder conventions
@@ -133,8 +131,8 @@ affiliation) and confirm the quote with the speaker before posting.
 Social lives in one of two places, by whether it belongs to a paper:
 
 - **Paper-tied social** → `papers/<paper-slug>/social/`, next to that paper's
-  `press-release/`, `data-viz/`, and `blog/` (see `papers/README.md`). Most social is
-  this. No dated sub-folder — the paper folder already names the topic.
+  `press-release/`, `data-viz/`, and `blog/` (see `papers/README.md`). Most social outputs are
+  this.
 - **Non-paper social** (lab news, events, cross-paper campaigns) → the top-level
   `social/YYYY-[topic-slug]/` (see `social/README.md`).
 
@@ -158,7 +156,7 @@ social/
 - [ ] Does the **first line state the finding** (no "excited to share")?
 - [ ] Is there a **visual**, and does it read with no caption?
 - [ ] Are **authors named/tagged** in the lab's voice?
-- [ ] Source line + logo lock-up on the image?
+- [ ] Source line + logo on the image?
 - [ ] Colors from `eil_pal`, one emphasis color, house type?
-- [ ] Caption within the platform's budget; hashtags topical and few?
-- [ ] Any quote **real, attributed, and confirmed** — never a placeholder?
+- [ ] Caption within the platform's word limit?
+- [ ] Any quote **real, attributed, and confirmed**?
