@@ -1,9 +1,9 @@
 # Social Card Templates
 
 R scaffolding for EIL **social media cards** — the images that ride along with a
-social post. A card is a figure *re-rendered for social*: larger type, a headline
-baked in, the logo lock-up added, sized to a platform aspect ratio. It is never a
-copied export of a print figure.
+social post. Any card with a figure should be *re-rendered for social*: larger type, a headline
+baked in, the logo lock-up added, sized to a platform aspect ratio. The figure that exists in
+other outputs won't integrate well with the social card.
 
 - **Style guide:** `style-guides/social/README.md` (voice, archetypes, on-image conventions)
 - **Builds on:** `formats/data-viz/eil-theme.R` (palette, theme, `eil_save()`)
@@ -53,7 +53,7 @@ Each template has two `EDIT HERE` blocks — **content** (stat, headline, source
 
 ## Output convention
 
-Templates write to `/tmp` for a quick preview. For real work, save into the paper's
+Templates write to `/tmp` for a quick preview. For new outputs, save into the paper's
 `social/` folder (or, for non-paper campaigns, a top-level `social/YYYY-[topic-slug]/`) —
 see `style-guides/social/README.md` §9:
 
