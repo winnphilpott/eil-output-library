@@ -1,12 +1,14 @@
 # =====================================================================
-#  chart-card.R  ·  EPA compliance workshops — social chart card
+#  chart-card.R  ·  EPA compliance workshops — social chart card (1b)
 #  Conventions: style-guides/social/README.md  (§2: reuse the recipe,
 #               re-render the card — don't copy the print PNG)
 #  Scaffolding:  formats/social/social-cards.R
 #
-#  Re-renders the paper's Fig. 2 event study at social scale, with a
-#  headline and the logo lock-up added. The regression recipe mirrors
-#  papers/2026-epa-compliance-workshops/data-viz/code/make-fig2.R.
+#  Recreates mockup card 1b: the paper's Fig. 2 event study re-rendered
+#  at social scale (landscape 1200x675) with a plain-language headline,
+#  before/after-training framing, and the logo lock-up added. The
+#  regression recipe mirrors data-viz/code/make-fig2.R — the marks come
+#  from the real data, not the mockup's placeholder SVG.
 #
 #  Run (from REPO ROOT):
 #    Rscript papers/2026-epa-compliance-workshops/social/chart-card.R
@@ -23,8 +25,8 @@ source("formats/social/social-cards.R")
 DATA_FILE <- "papers/2026-epa-compliance-workshops/data-viz/data/final_deidentified_dataset_july2025.dta"
 DATA_URL  <- "https://osf.io/download/sa56r/"
 OUT       <- "papers/2026-epa-compliance-workshops/social/assets/epa-chart-card.png"
-SOURCE    <- "Environmental Inequality Lab · EPA Compliance Workshops, 2026"
-HEADLINE  <- wrap_text("Free compliance workshops didn't reduce violations", 22)
+SOURCE    <- "Environmental Inequality Lab · Ferraro & Shimshack, 2026 · shaded band = 95% CI"
+HEADLINE  <- wrap_text("Free compliance workshops didn't reduce violations", 30)
 
 # --- Event study (eq. 2): facility FE + time FE + weather, ref -1 ----
 if (!file.exists(DATA_FILE)) {
@@ -48,26 +50,36 @@ es <- rbind(es, data.frame(event = -1, est = 0, se = 0)) |> arrange(event)
 es$lo <- es$est - 1.96 * es$se
 es$hi <- es$est + 1.96 * es$se
 
-# --- Plot at social scale ---------------------------------------------
-# Stripped for a card: ONE fill (the soft band), ONE accent (the dashed
-# workshop marker), calm marks. The single idea is "flat at zero, before
-# and after" -- no competing "after" block, no double x-axis label.
+# --- Plot at social scale --------------------------------------------
+# Mockup 1b framing: a soft "after training" band, one dashed workshop
+# marker, a word-based y-axis, and a single soft CI ribbon. Colours are
+# the house tokens (eil_pal), so the card matches the paper figure.
 p <- ggplot(es, aes(event, est)) +
-  # the one reference and the one accent
-  geom_hline(yintercept = 0, color = eil_pal$muted, linewidth = 0.5) +
+  annotate("rect", xmin = -0.5, xmax = 12.5, ymin = -Inf, ymax = Inf,
+           fill = eil_pal$band, alpha = 0.55) +
+  annotate("text", x = -6.25, y = 0.92, label = "BEFORE TRAINING",
+           size = 2.5, color = eil_pal$muted, fontface = "bold") +
+  annotate("text", x = 6.25, y = 0.92, label = "AFTER TRAINING",
+           size = 2.5, color = eil_pal$accentred, fontface = "bold") +
   geom_vline(xintercept = -0.5, color = eil_pal$accentred,
-             linetype = "dashed", linewidth = 0.5) +
-  # soft uncertainty -- the only fill on the card
-  geom_ribbon(aes(ymin = lo, ymax = hi), fill = eil_pal$axis, alpha = 0.20) +
-  # restrained marks: thin connecting line + small points
-  geom_line(color = eil_pal$ink, alpha = 0.30, linewidth = 0.5) +
-  geom_point(color = eil_pal$ink, size = 1.5) +
-  scale_y_continuous(limits = c(-0.75, 0.8), breaks = c(-0.5, 0, 0.5),
-    labels = c("Fewer", "No change", "More")) +
-  scale_x_continuous(breaks = c(-12, -0.5, 12),
-    labels = c("12 mo.\nbefore", "Workshop", "12 mo.\nafter"),
-    expand = c(0.06, 0)) +
-  labs(title = HEADLINE, x = NULL, y = NULL) +
-  theme_eil_social()
+             linetype = "dashed", linewidth = 0.6) +
+  geom_hline(yintercept = 0, color = eil_pal$muted, linewidth = 0.5) +
+  geom_ribbon(aes(ymin = lo, ymax = hi), fill = eil_pal$axis, alpha = 0.30) +
+  geom_line(color = eil_pal$ink, alpha = 0.40, linewidth = 0.5) +
+  geom_point(color = eil_pal$ink, size = 1.6) +
+  scale_y_continuous(limits = c(-0.8, 1.0), breaks = c(-0.5, 0, 0.5),
+    labels = c("Fewer\nviolations", "No change", "More\nviolations")) +
+  scale_x_continuous(breaks = seq(-12, 12, 6),
+    labels = c("12+ before", "6 before", "Workshop", "6 after", "12+ after"),
+    expand = c(0.02, 0)) +
+  labs(title = HEADLINE, x = "MONTHS RELATIVE TO TRAINING", y = NULL) +
+  theme_eil_social() +
+  # smaller axis labels: the mockup sets these ~8pt, well below the theme
+  # default, so the y-word labels and x ticks have room to breathe.
+  theme(
+    axis.text.x  = element_text(size = 8),
+    axis.text.y  = element_text(size = 8, lineheight = 0.9),
+    axis.title.x = element_text(size = 7)
+  )
 
-save_card(p, OUT, dims = SOCIAL_DIMS$square, source = SOURCE)
+save_card(p, OUT, dims = SOCIAL_DIMS$landscape, source = SOURCE)
