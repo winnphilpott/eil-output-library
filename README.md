@@ -7,7 +7,7 @@ A shared library of public-facing outputs developed at the Environmental Inequal
 ```
 eil-output-library/
 ├── papers/                    # One folder per paper, each containing a full output bundle
-│   └── YYYY-[topic-slug]/
+│   └── YYYY-[topic-slug]/     # If it's a working paper, use WP-[topic-slug]
 │       ├── data-viz/          # Figure pipeline shared across this paper's outputs
 │       │   ├── code/          # Figure scripts
 │       │   ├── data/          # Datasets (excluded from git)
