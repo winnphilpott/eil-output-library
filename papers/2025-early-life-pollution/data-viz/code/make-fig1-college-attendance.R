@@ -34,9 +34,10 @@ OUT_PATH  <- "figures/fig1-college-attendance.png"
 CARD_PATH <- "figures/fig1-college-attendance-card.png"
 SOURCE    <- "Environmental Inequality Lab · Early-Life Pollution Exposure, 2025"
 
-# The moment the Clean Air Act gains separate the cohorts: between the 1971
-# reference cohort and the 1972 cohort.
-PIVOT <- 1971.5
+# Where the 1970 Clean Air Act gains land. Placed on 1971 to match Figure 2 in
+# the paper (its reference/normalization year), so a reader comparing the two
+# sees the same pivot. Everything is measured relative to the 1971 cohort.
+PIVOT <- 1971
 
 # --- Data ------------------------------------------------------------
 # Digitized from Figure 2. `year` = the PARENT's (first-generation) birth
@@ -65,11 +66,11 @@ p <- ggplot(fig, aes(year, est)) +
              linetype = "dashed", linewidth = 0.4) +
   geom_hline(yintercept = 0, color = eil_pal$muted, linewidth = 0.45) +
   # 2. orientation labels (neutral before, emphasized after)
-  annotate("text", x = 1970, y = 6.6, label = "PARENTS BORN\nBEFORE THE GAINS",
+  annotate("text", x = 1970, y = 6.6, label = "PARENTS WHO GREW UP\nWITH DIRTIER AIR",
            size = 2.2, color = eil_pal$muted, fontface = "bold", lineheight = 0.9) +
-  annotate("text", x = 1973.3, y = -2.3, label = "PARENTS BORN AFTER\nAIR QUALITY IMPROVED",
+  annotate("text", x = 1973.3, y = -2.3, label = "PARENTS WHO GREW UP\nWITH CLEANER AIR",
            size = 2.2, color = eil_pal$accentred, fontface = "bold", lineheight = 0.9) +
-  annotate("text", x = 1971.72, y = 8.1, hjust = 0,
+  annotate("text", x = 1971.15, y = 8.1, hjust = 0,
            label = "1970 Clean Air Act\nimproves air quality",
            size = 1.95, color = eil_pal$muted, lineheight = 0.9) +
   # 3. soft uncertainty band, named once in plain words
