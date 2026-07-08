@@ -3,7 +3,7 @@
 #
 # Recreates the paper's Figure 7(a): cumulative earnings of the most
 # coal-exposed workers relative to otherwise similar less-exposed workers,
-# normalized to average pre-shock (2007-2011) annual pay, year by year.
+# normalized to average pre-decline (2007-2011) annual pay, year by year.
 #
 # IMPORTANT: we do not hold the paper's restricted Census/IRS microdata, so
 # the point estimates here are DIGITIZED from the published Figure 7(a) and
@@ -23,7 +23,7 @@ library(ggplot2)
 OUT_PATH <- "figures/fig1.png"
 SRC      <- "Environmental Inequality Lab · Coal Worker Transitions, 2026"
 
-# --- Digitized point estimates (coef. on coal exposure, x pre-shock annual pay)
+# --- Digitized point estimates (coef. on coal exposure, x pre-decline pay)
 d <- data.frame(
   year = 2007:2021,
   est  = c(0.00, 0.03, 0.04, 0.02, 0.02,
@@ -66,7 +66,7 @@ p <- ggplot(d, aes(year, est)) +
   scale_y_continuous(
     limits = c(-2.9, 0.45),
     breaks = c(0, -0.5, -1.0, -1.5, -2.0, -2.5),
-    labels = c("Pre-shock\nearnings", "½ year's\npay", "1 year",
+    labels = c("Pre-decline\nearnings", "½ year's\npay", "1 year",
                "1½ years", "2 years", "2½ years\nlost")) +
   scale_x_continuous(breaks = seq(2007, 2021, 2),
                      limits = XLIM, expand = c(0, 0)) +
