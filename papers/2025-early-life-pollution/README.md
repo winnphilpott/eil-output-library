@@ -1,11 +1,10 @@
-# [Paper Title — state the finding as a claim]
+# The Intergenerational Effects of Early-Life Pollution Exposure
 
-**[Authors] · [Journal], 2025**
-DOI: [10.xxxx/xxxxx](https://doi.org/[DOI])
+**Colmer & Voorheis · Journal of Political Economy: Microeconomics (forthcoming), 2025**
+DOI: [10.1086/740104](https://doi.org/10.1086/740104)
 
-<!-- Fill in title, authors, journal, and DOI from the paper. Folder dated 2025
-     = year accepted for publication. Source PDF: early-life-pollution_paper.pdf
-     (gitignored via papers/*/*.pdf). -->
+<!-- Folder dated 2025 = year accepted for publication. Source PDF:
+     early-life-pollution_paper.pdf (gitignored via papers/*/*.pdf). -->
 
 ## Data
 
