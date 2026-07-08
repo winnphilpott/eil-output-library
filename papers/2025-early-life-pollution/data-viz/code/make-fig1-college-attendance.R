@@ -73,10 +73,8 @@ p <- ggplot(fig, aes(year, est)) +
   annotate("text", x = 1971.15, y = 8.1, hjust = 0,
            label = "1970 Clean Air Act\nimproves air quality",
            size = 1.95, color = eil_pal$muted, lineheight = 0.9) +
-  # 3. soft uncertainty band, named once in plain words
+  # 3. soft uncertainty band (explained in the figure note, not on the chart)
   geom_ribbon(aes(ymin = lo, ymax = hi), fill = eil_pal$axis, alpha = 0.40) +
-  annotate("text", x = 1969.55, y = -0.9, label = "range of\nuncertainty",
-           size = 1.9, color = eil_pal$muted, lineheight = 0.9) +
   # 5. restrained data ink
   geom_line(color = eil_pal$ink, alpha = 0.55, linewidth = 0.5) +
   geom_point(color = eil_pal$ink, size = 1.35) +
