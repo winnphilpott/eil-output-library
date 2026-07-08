@@ -102,7 +102,7 @@ format:
 \begin{center}
 \begin{minipage}{0.82\linewidth}
 \figtitle{[Sentence-style figure title — what the chart shows]}{Source: [Author(s)] ([Year]).}
-\includegraphics[width=\linewidth]{../data-viz/figures/[figure].png}
+\includegraphics[width=\linewidth]{../data-viz/figures/fig1-college-attendance.png}
 \par\vspace{3pt}
 {\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} [Plain-language note: how to read the chart and what to conclude from it.]\par}
 \end{minipage}

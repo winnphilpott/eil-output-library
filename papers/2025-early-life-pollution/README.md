@@ -15,7 +15,7 @@ DOI: [10.1086/740104](https://doi.org/10.1086/740104)
 ```bash
 # 1. Generate the figure(s) (run from the paper's data-viz/ folder)
 cd data-viz/
-Rscript code/data-viz-template.R
+Rscript code/make-fig1-college-attendance.R
 
 # 2. Render the PDF (from the research-highlight/ subfolder)
 cd ../research-highlight/
