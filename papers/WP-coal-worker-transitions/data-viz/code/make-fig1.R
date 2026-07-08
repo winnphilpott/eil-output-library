@@ -1,5 +1,5 @@
 # Generate Fig. 1 (cumulative earnings of coal-exposed workers) for the
-# Colmer, Krause, Lyubich & Voorheis (2025) research highlight.
+# Colmer, Krause, Lyubich & Voorheis (2026) research highlight.
 #
 # Recreates the paper's Figure 7(a): cumulative earnings of the most
 # coal-exposed workers relative to otherwise similar less-exposed workers,
@@ -7,7 +7,7 @@
 #
 # IMPORTANT: we do not hold the paper's restricted Census/IRS microdata, so
 # the point estimates here are DIGITIZED from the published Figure 7(a) and
-# cross-checked against the paper's text (cumulative loss = 1.6x a year's pay
+# cross-checked against the paper's text (cumulative loss = 1.8x a year's pay
 # by 2019). The uncertainty band is an approximation of the published 95% CI.
 # This is a faithful recreation for presentation, not a re-estimation.
 #
@@ -21,17 +21,17 @@
 library(ggplot2)
 
 OUT_PATH <- "figures/fig1.png"
-SRC      <- "Environmental Inequality Lab · Coal Worker Transitions, 2025"
+SRC      <- "Environmental Inequality Lab · Coal Worker Transitions, 2026"
 
 # --- Digitized point estimates (coef. on coal exposure, x pre-shock annual pay)
 d <- data.frame(
   year = 2007:2021,
-  est  = c(0.00, 0.02, 0.03, 0.02, 0.00,
-           -0.07, -0.18, -0.33, -0.55, -0.80,
-           -1.07, -1.33, -1.60, -1.90, -2.20),
+  est  = c(0.00, 0.03, 0.04, 0.02, 0.02,
+           -0.07, -0.18, -0.34, -0.56, -0.87,
+           -1.17, -1.47, -1.80, -2.18, -2.55),
   hw   = c(0.02, 0.02, 0.02, 0.02, 0.02,
-           0.05, 0.07, 0.09, 0.11, 0.13,
-           0.15, 0.18, 0.20, 0.23, 0.27)  # approx. 95% band half-width
+           0.04, 0.05, 0.06, 0.07, 0.09,
+           0.11, 0.13, 0.15, 0.19, 0.22)  # approx. 95% band half-width
 )
 d$lo <- d$est - d$hw
 d$hi <- d$est + d$hw
@@ -57,14 +57,14 @@ p <- ggplot(d, aes(year, est)) +
   geom_line(color = INK, alpha = 0.6, linewidth = 0.45) +
   geom_point(color = INK, size = 1.0) +
   # call out the headline 2019 value, label parked in open space lower-left
-  annotate("point", x = 2019, y = -1.60, color = RED, size = 1.7) +
-  annotate("segment", x = 2016.2, xend = 2018.85, y = -2.12, yend = -1.66,
+  annotate("point", x = 2019, y = -1.80, color = RED, size = 1.7) +
+  annotate("segment", x = 2016.2, xend = 2018.85, y = -2.26, yend = -1.86,
            color = RED, linewidth = 0.3) +
-  annotate("text", x = 2016.1, y = -2.12, hjust = 1, vjust = 0.5,
-           label = "1.6 years' pay\nlost by 2019",
+  annotate("text", x = 2016.1, y = -2.26, hjust = 1, vjust = 0.5,
+           label = "1.8 years' pay\nlost by 2019",
            size = 2.4, color = RED, fontface = "bold", lineheight = 0.9) +
   scale_y_continuous(
-    limits = c(-2.5, 0.45),
+    limits = c(-2.9, 0.45),
     breaks = c(0, -0.5, -1.0, -1.5, -2.0, -2.5),
     labels = c("Pre-shock\nearnings", "½ year's\npay", "1 year",
                "1½ years", "2 years", "2½ years\nlost")) +
