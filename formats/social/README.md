@@ -68,4 +68,4 @@ papers/<paper-slug>/social/      # paper-tied (most social)
 ```
 
 The EPA cards are a worked example — `stat-card.R`, `chart-card.R`, and `quote-card.R` in
-`papers/2026-epa-compliance-workshops/social/script/`, writing to `social/assets/`.
+`papers/2026-epa-compliance-workshops/social/code/`, writing to `social/assets/`.
