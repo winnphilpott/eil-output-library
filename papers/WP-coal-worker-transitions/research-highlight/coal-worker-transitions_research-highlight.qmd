@@ -86,7 +86,7 @@ format:
 % BACKGROUND  (~120 words, 2 paragraphs)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent U.S. coal mining employment has fallen more than half since 2011, as cheap natural gas from the fracking boom and falling renewable energy costs pushed coal out of the power sector. Earlier research shows that coal \textit{communities} lost jobs, wages, and tax revenue. However, aggregate numbers hide how individual workers fared. Some may have moved on quickly to new jobs, while others may have borne heavy \textbf{transitional costs}: the lasting losses to earnings and employment that workers bear when an industry shrinks. Researchers sought to understand which patterns held for coal workers at the individual level.
+\noindent U.S. coal mining employment has fallen more than half since 2011, as cheap natural gas from the fracking boom and falling renewable energy costs pushed coal out of the power sector. Earlier research shows that coal \textit{communities} lost jobs, wages, and tax revenue. However, aggregate numbers hide how individual workers fared. Some may have quickly moved to new jobs, while others may have borne heavy \textbf{transitional costs}: the lasting losses to earnings and employment that workers bear when an industry shrinks. Researchers sought to understand which patterns held for coal workers at the individual level.
 
 \noindent The research team assembled administrative records covering nearly every person who worked in U.S. coal mining before, during, and after coal's 2011 peak. This let them follow each worker's earnings, employment, and location year by year, even if workers worked outside coal or were unemployed. They could then compare those paths with otherwise similar workers who depended less on coal for their livelihoods.
 
@@ -112,7 +112,9 @@ format:
 
 \newpage
 
-\noindent An important part of measuring what coal's decline cost workers is separating the decline's effects from everything else that shapes a career. To do this, researchers compared the most coal-dependent workers with other workers, evening out differences in age, education, earnings, and location. By doing so, they created a comparison in which they assumed that workers with more dependence on the coal industry before 2011 have the same earnings and employment potential as workers with less or no dependence on the coal industry. The collapse in coal demand was driven by national energy prices rather than any one worker's choices, so the comparison offers a clearer picture of coal's effect. If coal's decline had left workers unharmed --- or had affected both groups equally --- no earnings gap should have opened between them.
+\noindent An important part of measuring what coal's decline cost workers is separating the decline's effects from everything else that shapes a career. To do this, researchers compared the most coal-dependent workers with other workers, evening out differences in age, education, earnings, and location. By doing so, they created a comparison in which they assumed that workers with more dependence on the coal industry before 2011 have the same earnings and employment potential as workers with less or no dependence on the coal industry. 
+
+\noindent The collapse in coal demand was driven by national energy prices rather than any one worker's choices, so the comparison offers a clearer picture of coal's effect. If coal's decline had left workers unharmed --- or had affected both groups equally --- no earnings gap should have opened between them.
 
 \noindent This is not what the researchers found. Between 2012 and 2019, \textbf{the most coal-dependent workers lost cumulative earnings equal to roughly 1.8 times a full pre-decline year of pay}. The losses came through two channels at once: compared with similar workers, coal-dependent workers spent about five more months out of work \textit{and}, in the years they did work, earned roughly 19 percent less. \textbf{A decade on, coal's decline had carved a deep and persistent hole in workers' earnings.}
 
@@ -123,7 +125,7 @@ format:
 % ---------------------------------------------------------------------
 \sectionhead{Takeaways}
 \subhead{The challenges of change}
-\noindent Workers couldn't simply move or retrain their way out. Coal paid well --- about \$13,000 a year more than comparable work --- and its jobs are concentrated in a few isolated regions where entire local economies lean on the industry, so nearby alternatives that matched it were scarce. Those who left coal for other industries earned over 30 percent less than they had in coal, and relocating to a new labor market barely helped. Where workers displaced by factory closings often find their way into new jobs, a large share of coal workers stopped working altogether, \textbf{a sign their skills didn't transfer to the jobs around them}.
+\noindent Workers couldn't simply move or retrain their way out. Coal paid well --- about \$13,000 a year more than comparable work --- and its jobs are concentrated in a few isolated regions where entire economies lean on the industry, so nearby alternatives were scarce. Those who left coal for other industries earned over 30 percent less than they had in coal, and relocating to a new labor market barely helped. Where workers displaced by factory closings often find their way into new jobs, a large share of coal workers stopped working altogether, \textbf{a sign their skills didn't transfer to the jobs around them}.
 
 \vspace{5pt}
 \subhead{Leaning on the safety net}
@@ -131,5 +133,5 @@ format:
 
 \vspace{5pt}
 \subhead{A preview of the energy transition}
-\noindent Coal's decline is an early look at what shrinking demand for fossil fuels could mean for workers in regionally concentrated, high-wage industries. Coal is just one industry, and its geography is unusually isolating, so its exact path won't repeat everywhere. Even so, the warning is clear: \textbf{where specialized skills don't transfer, the costs of an energy transition land hard on workers, and existing safety nets catch only part of the fall}.
+\noindent Coal's decline is an early look at what shrinking demand for fossil fuels could mean for workers in regionally concentrated, high-wage industries. Coal is just one industry, and its geography is unusually isolating, so its exact path won't repeat everywhere. Even so, the warning is clear: \textbf{where specialized skills don't transfer, the costs of an energy transition land hard on individual workers, and existing safety nets catch only part of the fall}.
 ```
