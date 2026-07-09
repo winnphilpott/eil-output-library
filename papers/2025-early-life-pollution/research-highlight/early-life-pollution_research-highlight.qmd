@@ -104,7 +104,7 @@ format:
 \figtitle{[Sentence-style figure title — what the chart shows]}{Source: [Author(s)] ([Year]).}
 \includegraphics[width=\linewidth]{../data-viz/figures/fig1-college-attendance.png}
 \par\vspace{3pt}
-{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point compares one parent's birth cohort with the 1971 cohort — how much more (or less) likely their children were to attend college. The line is flat before 1971 and climbs after the 1970 Clean Air Act cleared the air, so children of parents who grew up with cleaner air were increasingly likely to attend college. The shaded band shows the range of uncertainty, pinched to zero at the 1971 comparison year.\par}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point compares one parent's birth cohort with the 1971 cohort — whether their children were more or less likely to attend college. The line is flat before 1971 and climbs after the 1970 Clean Air Act cleared the air: by the 1975 cohort, children of parents who grew up with cleaner air were markedly more likely to attend college. The shaded band shows the range of uncertainty, pinched to zero at the 1971 comparison year.\par}
 \end{minipage}
 \end{center}
 
