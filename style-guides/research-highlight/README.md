@@ -11,12 +11,11 @@ translate a single academic paper for a policy audience.
 
 ## 1. Purpose & shape
 
-A research highlight is a **one- to two-page PDF** built from a single paper. Body type is
-10.5/13.5pt. **Use the space the paper warrants:** a single, clean finding can live on one
-page; a richer paper — multiple results, a mechanism worth unpacking, a second figure —
-is better served by two pages than by cramming. **Don't shrink the layout to force a fit,**
-and don't pad to fill a second page. The running masthead and footer repeat across pages,
+A research highlight is a **two-page PDF** built from a single paper. Body type is
+10.5/13.5pt. **Use the space the paper warrants:** don't try to cram too much into one page. **Don't shrink the layout to force a fit,** and don't pad to fill a second page. The running masthead and footer repeat across pages,
 so two-page highlights stay branded throughout.
+
+The hardest section to write is usually **"What the Study Found,"** where you explain the research design to a general audience. The goal is not just to explain the method, but to walk the reader through the reasoning behind it — the challenges researchers faced and how they solved them. Rather than "here were the problems, here were the fixes," lay it out as a story: *"You might first think to compare X. But that raises [a problem]. So you might try [Y] — except that introduces [a complication]. The researchers got around this by [doing Z]."* Take the reader along the journey of figuring out how to answer the question, instead of handing them the answer at face value. (The *finding* itself still leads — title, Bottom Line, and bold sentence — this storytelling applies to how the design is explained.)
 
 **Section order (fixed):**
 
