@@ -134,4 +134,12 @@ format:
 \vspace{5pt}
 \subhead{A preview of the energy transition}
 \noindent Coal's decline is an early look at what shrinking demand for fossil fuels could mean for workers in regionally concentrated, high-wage industries. Coal is just one industry, and its geography is unusually isolating, so its exact path won't repeat everywhere. Even so, the warning is clear: \textbf{where specialized skills don't transfer, the costs of an energy transition land hard on individual workers, and existing safety nets catch only part of the fall}.
+
+\vspace{8pt}
+
+\begin{infobox}
+\textbf{For more information}, contact Eleanor Krause (eleanor.krause@uky.edu).\par
+\vspace{2pt}
+Colmer, Jonathan, Eleanor Krause, Eva Lyubich, and John Voorheis. 2026. ``Transitional Costs and the Decline of Coal: Worker-Level Evidence.'' Working paper. \href{https://researchonline.lse.ac.uk/id/eprint/126795}{\color{faint}\underline{researchonline.lse.ac.uk/id/eprint/126795}}.\par
+\end{infobox}
 ```

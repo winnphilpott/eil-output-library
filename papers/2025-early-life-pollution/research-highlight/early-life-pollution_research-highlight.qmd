@@ -130,4 +130,12 @@ format:
 \vspace{5pt}
 \subhead{[Subhead 3]}
 \noindent [Third takeaway. Acknowledge any caveats or limitations without getting too technical, then restate the central point.]
+
+\vspace{8pt}
+
+\begin{infobox}
+\textbf{For more information}, contact Jonathan Colmer (j.colmer@virginia.edu).\par
+\vspace{2pt}
+Colmer, Jonathan, and John Voorheis. Forthcoming. ``The Intergenerational Effects of Early-Life Pollution Exposure.'' \textit{Journal of Political Economy: Microeconomics}. \href{https://doi.org/10.1086/740104}{\color{faint}\underline{doi.org/10.1086/740104}}.\par
+\end{infobox}
 ```

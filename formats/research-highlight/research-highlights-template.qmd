@@ -130,4 +130,16 @@ format:
 \vspace{5pt}
 \subhead{[Subhead 3]}
 \noindent [Third takeaway. Acknowledge any caveats or limitations without getting too technical, then restate the central point.]
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------
+% FOR MORE INFORMATION — centered infobox: contact line + full citation.
+% AEA (Chicago author-date) style. Keep links faint via the wrapper below.
+% ---------------------------------------------------------------------
+\begin{infobox}
+\textbf{For more information}, contact [Corresponding author] ([email]).\par
+\vspace{2pt}
+[Last, First, and First Last]. [Year]. ``[Exact Paper Title].'' \textit{[Journal]} [vol] ([issue]): [pages]. \href{https://doi.org/[DOI]}{\color{faint}\underline{doi.org/[DOI]}}.\par
+\end{infobox}
 ```
