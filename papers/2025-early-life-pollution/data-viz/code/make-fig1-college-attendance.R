@@ -78,17 +78,30 @@ p <- ggplot(fig, aes(year, est)) +
   # 5. restrained data ink
   geom_line(color = eil_pal$ink, alpha = 0.55, linewidth = 0.5) +
   geom_point(color = eil_pal$ink, size = 1.35) +
-  # 4. plain-language axes
-  scale_y_continuous(limits = c(-3, 8.6), breaks = c(0, 2, 4, 6, 8),
-    labels = c("0\n(no change)", "+2", "+4", "+6", "+8")) +
+  # call out the 1975 cohort (fully raised on cleaner air; the one estimate
+  # whose CI clears zero). Red marker + leader to a label parked upper-right.
+  annotate("point", x = 1975, y = 4.7, color = eil_pal$accentred, size = 1.7) +
+  annotate("segment", x = 1974.6, xend = 1974.9, y = 6.15, yend = 4.9,
+           color = eil_pal$accentred, linewidth = 0.3) +
+  annotate("text", x = 1974.85, y = 7.9, hjust = 1, vjust = 1,
+           label = paste0("By 1975, children of\n",
+                          "cleaner-air parents are\n",
+                          "markedly more likely\n",
+                          "to attend college"),
+           size = 2.15, color = eil_pal$accentred, fontface = "bold",
+           lineheight = 0.9) +
+  # 4. word-anchored y-axis (house pattern: no rotated title, no numbers;
+  #    the tick labels carry the direction. "No change" sits on the 0 line,
+  #    the outcome is named once at the top. Directional, not magnitude:
+  #    matches the digitized-approximation caveat in the figure note.
+  scale_y_continuous(
+    limits = c(-3, 8.6), breaks = c(-2, 0, 2),
+    labels = c("Less likely", "No change", "More likely\nto attend college")) +
   scale_x_continuous(breaks = 1969:1975, expand = c(0.02, 0)) +
-  labs(x = "PARENT'S BIRTH COHORT",
-       y = "CHILD'S COLLEGE ATTENDANCE\n(PERCENTAGE-POINT CHANGE)") +
+  labs(x = "PARENT'S BIRTH COHORT", y = NULL) +
   theme_eil() +
   theme(
-    axis.title.y = element_text(color = eil_pal$muted, size = 6, angle = 90,
-                                lineheight = 0.9, margin = margin(r = 4)),
-    axis.text.y  = element_text(color = eil_pal$ink, size = 6, lineheight = 0.85)
+    axis.text.y = element_text(color = eil_pal$ink, size = 6, lineheight = 0.85)
   )
 
 # --- Export ----------------------------------------------------------
