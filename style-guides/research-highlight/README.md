@@ -11,7 +11,7 @@ translate a single academic paper for a policy audience.
 
 ## 1. Purpose & shape
 
-A research highlight is a **two-page PDF** built from a single paper. Body type is
+A research highlight is a roughly **two-page PDF** built from a single paper. Body type is
 10.5/13.5pt. **Use the space the paper warrants:** don't try to cram too much into one page. **Don't shrink the layout to force a fit,** and don't pad to fill a second page. The running masthead and footer repeat across pages,
 so two-page highlights stay branded throughout.
 
@@ -60,7 +60,7 @@ The hardest section to write is usually **"What the Study Found,"** where you ex
 
 ## 4. Figures
 
-- **One figure on a one-page highlight; up to two on a two-page highlight.** Each is
+- **One to two figures in a highlight.** Each is
   centered in a `0.82\linewidth` minipage. Add a second figure only when it carries a
   distinct result — not to decorate the extra space.
 - **Three stacked parts:**
@@ -91,14 +91,13 @@ The hardest section to write is usually **"What the Study Found,"** where you ex
 
 ## 6. Length budget (target)
 
-Two columns: a tight **one-page** budget, and a looser **two-page** budget for papers that
-need the room. This is the least strict element of the style guide, as long as the text is clear, direct,
+This is the least strict element of the style guide, as long as the text is clear, direct,
 and based on all other conventions in this style guide. 
 
-| Block                 | One page                       | Two pages                          |
-|-----------------------|--------------------------------|------------------------------------|
-| Title                 | ≤ 10                           | ≤ 10                               |
-| Bottom Line           | ~40–50                         | ~40–50                             |
-| Background            | ~120 (2 paragraphs)            | ~180 (2–3 paragraphs)              |
-| What the study found  | ~150 (2 paragraphs + fig note) | ~300 (3–4 paragraphs + 1–2 figs)   |
-| Takeaways             | 3 × ~50, each with a subhead   | 3–4 × ~60, each with a subhead     |
+| Block                 |Budget                              |
+|-----------------------|------------------------------------|
+| Title                 | ≤ 10                               |
+| Bottom Line           | ~40–50                             |
+| Background            | ~180 (2–3 paragraphs)              |
+| What the study found  | ~300 (3–4 paragraphs + 1–2 figs)   |
+| Takeaways             | 3–4 × ~60, each with a subhead     |
