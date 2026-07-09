@@ -86,8 +86,11 @@ The hardest section to write is usually **"What the study found,"** where you ex
 - **Never restyle in the `.qmd`.** All colors, fonts (Source Sans 3 / Source Serif 4),
   boxes, and macros live in `_style.tex`. Edit there to restyle every highlight at once.
 - **Macros:** `\brieftitle`, `\briefcitation`, `\sectionhead`, `\subhead`, `\figtitle`,
-  `\begin{bottomline}`. The `v4` header block overrides `\subhead` to maroon and sets body
-  type to 10.5/13.5pt — keep these per-document overrides.
+  `\begin{bottomline}`, `\begin{infobox}`. The `v4` header block overrides `\subhead` to maroon
+  and sets body type to 10.5/13.5pt — keep these per-document overrides.
+- **`infobox`** is the centered, thin-bordered box for an end-of-document "For more
+  information" contact line and full citation. Text is faint at footer size; wrap any link as
+  `\href{url}{\color{faint}\underline{text}}` so it stays faint instead of the accent link color.
 - **Color tokens:** `ink` (headings), `body` (text), `accentred` maroon (label, links,
   figure title, subheads), `boxred` (Bottom Line fill). Hex values are fixed in `_style.tex`.
 - **Paragraphs** begin with `\noindent`; separate blocks with explicit `\vspace`
