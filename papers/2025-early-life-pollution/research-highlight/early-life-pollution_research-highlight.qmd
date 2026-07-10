@@ -127,7 +127,7 @@ format:
 
 \vspace{5pt}
 \subhead{The full value of cleaner air}
-\noindent Because the benefits reach a second generation, standard analyses that stop at the people directly exposed \textbf{understate what environmental protection is worth}. Counting both generations, the lifetime earnings gains from this one improvement are 50 to 85 percent larger than the first-generation gains alone --- on the scale of the mortality benefits that usually dominate these calculations.
+\noindent The benefits reach a second generation, so standard analyses that stop at the people directly exposed \textbf{understate what environmental protection is worth}. Counting both generations, the lifetime earnings gains from this one improvement are 50 to 85 percent larger than the first-generation gains alone --- on the scale of the mortality benefits that usually dominate these calculations.
 
 \vspace{5pt}
 \subhead{Whom clean air reaches}
