@@ -351,9 +351,9 @@
 %   - close on setup for "what the study found": with this data they
 %     can watch what happens to homicides on hot days, specifically in
 %     places/times with stricter vs. looser carry laws
-\noindent Past research has established that high temperatures lead to increased aggression and violent behavior: hotter days are linked to more confrontations and violent crime. Additionally, states differ significantly in their \textbf{concealed-carry laws} --- the rules governing who can carry a hidden handgun in public. Some states let nearly any adult carry one; others require a permit that officials can deny, or ban concealed carry altogether. Together, these two facts raise an important question: if heat makes people more likely to become violent, does having a gun close at hand change the results of these confrontations? If so, then stricter concealed carry laws may be especially beneficial as areas get hotter. 
+\noindent Past research has established that high temperatures lead to increased aggression and violent behavior: hotter days are linked to more confrontations and violent crime. Additionally, states differ significantly in their \textbf{concealed-carry laws} --- the rules governing who can carry a hidden handgun in public. Some states let nearly any adult carry one; others require a permit that officials can deny, or ban concealed carry altogether. Together, these two facts raise an important question: if heat makes people more likely to become violent, does having a gun close at hand change the results of these confrontations? If so, then stricter concealed-carry laws may protect against an increase in homicides as temperatures rise. 
 
-\noindent To answer this question, researchers matched 25 years of daily police crime reports (1991--2016) with local weather records and each state's concealed-carry laws, month by month. This allowed them to see the tempterature, time, and laws in place for each crime that was committed.They focused on homicide because it is the crime type most consistently and reliably reported to police, across both place and time.
+\noindent To answer this question, researchers matched 25 years of daily police crime reports (1991--2016) with local weather records and each state's concealed-carry laws, month by month. This allowed them to see the temperature, time, and laws in place for each crime that was committed.
 
 \vspace{6pt}
 
@@ -363,37 +363,37 @@
 \sectionhead{What the study found}
 
 % ---------------------------------------------------------------------
-% FIGURE — adapted Figure 3 (event study), house style
+% FIGURE — adapted Figure 2 (temperature-homicide relationship by
+% policy regime), house style
 % ---------------------------------------------------------------------
 % OUTLINE — figure:
-%   - source figure: paper's Figure 3, event study of temp-homicide gap
-%     before/after a state loosens its concealed-carry law
-%   - figtitle (sentence-style, describes what's shown, not the method):
-%     e.g. "How much deadlier hot days become after a state loosens its
-%     gun-carry rules"
-%   - build script: code/make-fig1-event-study.R -> figures/fig1-event-study.png
-%     (needs the paper's underlying event-study coefficients/data --
-%     check with PIs whether we have access or are doing a visual
-%     recreation from the published figure)
+%   - source figure: paper's Figure 2, semi-parametric temperature-
+%     homicide relationship, plotted separately for less-prohibitive
+%     and more-prohibitive concealed-carry states
+%   - figtitle (sentence-style, describes what's shown, not the method)
+%   - build script: code/make-fig1-temp-homicide-by-regime.R
+%     -> figures/fig1-temp-homicide-by-regime.png
+%     (approximated from the published figure -- no replication package
+%     found publicly; check with PIs before this goes public)
 %   - note (plain language, how to read + what to conclude):
-%     - before the law loosens: no gap between eventual-loosening states
-%       and always-strict states -- hot days are equally (un)dangerous
-%     - after: gap opens immediately and holds for years afterward
-%     - the "opens right at the change and stays open" pattern is what
-%       makes this look like the LAW's effect, not some other trend
+%     - less-strict-law states: line rises with temperature -- hotter
+%       days bring more homicides
+%     - stricter-law states: line stays flat -- hotter days aren't any
+%       more dangerous
 \begin{center}
 \begin{minipage}{0.82\linewidth}
-\figtitle{How much deadlier hot days become after a state loosens its concealed-carry law}{Source: Colmer \& Doleac (2026).}
+\figtitle{How much hotter days raise homicides, depending on how strict a state's gun laws are}{Source: Colmer \& Doleac (2026).}
 % NOTE: values in this figure are approximated from the published
-% Figure 3 image, not sourced from a replication package (none found
+% Figure 2 image, not sourced from a replication package (none found
 % publicly) -- confirm with Colmer & Doleac before this goes public.
-\includegraphics[width=\linewidth]{../data-viz/figures/fig1-event-study.png}
+\includegraphics[width=\linewidth]{../data-viz/figures/fig1-temp-homicide-by-regime.png}
 \par\vspace{3pt}
-{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point tracks the gap in hot-day homicides between states that eventually loosen their concealed-carry law and states that keep theirs strict, year by year before and after the change (year 0). Before the change, the gap is flat --- hot days are equally dangerous in both groups. Right after, it opens and stays open for years, which is what makes this look like the law's effect rather than a coincidence.\par}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each panel shows the estimated relationship between daily temperature and homicides, after accounting for typical seasonal and local patterns. In states with less strict concealed-carry laws (left), hotter days bring more homicides. In states with stricter laws (right), the line stays flat --- hotter days aren't any more dangerous. The shaded areas show the range of uncertainty around each estimate.\par}
 \end{minipage}
 \end{center}
 
-\vspace{8pt}
+\vspace{10pt}
+\newpage
 
 % OUTLINE — design narrative (walk the reader through the reasoning,
 % per style guide's "storytelling" instruction -- don't name DiD/DiT):
@@ -434,9 +434,9 @@
 %     homicides that show up specifically on hot days -- and ask
 %     whether that extra amount is smaller in strict-law states. this
 %     nets out whatever else makes strict- and loose-law states
-\noindent It is difficult to measure how a law might affect heat-induced gun violence because it is impossible to measure the difference between an area if the law had never been passed because there a many possibilities as to why the law might have been passed at that exact time. It would also be difficult to compare states with different laws and/or temperatures for the same reason: there might be other circumstances (e.g. cultural, political, poverty) that would lead to different outcomes that could also affect violence. 
+\noindent \textbf{It is difficult to measure how a law might affect heat-induced gun violence because it is impossible to measure the difference between an area if the law had never been passed in the first place.} The reason the law was passed might also affect gun habits or violent behavior. It would also be difficult to compare states with different laws and/or temperatures for the same reason: there might be other circumstances (e.g. cultural, political, poverty) that would lead to different outcomes that could also affect violence. 
 
-\noindent However, researchers found a solution that allowed them to judge the actual effects they wanted to observe. They compared how much \emph{extra} violence a hot day brings in strict-law places versus loose-law places. That comparison cancels out whatever else makes those states different, as long as those other differences don't also change how a place responds to heat specifically. As a check, they also tracked the same states over time, comparing each state's own hot-day homicides before and after it changed its own law --- shown in the figure above. Both approaches point to the same conclusion.
+\noindent However, researchers found a solution that allowed them to judge the actual effects they wanted to observe. They compared the amount of \emph{extra} violence a hot day brought in strict-law places versus loose-law places compared to each state's own averages --- shown in the figure above. The researchers assumed that whatever else makes strict-law and loose-law states different --- their politics, policing, or poverty rates --- doesn't also happen to change how people respond specifically to hot weather. Under that assumption, their comparison isolates how much a state's gun laws shape hot weather's effect on violence, rather than picking up other differences between the states. As a check, they also tracked the same states over time, comparing each state's own hot-day homicides before and after it changed its own law. Both approaches point to the same conclusion.
 
 \noindent Nationally, each one-degree-Celsius increase in daily temperature is tied to roughly six percent more homicides than usual on an average day. In states with stricter concealed-carry laws, that heat-driven bump nearly disappears --- both when comparing different states at the same time, and when tracking the same states before and after they changed their own laws. \textbf{Stricter concealed-carry laws blunt most of the effect of heat on homicides.}
 
@@ -485,7 +485,7 @@
 %   - bold: the safety margin stricter laws provide against heat has
 %     been shrinking as laws loosen, right as it's needed more
 \subhead{A Growing Risk}
-\noindent Concealed-carry laws have loosened nationwide since the 1990s --- from 36 states with strict laws in 1991 to just 10 by 2016 but climate change is bringing more hot days every year. If the whole country still had 1991's stricter mix of laws today, a one-degree hot day would cause an estimated 97 additional homicides nationwide; with today's looser laws in place, that same hot day causes roughly 299. \textbf{Fewer states now have the laws that lessen heat's effect on violence, just as rising temperatures make that protection more important.}
+\noindent Concealed-carry laws have loosened nationwide since the 1990s --- from 36 states with strict laws in 1991 to just 10 by 2016. Because of rising temperatures from climate change, this effect is only growing. If the whole country still had 1991's stricter mix of laws today, a one-degree hot day would cause an estimated 97 additional homicides nationwide; with today's looser laws in place, that same hot day causes roughly 299. \textbf{Fewer states now have the laws that lessen heat's effect on violence, just as rising temperatures make that protection more important.}
 
 \vspace{5pt}
 
@@ -527,7 +527,7 @@
 %     anyway into lethal ones, rather than laws changing how much
 %     people interact
 \subhead{Aggression, Not More Encounters}
-\noindent Why does heat make hot days more lethal where guns are easy to carry? It could be that people simply see more people when the weather is nice, or that heat makes people more aggressive once a conflict starts. The evidence favors the latter. The effect holds for homicides at home when they aren't necessarily seeing more people, and the effect is strongest in the hottest hours of the day, which doesn't point to an increase in social interactions as strongly. \textbf{The heat makes people more aggressive, which turns an ordinary conflict into lethal one when guns are nearby.}
+\noindent Why does heat make hot days more lethal where guns are easy to carry? It could be that people simply see more people when it's sunny outside, or that heat makes people more aggressive once a conflict starts. The evidence favors the latter. The effect holds for homicides at home when they aren't necessarily seeing more people, and the effect is strongest in the hottest hours of the day, which doesn't point to an increase in social interactions as strongly. \textbf{The heat makes people more aggressive, which turns an ordinary conflict into a lethal one when guns are nearby.}
 
 \vspace{5pt}
 
