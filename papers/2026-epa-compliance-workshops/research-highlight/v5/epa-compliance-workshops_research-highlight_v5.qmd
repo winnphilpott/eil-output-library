@@ -84,7 +84,7 @@ format:
 % BACKGROUND  (broad — poses the question)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators help facilities follow the rules in the first place, through free workshops, guidance, and technical support. The basis of the program comes from the belief that many violations stem from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance has become increasingly popular at the Environmental Protection Agency (EPA). In Ohio, facilities that attended free workshops went on to violate less often afterward. Regulators took that as a sign the approach worked and moved to expand it to other states, though \textbf{whether the workshops caused the improvement has never actually been tested.}
+\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators help facilities follow the rules in the first place, through free workshops, guidance, and technical support. The program rests on the belief that many violations stem from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance has become increasingly popular at the Environmental Protection Agency (EPA). In Ohio, facilities that attended free workshops went on to violate less often afterward. Regulators took that as a sign the approach worked and moved to expand it to other states, though \textbf{whether the workshops caused the improvement has never actually been tested.}
 
 \vspace{6pt}
 
@@ -111,7 +111,7 @@ format:
 \sectionhead{How the study tested it}
 \noindent In a new study, researchers set out to test that program directly, using data on hundreds of wastewater treatment facilities regulated by the Ohio EPA. Facilities that had recently been cited for violations were invited to participate in the workshops, which were rolled out over several months. Those that volunteered received free training on how to comply with the Clean Water Act.
 
-\noindent \textbf{Evaluating whether a policy works is hard: there is no way to see what facilities would have done without it.} On one hand, asking whether violations fell at trained facilities after the workshops could credit the training with whatever else was going on at the same time. On another hand, comparing facilities that signed up for trainings against those that didn't raises another problem: the workshops were voluntary, so a difference between the two could reflect the \emph{motivation} of the facilities that signed up rather than anything the training did.
+\noindent \textbf{Evaluating whether a policy works is hard: there is no way to see what facilities would have done without it.} Comparing violations at trained facilities before and after the workshops would credit the training with whatever else was happening at the same time. Comparing facilities that signed up against those that didn't runs into a different problem: the workshops were voluntary, so a gap between the two groups could reflect the \emph{motivation} of the facilities that signed up rather than anything the training did.
 
 \noindent The researchers got around this by comparing facilities trained earlier against ones that had \emph{also} signed up but had not yet been trained. Those facilities were just as motivated and they were tracked over the same months, so any trend running through the industry showed up in both groups equally. The staggered rollout is what made those not-yet-trained facilities available as a fair comparison. That comparison holds only if the not-yet-trained facilities really would have followed the same path as the trained ones, which is something the researchers have to assume.
 
@@ -121,7 +121,7 @@ format:
 % WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
 % ---------------------------------------------------------------------
 \sectionhead{What the study found}
-\noindent The researchers found that \textbf{trained facilities were no less likely to violate than facilities that had not yet been trained.} Month after month, the workshops left no mark on how often facilities broke their permits.
+\noindent The researchers found that \textbf{trained facilities were no less likely to violate than facilities that had not yet been trained.}
 
 \noindent The same was true of pollution itself. A violation is a regulatory category, and a facility can be cited without much changing in the water. So the researchers also tracked what the plants actually discharged each month, across five pollutants. Those didn't move either. \textbf{The workshops changed neither what facilities reported nor what they released into the water.}
 
