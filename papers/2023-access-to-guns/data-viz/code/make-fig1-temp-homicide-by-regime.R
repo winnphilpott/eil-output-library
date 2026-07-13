@@ -60,10 +60,14 @@ SOURCE   <- "Environmental Inequality Lab · Access to Guns in the Heat of the M
 # Anchor points read off the chart every 2 degrees. Less-strict states:
 # the line starts around -0.0019 at x=-10, rises fairly gently through
 # the middle of the range, then kinks upward more steeply from about
-# x=6 to x=10. Stricter states: the line hovers slightly above zero
-# through the middle of the range, then dips below zero toward the hot
-# tail. Both bands are tightest near the middle of the temperature
-# range and flare out at the tails, more so on the hot (right) side.
+# x=6 to x=10. Stricter states: comparing its vertical extent against
+# the less-strict panel's rise, the stricter-law line stays close to
+# zero throughout, with only a small upward drift through the middle
+# and a small downward drift at the hot tail -- clearly flatter than
+# the less-strict panel, which is the paper's whole point in showing
+# these two side by side. Both bands are tightest near the middle of
+# the temperature range and flare out at the tails, more so on the hot
+# (right) side.
 anchors_x <- seq(-10, 10, by = 2)
 
 less_strict_anchors <- tibble(
@@ -76,8 +80,8 @@ less_strict_anchors <- tibble(
 
 stricter_anchors <- tibble(
   x  = anchors_x,
-  y  = c( 0.0002,  0.0002,  0.0002,  0.0003,  0.0004,  0.0004,
-          0.0005,  0.0004,  0.0002, -0.0002, -0.0005),
+  y  = c( 0.0001,  0.0001,  0.0001,  0.0002,  0.0003,  0.0003,
+          0.0003,  0.0002,  0.0001, -0.0001, -0.0003),
   hw = c( 0.0019,  0.0015,  0.0012,  0.0010,  0.0009,  0.0009,
           0.0009,  0.0010,  0.0012,  0.0016,  0.0021)
 )
@@ -113,8 +117,9 @@ p <- ggplot(df, aes(x, y)) +
   # |hi/lo| ~0.0038 at x=+/-10) so nothing clips
   scale_y_continuous(limits = c(-0.004, 0.004), breaks = c(-0.002, 0, 0.002),
     labels = c("Fewer\nhomicides", "No change", "More\nhomicides")) +
-  scale_x_continuous(breaks = c(-10, 0, 10), expand = expansion(mult = 0.12),
-    labels = c("Cooler\nthan usual", "Typical\nday", "Hotter\nthan usual")) +
+  scale_x_continuous(breaks = c(-10, -5, 0, 5, 10), expand = expansion(mult = 0.1),
+    labels = c("10° below\naverage", "5° below", "Average\nday",
+               "5° above", "10° above\naverage")) +
   labs(x = NULL, y = NULL, caption = SOURCE) +
   theme_eil(base_size = 7) +
   theme(
