@@ -137,9 +137,11 @@ format:
 
 \vspace{8pt}
 
-\begin{infobox}
-\textbf{For more information}, contact Eleanor Krause (eleanor.krause@uky.edu).\par
-\vspace{2pt}
-Colmer, Jonathan, Eleanor Krause, Eva Lyubich, and John Voorheis. 2026. ``Transitional Costs and the Decline of Coal: Worker-Level Evidence.'' Working paper. \href{https://researchonline.lse.ac.uk/id/eprint/126795}{\color{faint}\underline{researchonline.lse.ac.uk/id/eprint/126795}}.\par
-\end{infobox}
+\begin{moreinfo}
+Colmer, Jonathan, Eleanor Krause, Eva Lyubich, and John Voorheis. 2026. ``Transitional Costs and the Decline of Coal: Worker-Level Evidence.'' Working paper. \href{https://researchonline.lse.ac.uk/id/eprint/126795}{\color{cite}\underline{researchonline.lse.ac.uk/id/eprint/126795}}.\par
+
+Jonathan Colmer is at the University of Virginia. Eleanor Krause is at the University of Kentucky. Eva Lyubich and John Voorheis are at the US Census Bureau. Contact Eleanor Krause (eleanor.krause@uky.edu) with questions about this research.\par
+
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
+\end{moreinfo}
 ```

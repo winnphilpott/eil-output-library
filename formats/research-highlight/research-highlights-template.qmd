@@ -134,12 +134,16 @@ format:
 \vspace{8pt}
 
 % ---------------------------------------------------------------------
-% FOR MORE INFORMATION — centered infobox: contact line + full citation.
-% AEA (Chicago author-date) style. Keep links faint via the wrapper below.
+% FOR MORE INFORMATION — full-width closing block, rule above, no box.
+% Three paragraphs: full citation (AEA / Chicago author-date), author
+% affiliations + contact, then the EIL boilerplate. Keep the boilerplate
+% sentence identical to the one in the press-release template.
 % ---------------------------------------------------------------------
-\begin{infobox}
-\textbf{For more information}, contact [Corresponding author] ([email]).\par
-\vspace{2pt}
-[Last, First, and First Last]. [Year]. ``[Exact Paper Title].'' \textit{[Journal]} [vol] ([issue]): [pages]. \href{https://doi.org/[DOI]}{\color{faint}\underline{doi.org/[DOI]}}.\par
-\end{infobox}
+\begin{moreinfo}
+[Last, First, and First Last]. [Year]. ``[Exact Paper Title].'' \textit{[Journal]} [vol] ([issue]): [pages]. \href{https://doi.org/[DOI]}{\color{cite}\underline{doi.org/[DOI]}}.\par
+
+[First Last] is [affiliation]. [First Last] is [affiliation]. Contact [Corresponding author] ([email]) with questions about this research.\par
+
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
+\end{moreinfo}
 ```

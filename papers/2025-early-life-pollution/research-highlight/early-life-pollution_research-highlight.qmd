@@ -135,9 +135,11 @@ format:
 
 \vspace{8pt}
 
-\begin{infobox}
-\textbf{For more information}, contact Jonathan Colmer (j.colmer@virginia.edu).\par
-\vspace{2pt}
-Colmer, Jonathan, and John Voorheis. Forthcoming. ``The Intergenerational Effects of Early-Life Pollution Exposure.'' \textit{Journal of Political Economy: Microeconomics}. \href{https://doi.org/10.1086/740104}{\color{faint}\underline{doi.org/10.1086/740104}}.\par
-\end{infobox}
+\begin{moreinfo}
+Colmer, Jonathan, and John Voorheis. Forthcoming. ``The Intergenerational Effects of Early-Life Pollution Exposure.'' \textit{Journal of Political Economy: Microeconomics}. \href{https://doi.org/10.1086/740104}{\color{cite}\underline{doi.org/10.1086/740104}}.\par
+
+Jonathan Colmer is at the University of Virginia. John Voorheis is at the US Census Bureau. Contact Jonathan Colmer (j.colmer@virginia.edu) with questions about this research.\par
+
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
+\end{moreinfo}
 ```

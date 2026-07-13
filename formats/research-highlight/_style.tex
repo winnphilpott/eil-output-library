@@ -79,7 +79,8 @@
   before upper={\fontsize{9.4pt}{13.6pt}\selectfont}}
 
 % --- Info box (contact + full citation; centered, thin faint border) --
-% Faint text at footer size. Wrap any link as
+% Superseded by the moreinfo environment below; kept so older highlights
+% still compile. Faint text at footer size. Wrap any link as
 % \href{url}{\color{faint}\underline{text}} so it inherits the faint
 % colour instead of the global accent link colour.
 \newtcolorbox{infobox}{%
@@ -87,3 +88,22 @@
   boxrule=0.5pt, colframe=faint, colback=white, coltext=faint,
   left=9pt, right=9pt, top=7pt, bottom=7pt,
   before upper={\fontsize{7.4pt}{9.5pt}\selectfont}}
+
+% =====================================================================
+%  CLOSING BLOCK
+% =====================================================================
+
+% --- For more information (full width; rule above, no box) ------------
+% Citation, author affiliations + contact, then the EIL boilerplate —
+% one paragraph each. Wrap any link as
+% \href{url}{\color{cite}\underline{text}} so it inherits the block's
+% grey instead of the global accent link colour.
+\newenvironment{moreinfo}{%
+  \par\vspace{12pt}%
+  \noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}\par
+  \vspace{7pt}%
+  {\color{ink}\bfseries\fontsize{8.25pt}{10pt}\selectfont
+   \textls[50]{\MakeUppercase{For more information}}\par}\vspace{4pt}%
+  \color{cite}\fontsize{8.4pt}{11.5pt}\selectfont
+  \setlength{\parskip}{5pt}%
+}{\par}

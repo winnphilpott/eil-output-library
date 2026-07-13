@@ -188,7 +188,8 @@
   before upper={\fontsize{9.4pt}{13.6pt}\selectfont}}
 
 % --- Info box (contact + full citation; centered, thin faint border) --
-% Faint text at footer size. Wrap any link as
+% Superseded by the moreinfo environment below; kept so older highlights
+% still compile. Faint text at footer size. Wrap any link as
 % \href{url}{\color{faint}\underline{text}} so it inherits the faint
 % colour instead of the global accent link colour.
 \newtcolorbox{infobox}{%
@@ -196,6 +197,25 @@
   boxrule=0.5pt, colframe=faint, colback=white, coltext=faint,
   left=9pt, right=9pt, top=7pt, bottom=7pt,
   before upper={\fontsize{7.4pt}{9.5pt}\selectfont}}
+
+% =====================================================================
+%  CLOSING BLOCK
+% =====================================================================
+
+% --- For more information (full width; rule above, no box) ------------
+% Citation, author affiliations + contact, then the EIL boilerplate —
+% one paragraph each. Wrap any link as
+% \href{url}{\color{cite}\underline{text}} so it inherits the block's
+% grey instead of the global accent link colour.
+\newenvironment{moreinfo}{%
+  \par\vspace{12pt}%
+  \noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}\par
+  \vspace{7pt}%
+  {\color{ink}\bfseries\fontsize{8.25pt}{10pt}\selectfont
+   \textls[50]{\MakeUppercase{For more information}}\par}\vspace{4pt}%
+  \color{cite}\fontsize{8.4pt}{11.5pt}\selectfont
+  \setlength{\parskip}{5pt}%
+}{\par}
 % --- Running masthead + footer (logo, label, rule, page number) ---
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
@@ -313,6 +333,23 @@
 \vspace{6pt}
 
 % ---------------------------------------------------------------------
+% FIGURE — event study: effect on violations by month around training
+%   Placed after the background so it lands on page 1: the bottom-line box
+%   has already stated the null, so the chart illustrates a claim the
+%   reader holds rather than spoiling one they don't.
+% ---------------------------------------------------------------------
+\begin{center}
+\begin{minipage}{0.82\linewidth}
+\figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026).}
+\includegraphics[width=\linewidth]{../../data-viz/figures/fig2-did.png}
+\par\vspace{3pt}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point compares violations at trained facilities against facilities not yet trained, month by month around training (month 0). After training, an effect from the workshops would show up as the line moving away from zero. Instead it stays flat, and the shaded band of statistical uncertainty always includes ``no change.'' The workshops had no detectable effect.\par}
+\end{minipage}
+\end{center}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
 % HOW THE STUDY TESTED IT  (narrowing — setting + research design)
 % ---------------------------------------------------------------------
 \sectionhead{How the study tested it}
@@ -332,32 +369,19 @@
 
 \noindent The same was true of pollution itself. A violation is a regulatory category, and a facility can be cited without much changing in the water. So the researchers also tracked what the plants actually discharged each month, across five pollutants. Those didn't move either. \textbf{The workshops changed neither what facilities reported nor what they released into the water.}
 
-% ---------------------------------------------------------------------
-% FIGURE — event study: effect on violations by month around training
-%   (the interpretive close follows the figure)
-% ---------------------------------------------------------------------
-\begin{center}
-\begin{minipage}{0.82\linewidth}
-\figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026).}
-\includegraphics[width=\linewidth]{../../data-viz/figures/fig2-did.png}
-\par\vspace{3pt}
-{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point compares violations at trained facilities against facilities not yet trained, month by month around training (month 0). After training, an effect from the workshops would show up as the line moving away from zero. Instead it stays flat, and the shaded band of statistical uncertainty always includes ``no change.'' The workshops had no detectable effect.\par}
-\end{minipage}
-\end{center}
-
-\vspace{6pt}
-
 \noindent Judged only on the facilities that attended, the program appears to be a triumph: violations at those plants fell by about half in the years after the workshops. \textbf{The catch is that violations fell just as far at the facilities that had signed up but hadn't been trained yet --- the decline was already underway, and the workshops added nothing to it.} A facility that spent a day in a workshop went on to break its permit about as often as it would have if it had never shown up.
 
 \noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case: they look less like confused actors waiting for help than ones weighing whether compliance is worth it. That calculation is what inspections and penalties act on, and \textbf{they have a track record of reducing violations. These workshops, on this evidence, do not.}
 
 \vspace{8pt}
 
-\begin{infobox}
-\textbf{For more information}, contact Jay Shimshack (jay.shimshack@virginia.edu).\par
-\vspace{2pt}
-Ferraro, Paul J., and Jay P. Shimshack. 2026. ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations.'' \textit{Journal of Policy Analysis and Management} 45 (3): e70056. \href{https://doi.org/10.1002/pam.70056}{\color{faint}\underline{https://doi.org/10.1002/pam.70056}}.\par
-\end{infobox}
+\begin{moreinfo}
+Ferraro, Paul J., and Jay P. Shimshack. 2026. ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations.'' \textit{Journal of Policy Analysis and Management} 45 (3): e70056. \href{https://doi.org/10.1002/pam.70056}{\color{cite}\underline{doi.org/10.1002/pam.70056}}.\par
+
+Paul J. Ferraro is at Johns Hopkins University. Jay P. Shimshack is at the University of Virginia. Contact Jay Shimshack (jay.shimshack@virginia.edu) with questions about this research.\par
+
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
+\end{moreinfo}
 
 
 
