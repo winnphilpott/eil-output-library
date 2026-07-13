@@ -62,7 +62,7 @@ format:
 % TITLE + CITATION  (masthead repeats in the page header)
 % ---------------------------------------------------------------------
 \brieftitle{EPA Compliance Workshops Don't Reduce Violations}
-\briefcitation{Lessons from ``The effect of compliance assistance on pollution discharges and violations of environmental regulations'' by Paul J. Ferraro \& Jay P. Shimshack in \textit{Journal of Policy Analysis and Management}, 2026.}
+\briefcitation{Lessons from ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations'' by Paul J. Ferraro \& Jay P. Shimshack in \textit{Journal of Policy Analysis and Management}, 2026.}
 
 \vspace{-2pt}
 
