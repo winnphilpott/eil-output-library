@@ -125,7 +125,7 @@ format:
 
 \noindent Judged only on the facilities that attended, the program appears to be a triumph: violations at those plants fell by about half in the years after the workshops. \textbf{The catch is that violations fell just as far at the facilities that had signed up but hadn't been trained yet --- the decline was already underway, and the workshops added nothing to it.} A facility that spent a day in a workshop went on to break its permit about as often as it would have if it had never shown up.
 
-\noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case: they look less like confused actors waiting for help than ones weighing whether compliance is worth it. That calculation is what inspections and penalties act on, and \textbf{they have a track record of reducing violations. The older tools may still be the more useful ones.}
+\noindent Compliance assistance rests on the idea that facilities break the rules because they don't fully understand them. For these wastewater plants, that wasn't the case: they look less like confused actors waiting for help than ones weighing whether compliance is worth it. That calculation is what inspections and penalties act on, and \textbf{they have a track record of reducing violations. These workshops, on this evidence, do not.}
 
 \vspace{8pt}
 
