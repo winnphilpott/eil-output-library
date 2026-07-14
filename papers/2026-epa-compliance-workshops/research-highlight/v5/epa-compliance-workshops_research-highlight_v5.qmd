@@ -84,7 +84,7 @@ format:
 % BACKGROUND  (broad — poses the question)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators aim to measurably reduce regulatory violations by providing facilities with free workshops, technical publications, and other support. The idea is that many violations stem from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance has become a prominent alternative to enforcement action at the Environmental Protection Agency (EPA), which is what the Ohio EPA used when it offered free workshops to wastewater treatment facilities in the state.
+\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators offer workshops, technical guidance, and other support to help facilities understand and meet regulatory requirements. This approach reflects the idea that many violations result from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance has become a prominent alternative to enforcement action at the Environmental Protection Agency (EPA), and was recently adopted by the Ohio EPA in a program offering free workshops to wastewater treatment facilities across the state.
 
 \noindent The program was designed with potential expansion to other states in mind, but the effectiveness of the workshops was only evaluated by looking at a before-and-after comparison of violation rates. In a new study, Ferraro \& Shimshack set out to further explore the effectiveness of compliance assistance, using data on hundreds of wastewater treatment facilities that participated in the Ohio program. Facilities that had recently been cited for violations were invited to participate in the workshops, which were rolled out over several months. Despite the promising before-and-after results, \textbf{Ferraro \& Shimshack found that the workshops had no measurable effect on either violations or pollution discharges.}
 
@@ -98,10 +98,10 @@ format:
 % ---------------------------------------------------------------------
 \begin{center}
 \begin{minipage}{0.82\linewidth}
-\figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026).}
+\figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026), Fig.\ 2a.}
 \includegraphics[width=\linewidth]{../../data-viz/figures/fig2-event-study.png}
 \par\vspace{3pt}
-{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} This figure only includes facilities that attended a workshop. The month a facility was trained sets its zero line, so each dot shows whether it had more or fewer violations in a given month than it did in that training month. The estimates set aside each facility's usual violation rate, the local weather, and any swings shared across the industry; the shaded band shows the range of statistical uncertainty. If the workshops had an effect on violations, the line would drop below zero after the workshop. It doesn't: in every month afterward, the band still includes ``no change.''\par}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} This figure shows the estimated effect of compliance assistance workshops on the number of facility violations. Each dot shows whether facilities had more (above the zero line) or fewer (below the zero line) violations in a given month relative to the workshop month (vertical dashed line). The estimates account for each facility's usual number of violations, the local weather, and any common trends shared across facilities; the shaded band shows the range of estimates within the 95\% confidence interval. If the workshops had an effect on violations, the line would drop below zero after the workshop.\par}
 \end{minipage}
 \end{center}
 
@@ -110,7 +110,7 @@ format:
 % ---------------------------------------------------------------------
 % HOW THE STUDY TESTED IT  (narrowing — setting + research design)
 % ---------------------------------------------------------------------
-\sectionhead{Making a Fair Comparison}
+\sectionhead{Comparing across time and facilities}
 \noindent \textbf{Evaluating whether a policy works is hard: there is no way to see what facilities would have done without it.} Comparing violations at trained facilities before and after the workshops would credit the training with whatever else was happening at the same time. Comparing facilities that signed up against those that didn't runs into a different problem: the workshops were voluntary, so a gap between the two groups could reflect the \emph{motivation} of the facilities that signed up rather than anything the training did.
 
 \noindent Ferraro \& Shimshack got around this by comparing facilities trained earlier against ones that had \emph{also} signed up but had not yet been trained. Those facilities were just as motivated and they were tracked over the same months, so any trend running through the industry showed up in both groups equally. The staggered rollout is what made those not-yet-trained facilities available as a fair benchmark. That benchmark holds only if the not-yet-trained facilities really would have followed the same path as the trained ones, which is something the researchers have to assume.
@@ -122,7 +122,7 @@ format:
 % ---------------------------------------------------------------------
 % WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
 % ---------------------------------------------------------------------
-\sectionhead{What the study found}
+\sectionhead{Workshops may not be the answer}
 \noindent Ferraro \& Shimshack found that \textbf{trained facilities were no less likely to violate than facilities that had not yet been trained.} The same was true of pollution itself. A violation is a regulatory category, and a facility can be cited without much changing in the water. So Ferraro \& Shimshack also tracked what the plants actually discharged each month, across five pollutants. Those didn't move either. The workshops changed neither what facilities reported nor what they released into the water.
 
 \noindent Judged only on the facilities that attended, the program appears to be a triumph: violations at those plants fell by about half in the years after the workshops. The catch is that \textbf{violations fell just as far at the facilities that had signed up but hadn't been trained yet} --- the decline was already underway, and the workshops added nothing to it. A facility that spent a day in a workshop went on to break its permit about as often as it would have if it had never shown up.
