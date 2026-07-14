@@ -101,7 +101,7 @@ format:
 \figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026).}
 \includegraphics[width=\linewidth]{../../data-viz/figures/fig2-event-study.png}
 \par\vspace{3pt}
-{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} This figure only includes facilities that attended a workshop. The month a facility was trained sets its zero line, so each dot shows whether it had more or fewer violations in a given month than it did in that training month. The estimates set aside each facility's usual violation rate, the local weather, and any swings shared across the industry; the shaded band shows the range of statistical uncertainty. If the workshops worked, the line would drop below zero after the workshop. It doesn't: in every month afterward, the band still includes ``no change.''\par}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} This figure only includes facilities that attended a workshop. The month a facility was trained sets its zero line, so each dot shows whether it had more or fewer violations in a given month than it did in that training month. The estimates set aside each facility's usual violation rate, the local weather, and any swings shared across the industry; the shaded band shows the range of statistical uncertainty. If the workshops had an effect on violations, the line would drop below zero after the workshop. It doesn't: in every month afterward, the band still includes ``no change.''\par}
 \end{minipage}
 \end{center}
 
@@ -110,10 +110,10 @@ format:
 % ---------------------------------------------------------------------
 % HOW THE STUDY TESTED IT  (narrowing — setting + research design)
 % ---------------------------------------------------------------------
-\sectionhead{How the study tested it}
+\sectionhead{Making a Fair Comparison}
 \noindent \textbf{Evaluating whether a policy works is hard: there is no way to see what facilities would have done without it.} Comparing violations at trained facilities before and after the workshops would credit the training with whatever else was happening at the same time. Comparing facilities that signed up against those that didn't runs into a different problem: the workshops were voluntary, so a gap between the two groups could reflect the \emph{motivation} of the facilities that signed up rather than anything the training did.
 
-\noindent Ferraro \& Shimshack got around this by comparing facilities trained earlier against ones that had \emph{also} signed up but had not yet been trained. Those facilities were just as motivated and they were tracked over the same months, so any trend running through the industry showed up in both groups equally. The staggered rollout is what made those not-yet-trained facilities available as a fair benchmark. That benchmark holds only if the not-yet-trained facilities really would have followed the same path as the trained ones, which is something Ferraro \& Shimshack have to assume.
+\noindent Ferraro \& Shimshack got around this by comparing facilities trained earlier against ones that had \emph{also} signed up but had not yet been trained. Those facilities were just as motivated and they were tracked over the same months, so any trend running through the industry showed up in both groups equally. The staggered rollout is what made those not-yet-trained facilities available as a fair benchmark. That benchmark holds only if the not-yet-trained facilities really would have followed the same path as the trained ones, which is something the researchers have to assume.
 
 \noindent The figure asks a narrower question of the same facilities: once those industry-wide trends are stripped out, did anything change in the months around a facility's own training?
 
@@ -123,9 +123,7 @@ format:
 % WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
 % ---------------------------------------------------------------------
 \sectionhead{What the study found}
-\noindent Ferraro \& Shimshack found that \textbf{trained facilities were no less likely to violate than facilities that had not yet been trained.}
-
-\noindent The same was true of pollution itself. A violation is a regulatory category, and a facility can be cited without much changing in the water. So Ferraro \& Shimshack also tracked what the plants actually discharged each month, across five pollutants. Those didn't move either. The workshops changed neither what facilities reported nor what they released into the water.
+\noindent Ferraro \& Shimshack found that \textbf{trained facilities were no less likely to violate than facilities that had not yet been trained.} The same was true of pollution itself. A violation is a regulatory category, and a facility can be cited without much changing in the water. So Ferraro \& Shimshack also tracked what the plants actually discharged each month, across five pollutants. Those didn't move either. The workshops changed neither what facilities reported nor what they released into the water.
 
 \noindent Judged only on the facilities that attended, the program appears to be a triumph: violations at those plants fell by about half in the years after the workshops. The catch is that \textbf{violations fell just as far at the facilities that had signed up but hadn't been trained yet} --- the decline was already underway, and the workshops added nothing to it. A facility that spent a day in a workshop went on to break its permit about as often as it would have if it had never shown up.
 
