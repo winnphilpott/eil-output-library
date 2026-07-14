@@ -1,0 +1,142 @@
+---
+# =====================================================================
+#  Research highlight v5 — hourglass restructure
+#    Background (broad) -> How the study tested it -> What the study found,
+#    closing on what the null result implies about facilities. The Takeaways
+#    section (and its subheads) is cut entirely.
+#  Render:  quarto render epa-compliance-workshops_research-highlight_v5.qmd
+#  Design system: _style.tex (colours, fonts, boxes, macros)
+#  Figure: figures/fig2-event-study.png (built by code/make-fig2.R)
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 11pt
+    geometry:
+      - top=0.4in
+      - bottom=0.45in
+      - left=0.65in
+      - right=0.65in
+      - includehead
+      - headheight=52pt
+      - headsep=7pt
+      - includefoot
+      - footskip=24pt
+    include-in-header:
+      - file: ../../../../formats/research-highlight/_style.tex
+      - text: |
+          % --- Running masthead + footer (logo, label, rule, page number) ---
+          \usepackage{fancyhdr}
+          \renewcommand{\headrulewidth}{0pt}
+          \renewcommand{\footrulewidth}{0pt}
+          \fancypagestyle{brief}{%
+            \fancyhf{}%
+            \fancyhead[L]{%
+              \begin{minipage}[c]{0.62\textwidth}\raggedright\color{ink}\includegraphics[height=0.45in]{../../../../formats/logos/eil-logo-maroon.png}\end{minipage}\hfill%
+              \begin{minipage}[c]{0.36\textwidth}\raggedleft\fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}\textls[200]{\MakeUppercase{Research Highlight}}\end{minipage}%
+              \par\vspace{2pt}%
+              \noindent\textcolor{ink}{\rule{\textwidth}{2.2pt}}%
+            }%
+            \fancyfoot[C]{%
+              \color{warmrule}\rule{\textwidth}{0.7pt}\par\vspace{3pt}%
+              \hbox to\textwidth{%
+                \color{faint}\fontsize{7.4pt}{9pt}\selectfont
+                For full paper:\hspace{0.4em}\href{https://doi.org/10.1002/pam.70056}{\color{faint}\underline{\textls[40]{doi.org/10.1002/pam.70056}}}%
+                \hfill
+                Page \thepage%
+              }%
+            }%
+          }
+          \pagestyle{brief}
+          % Subhead macro retained from the design system (unused in v5, which
+          % replaces the Takeaways subheads with a flowing concluding section).
+          \renewcommand{\subhead}[1]{%
+            {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
+            \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% TITLE + CITATION  (masthead repeats in the page header)
+% ---------------------------------------------------------------------
+\brieftitle{EPA Compliance Assistance Workshops Don't Reduce Violations}
+\briefcitation{Lessons from ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations'' by Paul J. Ferraro \& Jay P. Shimshack in \textit{Journal of Policy Analysis and Management}, 2026.}
+
+\vspace{-2pt}
+
+% override body font size for this document
+\fontsize{10.5pt}{13.5pt}\selectfont
+
+% ---------------------------------------------------------------------
+% BOTTOM LINE
+% ---------------------------------------------------------------------
+\begin{bottomline}
+{\fontsize{11pt}{15pt}\selectfont
+\textbf{Offering polluting facilities free help to follow the rules doesn't make them more likely to follow them.} New research studying hundreds of facilities that were offered free compliance assistance workshops found the workshops didn't reduce violations.
+}
+\end{bottomline}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% BACKGROUND  (broad — poses the question)
+% ---------------------------------------------------------------------
+\sectionhead{Background}
+\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators offer workshops, technical guidance, and other support to help facilities understand and meet regulatory requirements. This approach reflects the idea that many violations result from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance has become a prominent alternative to enforcement action at the Environmental Protection Agency (EPA), and was recently adopted by the Ohio EPA in a program offering free workshops to wastewater treatment facilities across the state.
+
+\noindent \textbf{In a new study, Ferraro and Shimshack (2026) find that compliance assistance workshops did not reduce regulatory violations or pollution discharges.} The researchers analyzed data from hundreds of Ohio wastewater treatment facilities that had recently been cited for violations and were invited to attend workshops rolled out over several months. An earlier, noncausal evaluation had suggested the program was effective, based on a simple before-and-after comparison of violation rates. Such comparisons can be misleading, and accurately understanding program effects is critical to promoting environmental compliance in real-world policy settings.
+
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% FIGURE — event study: effect on violations by month around training
+%   Placed after the background so it lands on page 1: the bottom-line box
+%   has already stated the null, so the chart illustrates a claim the
+%   reader holds rather than spoiling one they don't.
+% ---------------------------------------------------------------------
+\begin{center}
+\begin{minipage}{0.75\linewidth}
+\figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026), Fig.\ 2a.}
+\includegraphics[width=\linewidth]{../../data-viz/figures/fig2-event-study.png}
+\par\vspace{3pt}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} This figure shows the estimated effect of compliance assistance workshops on the number of facility violations. Each dot shows whether facilities had more (above the zero line) or fewer (below the zero line) violations in a given month relative to the workshop month (vertical dashed line). The estimates account for each facility's usual number of violations, the local weather, and any common trends shared across facilities; the shaded band shows the range of estimates within the 95\% confidence interval. If the workshops had an effect on violations, the line would drop below zero after the workshop.\par}
+\end{minipage}
+\end{center}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% HOW THE STUDY TESTED IT  (narrowing — setting + research design)
+% ---------------------------------------------------------------------
+\sectionhead{Comparing across time and facilities}
+\noindent \textbf{Measuring whether a policy works requires a comparison group: facilities that show what the trained facilities would have done without the training.} Comparing violations at trained facilities before and after the workshops would credit the training with anything else that changed over the same period. Comparing facilities that signed up against those that did not introduces a different problem: attendance was voluntary, so a gap between the two groups could reflect the motivation of the facilities that chose to participate rather than the effect of the training.
+
+\noindent Ferraro and Shimshack addressed this by comparing facilities trained earlier against facilities that had also signed up but had not yet been trained. Both groups had volunteered, and both were tracked over the same months, so any trend running through the industry appeared in both. The staggered rollout of the workshops is what made the not-yet-trained facilities available as a benchmark. The comparison holds only if those facilities would otherwise have followed the same path as the trained ones, an assumption the pre-workshop months in the figure support but cannot prove.
+
+\vspace{6pt}
+
+
+% ---------------------------------------------------------------------
+% WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
+% ---------------------------------------------------------------------
+\sectionhead{No effect on violations or discharges}
+\noindent \textbf{Trained facilities were no less likely to violate environmental regulations than facilities that had not yet been trained.} A violation is a regulatory event rather than a measure of pollution, so Ferraro and Shimshack also measured discharges directly, across five pollutants. Both sets of estimates were close to zero and precisely estimated. The workshops changed neither what facilities reported nor what they released into the water.
+
+\noindent \textbf{Violations did fall at the facilities that attended, but the workshops were not the reason.} At those plants, violations fell by about half in the years after the training. They fell just as far at the facilities that had signed up but had not yet been trained. Looking only at the facilities that attended, the earlier before-and-after evaluation counted that decline as evidence the program worked.
+
+\noindent Compliance assistance rests on the premise that facilities break the rules because they do not fully understand them. The results do not support that premise for these wastewater plants: if facilities were violating out of confusion, the training would have reduced violations, and it did not. \textbf{The pattern is more consistent with facilities weighing the cost of compliance against the consequences of violating.} Free help was not what these facilities were missing.
+
+\vspace{8pt}
+
+\begin{moreinfo}
+Ferraro, Paul J., and Jay P. Shimshack. 2026. ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations.'' \textit{Journal of Policy Analysis and Management} 45 (3): e70056. \href{https://doi.org/10.1002/pam.70056}{\color{cite}\underline{doi.org/10.1002/pam.70056}}.\par
+
+Paul J. Ferraro is at Johns Hopkins University. Jay P. Shimshack is at the University of Virginia. Contact Jay Shimshack (jay.shimshack@virginia.edu) with questions about this research.\par
+
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
+\end{moreinfo}
+
+```
