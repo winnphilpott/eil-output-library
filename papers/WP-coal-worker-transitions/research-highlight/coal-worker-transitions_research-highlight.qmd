@@ -90,7 +90,7 @@ format:
 \noindent U.S. coal mining employment has fallen more than half since its peak in 2011, as cheap natural gas from the fracking boom and falling renewable energy costs pushed coal out of the power sector. Earlier research shows that coal \textit{communities} lost jobs, earnings, and tax revenue. However, aggregate numbers may hide how individual workers fared. Some may have quickly moved to new jobs, while others may have borne heavy \textbf{transitional costs}: the lasting losses to earnings and employment that workers bear when an industry shrinks. Colmer et al. wanted to use the decline of coal to understand individual-level transitional costs, and how that might inform the broader question of what the energy transition could mean for workers in other high-wage, regionally concentrated industries.
 
 \noindent 
-To asses the private costs of coal's decline and understand if aggregated patterns held for individual workers, Colmer et al. assembled administrative records covering nearly every person who worked in U.S. coal mining before, during, and after coal's 2011 peak. This let them follow each worker's earnings, employment, and location year by year, even if workers worked outside coal or were unemployed. They could then compare those paths with otherwise similar workers who depended less on coal for their livelihoods. \textbf{This comparison showed that coal-dependent workers experienced persistent losses in earnings and employment following coal's decline.}
+To assess the private costs of coal's decline and understand if aggregated patterns held for individual workers, Colmer et al. assembled administrative records covering nearly every person who worked in U.S. coal mining before, during, and after coal's 2011 peak. This let them follow each worker's earnings, employment, and location year by year, even if workers worked outside coal or were unemployed. They could then compare those paths with otherwise similar workers who depended less on coal for their livelihoods. \textbf{This comparison showed that coal-dependent workers experienced persistent losses in earnings and employment following coal's decline.}
 
 \vspace{6pt}
 
@@ -103,7 +103,9 @@ To asses the private costs of coal's decline and understand if aggregated patter
 \begin{center}
 \begin{minipage}{0.82\linewidth}
 \figtitle{Coal workers' earnings fell further behind comparable workers every year}{Source: recreated from Colmer et al.\ (2026), Fig.\ 7a.}
-\includegraphics[width=\linewidth]{../data-viz/figures/fig1.png}
+% Scaled to 0.94 so the figure block clears the page-1 text block; at full
+% width it overruns by ~2pt and the unbreakable minipage jumps to page 2.
+\centerline{\includegraphics[width=0.94\linewidth]{../data-viz/figures/fig1.png}}
 \par\vspace{3pt}
 {\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point is the cumulative earnings gap between workers whose livelihoods depended most on coal and otherwise similar workers who depended on it less, measured in years of pre-decline pay. After coal's 2011 peak, more- and less-coal-dependent workers' earnings steadily diverge --- by 2019 the gap reaches 1.8 years' worth of earnings. Values digitized from the published figure.\par}
 \end{minipage}
