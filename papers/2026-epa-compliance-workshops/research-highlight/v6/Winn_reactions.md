@@ -1,0 +1,10 @@
+- **Reacting to Jonathan's v6**
+  - "The Challenge" section feels too conversational for the direction we're going
+    - "indeed, the researchers show that trained facilities has received more violations prior to receiving training" --> not clear what this means within the context of the rest of the paragraph
+  - Findings section a litte too reduced. Will think about what earns a spot back in the next version.
+    - I'm hesitant to put the figure right under the sentence "Trained facilities were no less likely to violate environmental regulations, or reduce water pollution, than facilities that had not yet been trained" because that's not exactly what the figure is showing -- it's showing an event study not a diff-in-diff
+    - Could sit under a similar sentence sayingn something like "Controlling for industry level trends, trained facilities were no less likely to violate environmental regulations, or reduce water pollution, than before they were trained" [insert figure]
+    - Then could say "Using the staggered rollout, Ferraro and Shimshack were also able to show that the same pattern held when comparing between trained and not-yet-trained facilities"
+  - The above notes also mean that we might want to introduce those steps a little more clearly at the end of "the challenge" section 
+- A lot of these thoughts and notes depend on which direction we want to lean more or less into: strictly meeting people where they're at, or meeting people where they're at and trying to introduce a little more of a learning moment. Some of the more detailed sections I had included were directed towards a more educational goals for the highlight. Do we want to include those or move to a more stream-lined version like v6?
+- I think the point about walking through the different kinds of comparisons Ferraro and Shimshack use will not only help provide necessary context for the figure *and* provide a stronger teaching moment. Again, this doesn't *have* to be the direction we take, but I think moving to a less teaching-oriented version *could* change what data viz we use and its relationship with the text.
