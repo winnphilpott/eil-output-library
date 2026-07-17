@@ -23,6 +23,8 @@
     - all facilities invited had recently been cited, so I feel like it's more helpful to give the example of and unusually bad year being followed by a normal one and leaving it at that.
 - Rewrote the second paragraph's opener. Old: "Simply comparing facilities that attended the training to facilities that didn't also raises concerns." New: leads with the ideal counterfactual, then the stand-in, then the concern.
 - Generalized the sign-up sentence in the second paragraph. Old: "...might be the ones already run by managers who take compliance seriously, making the program look successful, or the ones that have recently been in trouble, making the program look worse!" New: "...might be different from those that don't in ways unrelated to the program itself."
+### No Effect on Violations or Discharges
+- reframed to match the figure a little more directly
 ### For more information
 - Expanded both author bios to full titles/affiliations; split the "Contact Jay Shimshack" line into its own paragraph.
 
