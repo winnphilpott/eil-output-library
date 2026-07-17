@@ -3,7 +3,7 @@
 Writing and design conventions for EIL **research highlights** — one- to two-page PDFs that
 translate a single academic paper for a policy audience.
 
-- **Canonical example:** `papers/2026-epa-compliance-workshops/research-highlight/v4/epa-compliance-workshops_research-highlight_v4.qmd`
+- **Canonical example:** `papers/2026-epa-compliance-workshops/research-highlight/v8/epa-compliance-workshops_research-highlight_v8.qmd`
 - **Design system:** `formats/research-highlight/_style.tex` (colors, fonts, boxes, macros)
 - **Starter template:** `formats/research-highlight/research-highlights-template.qmd` (matches this guide)
 
@@ -23,26 +23,38 @@ so two-page highlights stay branded throughout.
 3. **Citation line** — directly under the title.
 4. **Bottom Line** — maroon box; the finding in one breath.
 5. **Background** — why the question matters.
-6. **What the study found** — the result and how we know it, anchored by a figure.
-7. **Takeaways** — a few (two to four) subheaded points, as many as the paper earns.
-8. **Footer** — "For full paper:" + DOI link, and page number.
+6. **The challenge** — the research-design story: why a fair comparison is hard and how
+   the researchers found one. Head it with the specific obstacle ("The challenge"), not a
+   generic label. See §3.
+7. **Findings** — the result, anchored by a figure, closing on a short un-subheaded
+   paragraph that draws out what it means. **Head this section with the finding itself**
+   ("No effect on violations or discharges"), not a generic label like "What the study found."
+8. **For more information** — full-width closing block: contact line, full citation, author
+   affiliations, EIL boilerplate. See §6.
+9. **Footer** — "For full paper:" + DOI link, and page number.
+
+Section heads 5–7 carry the argument, so name them for *this* paper: `Background`, then the
+specific obstacle, then the finding. Two body sections — the challenge and the findings — is
+the norm. (The older *What the study found* + *Takeaways* scaffold has been retired; the
+`\subhead` macro survives only so earlier highlights still compile.)
 
 ## 2. Tone
 
 - **Lead with the conclusion.** The title, the Bottom Line, and each section's bolded
-  sentence all state the answer first. *("EPA Compliance Workshops Don't Reduce Violations.")*
+  sentence all state the answer first. *("Compliance Assistance Workshops Don't Reduce Violations.")*
 - **Plain, declarative, active voice.** Prefer short words to technical ones —
   "free help to follow the rules," not "voluntary compliance interventions."
 - **Bold one claim per block.** Picture a reader skimming only the bold sentences — do they
   still get the story? Bold that one, then stop. More than one or two per section and the
   emphasis stops meaning anything.
 - **Define jargon on first use** and bold the term (**compliance assistance**), then
-  explain it in plain language. Spell out agencies on first mention —
-  "Environmental Protection Agency (EPA)."
+  explain it in plain language. Name the general actor ("regulators") rather than a specific
+  agency unless the agency is essential to the point; when you do name one, spell it out on
+  first mention — "Environmental Protection Agency (EPA)."
 - **Explain the method, don't name it.** Your reader doesn't need the textbook term — they
   need to see *why* the comparison is fair. Narrate it ("similar facilities that signed up but
   hadn't yet been trained") instead of labeling it ("difference-in-differences"). This is the
-  heart of the *What the study found* section — see §3, Explaining the research design.
+  heart of the *challenge* section — see §3, Explaining the research design.
 - **Earn trust with calibrated humility.** Name the limit plainly — "this is one program, and
   small benefits can't be ruled out" — then restate the real point. A reader trusts a caveat
   more than a hard sell.
@@ -52,7 +64,7 @@ so two-page highlights stay branded throughout.
 
 ## 3. Explaining the research design
 
-The hardest section to write is usually **"What the study found,"** where you explain the research design to a general audience. The goal is not just to explain the method, but to walk the reader through the reasoning behind it — the challenges researchers faced and how they solved them. Rather than "here were the problems, here were the fixes," lay it out as a story: *"You might first think to compare X. But that raises [a problem]. So you might try [Y] — except that introduces [a complication]. The researchers got around this by [doing Z]."* Take the reader along the journey of figuring out how to answer the question, instead of handing them the answer at face value. (The *finding* itself still leads — title, Bottom Line, and bold sentence — this storytelling applies to how the design is explained.)
+The hardest section to write is usually **"The challenge,"** where you explain the research design to a general audience. The goal is not just to explain the method, but to walk the reader through the reasoning behind it — the challenges researchers faced and how they solved them. Rather than "here were the problems, here were the fixes," lay it out as a story: *"You might first think to compare X. But that raises [a problem]. So you might try [Y] — except that introduces [a complication]. The researchers got around this by [doing Z]."* Take the reader along the journey of figuring out how to answer the question, instead of handing them the answer at face value. (The *finding* itself still leads — title, Bottom Line, and bold sentence — this storytelling applies to how the design is explained.)
 
 ## 4. Citations
 
@@ -60,14 +72,15 @@ The hardest section to write is usually **"What the study found,"** where you ex
   *Lessons from "[Exact Paper Title]" by [Authors] in* [Journal]*, [Year].*
   Paper title in straight quotes; journal italicized.
 - **In-text reference:** Author & Author (Year) — "Ferraro & Shimshack (2026)."
-- **Figure source:** `Source: Ferraro & Shimshack (2026).` Use *et al.* for 3+ authors.
+- **Figure source:** `Source: Ferraro & Shimshack (2026), Fig. 2a.` — cite the specific figure
+  when the highlight reproduces one. Use *et al.* for 3+ authors.
 - **Footer link:** `For full paper: doi.org/...` — always a resolvable DOI, underlined,
   in the faint footer color. If source paper is a working paper without a DOI, use an appropriate alternative link. 
 
 ## 5. Figures
 
 - **One to two figures in a highlight.** Each is
-  centered in a `0.82\linewidth` minipage. Add a second figure only when it carries a
+  centered in a `0.75\linewidth` minipage. Add a second figure only when it carries a
   distinct result — not to decorate the extra space.
 - **Three stacked parts:**
   1. `\figtitle` — a sentence-style title in uppercase maroon describing what the chart
@@ -85,16 +98,20 @@ The hardest section to write is usually **"What the study found,"** where you ex
 
 - **Never restyle in the `.qmd`.** All colors, fonts (Source Sans 3 / Source Serif 4),
   boxes, and macros live in `_style.tex`. Edit there to restyle every highlight at once.
-- **Macros:** `\brieftitle`, `\briefcitation`, `\sectionhead`, `\subhead`, `\figtitle`,
-  `\begin{bottomline}`, `\begin{infobox}`. The `v4` header block overrides `\subhead` to maroon
-  and sets body type to 10.5/13.5pt — keep these per-document overrides.
-- **`infobox`** is the centered, thin-bordered box for an end-of-document "For more
-  information" contact line and full citation. Text is faint at footer size; wrap any link as
-  `\href{url}{\color{faint}\underline{text}}` so it stays faint instead of the accent link color.
-- **Color tokens:** `ink` (headings), `body` (text), `accentred` maroon (label, links,
-  figure title, subheads), `boxred` (Bottom Line fill). Hex values are fixed in `_style.tex`.
+- **Macros:** `\brieftitle`, `\briefcitation`, `\sectionhead`, `\figtitle`,
+  `\begin{bottomline}`, `\begin{moreinfo}`. Section heads are maroon in `_style.tex`, so the
+  only per-document override to keep is the body type — `\fontsize{10.5pt}{13.5pt}` — set once
+  after the citation line. (`\subhead` and `\begin{infobox}` are legacy, kept so earlier
+  highlights still compile; new highlights don't use them.)
+- **`moreinfo`** is the full-width closing block ("For more information") — a rule above, no
+  box. Four paragraphs: a contact line, the full citation, the author affiliations (one
+  **bold-lead** sentence each), then the EIL boilerplate. Text is `cite` grey; wrap any link as
+  `\href{url}{\color{cite}\underline{text}}` so it stays grey instead of the accent link color.
+- **Color tokens:** `ink` (title, masthead rule), `body` (text), `accentred` maroon (label,
+  links, section heads, figure title), `boxred` (Bottom Line fill). Hex values are fixed in
+  `_style.tex`.
 - **Paragraphs** begin with `\noindent`; separate blocks with explicit `\vspace`
-  (6–8pt between sections, 5pt between Takeaway subheads).
+  (6–8pt between sections).
 - **File layout:** `papers/<paper-slug>/research-highlight/` holds the `.qmd`, with sibling
   `figures/` and `code/` folders. Keep `keep-tex: true`.
 - **Rendering:** there's no standalone `quarto` on PATH here — render with RStudio's bundled
@@ -106,10 +123,10 @@ The hardest section to write is usually **"What the study found,"** where you ex
 This is the least strict element of the style guide, as long as the text is clear, direct,
 and based on all other conventions in this style guide. 
 
-| Block                 |Budget                              |
-|-----------------------|------------------------------------|
-| Title                 | ≤ 10                               |
-| Bottom Line           | ~40–50                             |
-| Background            | ~180 (2–3 paragraphs)              |
-| What the study found  | ~300 (3–4 paragraphs + 1–2 figs)   |
-| Takeaways             | 2–4 × ~60, each with a subhead     |
+| Block          | Budget                                     |
+|----------------|--------------------------------------------|
+| Title          | ≤ 10                                       |
+| Bottom Line    | ~40–50                                      |
+| Background     | ~120–180 (2–3 paragraphs)                  |
+| The challenge  | ~180–300 (2–4 paragraphs)                  |
+| Findings       | ~150 + closing paragraph + 1–2 figs        |

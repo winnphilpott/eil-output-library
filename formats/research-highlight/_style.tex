@@ -1,14 +1,14 @@
 % =====================================================================
-%  _style.tex  ·  Design system for EIL research highlights (v4 layout)
+%  _style.tex  ·  Design system for EIL research highlights (v8 layout)
 %  Edit here to restyle ALL research highlights. Included via the .qmd YAML.
-%  Matches the canonical single-column v4 template; the masthead and footer
+%  Matches the canonical single-column v8 template; the masthead and footer
 %  are set per-document via fancyhdr in each .qmd's include-in-header.
 % =====================================================================
 
 % ---- Colours (exact hex) --------------------------------------------
-\definecolor{ink}{HTML}{1D2620}        % headings, title, section heads, rule
+\definecolor{ink}{HTML}{1D2620}        % title, masthead rule
 \definecolor{body}{HTML}{33352C}       % main body paragraphs
-\definecolor{accentred}{HTML}{641111}  % RESEARCH HIGHLIGHT label, links, fig title
+\definecolor{accentred}{HTML}{641111}  % RESEARCH HIGHLIGHT label, links, section heads, fig title
 \definecolor{boxred}{HTML}{8C2826}     % Bottom Line box fill
 \definecolor{boxtext}{HTML}{EEF1EA}    % Bottom Line body text (off-white)
 \definecolor{muted}{HTML}{50534A}      % figure source line
@@ -29,7 +29,7 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2pt}
-% Default body size/colour. The v4 .qmd overrides this to 10.5/13.5pt.
+% Default body size/colour. The .qmd overrides this to 10.5/13.5pt.
 \AtBeginDocument{\color{body}\fontsize{9.4pt}{13.6pt}\selectfont}
 
 % ---- Packages -------------------------------------------------------
@@ -51,15 +51,16 @@
   {\color{cite}\fontsize{9.4pt}{12pt}\selectfont #1\par}\vspace{3pt}%
   \noindent\textcolor{warmrule}{\rule{\linewidth}{0.7pt}}}
 
-% --- Section heads (uppercase, ink) ----------------------------------
+% --- Section heads (uppercase, maroon) -------------------------------
 \newcommand{\sectionhead}[1]{%
-  \vspace{2pt}{\color{ink}\bfseries\fontsize{9.75pt}{12pt}\selectfont
+  \vspace{2pt}{\color{accentred}\bfseries\fontsize{9.75pt}{12pt}\selectfont
   \textls[20]{\MakeUppercase{#1}}\par}\vspace{1pt}}
 
-% --- Sub-heads (small uppercase) — Takeaway subheads -----------------
-% The v4 .qmd overrides this to the brand maroon via \renewcommand.
+% --- Sub-heads (small uppercase) -------------------------------------
+% Legacy — the retired Takeaways block used these. Kept in the brand
+% maroon so older highlights that call \subhead still compile.
 \newcommand{\subhead}[1]{%
-  {\color{ink}\bfseries\fontsize{8.25pt}{10pt}\selectfont
+  {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
   \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
 
 % --- Figure title + source line --------------------------------------
@@ -94,8 +95,8 @@
 % =====================================================================
 
 % --- For more information (full width; rule above, no box) ------------
-% Citation, author affiliations + contact, then the EIL boilerplate —
-% one paragraph each. Wrap any link as
+% Four paragraphs: contact line, full citation, author affiliations
+% (one bold-lead sentence each), then the EIL boilerplate. Wrap any link as
 % \href{url}{\color{cite}\underline{text}} so it inherits the block's
 % grey instead of the global accent link colour.
 \newenvironment{moreinfo}{%

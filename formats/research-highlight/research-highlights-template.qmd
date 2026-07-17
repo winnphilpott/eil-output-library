@@ -7,8 +7,8 @@
 #  Figure: build with a script in code/ and save to figures/
 #
 #  LENGTH — use the space the paper warrants; pick ONE budget, stay close:
-#    One page  | Background ~120 | Found ~150 + 1 fig | 3 Takeaways ~50 ea
-#    Two pages | Background ~180 | Found ~300 + 1-2 figs | 3-4 Takeaways ~60 ea
+#    One page  | Background ~120 | Challenge ~180 | Findings ~150 + 1 fig
+#    Two pages | Background ~180 | Challenge ~300 | Findings ~250 + 1-2 figs
 #  Don't shrink the layout to fit, and don't pad to fill a second page.
 # =====================================================================
 format:
@@ -52,10 +52,6 @@ format:
             }%
           }
           \pagestyle{brief}
-          % Takeaways subheads in the brand maroon (logo / Research Highlight)
-          \renewcommand{\subhead}[1]{%
-            {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
-            \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
     keep-tex: true
 ---
 
@@ -93,15 +89,34 @@ format:
 \vspace{6pt}
 
 % ---------------------------------------------------------------------
-% WHAT THE STUDY FOUND  (~150 words + figure)
+% THE CHALLENGE  (~180–300 words) — the research-design story
+% Head it with the specific obstacle, not a generic label. Narrate the
+% comparison as a journey: the naive comparison, why it fails, the next
+% instinct, its complication, and how the researchers got around it.
+% See style-guides/research-highlight/README.md §3.
 % ---------------------------------------------------------------------
-\sectionhead{What the study found}
+\sectionhead{The challenge}
+\noindent \textbf{[State the core evaluation problem in one bold sentence a skimmer can catch.]} [Why seeing the counterfactual directly is impossible, so a stand-in comparison is needed.]
+
+\noindent [The naive before/after comparison and why it misleads.]
+
+\noindent [The next instinct — comparing against a different group — and the complication it introduces.]
+
+\noindent [How the researchers got around it. \textbf{Bold the sentence naming the actual comparison they used.} Note what makes it fair.]
+
+\vspace{6pt}
+
 % ---------------------------------------------------------------------
+% FINDINGS  (~150 words + figure) — head this with the finding itself,
+% not "What the study found."
 % FIGURE — one figure, centered. Build via a script in code/ -> figures/
 % ---------------------------------------------------------------------
+\sectionhead{[The finding, stated — e.g. "No effect on violations or discharges"]}
+\noindent [State the result, pointing the reader to the figure below. \textbf{Bold the headline finding.}]
+
 \begin{center}
-\begin{minipage}{0.82\linewidth}
-\figtitle{[Sentence-style figure title — what the chart shows]}{Source: [Author(s)] ([Year]).}
+\begin{minipage}{0.75\linewidth}
+\figtitle{[Sentence-style figure title — what the chart shows]}{Source: [Author(s)] ([Year]), Fig.\ [N].}
 \includegraphics[width=\linewidth]{figures/[figure].png}
 \par\vspace{3pt}
 {\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} [Plain-language note: how to read the chart and what to conclude from it.]\par}
@@ -110,39 +125,15 @@ format:
 
 \vspace{6pt}
 
-\noindent [Explain why the research design is credible — narrate the comparison, don't name the method. What would the result look like if the policy worked?]
+\noindent [Short closing paragraph — no subhead. Draw out what the result means, \textbf{bold the one line worth keeping}, and, where relevant, name the limit plainly before restating the point.]
 
-\noindent [State the result, pointing the reader to the figure. End with the headline finding in \textbf{bold}.]
-
-\vspace{8pt}
-
-% ---------------------------------------------------------------------
-% TAKEAWAYS  (3 points, ~50 words each)
-% ---------------------------------------------------------------------
-\sectionhead{Takeaways}
-\subhead{[Subhead 1]}
-\noindent [First takeaway. Bold the one sentence someone skimming should catch.]
-
-\vspace{5pt}
-\subhead{[Subhead 2]}
-\noindent [Second takeaway.]
-
-\vspace{5pt}
-\subhead{[Subhead 3]}
-\noindent [Third takeaway. Acknowledge any caveats or limitations without getting too technical, then restate the central point.]
-
-\vspace{8pt}
-
-% ---------------------------------------------------------------------
-% FOR MORE INFORMATION — full-width closing block, rule above, no box.
-% Three paragraphs: full citation (AEA / Chicago author-date), author
-% affiliations + contact, then the EIL boilerplate. Keep the boilerplate
-% sentence identical to the one in the press-release template.
-% ---------------------------------------------------------------------
 \begin{moreinfo}
+Contact [Corresponding author] ([email]) with questions about this research.\par
+
 [Last, First, and First Last]. [Year]. ``[Exact Paper Title].'' \textit{[Journal]} [vol] ([issue]): [pages]. \href{https://doi.org/[DOI]}{\color{cite}\underline{doi.org/[DOI]}}.\par
 
-[First Last] is [affiliation]. [First Last] is [affiliation]. Contact [Corresponding author] ([email]) with questions about this research.\par
+\textbf{[First Last]} is [full title and affiliation].\par
+\textbf{[First Last]} is [full title and affiliation].\par
 
 The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
 \end{moreinfo}
