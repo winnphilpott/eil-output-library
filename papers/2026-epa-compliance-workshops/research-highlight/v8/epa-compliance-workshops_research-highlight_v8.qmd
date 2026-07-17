@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 11pt
+    geometry:
+      - top=0.4in
+      - bottom=0.45in
+      - left=0.65in
+      - right=0.65in
+      - includehead
+      - headheight=52pt
+      - headsep=7pt
+      - includefoot
+      - footskip=24pt
+    include-in-header:
+      - file: ../../../../formats/research-highlight/_style.tex
+      - text: |
+          \usepackage{fancyhdr}
+          \renewcommand{\headrulewidth}{0pt}
+          \renewcommand{\footrulewidth}{0pt}
+          \fancypagestyle{brief}{%
+            \fancyhf{}%
+            \fancyhead[L]{%
+              \begin{minipage}[c]{0.62\textwidth}\raggedright\color{ink}\includegraphics[height=0.45in]{../../../../formats/logos/eil-logo-maroon.png}\end{minipage}\hfill%
+              \begin{minipage}[c]{0.36\textwidth}\raggedleft\fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}\textls[200]{\MakeUppercase{Research Highlight}}\end{minipage}%
+              \par\vspace{2pt}%
+              \noindent\textcolor{ink}{\rule{\textwidth}{2.2pt}}%
+            }%
+            \fancyfoot[C]{%
+              \color{warmrule}\rule{\textwidth}{0.7pt}\par\vspace{3pt}%
+              \hbox to\textwidth{%
+                \color{faint}\fontsize{7.4pt}{9pt}\selectfont
+                For full paper:\hspace{0.4em}\href{https://doi.org/10.1002/pam.70056}{\color{faint}\underline{\textls[40]{doi.org/10.1002/pam.70056}}}%
+                \hfill
+                Page \thepage%
+              }%
+            }%
+          }
+          \pagestyle{brief}
+          \renewcommand{\subhead}[1]{%
+            {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
+            \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
+          \renewcommand{\sectionhead}[1]{%
+            \vspace{2pt}{\color{accentred}\bfseries\fontsize{9.75pt}{12pt}\selectfont
+            \textls[20]{\MakeUppercase{#1}}\par}\vspace{1pt}}
+    keep-tex: true
+---
+
+```{=latex}
+\brieftitle{Compliance Assistance Workshops Don't Reduce Violations}
+\briefcitation{Lessons from ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations'' by Paul J. Ferraro \& Jay P. Shimshack in \textit{Journal of Policy Analysis and Management}, 2026.}
+
+\vspace{-2pt}
+
+\fontsize{10.5pt}{13.5pt}\selectfont
+
+\begin{bottomline}
+{\fontsize{11pt}{15pt}\selectfont
+\textbf{Offering polluting facilities free help to follow the rules doesn't make them more likely to follow them.} New research studying hundreds of facilities that were offered free compliance assistance workshops found the workshops didn't reduce violations.
+}
+\end{bottomline}
+
+\vspace{6pt}
+
+\sectionhead{Background}
+\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators offer workshops, technical guidance, and other support to help facilities understand and meet regulatory requirements. This approach reflects the belief that many violations result from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance programs have become increasingly popular as a policy lever, but evidence on whether they are effective is scarce.
+
+\noindent \textbf{In a new study, Ferraro and Shimshack (2026) find that compliance assistance workshops did not reduce regulatory violations or pollution discharges.} The researchers analyzed data from hundreds of Ohio wastewater treatment facilities that had recently been cited for violations and were invited to attend workshops rolled out over several months.
+
+\vspace{6pt}
+
+\sectionhead{The Challenge}
+\noindent \textbf{Evaluating whether compliance assistance programs are effective is difficult to do in practice.} Ideally, researchers would be able to see what would have happened to the same facility if it had not attended a workshop, but that is impossible; so, they have to find a way to reliably mimic that comparison.
+
+\noindent Simply comparing the violations before vs. after facilities attended the workshops risks attributing program success to changes in behavior that are actually driven by other factors. For example, if an unusually bad year is followed by a more normal one, then the facility may have reduced its pollution whether it received the training or not.
+
+\noindent Comparing against non-trained facilities also raises some concerns. The facilities that sign up for a workshop might be different from those that don't in ways unrelated to the program itself, like a manager who cares about violations. Comparing attendees and non-attendees might simply reflect who chose to walk through the door, not what they learned once inside.
+
+\noindent To avoid these concerns, \textbf{Ferraro and Shimshack compared facilities that received the training early to facilities that had signed up but not yet received the training.} The state rolled the workshops out gradually, and the order in which facilities were trained had little to do with their pollution records, so the facilities still waiting their turn serve as a natural comparison for those already trained. Any trend running through the industry would show up in both groups, so a gap between them points to the workshops rather than to something they had in common. The absence of differences in violations between these facilities before any of them were trained provides support for this.
+
+\vspace{6pt}
+
+\sectionhead{No effect on violations or discharges}
+\noindent As the figure below shows, \textbf{facilities' violations stayed consistent before and after the workshops.} The yet-to-be-trained facilities serve as a control, letting Ferraro and Shimshack strip out trends running through the whole industry. Any movement in the line would have to come from the workshops, but it doesn't move. Trained facilities ended up no less likely to violate environmental regulations, and no more likely to cut their water pollution, than before the workshops.
+
+\begin{center}
+\begin{minipage}{0.75\linewidth}
+\figtitle{The workshops' effect on violations, month by month}{Source: Ferraro \& Shimshack (2026), Fig.\ 2a.}
+\includegraphics[width=\linewidth]{../../data-viz/figures/fig2-event-study.png}
+\par\vspace{3pt}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each dot shows whether facilities had more or fewer violations in a given month relative to the workshop month. The estimates account for each facility's usual number of violations, the local weather, and any common trends shared across facilities; the shaded band shows the range of estimates within the 95\% confidence interval. If the workshops had reduced violations, the line would drop below zero after the workshop.\par}
+\end{minipage}
+\end{center}
+
+\vspace{6pt}
+
+While compliance assistance programs presume that facilities violate because they do not fully understand the rules, Ferraro and Shimshack find no support for that view: the workshops supplied the technical guidance facilities were supposedly lacking, and neither violations nor discharges changed. At least \textbf{in this context, a lack of facility understanding does not appear to be what was holding compliance back.}
+
+\begin{moreinfo}
+Contact Jay Shimshack (jay.shimshack@virginia.edu) with questions about this research.\par
+
+Ferraro, Paul J., and Jay P. Shimshack. 2026. ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations.'' \textit{Journal of Policy Analysis and Management} 45 (3): e70056. \href{https://doi.org/10.1002/pam.70056}{\color{cite}\underline{doi.org/10.1002/pam.70056}}.\par
+
+\textbf{Paul J. Ferraro} is the Bloomberg Distinguished Professor of Human Behavior and Public Policy at Johns Hopkins University, Carey Business School and Department of Environmental Health and Engineering, and Bloomberg School of Public Health \& Whiting School of Engineering.\par
+\textbf{Jay P. Shimshack} is a Professor of Public Policy and Economics at Frank Batten School of Leadership and Public Policy at the University of Virginia.\par
+
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
+\end{moreinfo}
+
+```
