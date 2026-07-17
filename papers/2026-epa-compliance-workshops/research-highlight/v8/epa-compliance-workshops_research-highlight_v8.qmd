@@ -39,12 +39,6 @@ format:
             }%
           }
           \pagestyle{brief}
-          \renewcommand{\subhead}[1]{%
-            {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
-            \textls[50]{\MakeUppercase{#1}}\par}\vspace{2pt}}
-          \renewcommand{\sectionhead}[1]{%
-            \vspace{2pt}{\color{accentred}\bfseries\fontsize{9.75pt}{12pt}\selectfont
-            \textls[20]{\MakeUppercase{#1}}\par}\vspace{1pt}}
     keep-tex: true
 ---
 
