@@ -12,11 +12,11 @@ DOI: [10.1002/pam.70056](https://doi.org/10.1002/pam.70056)
 ```bash
 # 1. Generate figure (from the data-viz/ folder)
 cd data-viz/
-Rscript code/make-fig1.R
+Rscript code/make-fig2.R
 
 # 2. Render PDF (from the version subfolder)
-cd ../research-highlight/v4/
-quarto render epa-compliance-workshops_research-highlight_v4.qmd
+cd ../research-highlight/v8/
+quarto render epa-compliance-workshops_research-highlight_v8.qmd
 ```
 
 ## Reproducing the Social Cards

@@ -6,8 +6,8 @@ newsletter, or published as a standalone graphic. The goal is a figure a
 non-specialist understands at a glance and a journalist can reprint without a
 caption deck.
 
-- **Canonical example:** `papers/2026-epa-compliance-workshops/figures/fig2-did.png`
-  (built by `papers/2026-epa-compliance-workshops/code/make-fig2.R`)
+- **Canonical example:** `papers/2026-epa-compliance-workshops/data-viz/figures/fig2-event-study.png`
+  (built by `papers/2026-epa-compliance-workshops/data-viz/code/make-fig2.R`)
 - **Theme & palette:** `formats/data-viz/eil-theme.R` (`eil_pal`, `theme_eil()`, `eil_save()`)
 - **Starter template:** `formats/data-viz/data-viz-template.R` (runnable, synthetic data)
 - **Companion guides:** `style-guides/research-highlight/README.md`, `style-guides/press-release/README.md`
@@ -116,7 +116,7 @@ embedded figure.
   would show.
 - **`.png` for embedding** in highlights/releases; `.svg` or `.html` for standalone
   or interactive web pieces.
-- **File layout** (per `data-viz/README.md`):
+- **File layout** (per the paper folder convention in `papers/README.md`):
 
   ```
   YYYY-[topic-slug]/
