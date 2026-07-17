@@ -38,7 +38,7 @@ cd research-highlight/
 
 The PDF will appear in `research-highlight/`. If Quarto is on your system PATH, you can replace the full path above with just `quarto`.
 
-**Convenience scripts.** Each `press-release/` folder ships a `render.sh` (macOS / Linux, or Windows via Git Bash or WSL) and a `render.ps1` (native Windows PowerShell) that render every `.qmd` in the folder from any working directory — they locate Quarto themselves and `cd` into their own folder first. Run `./render.sh` or `.\render.ps1`.
+**Convenience scripts.** Each populated `press-release/` folder ships a `render.sh` (macOS / Linux, or Windows via Git Bash or WSL) and a `render.ps1` (native Windows PowerShell) that render every `.qmd` in the folder from any working directory — they locate Quarto themselves and `cd` into their own folder first. Run `./render.sh` or `.\render.ps1`.
 
 ## Naming Conventions
 
@@ -48,7 +48,7 @@ The PDF will appear in `research-highlight/`. If Quarto is on your system PATH, 
 | Research highlight source | `[topic-slug]_research-highlight.qmd` | `epa-compliance-workshops_research-highlight.qmd` |
 | Press release source | `[topic-slug]_press-release.qmd` | `epa-compliance-workshops_press-release.qmd` |
 | Data files | `YYYY-[description].[ext]` | `2025-deidentified-survey.dta` |
-| Figures | `fig[N]-[description].png` | `fig1-violations-per-facility.png` |
-| Figure scripts | `make-fig[N]-[description].[ext]` | `make-fig1-violations.R` |
+| Figures | `fig[N]-[description].png` | `fig1-event-study.png` |
+| Figure scripts | `make-fig[N]-[description].[ext]` | `make-fig1-event-study.R` |
 
 **Output sources carry their type in the filename** (`_research-highlight`, `_press-release`, etc.). A paper's research highlight and press release share a topic slug and could otherwise produce identically named files; encoding the output type keeps both the source and the rendered PDF self-describing even when pulled out of their folder. Add a version suffix (`_v4`) when keeping numbered drafts.
