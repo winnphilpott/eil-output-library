@@ -31,6 +31,13 @@ format:
     include-in-header:
       - file: ../../../../formats/research-highlight/_style.tex
       - text: |
+          % --- Text-wrap around the Background figure ---
+          \usepackage{wrapfig}
+          % --- No hyphenation at line breaks (loosen spacing to avoid overruns) ---
+          \usepackage[none]{hyphenat}
+          \tolerance=9999
+          \emergencystretch=3em
+          \hbadness=99999
           % --- Running masthead + footer (logo, label, rule, page number) ---
           \usepackage{fancyhdr}
           \renewcommand{\headrulewidth}{0pt}
@@ -78,17 +85,22 @@ format:
 }
 \end{bottomline}
 
-\vspace{6pt}
+\vspace{2pt}
 
 % ---------------------------------------------------------------------
 % BACKGROUND  (broad — poses the question)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
+\begin{wrapfigure}{r}{3.1in}
+  \vspace{-\intextsep}
+  \centering
+  \includegraphics[width=3.1in]{../../data-viz/figures/fig-two-approaches_1_cropped.png}
+\end{wrapfigure}
 \noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators offer workshops, technical guidance, and other support to help facilities understand and meet regulatory requirements. This approach reflects the belief that many violations result from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance programs have become increasingly popular as a policy lever, but evidence on whether they are effective is scarce.
 
 \noindent \textbf{In a new study, Ferraro and Shimshack (2026) find that compliance assistance workshops did not reduce regulatory violations or pollution discharges.} The researchers analyzed data from hundreds of Ohio wastewater treatment facilities that had recently been cited for violations and were invited to attend workshops rolled out over several months.
 
-\vspace{6pt}
+\vspace{2pt}
 % ---------------------------------------------------------------------
 % HOW THE STUDY TESTED IT  (narrowing — setting + research design)
 % ---------------------------------------------------------------------
@@ -99,15 +111,13 @@ format:
 
 \noindent To avoid these concerns, \textbf{Ferraro and Shimshack compared facilities that received the training early to facilities that had signed up but not yet received the training.} Arguably, these facilities would have had similar motivations and similar histories. The absence of differences between these facilities prior to receiving the training provides support for this.
 
-\vspace{6pt}
+\vspace{2pt}
 
 % ---------------------------------------------------------------------
 % WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
 % ---------------------------------------------------------------------
 \sectionhead{No effect on violations or discharges}
-\noindent Compared with not-yet-trained facilities, trained facilities violated environmental regulations just as often and discharged just as much pollution.
-
-\noindent Ferraro and Shimshack find no support for the premise behind compliance assistance: the workshops supplied the guidance facilities were supposedly lacking, and neither violations nor discharges changed. This is one program in one state, and whether the same holds elsewhere --- or for more intensive, one-on-one assistance --- is an open question. \textbf{At least in this context, a lack of understanding at these facilities does not appear to be what was holding compliance back.}
+\noindent Compared with not-yet-trained facilities, trained facilities violated environmental regulations just as often and discharged just as much pollution. That held within facilities as well as across them: tracking the same facilities over time, their violations did not decline in the months after they attended a workshop (see figure). Ferraro and Shimshack find no support for the premise behind compliance assistance: the workshops supplied the guidance facilities were supposedly lacking, and neither violations nor discharges changed. This is one program in one state, and whether the same holds elsewhere --- or for more intensive, one-on-one assistance --- is an open question. \textbf{At least in this context, a lack of understanding at these facilities does not appear to be what was holding compliance back.}
 
 \vspace{4pt}
 
@@ -131,7 +141,7 @@ format:
 \sectionhead{Implications for policy}
 \noindent If these results hold beyond Ohio, they caution against leaning on compliance assistance to reduce violations and pollution. The evidence that inspections and penalties work is stronger. With enforcement budgets already shrinking, \textbf{funding a compliance assistance program out of that same budget could mean more violations and more pollution}.
 
-\noindent A null result for one program is not a verdict on compliance assistance everywhere. Rather, \textbf{this study exposes the importance of rigorous program evaluation}. Regulators could put this into practice by deliberately staggering rollouts so a program's effects can be measured.
+\noindent A null result for one program is not a verdict on compliance assistance everywhere. Rather, \textbf{this study exposes the importance of rigorous program evaluation}. Regulators could partner with interested researchers to phase in new programs and measure their effects --- turning an ordinary rollout into a genuine test of what works, much as this study did.
 
 \vspace{4pt}
 
