@@ -9,15 +9,21 @@ DOI: [10.1002/pam.70056](https://doi.org/10.1002/pam.70056)
 
 ## Reproducing the Brief
 
+The current draft is `research-highlight/v9/`. Note that v9 branches from v6, not v8 —
+the version numbers are sequential but v7 and v8 are a separate line of development.
+
 ```bash
 # 1. Generate figure (from the data-viz/ folder)
 cd data-viz/
-Rscript code/make-fig2.R
+Rscript code/make-fig2-event-study.R
 
 # 2. Render PDF (from the version subfolder)
-cd ../research-highlight/v8/
-quarto render epa-compliance-workshops_research-highlight_v8.qmd
+cd ../research-highlight/v9/
+quarto render epa-compliance-workshops_research-highlight_v9.qmd
 ```
+
+If Quarto isn't on your PATH, use the RStudio-bundled binary — see
+`papers/README.md` for the full path and setup notes.
 
 ## Reproducing the Social Cards
 

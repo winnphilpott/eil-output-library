@@ -15,7 +15,8 @@
 # Validation: the pooled "Post" ATT from this design reproduces Table 3 col. 1
 # (0.0043 vs. the paper's 0.004) on 222 treated facilities / 15,912 obs.
 #
-# Run (from data-viz/):  Rscript code/make-fig2.R  ->  figures/fig2-event-study.png
+# Run (from data-viz/):  Rscript code/make-fig2-event-study.R
+#   -> figures/fig2-event-study.png
 # Deps: haven, dplyr, fixest, ggplot2
 
 library(haven)
