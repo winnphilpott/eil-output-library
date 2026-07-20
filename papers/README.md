@@ -9,7 +9,7 @@ Each paper gets its own folder named `YYYY-[topic-slug]` (e.g., `2026-epa-compli
 ```
 YYYY-[topic-slug]/
 ├── data-viz/            # figure pipeline shared across this paper's outputs
-│   ├── code/            # figure scripts (e.g., make-fig1.R)
+│   ├── code/            # figure scripts (e.g., make-fig1-event-study.R)
 │   ├── data/            # datasets used by the figures (gitignored)
 │   └── figures/         # figure outputs; logos live in formats/logos/
 ├── research-highlight/  # one-page research highlight (.qmd source + rendered PDF)
@@ -28,7 +28,7 @@ Every output that needs a figure (research highlight, press release, blog, …) 
 ```bash
 # 1. Generate figures (run from the paper's data-viz/ folder)
 cd data-viz/
-Rscript code/make-fig1.R
+Rscript code/make-fig1-[description].R
 cd ..
 
 # 2. Render the PDF (run from the research-highlight/ subfolder)
