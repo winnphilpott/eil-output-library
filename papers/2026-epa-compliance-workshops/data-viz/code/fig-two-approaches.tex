@@ -1,0 +1,90 @@
+% =====================================================================
+%  fig-two-approaches.tex  —  editable TikZ source for the Background
+%  figure "Two approaches to compliance".
+%
+%  This is a faithful reproduction of fig-two-approaches_1_cropped.png.
+%  Colours, type (Source Sans 3), and layout were measured off that PNG.
+%
+%  BUILD (produces a vector PDF next to this file):
+%      pdflatex fig-two-approaches.tex
+%  then copy the PDF to ../figures/ if you point the .qmd at it:
+%      cp fig-two-approaches.pdf ../figures/fig-two-approaches.pdf
+%
+%  To edit: change the box labels, headings, or colours below and rebuild.
+%  Canvas is 150mm wide; \includegraphics[width=...] scales it to fit.
+% =====================================================================
+\documentclass[border=0pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}   % same typeface as the document
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+% ---- palette (sampled from the PNG) ---------------------------------
+\definecolor{maroon}{HTML}{8A2424}    % title, right column, bottom line
+\definecolor{graytext}{HTML}{6F6A63}  % left header, left boxes, arrows
+\definecolor{softgray}{HTML}{928D85}  % subtitle + captions (italic)
+\definecolor{leftfill}{HTML}{F0EFEC}  % left box fill
+\definecolor{rightfill}{HTML}{F7EDEC} % right box fill
+\definecolor{rule}{HTML}{DDDDDB}      % divider + bottom rule
+
+\begin{document}
+\begin{tikzpicture}[x=1mm,y=1mm,
+  box/.style={rounded corners=4.95mm, minimum width=54.7mm,
+              minimum height=9.9mm, line width=1.3pt, align=center,
+              font=\bfseries\fontsize{11.5pt}{12pt}\selectfont},
+  Lbox/.style={box, draw=graytext, fill=leftfill,  text=graytext},
+  Rbox/.style={box, draw=maroon,   fill=rightfill, text=maroon},
+  Larr/.style={graytext, line width=1.3pt, -{Triangle[length=3mm,width=3.4mm]}},
+  Rarr/.style={maroon,   line width=1.3pt, -{Triangle[length=3mm,width=3.4mm]}}]
+
+  % --- column + row anchors (mm, y measured up from bottom) ----------
+  \def\Lx{37.5}\def\Rx{112.5}
+  \def\rowA{62.5}\def\rowB{46.4}\def\rowC{30.4}
+
+  % --- title + subtitle (top-left) -----------------------------------
+  \node[anchor=north west, maroon, font=\bfseries\fontsize{14pt}{15pt}\selectfont]
+    at (1.9,100.0) {\textls[30]{TWO APPROACHES TO COMPLIANCE}};
+  \node[anchor=north west, softgray, align=left,
+        font=\itshape\fontsize{12pt}{13.5pt}\selectfont]
+    at (1.9,92.3) {They rest on different beliefs about why facilities break the rules.};
+
+  % --- column headers ------------------------------------------------
+  \node[graytext, align=center, font=\bfseries\fontsize{10.5pt}{11.5pt}\selectfont]
+    at (\Lx,76.2) {\textls[50]{TRADITIONAL}\\[-0.2ex]\textls[50]{ENFORCEMENT}};
+  \node[maroon, align=center, font=\bfseries\fontsize{10.5pt}{11.5pt}\selectfont]
+    at (\Rx,76.2) {\textls[50]{COMPLIANCE}\\[-0.2ex]\textls[50]{ASSISTANCE}};
+
+  % --- left column: traditional enforcement --------------------------
+  \node[Lbox] (l1) at (\Lx,\rowA) {Inspect};
+  \node[Lbox] (l2) at (\Lx,\rowB) {Catch violations};
+  \node[Lbox] (l3) at (\Lx,\rowC) {Levy fines};
+  \draw[Larr] (l1.south) -- (l2.north);
+  \draw[Larr] (l2.south) -- (l3.north);
+
+  % --- right column: compliance assistance ---------------------------
+  \node[Rbox] (r1) at (\Rx,\rowA) {Run workshops};
+  \node[Rbox] (r2) at (\Rx,\rowB) {Give guidance};
+  \node[Rbox] (r3) at (\Rx,\rowC) {Support facilities};
+  \draw[Rarr] (r1.south) -- (r2.north);
+  \draw[Rarr] (r2.south) -- (r3.north);
+
+  % --- captions under each column ------------------------------------
+  \node[anchor=north, softgray, align=center,
+        font=\itshape\fontsize{11pt}{12.5pt}\selectfont]
+    at (\Lx,20.6) {Sees violations as\\deliberate --- penalizes};
+  \node[anchor=north, softgray, align=center,
+        font=\itshape\fontsize{11pt}{12.5pt}\selectfont]
+    at (\Rx,20.6) {Sees violations as\\confusion --- informs};
+
+  % --- vertical divider ----------------------------------------------
+  \draw[rule, line width=1pt] (74.8,81.6) -- (74.8,6.9);
+
+  % --- bottom rule + closing line ------------------------------------
+  \draw[rule, line width=1pt] (0,6.9) -- (150,6.9);
+  \node[anchor=north, maroon, font=\bfseries\fontsize{10.7pt}{12pt}\selectfont]
+    at (75,4.9) {This study tests whether the second approach works.};
+
+\end{tikzpicture}
+\end{document}

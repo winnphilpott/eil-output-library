@@ -94,7 +94,7 @@ format:
 \begin{wrapfigure}{r}{3.1in}
   \vspace{-\intextsep}
   \centering
-  \includegraphics[width=3.1in]{../../data-viz/figures/fig-two-approaches_1_cropped.png}
+  \includegraphics[width=3.1in]{../../data-viz/code/fig-two-approaches.pdf}
 \end{wrapfigure}
 \noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators offer workshops, technical guidance, and other support to help facilities understand and meet regulatory requirements. This approach reflects the belief that many violations result from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance programs have become increasingly popular as a policy lever, but evidence on whether they are effective is scarce.
 
@@ -141,7 +141,7 @@ format:
 \sectionhead{Implications for policy}
 \noindent If these results hold beyond Ohio, they caution against leaning on compliance assistance to reduce violations and pollution. The evidence that inspections and penalties work is stronger. With enforcement budgets already shrinking, \textbf{funding a compliance assistance program out of that same budget could mean more violations and more pollution}.
 
-\noindent A null result for one program is not a verdict on compliance assistance everywhere. Rather, \textbf{this study exposes the importance of rigorous program evaluation}. Regulators could partner with interested researchers to phase in new programs and measure their effects --- turning an ordinary rollout into a genuine test of what works, much as this study did.
+\noindent A null result for one program is not a verdict on compliance assistance everywhere. Rather, \textbf{this study exposes the importance of rigorous program evaluation}. Regulators could partner with interested researchers on new pilot programs and measure their effects --- turning a program into a real test of what works, much as this study did.
 
 \vspace{4pt}
 
