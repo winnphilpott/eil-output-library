@@ -1,10 +1,10 @@
 ---
 # =====================================================================
-#  Research highlight v5 — hourglass restructure
-#    Background (broad) -> How the study tested it -> What the study found,
-#    closing on what the null result implies about facilities. The Takeaways
-#    section (and its subheads) is cut entirely.
-#  Render:  quarto render epa-compliance-workshops_research-highlight_v5.qmd
+#  Research highlight v6 — two-page cut
+#    Background -> The Challenge (identification) -> What the study found,
+#    with the figure moved to page 2 alongside the result and the closing
+#    paragraph condensed to a single passage.
+#  Render:  quarto render epa-compliance-workshops_research-highlight_v6.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 #  Figure: figures/fig2-event-study.png (built by code/make-fig2.R)
 # =====================================================================
@@ -49,7 +49,7 @@ format:
             }%
           }
           \pagestyle{brief}
-          % Subhead macro retained from the design system (unused in v5, which
+          % Subhead macro retained from the design system (unused in v6, which
           % replaces the Takeaways subheads with a flowing concluding section).
           \renewcommand{\subhead}[1]{%
             {\color{accentred}\bfseries\fontsize{8.25pt}{10pt}\selectfont
@@ -78,18 +78,41 @@ format:
 }
 \end{bottomline}
 
-\vspace{6pt}
+\vspace{12pt}
 
 % ---------------------------------------------------------------------
 % BACKGROUND  (broad — poses the question)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators offer workshops, technical guidance, and other support to help facilities understand and meet regulatory requirements. This approach reflects the idea that many violations result from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance has become a prominent alternative to enforcement action at the Environmental Protection Agency (EPA), and was recently adopted by the Ohio EPA in a program offering free workshops to wastewater treatment facilities across the state.
-
-\noindent \textbf{In a new study, Ferraro and Shimshack (2026) find that compliance assistance workshops did not reduce regulatory violations or pollution discharges.} The researchers analyzed data from hundreds of Ohio wastewater treatment facilities that had recently been cited for violations and were invited to attend workshops rolled out over several months. An earlier, noncausal evaluation had suggested the program was effective, based on a simple before-and-after comparison of violation rates. Such comparisons can be misleading, and accurately understanding program effects is critical to promoting environmental compliance in real-world policy settings.
+\noindent Environmental enforcement in the U.S. has long centered on inspecting facilities, catching violations, and levying fines. \textbf{Compliance assistance} takes a different approach: regulators offer workshops, technical guidance, and other support to help facilities understand and meet regulatory requirements. This approach reflects the belief that many violations result from confusion or limited expertise rather than deliberate corner-cutting. Compliance assistance programs have become increasingly popular as a policy lever, but evidence on whether they are effective is scarce.
 
 
+\vspace{12pt}
+
+\noindent \textbf{In a new study, Ferraro and Shimshack (2026) find that compliance assistance workshops did not reduce regulatory violations or pollution discharges.} The researchers analyzed data from hundreds of Ohio wastewater treatment facilities that had recently been cited for violations and were invited to attend workshops rolled out over several months. 
+
+
+\vspace{12pt}
+% ---------------------------------------------------------------------
+% HOW THE STUDY TESTED IT  (narrowing — setting + research design)
+% ---------------------------------------------------------------------
+\sectionhead{The Challenge}
+\noindent Evaluating whether compliance assistance programs are effective is difficult to do in practice. Simply comparing the behavior of facilities before vs. after receiving the training risks attributing program success to changes in behavior that are actually driven by other factors. For example, facilities may be more likely to attend these workshops after they have received a warning for a violation or a fine. If an unusually bad year is followed by a more normal one, then the facility may have reduced its pollution whether it received the training or not. Indeed, the researchers show that trained facilities had received more violations prior to receiving the training. 
+
+\noindent Simply comparing facilities that attended the training to facilities that didn't also raises concerns. The facilities that sign up for a workshop might be the ones already run by managers who take compliance seriously, making the program look successful, or the ones that have recently been in trouble, making the program look worse! Comparing attendees and non-attendees might simply reflect who chose to walk through the door, not what they learned once inside. 
+
+\noindent To avoid these concerns, Ferraro and Shimshack compared facilities that received the training early to facilities that had signed up but not yet received the training. Arguably, these facilities would have had similar motivations and similar histories. The absence of differences between these facilities prior to receiving the training provides support for this.
 \vspace{6pt}
+
+\pagebreak
+
+% ---------------------------------------------------------------------
+% WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
+% ---------------------------------------------------------------------
+\sectionhead{No effect on violations or discharges}
+\noindent Trained facilities were no less likely to violate environmental regulations, or reduce water pollution, than facilities that had not yet been trained.
+
+\vspace{12pt}
 
 % ---------------------------------------------------------------------
 % FIGURE — event study: effect on violations by month around training
@@ -106,30 +129,11 @@ format:
 \end{minipage}
 \end{center}
 
-\vspace{6pt}
+\vspace{12pt}
 
-% ---------------------------------------------------------------------
-% HOW THE STUDY TESTED IT  (narrowing — setting + research design)
-% ---------------------------------------------------------------------
-\sectionhead{Comparing across time and facilities}
-\noindent \textbf{Measuring whether a policy works requires a comparison group: facilities that show what the trained facilities would have done without the training.} Comparing violations at trained facilities before and after the workshops would credit the training with anything else that changed over the same period. Comparing facilities that signed up against those that did not introduces a different problem: attendance was voluntary, so a gap between the two groups could reflect the motivation of the facilities that chose to participate rather than the effect of the training.
+While compliance assistance programs presume that facilities violate because they do not fully understand the rules, Ferraro and Shimshack find no support for that view: the workshops supplied the technical guidance facilities were supposedly lacking, and neither violations nor discharges changed. At least in this context, a lack of understanding does not appear to be what was holding compliance back.
 
-\noindent Ferraro and Shimshack addressed this by comparing facilities trained earlier against facilities that had also signed up but had not yet been trained. Both groups had volunteered, and both were tracked over the same months, so any trend running through the industry appeared in both. The staggered rollout of the workshops is what made the not-yet-trained facilities available as a benchmark. The comparison holds only if those facilities would otherwise have followed the same path as the trained ones, an assumption the pre-workshop months in the figure support but cannot prove.
-
-\vspace{6pt}
-
-
-% ---------------------------------------------------------------------
-% WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
-% ---------------------------------------------------------------------
-\sectionhead{No effect on violations or discharges}
-\noindent \textbf{Trained facilities were no less likely to violate environmental regulations than facilities that had not yet been trained.} A violation is a regulatory event rather than a measure of pollution, so Ferraro and Shimshack also measured discharges directly, across five pollutants. Both sets of estimates were close to zero and precisely estimated. The workshops changed neither what facilities reported nor what they released into the water.
-
-\noindent \textbf{Violations did fall at the facilities that attended, but the workshops were not the reason.} At those plants, violations fell by about half in the years after the training. They fell just as far at the facilities that had signed up but had not yet been trained. Looking only at the facilities that attended, the earlier before-and-after evaluation counted that decline as evidence the program worked.
-
-\noindent Compliance assistance rests on the premise that facilities break the rules because they do not fully understand them. The results do not support that premise for these wastewater plants: if facilities were violating out of confusion, the training would have reduced violations, and it did not. \textbf{The pattern is more consistent with facilities weighing the cost of compliance against the consequences of violating.} Free help was not what these facilities were missing.
-
-\vspace{8pt}
+\vspace{12pt}
 
 \begin{moreinfo}
 Ferraro, Paul J., and Jay P. Shimshack. 2026. ``The Effect of Compliance Assistance on Pollution Discharges and Violations of Environmental Regulations.'' \textit{Journal of Policy Analysis and Management} 45 (3): e70056. \href{https://doi.org/10.1002/pam.70056}{\color{cite}\underline{doi.org/10.1002/pam.70056}}.\par
@@ -138,5 +142,4 @@ Paul J. Ferraro is at Johns Hopkins University. Jay P. Shimshack is at the Unive
 
 The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
 \end{moreinfo}
-
 ```
