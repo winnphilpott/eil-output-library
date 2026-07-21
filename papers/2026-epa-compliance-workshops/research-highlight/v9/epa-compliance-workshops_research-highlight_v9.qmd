@@ -141,7 +141,7 @@ format:
 \sectionhead{Implications for policy}
 \noindent If these results hold beyond Ohio, they caution against leaning on compliance assistance to reduce violations and pollution. The evidence that inspections and penalties work is stronger. With enforcement budgets already shrinking, \textbf{funding a compliance assistance program out of that same budget could mean more violations and more pollution}.
 
-\noindent One program that didn't work isn't a verdict on compliance assistance everywhere. Rather, \textbf{this study shows the value of rigorous program evaluation}. Agencies already ask which of their programs work, and partnering with researchers before a program launches is how that question can be answered.
+\noindent One program that didn't work isn't a verdict on compliance assistance everywhere. Rather, \textbf{this study highlights the value of rigorous program evaluation}. It also points to an opportunity for researchers and regulators to work together: by piloting new programs and measuring their effects before rolling them out researchers can help policymakers learn what works, advancing evidence-based policy making.
 
 \vspace{4pt}
 
