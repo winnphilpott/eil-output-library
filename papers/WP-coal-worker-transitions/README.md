@@ -1,6 +1,6 @@
 # Transitional Costs and the Decline of Coal: Worker-Level Evidence
 
-**Colmer, Krause, Lyubich & Voorheis · Working Paper, July 2026** URI: https://researchonline.lse.ac.uk/id/eprint/126795
+**Colmer, Krause, Lyubich & Voorheis · Working Paper, July 2026** URI: https://www.environmental-inequality-lab.org/energy
 
 ## Data
 
