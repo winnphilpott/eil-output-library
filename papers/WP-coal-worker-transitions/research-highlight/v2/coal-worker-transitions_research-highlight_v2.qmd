@@ -71,7 +71,7 @@ format:
 % ---------------------------------------------------------------------
 \begin{bottomline}
 {\fontsize{11pt}{15pt}\selectfont
-\textbf{When U.S. coal production and employment fell by more than half after 2011, the workers left behind never caught back up.} The most coal-dependent workers lost close to two years' worth of earnings in the eight years that followed, and neither switching industries nor moving helped them recoup it.
+\textbf{When U.S. coal production and employment fell by more than half after 2011, the workers who had depended on it most fell further behind in earnings every year that followed.} They lost close to two years' worth of pay by 2019, and neither switching industries nor moving closed the gap.
 }
 \end{bottomline}
 
@@ -146,7 +146,7 @@ format:
 % POLICY IMPLICATIONS  (thinking bigger picture about the findings)
 % ---------------------------------------------------------------------
 \sectionhead{Implications for policy}
-\noindent Coal is the first major U.S. fossil-fuel industry to go through a large-scale contraction, an early look at what falling demand could mean elsewhere in the carbon-intensive economy. The industries most exposed share coal's profile: high pay, few local alternatives, and a workforce whose skills are worth far less outside the industry. \textbf{Policy that assumes displaced workers will find comparable jobs is likely to be wrong} --- these workers didn't, whether they stayed, switched industries, or moved.
+\noindent Coal is the first major U.S. fossil-fuel industry to go through a large-scale contraction, an early look at what falling demand could mean elsewhere in the carbon-intensive economy. The industries most exposed share coal's profile: high pay, few local alternatives, and a workforce whose skills are worth far less outside the industry. \textbf{Policy that assumes displaced workers will find comparable jobs is likely to be wrong}. Coal workers didn't, whether they stayed, switched industries, or moved.
 
 \noindent \textbf{The harder thing to replace was what they already knew how to do, not where they lived.} Workers who left their local labor market fared no better than those who stayed, which points to skill mismatch rather than geography as the more binding constraint. How far that mismatch can be eased is an open question, though the researchers see room for cheaper responses than the disability benefits and retirement savings these workers fell back on. What coal makes clear is the price of leaving it in place: eight years on, the cost still sat with the workers.
 
