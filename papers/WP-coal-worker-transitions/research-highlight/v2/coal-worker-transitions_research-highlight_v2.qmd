@@ -5,6 +5,8 @@
 #  Render:  quarto render coal-worker-transitions_research-highlight_v2.qmd
 #  Design system: _style.tex (colours, fonts, boxes, macros)
 #  Figure: ../../data-viz/figures/fig1.png (built by data-viz/code/make-fig1.R)
+#  Background figure: ../../data-viz/code/fig-three-paths.pdf
+#    (editable TikZ — rebuild with: pdflatex fig-three-paths.tex)
 # =====================================================================
 format:
   pdf:
@@ -24,6 +26,8 @@ format:
     include-in-header:
       - file: ../../../../formats/research-highlight/_style.tex
       - text: |
+          % --- Text-wrap around the Background figure ---
+          \usepackage{wrapfig}
           % --- Running masthead + footer (logo, label, rule, page number) ---
           \usepackage{fancyhdr}
           \renewcommand{\headrulewidth}{0pt}
@@ -77,9 +81,24 @@ format:
 % BACKGROUND  (broad — poses the question)
 % ---------------------------------------------------------------------
 \sectionhead{Background}
-\noindent U.S. coal mining employment has fallen by more than half since its 2011 peak, as cheap natural gas from the fracking boom and falling wind and solar costs pushed coal out of the power sector. Earlier research shows that coal \textit{communities} lost jobs, earnings, and tax revenue, but community averages can hide what happened to individual workers. Some may have moved quickly into new jobs. Others may have borne heavy \textbf{transitional costs}: the lasting losses to earnings and employment that workers bear when an industry shrinks.
+% No hyphenation in this section: the narrow column beside the wrapped
+% figure otherwise breaks words mid-line. Same effect as the EPA
+% compliance highlight's \usepackage[none]{hyphenat}, but scoped to
+% Background so the rest of the document keeps its existing line breaks.
+% The loosened tolerance lets justification hold without hyphens.
+\begingroup
+\hyphenpenalty=10000\exhyphenpenalty=10000
+\tolerance=9999\emergencystretch=3em
+\begin{wrapfigure}{r}{3.1in}
+  \vspace{-\intextsep}
+  \centering
+  \includegraphics[width=3.1in]{../../data-viz/code/fig-three-paths.pdf}
+\end{wrapfigure}
+\noindent Cheap natural gas from the fracking boom and falling wind and solar costs pushed coal out of the power sector, halving U.S. coal mining employment since its 2011 peak. Earlier research shows that coal \textit{communities} lost jobs, earnings, and tax revenue, but community averages can hide what happened to individual workers. Some may have moved quickly into new jobs. Others may have borne heavy \textbf{transitional costs}: the lasting losses to earnings and employment that workers bear when an industry shrinks.
 
-\noindent \textbf{In a new working paper, Colmer et al.\ (2026) find that the workers most dependent on coal never recovered from its decline.} The researchers assembled Census and IRS records covering nearly every person employed in U.S. coal mining between 2005 and 2021, following each worker's earnings, employment, and location year by year. That included the years they spent working outside coal, or not working at all.
+\noindent \textbf{In a new working paper, Colmer et al.\ (2026) find that the workers most dependent on coal experienced significant earnings losses.} The researchers assembled Census and IRS records covering nearly every person employed in U.S. coal mining between 2005 and 2021, following each worker's earnings, employment, and location year by year. That included any time they spent working outside coal, or not working at all.
+
+\endgroup
 
 \vspace{2pt}
 
@@ -88,21 +107,24 @@ format:
 % fails, the next instinct, its complication, how they got around it)
 % ---------------------------------------------------------------------
 \sectionhead{The challenge}
-\noindent \textbf{Measuring what coal's decline cost workers is hard, because a career is shaped by many forces at once.} Tracking coal workers' earnings after 2011 and calling the drop the cost is misleading because aging, the broader economy, and ordinary job churn all pull on those same paychecks. A raw decline can't be pinned on coal alone.
+\noindent \textbf{Measuring what coal's decline cost workers is hard, because a career is shaped by many forces at once.} Tracking coal workers' earnings after 2011 and calling a drop the true cost is misleading because aging, the broader economy, and ordinary job churn can all pull on those same paychecks. A raw decline can't be pinned on coal alone.
 
-\noindent Comparing coal workers against everyone else also raises some concerns. Coal workers tend to be better paid, clustered in a few isolated regions, and different from other workers in schooling, so any earnings gap between them could reflect those existing differences rather than what coal's decline did to them.
+\noindent Comparing coal workers against everyone else also raises some concerns. Coal workers tend to be better paid, clustered in a few isolated regions, and different from other workers in schooling, so any earnings gap between the two groups could reflect those existing differences rather than what coal's decline did.
 
-\noindent \textbf{Colmer et al.\ compared the most coal-dependent workers, those in coal in all five years before the 2011 peak, with otherwise similar workers who had spent less time in coal, or none at all.} The comparison still rests on an assumption: that the two groups' earnings would have moved together had coal not declined. That holds up here because coal's collapse came from national gas and renewables prices. It happened to these workers rather than because of them, so there is little reason to think the most coal-dependent group was already headed for a worse decade.
+\noindent \textbf{Colmer et al.\ compared the most coal-dependent workers (those in coal in all five years before the 2011 peak) with otherwise similar workers who had spent less time in coal, or none at all.} The comparison rests on the assumption that the two groups' earnings would have moved together had coal not declined. That holds up here because coal's collapse came from national gas and renewables prices. It happened to these workers rather than because of them, so there is little reason to think the most coal-dependent group was already headed for greater losses.
 
 \vspace{2pt}
 
 % ---------------------------------------------------------------------
 % FINDINGS  (headed with the finding itself), anchored by the figure
 % ---------------------------------------------------------------------
+% Extend page 1 by one line so the findings paragraph isn't split across
+% the page break; the trims below close the remaining overflow.
+\enlargethispage{\baselineskip}
 \sectionhead{Nearly two years of lost earnings, and no way back}
-\noindent Between 2012 and 2019, \textbf{the most coal-dependent workers lost cumulative earnings equal to roughly 1.8 times a full pre-decline year of pay}, about \$165,600 for someone making \$92,000 in 2011 (in 2019 dollars; see figure). The losses came through two channels at once: compared with similar workers, coal-dependent workers spent about five fewer months employed \textit{and}, in the years they did work, earned roughly 19 percent less.
+\noindent Between 2012 and 2019, \textbf{the most coal-dependent workers lost cumulative earnings equal to roughly 1.8 times a full pre-decline year of pay}, about \$165,600 for someone making \$92,000 in 2011 (in 2019 dollars; see figure). The losses came through two channels at once: compared with similar workers, coal-dependent workers spent about five fewer months employed \textit{and}, in the years they did work, earned roughly 19\% less.
 
-\noindent Four in five workers left coal during the study period. What they couldn't find was comparable pay. Coal paid about \$13,000 a year more than other full-time work, and the industry was regionally isolated, so alternatives were scarce. In the years they worked outside coal, they earned more than 30 percent less than comparable non-coal workers. Relocating didn't close the gap: workers who left their local labor market fared no better than those who stayed. The most common thing these workers did was not work at all. They leaned on Social Security Disability Insurance and drew down retirement savings, but that replaced only a fraction of what was lost. \textbf{Eight years on, coal's decline had left a deep hole in workers' earnings that neither the labor market nor the safety net filled.}
+\noindent Four in five workers left coal. What they couldn't find was comparable pay. Coal paid about \$13,000 a year more than other full-time work, and the industry was regionally isolated, so alternatives were scarce. Outside coal, they earned more than 30\% less than comparable non-coal workers. Relocating didn't close the gap either. Most often, they didn't work at all. They leaned on Social Security Disability Insurance and drew down retirement savings, which replaced only a fraction of what was lost. \textbf{Coal's decline left a deep hole in workers' earnings that the labor market never filled.}
 
 \vspace{4pt}
 
@@ -124,9 +146,9 @@ format:
 % POLICY IMPLICATIONS  (thinking bigger picture about the findings)
 % ---------------------------------------------------------------------
 \sectionhead{Implications for policy}
-\noindent Coal is the first major U.S. fossil-fuel industry to contract at scale, an early look at what falling demand could mean elsewhere in the carbon-intensive economy. \textbf{Where a high-wage industry anchors an isolated labor market, policy that assumes displaced workers will find comparable jobs is likely to be wrong} --- these workers didn't, whether they stayed, switched industries, or moved.
+\noindent Coal is the first major U.S. fossil-fuel industry to go through a large-scale contraction, an early look at what falling demand could mean elsewhere in the carbon-intensive economy. The industries most exposed share coal's profile: high pay, few local alternatives, and a workforce whose skills are worth far less outside the industry. \textbf{Policy that assumes displaced workers will find comparable jobs is likely to be wrong} --- these workers didn't, whether they stayed, switched industries, or moved.
 
-\noindent Coal is one industry, and its geography is unusually isolating, so its exact path won't repeat everywhere. Where it does, the researchers see a cheaper option than the disability benefits and retirement savings these workers fell back on: wage insurance, which raised short-run employment and long-run earnings for workers displaced by trade. \textbf{When a high-wage, regionally concentrated industry contracts, its workers can bear the cost for the better part of a decade, and existing safety nets catch only part of the fall.}
+\noindent \textbf{The harder thing to replace was what they already knew how to do, not where they lived.} Workers who left their local labor market fared no better than those who stayed, which points to skill mismatch rather than geography as the more binding constraint. How far that mismatch can be eased is an open question, though the researchers see room for cheaper responses than the disability benefits and retirement savings these workers fell back on. What coal makes clear is the price of leaving it in place: eight years on, the cost still sat with the workers.
 
 \vspace{4pt}
 
