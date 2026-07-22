@@ -76,7 +76,7 @@ format:
 }
 \end{bottomline}
 
-\vspace{6pt}
+\vspace{2pt}
 
 % ---------------------------------------------------------------------
 % BACKGROUND  (~120 words, 2 paragraphs)
@@ -86,7 +86,7 @@ format:
 
 \noindent [Describe the setting and data in plain language — who was studied, what records the researchers had, and over what period.]
 
-\vspace{6pt}
+\vspace{2pt}
 
 % ---------------------------------------------------------------------
 % THE CHALLENGE  (~180–300 words) — the research-design story
@@ -104,7 +104,7 @@ format:
 
 \noindent [How the researchers got around it. \textbf{Bold the sentence naming the actual comparison they used.} Note what makes it fair.]
 
-\vspace{6pt}
+\vspace{2pt}
 
 % ---------------------------------------------------------------------
 % FINDINGS  (~150 words + figure) — head this with the finding itself,
@@ -113,6 +113,8 @@ format:
 % ---------------------------------------------------------------------
 \sectionhead{[The finding, stated — e.g. "No effect on violations or discharges"]}
 \noindent [State the result, pointing the reader to the figure below. \textbf{Bold the headline finding.}]
+
+\vspace{4pt}
 
 \begin{center}
 \begin{minipage}{0.75\linewidth}
@@ -123,9 +125,11 @@ format:
 \end{minipage}
 \end{center}
 
-\vspace{6pt}
+\vspace{4pt}
 
 \noindent [Short closing paragraph — no subhead. Draw out what the result means, \textbf{bold the one line worth keeping}, and, where relevant, name the limit plainly before restating the point.]
+
+\vspace{4pt}
 
 \begin{moreinfo}
 Contact [Corresponding author] ([email]) with questions about this research.\par
