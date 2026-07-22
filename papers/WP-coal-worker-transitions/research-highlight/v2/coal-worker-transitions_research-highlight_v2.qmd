@@ -1,0 +1,147 @@
+---
+# =====================================================================
+#  Research highlight v2
+#  Canonical layout: see style-guides/research-highlight/README.md
+#  Render:  quarto render coal-worker-transitions_research-highlight_v2.qmd
+#  Design system: _style.tex (colours, fonts, boxes, macros)
+#  Figure: ../../data-viz/figures/fig1.png (built by data-viz/code/make-fig1.R)
+# =====================================================================
+format:
+  pdf:
+    pdf-engine: pdflatex
+    documentclass: article
+    fontsize: 11pt
+    geometry:
+      - top=0.4in
+      - bottom=0.45in
+      - left=0.65in
+      - right=0.65in
+      - includehead
+      - headheight=52pt
+      - headsep=7pt
+      - includefoot
+      - footskip=24pt
+    include-in-header:
+      - file: ../../../../formats/research-highlight/_style.tex
+      - text: |
+          % --- Running masthead + footer (logo, label, rule, page number) ---
+          \usepackage{fancyhdr}
+          \renewcommand{\headrulewidth}{0pt}
+          \renewcommand{\footrulewidth}{0pt}
+          \fancypagestyle{brief}{%
+            \fancyhf{}%
+            \fancyhead[L]{%
+              \begin{minipage}[c]{0.62\textwidth}\raggedright\color{ink}\includegraphics[height=0.45in]{../../../../formats/logos/eil-logo-maroon.png}\end{minipage}\hfill%
+              \begin{minipage}[c]{0.36\textwidth}\raggedleft\fontsize{8.25pt}{10pt}\selectfont\bfseries\color{accentred}\textls[200]{\MakeUppercase{Research Highlight}}\end{minipage}%
+              \par\vspace{2pt}%
+              \noindent\textcolor{ink}{\rule{\textwidth}{2.2pt}}%
+            }%
+            \fancyfoot[C]{%
+              \color{warmrule}\rule{\textwidth}{0.7pt}\par\vspace{3pt}%
+              \hbox to\textwidth{%
+                \color{faint}\fontsize{7.4pt}{9pt}\selectfont
+                For full paper:\hspace{0.4em}``Transitional Costs and the Decline of Coal'' at \href{https://www.environmental-inequality-lab.org/energy}{\color{faint}\underline{\textls[40]{environmental-inequality-lab.org/energy}}}%
+                \hfill
+                Page \thepage%
+              }%
+            }%
+          }
+          \pagestyle{brief}
+    keep-tex: true
+---
+
+```{=latex}
+% ---------------------------------------------------------------------
+% TITLE + CITATION  (masthead repeats in the page header)
+% ---------------------------------------------------------------------
+\brieftitle{Coal's Decline Cost Workers Nearly Two Years of Pay}
+\briefcitation{Lessons from ``Transitional Costs and the Decline of Coal: Worker-Level Evidence'' by Jonathan Colmer, Eleanor Krause, Eva Lyubich \& John Voorheis, Working Paper, 2026.}
+
+\vspace{-2pt}
+
+% override body font size for this document
+\fontsize{10.5pt}{13.5pt}\selectfont
+
+% ---------------------------------------------------------------------
+% BOTTOM LINE
+% ---------------------------------------------------------------------
+\begin{bottomline}
+{\fontsize{11pt}{15pt}\selectfont
+\textbf{When U.S. coal production and employment fell by more than half after 2011, the workers left behind never caught back up.} The most coal-dependent workers lost close to two years' worth of earnings in the eight years that followed, and neither switching industries nor moving helped them recoup it.
+}
+\end{bottomline}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% BACKGROUND  (broad — poses the question)
+% ---------------------------------------------------------------------
+\sectionhead{Background}
+\noindent U.S. coal mining employment has fallen by more than half since its 2011 peak, as cheap natural gas from the fracking boom and falling wind and solar costs pushed coal out of the power sector. Earlier research shows that coal \textit{communities} lost jobs, earnings, and tax revenue, but community averages can hide what happened to individual workers. Some may have moved quickly into new jobs. Others may have borne heavy \textbf{transitional costs}: the lasting losses to earnings and employment that workers bear when an industry shrinks.
+
+\noindent \textbf{In a new working paper, Colmer et al.\ (2026) find that the workers most dependent on coal never recovered from its decline.} The researchers assembled Census and IRS records covering nearly every person employed in U.S. coal mining between 2005 and 2021, following each worker's earnings, employment, and location year by year. That included the years they spent working outside coal, or not working at all.
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% THE CHALLENGE  (the research-design story: naive comparison, why it
+% fails, the next instinct, its complication, how they got around it)
+% ---------------------------------------------------------------------
+\sectionhead{The challenge}
+\noindent \textbf{Measuring what coal's decline cost workers is hard, because a career is shaped by many forces at once.} Tracking coal workers' earnings after 2011 and calling the drop the cost is misleading because aging, the broader economy, and ordinary job churn all pull on those same paychecks. A raw decline can't be pinned on coal alone.
+
+\noindent Comparing coal workers against everyone else also raises some concerns. Coal workers tend to be better paid, clustered in a few isolated regions, and different from other workers in schooling, so any earnings gap between them could reflect those existing differences rather than what coal's decline did to them.
+
+\noindent \textbf{Colmer et al.\ compared the most coal-dependent workers, those in coal in all five years before the 2011 peak, with otherwise similar workers who had spent less time in coal, or none at all.} The comparison still rests on an assumption: that the two groups' earnings would have moved together had coal not declined. That holds up here because coal's collapse came from national gas and renewables prices. It happened to these workers rather than because of them, so there is little reason to think the most coal-dependent group was already headed for a worse decade.
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% FINDINGS  (headed with the finding itself), anchored by the figure
+% ---------------------------------------------------------------------
+\sectionhead{Nearly two years of lost earnings, and no way back}
+\noindent Between 2012 and 2019, \textbf{the most coal-dependent workers lost cumulative earnings equal to roughly 1.8 times a full pre-decline year of pay}, about \$165,600 for someone making \$92,000 in 2011 (in 2019 dollars; see figure). The losses came through two channels at once: compared with similar workers, coal-dependent workers spent about five fewer months employed \textit{and}, in the years they did work, earned roughly 19 percent less.
+
+\noindent Four in five workers left coal during the study period. What they couldn't find was comparable pay. Coal paid about \$13,000 a year more than other full-time work, and the industry was regionally isolated, so alternatives were scarce. In the years they worked outside coal, they earned more than 30 percent less than comparable non-coal workers. Relocating didn't close the gap: workers who left their local labor market fared no better than those who stayed. The most common thing these workers did was not work at all. They leaned on Social Security Disability Insurance and drew down retirement savings, but that replaced only a fraction of what was lost. \textbf{Eight years on, coal's decline had left a deep hole in workers' earnings that neither the labor market nor the safety net filled.}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% FIGURE — recreation of the paper's Fig. 7(a); built by data-viz/code/make-fig1.R
+% ---------------------------------------------------------------------
+\begin{center}
+\begin{minipage}{0.68\linewidth}
+\figtitle{Coal workers' earnings fell further behind comparable workers every year}{Source: recreated from Colmer et al.\ (2026), Fig.\ 7a.}
+\includegraphics[width=\linewidth]{../../data-viz/figures/fig1.png}
+\par\vspace{3pt}
+{\color{faint}\fontsize{7.1pt}{9.5pt}\selectfont \textit{Note:} Each point is the cumulative earnings gap between the most coal-dependent workers and otherwise similar workers who depended on coal less, measured in years of pre-decline pay. After coal's 2011 peak the two groups steadily diverge; by 2019 the gap reaches 1.8 years' pay. Had coal's decline cost these workers nothing, the line would have stayed flat at zero. Values digitized from the published figure.\par}
+\end{minipage}
+\end{center}
+
+\vspace{6pt}
+
+% ---------------------------------------------------------------------
+% POLICY IMPLICATIONS  (thinking bigger picture about the findings)
+% ---------------------------------------------------------------------
+\sectionhead{Implications for policy}
+\noindent Coal is the first major U.S. fossil-fuel industry to contract at scale, an early look at what falling demand could mean elsewhere in the carbon-intensive economy. \textbf{Where a high-wage industry anchors an isolated labor market, policy that assumes displaced workers will find comparable jobs is likely to be wrong} --- these workers didn't, whether they stayed, switched industries, or moved.
+
+\noindent Coal is one industry, and its geography is unusually isolating, so its exact path won't repeat everywhere. Where it does, the researchers see a cheaper option than the disability benefits and retirement savings these workers fell back on: wage insurance, which raised short-run employment and long-run earnings for workers displaced by trade. \textbf{When a high-wage, regionally concentrated industry contracts, its workers can bear the cost for the better part of a decade, and existing safety nets catch only part of the fall.}
+
+\vspace{4pt}
+
+% ---------------------------------------------------------------------
+% FOR MORE INFO
+% ---------------------------------------------------------------------
+\begin{moreinfo}
+Contact Eleanor Krause (eleanor.krause@uky.edu) with questions about this research.\par
+
+Colmer, Jonathan, Eleanor Krause, Eva Lyubich, and John Voorheis. 2026. ``Transitional Costs and the Decline of Coal: Worker-Level Evidence.'' Working paper. Available at \href{https://www.environmental-inequality-lab.org/energy}{\color{cite}\underline{environmental-inequality-lab.org/energy}}.\par
+
+\textbf{Jonathan Colmer} is in the Department of Economics at the University of Virginia.\par
+\textbf{Eleanor Krause} is in the Department of Economics at the University of Kentucky.\par
+\textbf{Eva Lyubich} and \textbf{John Voorheis} are at the U.S. Census Bureau.\par
+
+The \href{https://www.environmental-inequality-lab.org/}{\color{cite}\underline{Environmental Inequality Lab}} is a nonpartisan research group that applies a rigorous, data-driven approach to understand how our environment shapes economic opportunity and well-being.\par
+\end{moreinfo}
+```
