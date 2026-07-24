@@ -86,7 +86,7 @@ In new research studying hundreds of polluting facilities that were offered free
 }
 \end{bottomline}
 
-\vspace{2pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
 % BACKGROUND  (broad — poses the question)
@@ -101,7 +101,7 @@ In new research studying hundreds of polluting facilities that were offered free
 
 \noindent \textbf{In a new study, Ferraro and Shimshack (2026) find that compliance assistance workshops and training did not reduce regulatory violations or pollution discharges.} The researchers analyzed data from hundreds of Ohio wastewater treatment facilities that had recently been cited for violations and were invited to attend workshops rolled out over several months.
 
-\vspace{2pt}
+\vspace{6pt}
 % ---------------------------------------------------------------------
 % HOW THE STUDY TESTED IT  (narrowing — setting + research design)
 % ---------------------------------------------------------------------
@@ -112,7 +112,7 @@ In new research studying hundreds of polluting facilities that were offered free
 
 \noindent To avoid these concerns, \textbf{Ferraro and Shimshack compared facilities that received compliance assistance and training early to facilities that had signed up but not yet received the training.} Arguably, these facilities would have had similar motivations and similar histories. The absence of differences between these facilities prior to receiving the training provides support for this.
 
-\vspace{2pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
 % WHAT THE STUDY FOUND  (the waist — result, precision, discharges)
@@ -120,7 +120,7 @@ In new research studying hundreds of polluting facilities that were offered free
 \sectionhead{No effect on violations or discharges}
 \noindent Compared with not-yet-trained facilities, trained facilities violated environmental regulations just as often and discharged just as much pollution. That held within facilities as well as across them: tracking the same facilities over time, their violations did not decline in the months after they attended a workshop (see figure). Ferraro and Shimshack find no support for the premise that compliance assistance and training reduced violations or pollution discharges. \textbf{At least in this context, a lack of understanding at these facilities does not appear to be what was holding compliance back.}
 
-\vspace{4pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
 % FIGURE — event study: effect on violations by month around training
@@ -134,7 +134,7 @@ In new research studying hundreds of polluting facilities that were offered free
 \end{minipage}
 \end{center}
 
-\vspace{4pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
 % POLICY IMPLICATIONS  (thinking bigger picture about the findings)
@@ -144,10 +144,10 @@ In new research studying hundreds of polluting facilities that were offered free
 
 \noindent One program that didn't work isn't a verdict on compliance assistance everywhere. Rather, \textbf{this study highlights the value of rigorous program evaluation}. It also points to an opportunity for researchers and regulators to work together: by piloting new programs and measuring their effects before rolling them out widely, researchers can help policymakers learn what works, advancing evidence-based policy making.
 
-\vspace{4pt}
+\vspace{6pt}
 
 % ---------------------------------------------------------------------
-% FOR MORE INFO 
+% FOR MORE INFO
 % ---------------------------------------------------------------------
 \begin{moreinfo}
 Contact Jay Shimshack (jay.shimshack@virginia.edu) with questions about this research.\par
